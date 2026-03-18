@@ -34,33 +34,26 @@ export default function App() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
-      padding: "30px 16px 20px",
+      padding: "30px 16px",
       fontFamily: "Arial"
     }}>
 
       {/* 🔝 ШАПКА */}
       <div style={{
-        width: "100%",
-        maxWidth: 420,
-        marginBottom: 20
+        color: "#94a3b8",
+        fontSize: 14,
+        marginBottom: 25
       }}>
-        <div style={{
-          color: "#94a3b8",
-          fontSize: 16,
-          textAlign: "center",
-          letterSpacing: 1
-        }}>
-          tenerifeopen
-        </div>
+        tenerifeopen
       </div>
 
       {/* 📦 КАРТОЧКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        height: "min(45vh, 340px)",
+        height: "min(42vh, 320px)",
         perspective: 1000,
-        marginBottom: 30 // 🔥 отступ от кнопок
+        marginBottom: 25
       }}>
         <div
           onClick={() => setShow(!show)}
@@ -81,14 +74,14 @@ export default function App() {
             width: "100%",
             height: "100%",
             background: "#e5e7eb",
-            borderRadius: 24,
+            borderRadius: 20,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             padding: 20,
-            fontSize: "clamp(24px, 6vw, 32px)",
+            fontSize: "clamp(24px, 6vw, 30px)",
             fontWeight: 700,
-            color: "#111827", // 🔥 почти черный
+            color: "#111827",
             textAlign: "center",
             lineHeight: 1.3,
             wordBreak: "break-word",
@@ -104,12 +97,12 @@ export default function App() {
             height: "100%",
             background: "#2563eb",
             color: "white",
-            borderRadius: 24,
+            borderRadius: 20,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             padding: 20,
-            fontSize: "clamp(28px, 7vw, 36px)",
+            fontSize: "clamp(26px, 7vw, 34px)",
             fontWeight: 800,
             textAlign: "center",
             lineHeight: 1.3,
@@ -123,16 +116,13 @@ export default function App() {
         </div>
       </div>
 
-      {/* 🔘 ПАНЕЛЬ */}
+      {/* 🔘 КНОПКИ (ОТДЕЛЬНО!) */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        background: "#e5e7eb",
-        borderRadius: 24,
-        padding: "12px 14px",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        alignItems: "center"
       }}>
 
         <button
@@ -143,10 +133,10 @@ export default function App() {
           style={{
             width: 70,
             height: 48,
-            borderRadius: 20,
-            background: "#0f172a",
+            borderRadius: 16,
+            background: "#1e293b",
             color: "white",
-            fontSize: 26,
+            fontSize: 24,
             border: "none"
           }}
         >
@@ -154,9 +144,8 @@ export default function App() {
         </button>
 
         <div style={{
-          fontSize: 18,
-          fontWeight: 600,
-          color: "#111827"
+          color: "#cbd5f5",
+          fontSize: 16
         }}>
           {index + 1} / {cards.length}
         </div>
@@ -169,10 +158,10 @@ export default function App() {
           style={{
             width: 70,
             height: 48,
-            borderRadius: 20,
-            background: "#0f172a",
+            borderRadius: 16,
+            background: "#1e293b",
             color: "white",
-            fontSize: 26,
+            fontSize: 24,
             border: "none"
           }}
         >
