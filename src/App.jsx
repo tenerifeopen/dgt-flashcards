@@ -33,7 +33,7 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "30px 16px",
+      padding: "20px 16px 100px", // 🔥 отступ снизу под панель
       fontFamily: "Arial"
     }}>
 
@@ -41,141 +41,143 @@ export default function App() {
       <div style={{
         color: "#94a3b8",
         fontSize: 14,
-        marginBottom: 20
+        marginBottom: 10
       }}>
         tenerifeopen
       </div>
 
+      {/* КАРТОЧКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center"
+        height: "min(38vh, 280px)", // чуть меньше
+        perspective: 1000,
+        marginTop: 10
       }}>
+        <div
+          onClick={() => setShow(!show)}
+          style={{
+            width: "100%",
+            height: "100%",
+            position: "relative",
+            transformStyle: "preserve-3d",
+            transition: "transform 0.5s",
+            transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
+            cursor: "pointer"
+          }}
+        >
 
-        {/* КАРТОЧКА */}
-        <div style={{
-          width: "100%",
-          height: "min(40vh, 300px)",
-          perspective: 1000
-        }}>
-          <div
-            onClick={() => setShow(!show)}
-            style={{
-              width: "100%",
-              height: "100%",
-              position: "relative",
-              transformStyle: "preserve-3d",
-              transition: "transform 0.5s",
-              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
-              cursor: "pointer"
-            }}
-          >
-
-            {/* ВОПРОС */}
-            <div style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              background: "#e5e7eb",
-              borderRadius: 20,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 20,
-              fontSize: "clamp(22px, 6vw, 28px)",
-              fontWeight: 700,
-              color: "#111827",
-              textAlign: "center",
-              lineHeight: 1.3,
-              wordBreak: "break-word",
-              backfaceVisibility: "hidden"
-            }}>
-              {cards[index].question}
-            </div>
-
-            {/* ОТВЕТ */}
-            <div style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              background: "#2563eb",
-              color: "white",
-              borderRadius: 20,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 20,
-              fontSize: "clamp(24px, 7vw, 32px)",
-              fontWeight: 800,
-              textAlign: "center",
-              lineHeight: 1.3,
-              wordBreak: "break-word",
-              transform: "rotateY(180deg)",
-              backfaceVisibility: "hidden"
-            }}>
-              {cards[index].answer}
-            </div>
-
+          {/* ВОПРОС */}
+          <div style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background: "#e5e7eb",
+            borderRadius: 20,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 20,
+            fontSize: "clamp(22px, 6vw, 28px)",
+            fontWeight: 700,
+            color: "#111827",
+            textAlign: "center",
+            lineHeight: 1.3,
+            wordBreak: "break-word",
+            backfaceVisibility: "hidden"
+          }}>
+            {cards[index].question}
           </div>
-        </div>
 
-        {/* 🔥 ОПУЩЕННАЯ ПАНЕЛЬ */}
+          {/* ОТВЕТ */}
+          <div style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background: "#2563eb",
+            color: "white",
+            borderRadius: 20,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 20,
+            fontSize: "clamp(24px, 7vw, 32px)",
+            fontWeight: 800,
+            textAlign: "center",
+            lineHeight: 1.3,
+            wordBreak: "break-word",
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden"
+          }}>
+            {cards[index].answer}
+          </div>
+
+        </div>
+      </div>
+
+      {/* 🔥 ФИКСИРОВАННАЯ ПАНЕЛЬ ВНИЗУ */}
+      <div style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        padding: "12px 16px 20px",
+        background: "linear-gradient(to top, #0f172a, transparent)"
+      }}>
         <div style={{
-          width: "100%",
-          height: 64,
+          maxWidth: 420,
+          margin: "0 auto",
+          height: 70,
           background: "#1e293b",
-          borderRadius: 20,
+          borderRadius: 24,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 14px",
-          marginTop: 16, // ✅ вот твой 1 см вниз
-          boxShadow: "0 8px 20px rgba(0,0,0,0.4)"
+          padding: "0 16px",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.6)"
         }}>
 
-          {/* ← КНОПКА (черная) */}
+          {/* ← */}
           <button
             onClick={() => {
               setShow(false);
               setIndex((i) => (i - 1 + cards.length) % cards.length);
             }}
             style={{
-              width: 64,
-              height: 44,
-              borderRadius: 14,
+              width: 70,
+              height: 48,
+              borderRadius: 16,
               background: "#020617",
               color: "white",
-              fontSize: 22,
+              fontSize: 26,
               border: "none"
             }}
           >
             ←
           </button>
 
-          {/* СЧЕТЧИК */}
+          {/* счетчик */}
           <div style={{
             color: "white",
-            fontSize: 16,
+            fontSize: 18,
             fontWeight: 500
           }}>
             {index + 1} / {cards.length}
           </div>
 
-          {/* → КНОПКА (синяя как ответ) */}
+          {/* → */}
           <button
             onClick={() => {
               setShow(false);
               setIndex((i) => (i + 1) % cards.length);
             }}
             style={{
-              width: 64,
-              height: 44,
-              borderRadius: 14,
+              width: 70,
+              height: 48,
+              borderRadius: 16,
               background: "#2563eb",
               color: "white",
-              fontSize: 22,
+              fontSize: 26,
               border: "none"
             }}
           >
@@ -183,7 +185,6 @@ export default function App() {
           </button>
 
         </div>
-
       </div>
 
     </div>
