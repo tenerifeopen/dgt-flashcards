@@ -33,8 +33,9 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "20px 16px 100px", // 🔥 отступ снизу под панель
-      fontFamily: "Arial"
+      padding: "20px 12px 110px",
+      fontFamily: "Arial",
+      boxSizing: "border-box"
     }}>
 
       {/* ШАПКА */}
@@ -46,76 +47,88 @@ export default function App() {
         tenerifeopen
       </div>
 
-      {/* КАРТОЧКА */}
+      {/* КОНТЕЙНЕР */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        height: "min(38vh, 280px)", // чуть меньше
-        perspective: 1000,
-        marginTop: 10
+        padding: "0 4px", // 🔥 отступ от краёв
+        boxSizing: "border-box"
       }}>
-        <div
-          onClick={() => setShow(!show)}
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "relative",
-            transformStyle: "preserve-3d",
-            transition: "transform 0.5s",
-            transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
-            cursor: "pointer"
-          }}
-        >
 
-          {/* ВОПРОС */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            background: "#e5e7eb",
-            borderRadius: 20,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(22px, 6vw, 28px)",
-            fontWeight: 700,
-            color: "#111827",
-            textAlign: "center",
-            lineHeight: 1.3,
-            wordBreak: "break-word",
-            backfaceVisibility: "hidden"
-          }}>
-            {cards[index].question}
+        {/* КАРТОЧКА */}
+        <div style={{
+          width: "100%",
+          height: "calc(100vh - 240px)",
+          maxHeight: 420,
+          minHeight: 220,
+          perspective: 1000
+        }}>
+          <div
+            onClick={() => setShow(!show)}
+            style={{
+              width: "100%",
+              height: "100%",
+              position: "relative",
+              transformStyle: "preserve-3d",
+              transition: "transform 0.5s",
+              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
+              cursor: "pointer"
+            }}
+          >
+
+            {/* ВОПРОС */}
+            <div style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              background: "#e5e7eb",
+              borderRadius: 20,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 20,
+              boxSizing: "border-box", // 🔥 важно
+              fontSize: "clamp(22px, 6vw, 28px)",
+              fontWeight: 700,
+              color: "#111827",
+              textAlign: "center",
+              lineHeight: 1.3,
+              wordBreak: "break-word",
+              backfaceVisibility: "hidden"
+            }}>
+              {cards[index].question}
+            </div>
+
+            {/* ОТВЕТ */}
+            <div style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              background: "#2563eb",
+              color: "white",
+              borderRadius: 20,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 20,
+              boxSizing: "border-box", // 🔥 важно
+              fontSize: "clamp(24px, 7vw, 32px)",
+              fontWeight: 800,
+              textAlign: "center",
+              lineHeight: 1.3,
+              wordBreak: "break-word",
+              transform: "rotateY(180deg)",
+              backfaceVisibility: "hidden"
+            }}>
+              {cards[index].answer}
+            </div>
+
           </div>
-
-          {/* ОТВЕТ */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            background: "#2563eb",
-            color: "white",
-            borderRadius: 20,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(24px, 7vw, 32px)",
-            fontWeight: 800,
-            textAlign: "center",
-            lineHeight: 1.3,
-            wordBreak: "break-word",
-            transform: "rotateY(180deg)",
-            backfaceVisibility: "hidden"
-          }}>
-            {cards[index].answer}
-          </div>
-
         </div>
+
       </div>
 
-      {/* 🔥 ФИКСИРОВАННАЯ ПАНЕЛЬ ВНИЗУ */}
+      {/* НИЖНЯЯ ПАНЕЛЬ */}
       <div style={{
         position: "fixed",
         bottom: 0,
@@ -134,7 +147,7 @@ export default function App() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0 16px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.6)"
+          boxSizing: "border-box"
         }}>
 
           {/* ← */}
@@ -159,8 +172,7 @@ export default function App() {
           {/* счетчик */}
           <div style={{
             color: "white",
-            fontSize: 18,
-            fontWeight: 500
+            fontSize: 18
           }}>
             {index + 1} / {cards.length}
           </div>
