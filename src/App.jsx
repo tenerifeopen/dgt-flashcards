@@ -1,9 +1,30 @@
-import { useState } from "react";
-import { cards } from "./cards";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    fetch("/cards.txt")
+      .then(res => res.text())
+      .then(text => {
+        const parsed = text
+          .split("\n")
+          .map(line => line.split("="))
+          .filter(arr => arr.length === 2)
+          .map(([q, a]) => ({
+            question: q.trim(),
+            answer: a.trim()
+          }));
+
+        setCards(parsed);
+      });
+  }, []);
+
+  if (cards.length === 0) {
+    return <div style={{ padding: 40 }}>Загрузка...</div>;
+  }
 
   return (
     <div style={{
@@ -14,13 +35,9 @@ export default function App() {
       fontFamily: "Arial"
     }}>
       
-      <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 5 }}>
+      <h1 style={{ fontSize: 28, fontWeight: 800 }}>
         DGT Flashcards
       </h1>
-
-      <p style={{ color: "#6b7280", marginBottom: 20 }}>
-        Нажми на карту, чтобы увидеть ответ
-      </p>
 
       {/* Карточка */}
       <div style={{ perspective: 1000, marginBottom: 40 }}>
@@ -47,9 +64,8 @@ export default function App() {
             alignItems: "center",
             justifyContent: "center",
             padding: 20,
-            fontWeight: 700,
-            fontSize: 26,   // 👈 увеличенный текст
-            color: "#1f2937"
+            fontSize: 26,
+            fontWeight: 700
           }}>
             {cards[index].question}
           </div>
@@ -83,48 +99,29 @@ export default function App() {
         alignItems: "center",
         padding: 15,
         background: "#f1f5f9",
-        borderRadius: 20,
-        boxShadow: "0 5px 15px rgba(0,0,0,0.08)"
+        borderRadius: 20
       }}>
-
         <button
-          onClick={() => { setShow(false); setIndex((i) => (i - 1 + cards.length) % cards.length); }}
-          style={{
-            width: 70,
-            height: 50,
-            borderRadius: 15,
-            background: "#e5e7eb",
-            border: "none",
-            fontSize: 22
+          onClick={() => {
+            setShow(false);
+            setIndex((i) => (i - 1 + cards.length) % cards.length);
           }}
         >
           ←
         </button>
 
-        <div style={{ fontWeight: 700, color: "#2563eb" }}>
+        <div>
           {index + 1} / {cards.length}
         </div>
 
         <button
-          onClick={() => { setShow(false); setIndex((i) => (i + 1) % cards.length); }}
-          style={{
-            width: 70,
-            height: 50,
-            borderRadius: 15,
-            background: "#2563eb",
-            color: "white",
-            border: "none",
-            fontSize: 22,
-            boxShadow: "0 5px 10px rgba(37,99,235,0.3)"
+          onClick={() => {
+            setShow(false);
+            setIndex((i) => (i + 1) % cards.length);
           }}
         >
           →
         </button>
-
-      </div>
-
-      <div style={{ marginTop: 20, fontSize: 12, color: "#9ca3af" }}>
-        EXAMEN DGT 🚗
       </div>
     </div>
   );
