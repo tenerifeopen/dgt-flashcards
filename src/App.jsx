@@ -52,7 +52,8 @@ export default function App() {
 
         setCards(parsed);
 
-        const savedIndex = localStorage.getItem("index");
+        // 🔥 индекс по теме
+        const savedIndex = localStorage.getItem("index_" + topic);
         setIndex(savedIndex ? Number(savedIndex) : 0);
 
         setShow(false);
@@ -61,8 +62,10 @@ export default function App() {
 
   // ================= СОХРАНЕНИЕ =================
   useEffect(() => {
-    localStorage.setItem("index", index);
-  }, [index]);
+    if (topic) {
+      localStorage.setItem("index_" + topic, index);
+    }
+  }, [index, topic]);
 
   // ================= ЗАГРУЗКА =================
   if (topics.length === 0) {
@@ -131,7 +134,11 @@ export default function App() {
 
   // ================= КАРТОЧКИ =================
   if (cards.length === 0) {
-    return <div style={{ color: "white", padding: 40 }}>Нет карточек</div>;
+    return (
+      <div style={{ color: "white", padding: 40 }}>
+        В этой теме пока нет карточек
+      </div>
+    );
   }
 
   return (
@@ -217,7 +224,7 @@ export default function App() {
               wordBreak: "break-word",
               backfaceVisibility: "hidden"
             }}>
-              {cards[index].question}
+              {cards[index]?.question}
             </div>
 
             {/* ОТВЕТ */}
@@ -241,7 +248,7 @@ export default function App() {
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}>
-              {cards[index].answer}
+              {cards[index]?.answer}
             </div>
 
           </div>
