@@ -38,6 +38,9 @@ export default function App() {
   useEffect(() => {
     if (!topic) return;
 
+    // 👉 сначала сбрасываем индекс
+    setIndex(0);
+
     fetch(`/cards/${topic}.txt`)
       .then(res => res.text())
       .then(text => {
@@ -52,9 +55,11 @@ export default function App() {
 
         setCards(parsed);
 
-        // 🔥 индекс по теме
+        // 👉 потом загружаем индекс ДЛЯ ЭТОЙ темы
         const savedIndex = localStorage.getItem("index_" + topic);
-        setIndex(savedIndex ? Number(savedIndex) : 0);
+        if (savedIndex !== null) {
+          setIndex(Number(savedIndex));
+        }
 
         setShow(false);
       });
@@ -175,15 +180,12 @@ export default function App() {
         ← назад
       </div>
 
-      {/* КОНТЕЙНЕР */}
+      {/* КАРТОЧКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 4px",
-        boxSizing: "border-box"
+        padding: "0 4px"
       }}>
-
-        {/* КАРТОЧКА */}
         <div style={{
           width: "100%",
           height: "calc(100vh - 240px)",
@@ -198,13 +200,11 @@ export default function App() {
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "transform 0.5s",
-              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
-              cursor: "pointer"
+              transition: "0.5s",
+              transform: show ? "rotateY(180deg)" : "rotateY(0deg)"
             }}
           >
 
-            {/* ВОПРОС */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -215,19 +215,14 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              boxSizing: "border-box",
               fontSize: "clamp(22px, 6vw, 28px)",
               fontWeight: 700,
-              color: "#111827",
               textAlign: "center",
-              lineHeight: 1.3,
-              wordBreak: "break-word",
               backfaceVisibility: "hidden"
             }}>
               {cards[index]?.question}
             </div>
 
-            {/* ОТВЕТ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -239,12 +234,9 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              boxSizing: "border-box",
               fontSize: "clamp(24px, 7vw, 32px)",
               fontWeight: 800,
               textAlign: "center",
-              lineHeight: 1.3,
-              wordBreak: "break-word",
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}>
@@ -253,17 +245,14 @@ export default function App() {
 
           </div>
         </div>
-
       </div>
 
-      {/* НИЖНЯЯ ПАНЕЛЬ */}
+      {/* ПАНЕЛЬ */}
       <div style={{
         position: "fixed",
         bottom: 0,
-        left: 0,
         width: "100%",
-        padding: "12px 16px 20px",
-        background: "linear-gradient(to top, #0f172a, transparent)"
+        padding: "12px"
       }}>
         <div style={{
           maxWidth: 420,
@@ -274,77 +263,34 @@ export default function App() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 16px",
-          boxSizing: "border-box"
+          padding: "0 16px"
         }}>
-
-          {/* ← */}
-          <button
-            onClick={() => {
-              setShow(false);
-              setIndex((i) => (i - 1 + cards.length) % cards.length);
-            }}
-            style={{
-              width: 60,
-              height: 48,
-              borderRadius: 16,
-              background: "#020617",
-              color: "white",
-              fontSize: 24,
-              border: "none"
-            }}
-          >
+          <button onClick={() => {
+            setShow(false);
+            setIndex((i) => (i - 1 + cards.length) % cards.length);
+          }}>
             ←
           </button>
 
-          {/* 🔀 */}
-          <button
-            onClick={() => setRandomMode(!randomMode)}
-            style={{
-              width: 60,
-              height: 48,
-              borderRadius: 16,
-              background: randomMode ? "#16a34a" : "#334155",
-              color: "white",
-              fontSize: 18,
-              border: "none"
-            }}
-          >
+          <button onClick={() => setRandomMode(!randomMode)}>
             🔀
           </button>
 
-          {/* счетчик */}
-          <div style={{
-            color: "white",
-            fontSize: 18
-          }}>
+          <div style={{ color: "white" }}>
             {index + 1} / {cards.length}
           </div>
 
-          {/* → */}
-          <button
-            onClick={() => {
-              setShow(false);
-              setIndex((i) => {
-                if (randomMode) {
-                  return Math.floor(Math.random() * cards.length);
-                }
-                return (i + 1) % cards.length;
-              });
-            }}
-            style={{
-              width: 60,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 24,
-              border: "none"
-            }}
-          >
+          <button onClick={() => {
+            setShow(false);
+            setIndex((i) => {
+              if (randomMode) {
+                return Math.floor(Math.random() * cards.length);
+              }
+              return (i + 1) % cards.length;
+            });
+          }}>
             →
           </button>
-
         </div>
       </div>
 
