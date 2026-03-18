@@ -8,6 +8,7 @@ export default function App() {
   const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
+  const [randomMode, setRandomMode] = useState(false);
 
   // ================= ЗАГРУЗКА ТЕМ =================
   useEffect(() => {
@@ -270,24 +271,42 @@ export default function App() {
           boxSizing: "border-box"
         }}>
 
+          {/* ← */}
           <button
             onClick={() => {
               setShow(false);
               setIndex((i) => (i - 1 + cards.length) % cards.length);
             }}
             style={{
-              width: 70,
+              width: 60,
               height: 48,
               borderRadius: 16,
               background: "#020617",
               color: "white",
-              fontSize: 26,
+              fontSize: 24,
               border: "none"
             }}
           >
             ←
           </button>
 
+          {/* 🔀 */}
+          <button
+            onClick={() => setRandomMode(!randomMode)}
+            style={{
+              width: 60,
+              height: 48,
+              borderRadius: 16,
+              background: randomMode ? "#16a34a" : "#334155",
+              color: "white",
+              fontSize: 18,
+              border: "none"
+            }}
+          >
+            🔀
+          </button>
+
+          {/* счетчик */}
           <div style={{
             color: "white",
             fontSize: 18
@@ -295,18 +314,24 @@ export default function App() {
             {index + 1} / {cards.length}
           </div>
 
+          {/* → */}
           <button
             onClick={() => {
               setShow(false);
-              setIndex((i) => (i + 1) % cards.length);
+              setIndex((i) => {
+                if (randomMode) {
+                  return Math.floor(Math.random() * cards.length);
+                }
+                return (i + 1) % cards.length;
+              });
             }}
             style={{
-              width: 70,
+              width: 60,
               height: 48,
               borderRadius: 16,
               background: "#2563eb",
               color: "white",
-              fontSize: 26,
+              fontSize: 24,
               border: "none"
             }}
           >
