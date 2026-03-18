@@ -3,3 +3,4 @@ vehicles|Транспорт
 speed|Скорость
 words|Слова и выражения
 signs|Знаки
+parking|Парковка
