@@ -23,28 +23,43 @@ export default function App() {
   }, []);
 
   if (cards.length === 0) {
-    return <div style={{ padding: 40 }}>Загрузка...</div>;
+    return <div style={{ padding: 40, color: "white" }}>Загрузка...</div>;
   }
 
   return (
     <div style={{
-      maxWidth: 420,
-      margin: "0 auto",
-      padding: "30px 20px",
-      textAlign: "center",
+      minHeight: "100vh",
+      background: "#0f172a",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: 16,
       fontFamily: "Arial"
     }}>
-      
-      <h1 style={{ fontSize: 28, fontWeight: 800 }}>
+
+      {/* Заголовок */}
+      <h1 style={{
+        color: "white",
+        fontSize: "clamp(24px, 6vw, 36px)",
+        fontWeight: 800,
+        marginBottom: 20
+      }}>
         DGT Flashcards
       </h1>
 
       {/* Карточка */}
-      <div style={{ perspective: 1000, marginBottom: 40 }}>
+      <div style={{
+        width: "100%",
+        maxWidth: 420,
+        marginBottom: 20,
+        perspective: 1000
+      }}>
         <div
           onClick={() => setShow(!show)}
           style={{
-            height: 200,
+            width: "100%",
+            minHeight: 220,
             position: "relative",
             transformStyle: "preserve-3d",
             transition: "transform 0.5s",
@@ -52,20 +67,22 @@ export default function App() {
             cursor: "pointer"
           }}
         >
+
           {/* Вопрос */}
           <div style={{
             position: "absolute",
             width: "100%",
             height: "100%",
-            backfaceVisibility: "hidden",
-            background: "#f3f4f6",
-            borderRadius: 20,
+            background: "#e5e7eb",
+            borderRadius: 30,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: 20,
-            fontSize: 26,
-            fontWeight: 700
+            padding: 24,
+            fontSize: "clamp(20px, 5vw, 30px)",
+            fontWeight: 700,
+            textAlign: "center",
+            backfaceVisibility: "hidden"
           }}>
             {cards[index].question}
           </div>
@@ -75,42 +92,59 @@ export default function App() {
             position: "absolute",
             width: "100%",
             height: "100%",
-            backfaceVisibility: "hidden",
             background: "#2563eb",
             color: "white",
-            borderRadius: 20,
-            transform: "rotateY(180deg)",
+            borderRadius: 30,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: 32,
+            padding: 24,
+            fontSize: "clamp(24px, 6vw, 36px)",
             fontWeight: 800,
-            padding: 20
+            textAlign: "center",
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden"
           }}>
             {cards[index].answer}
           </div>
+
         </div>
       </div>
 
-      {/* Кнопки */}
+      {/* Панель */}
       <div style={{
+        width: "100%",
+        maxWidth: 420,
+        background: "#e5e7eb",
+        borderRadius: 30,
+        padding: 16,
         display: "flex",
-        justifyContent: "space-between",
         alignItems: "center",
-        padding: 15,
-        background: "#f1f5f9",
-        borderRadius: 20
+        justifyContent: "space-between"
       }}>
+
         <button
           onClick={() => {
             setShow(false);
             setIndex((i) => (i - 1 + cards.length) % cards.length);
           }}
+          style={{
+            width: 60,
+            height: 50,
+            borderRadius: 20,
+            background: "#111827",
+            color: "white",
+            fontSize: 24,
+            border: "none"
+          }}
         >
           ←
         </button>
 
-        <div>
+        <div style={{
+          fontSize: 18,
+          fontWeight: 600
+        }}>
           {index + 1} / {cards.length}
         </div>
 
@@ -119,10 +153,21 @@ export default function App() {
             setShow(false);
             setIndex((i) => (i + 1) % cards.length);
           }}
+          style={{
+            width: 60,
+            height: 50,
+            borderRadius: 20,
+            background: "#111827",
+            color: "white",
+            fontSize: 24,
+            border: "none"
+          }}
         >
           →
         </button>
+
       </div>
+
     </div>
   );
 }
