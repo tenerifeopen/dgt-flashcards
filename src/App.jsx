@@ -1,41 +1,7 @@
 import { useState } from "react";
+import { cards } from "./cards";
 
 export default function App() {
-  const cards = [
-    { question: "¿Cómo se considera a una persona que empuja un ciclomotor?", answer: "Peatón" },
-    { question: "Velocidad máxima: Turismo en carretera convencional", answer: "90 km/h" },
-    { question: "Velocidad máxima: Pick-up en autovía", answer: "120 km/h" },
-    { question: "Límite: Calle con plataforma única", answer: "20 km/h" },
-    { question: "Velocidad máxima: Vehículo mixto en autopista", answer: "100 km/h" },
-    { question: "Distancia de seguridad", answer: "2 - 3 seg" },
-    { question: "Velocidad máxima: Autobús en convencional", answer: "80 km/h" },
-    { question: "Límite: Vía urbana 2+ carriles por sentido", answer: "50 km/h" },
-    { question: "Velocidad máxima: Ciclomotor", answer: "45 km/h" },
-    { question: "Velocidad máxima: Calle residencial (S-28)", answer: "20 km/h" },
-    { question: "¿Puede un мопед ехать по автомагистрали?", answer: "No" },
-    { question: "Adelantamiento: ¿+20 km/h permitido?", answer: "No" },
-    { question: "Velocidad mínima: Autopista / Autovía", answer: "60 km/h" },
-    { question: "Velocidad máxima: Camión en convencional", answer: "80 km/h" },
-    { question: "Velocidad máxima: VMP", answer: "25 km/h" },
-    { question: "Reducción Mercancías Peligrosas", answer: "-10 km/h" },
-    { question: "Límite: Vía urbana 1 carril por sentido", answer: "30 km/h" },
-    { question: "Velocidad máxima: Turismo con remolque en autovía", answer: "90 km/h" },
-    { question: "¿Línea amarilla continua?", answer: "Prohibido parar/estacionar" },
-    { question: "¿Línea amarilla discontinua?", answer: "Prohibido estacionar" },
-    { question: "Alcohol: Novel", answer: "0.15 mg/l" },
-    { question: "Alcohol: General", answer: "0.25 mg/l" },
-    { question: "ITV: Turismo > 10 años", answer: "Anual" },
-    { question: "Chaleco reflectante: ¿Cuándo?", answer: "Vía interurbana" },
-    { question: "Velocidad máxima: Motocicleta en convencional", answer: "90 km/h" },
-    { question: "Uso de móvil con soporte", answer: "Permitido" },
-    { question: "Luz V-16", answer: "Luz de emergencia" },
-    { question: "Velocidad mínima: Convencional", answer: "45 km/h" },
-    { question: "Tractor con remolque: Máxima", answer: "25 km/h" },
-    { question: "Señal S-3", answer: "Vía para autos" },
-    { question: "¿Adelantar por la derecha en autopista?", answer: "No" },
-    { question: "¿Prioridad en glorietas?", answer: "El de dentro" }
-  ];
-
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
 
@@ -82,7 +48,7 @@ export default function App() {
             justifyContent: "center",
             padding: 20,
             fontWeight: 700,
-            fontSize: 24,
+            fontSize: 26,   // 👈 увеличенный текст
             color: "#1f2937"
           }}>
             {cards[index].question}
