@@ -8,6 +8,7 @@ export default function App() {
   const [randomMode, setRandomMode] = useState(false);
   const [favorites, setFavorites] = useState([]);
 
+  // загрузка карточек
   useEffect(() => {
     fetch("/cards/speed.txt")
       .then(res => res.text())
@@ -22,12 +23,13 @@ export default function App() {
           }));
 
         setCards(parsed);
-
-        const savedFav = localStorage.getItem("fav");
-        setFavorites(savedFav ? JSON.parse(savedFav) : []);
       });
+
+    const savedFav = localStorage.getItem("fav");
+    setFavorites(savedFav ? JSON.parse(savedFav) : []);
   }, []);
 
+  // сохранение избранного
   useEffect(() => {
     localStorage.setItem("fav", JSON.stringify(favorites));
   }, [favorites]);
@@ -36,7 +38,9 @@ export default function App() {
     return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
   }
 
-  const isFav = favorites.includes(index);
+  // 👉 УНИКАЛЬНЫЙ ID
+  const favId = "speed_" + index;
+  const isFav = favorites.includes(favId);
 
   return (
     <div style={{
@@ -50,33 +54,49 @@ export default function App() {
       boxSizing: "border-box"
     }}>
 
-      {/* ВЕРХ */}
+      {/* ШАПКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: 10
       }}>
         <div style={{ color: "#94a3b8", fontSize: 14 }}>
           tenerifeopen
         </div>
 
-        {/* 🔀 */}
         <button
           onClick={() => setRandomMode(!randomMode)}
           style={{
-            width: 48,
-            height: 48,
-            borderRadius: 12,
+            width: 50,
+            height: 50,
+            borderRadius: 14,
             background: randomMode ? "#16a34a" : "#334155",
             color: "white",
             border: "none",
-            fontSize: 20
+            fontSize: 22
           }}
         >
           🔀
         </button>
+      </div>
+
+      {/* 🔙 НАЗАД */}
+      <div
+        onClick={() => {
+          localStorage.clear(); // сброс
+          location.reload();
+        }}
+        style={{
+          alignSelf: "flex-start",
+          color: "#94a3b8",
+          marginBottom: 10,
+          cursor: "pointer"
+        }}
+      >
+        ← назад
       </div>
 
       {/* КАРТОЧКА */}
@@ -86,11 +106,9 @@ export default function App() {
         padding: "0 4px",
         boxSizing: "border-box"
       }}>
-
         <div style={{
           width: "100%",
-          height: 340, // 🔥 фикс вместо calc
-          marginTop: 20,
+          height: 360,
           perspective: 1000
         }}>
           <div
@@ -129,23 +147,22 @@ export default function App() {
                   e.stopPropagation();
 
                   if (isFav) {
-                    setFavorites(favorites.filter(f => f !== index));
+                    setFavorites(favorites.filter(f => f !== favId));
                   } else {
-                    setFavorites([...favorites, index]);
+                    setFavorites([...favorites, favId]);
                   }
                 }}
                 style={{
                   position: "absolute",
                   top: 10,
                   right: 10,
-                  width: 40,
-                  height: 40,
-                  borderRadius: 10,
+                  width: 42,
+                  height: 42,
+                  borderRadius: 12,
                   border: "none",
                   fontSize: 20,
-                  background: "#ffffffaa",
-                  color: isFav ? "#facc15" : "#64748b",
-                  zIndex: 10
+                  background: "#ffffffcc",
+                  color: isFav ? "#facc15" : "#64748b"
                 }}
               >
                 ⭐
@@ -175,13 +192,13 @@ export default function App() {
 
           </div>
         </div>
-
       </div>
 
       {/* ПАНЕЛЬ */}
       <div style={{
         position: "fixed",
         bottom: 0,
+        left: 0,
         width: "100%",
         padding: "12px 16px 20px",
         background: "linear-gradient(to top, #0f172a, transparent)"
