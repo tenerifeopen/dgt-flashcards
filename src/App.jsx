@@ -9,7 +9,7 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
 
-  // загрузка тем
+  // ================= ЗАГРУЗКА ТЕМ =================
   useEffect(() => {
     fetch("/topics.txt")
       .then(res => res.text())
@@ -24,10 +24,17 @@ export default function App() {
           }));
 
         setTopics(parsed);
+
+        // 🔥 восстановление темы
+        const savedTopic = localStorage.getItem("topic");
+        if (savedTopic) {
+          setTopic(savedTopic);
+          setScreen("cards");
+        }
       });
   }, []);
 
-  // загрузка карточек
+  // ================= ЗАГРУЗКА КАРТОЧЕК =================
   useEffect(() => {
     if (!topic) return;
 
@@ -44,17 +51,26 @@ export default function App() {
           }));
 
         setCards(parsed);
-        setIndex(0);
+
+        // 🔥 восстановление позиции
+        const savedIndex = localStorage.getItem("index");
+        setIndex(savedIndex ? Number(savedIndex) : 0);
+
         setShow(false);
       });
   }, [topic]);
 
-  // загрузка
+  // ================= СОХРАНЕНИЕ ИНДЕКСА =================
+  useEffect(() => {
+    localStorage.setItem("index", index);
+  }, [index]);
+
+  // ================= ЗАГРУЗКА =================
   if (topics.length === 0) {
     return <div style={{ padding: 40 }}>Загрузка...</div>;
   }
 
-  // ================= MENU =================
+  // ================= МЕНЮ =================
   if (screen === "menu") {
     return (
       <div style={{
@@ -92,6 +108,7 @@ export default function App() {
                 key={t.key}
                 onClick={() => {
                   setTopic(t.key);
+                  localStorage.setItem("topic", t.key);
                   setScreen("cards");
                 }}
                 style={{
@@ -100,7 +117,8 @@ export default function App() {
                   border: "none",
                   background: "#2563eb",
                   color: "white",
-                  fontSize: 16
+                  fontSize: 16,
+                  fontWeight: 600
                 }}
               >
                 {t.title}
@@ -112,9 +130,9 @@ export default function App() {
     );
   }
 
-  // ================= CARDS =================
+  // ================= КАРТОЧКИ =================
   if (cards.length === 0) {
-    return <div style={{ padding: 40 }}>Загрузка...</div>;
+    return <div style={{ padding: 40 }}>Нет карточек</div>;
   }
 
   return (
@@ -127,6 +145,7 @@ export default function App() {
       padding: "20px 12px 110px"
     }}>
 
+      {/* назад */}
       <div
         onClick={() => setScreen("menu")}
         style={{
@@ -139,6 +158,7 @@ export default function App() {
         ← назад
       </div>
 
+      {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420
@@ -147,6 +167,7 @@ export default function App() {
           width: "100%",
           height: "calc(100vh - 240px)",
           maxHeight: 420,
+          minHeight: 220,
           perspective: 1000
         }}>
           <div
@@ -161,6 +182,7 @@ export default function App() {
             }}
           >
 
+            {/* вопрос */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -172,12 +194,14 @@ export default function App() {
               justifyContent: "center",
               padding: 20,
               fontSize: "clamp(22px, 6vw, 28px)",
+              fontWeight: 700,
               textAlign: "center",
               backfaceVisibility: "hidden"
             }}>
               {cards[index].question}
             </div>
 
+            {/* ответ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -190,6 +214,7 @@ export default function App() {
               justifyContent: "center",
               padding: 20,
               fontSize: "clamp(24px, 7vw, 32px)",
+              fontWeight: 800,
               textAlign: "center",
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
@@ -201,6 +226,7 @@ export default function App() {
         </div>
       </div>
 
+      {/* панель */}
       <div style={{
         position: "fixed",
         bottom: 0,
