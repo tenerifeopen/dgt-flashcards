@@ -8,17 +8,19 @@ export default function App() {
   const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
-  const [randomMode, setRandomMode] = useState(false);
 
-  // ================= ЗАГРУЗКА ТЕМ =================
+  const [randomMode, setRandomMode] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+
+  // ================= ТЕМЫ =================
   useEffect(() => {
     fetch("/topics.txt")
       .then(res => res.text())
       .then(text => {
         const parsed = text
           .split("\n")
-          .map(line => line.split("|"))
-          .filter(arr => arr.length === 2)
+          .map(l => l.split("|"))
+          .filter(a => a.length === 2)
           .map(([key, title]) => ({
             key: key.trim(),
             title: title.trim()
@@ -34,11 +36,10 @@ export default function App() {
       });
   }, []);
 
-  // ================= ЗАГРУЗКА КАРТОЧЕК =================
+  // ================= КАРТОЧКИ =================
   useEffect(() => {
     if (!topic) return;
 
-    // 👉 сначала сбрасываем индекс
     setIndex(0);
 
     fetch(`/cards/${topic}.txt`)
@@ -46,8 +47,8 @@ export default function App() {
       .then(text => {
         const parsed = text
           .split("\n")
-          .map(line => line.split("="))
-          .filter(arr => arr.length === 2)
+          .map(l => l.split("="))
+          .filter(a => a.length === 2)
           .map(([q, a]) => ({
             question: q.trim(),
             answer: a.trim()
@@ -55,11 +56,11 @@ export default function App() {
 
         setCards(parsed);
 
-        // 👉 потом загружаем индекс ДЛЯ ЭТОЙ темы
         const savedIndex = localStorage.getItem("index_" + topic);
-        if (savedIndex !== null) {
-          setIndex(Number(savedIndex));
-        }
+        if (savedIndex !== null) setIndex(Number(savedIndex));
+
+        const savedFav = localStorage.getItem("fav_" + topic);
+        setFavorites(savedFav ? JSON.parse(savedFav) : []);
 
         setShow(false);
       });
@@ -69,23 +70,23 @@ export default function App() {
   useEffect(() => {
     if (topic) {
       localStorage.setItem("index_" + topic, index);
+      localStorage.setItem("fav_" + topic, JSON.stringify(favorites));
     }
-  }, [index, topic]);
+  }, [index, favorites, topic]);
 
-  // ================= ЗАГРУЗКА =================
+  // ================= МЕНЮ =================
   if (topics.length === 0) {
     return <div style={{ padding: 40 }}>Загрузка...</div>;
   }
 
-  // ================= МЕНЮ =================
   if (screen === "menu") {
     return (
       <div style={{
         minHeight: "100vh",
         background: "#e5e7eb",
         display: "flex",
-        alignItems: "center",
         justifyContent: "center",
+        alignItems: "center",
         padding: 20
       }}>
         <div style={{
@@ -95,11 +96,7 @@ export default function App() {
           borderRadius: 24,
           padding: 24
         }}>
-          <div style={{
-            fontSize: 22,
-            fontWeight: 700,
-            marginBottom: 20
-          }}>
+          <div style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>
             📚 Мои карточки
           </div>
 
@@ -119,13 +116,12 @@ export default function App() {
                   setScreen("cards");
                 }}
                 style={{
-                  padding: "14px 16px",
+                  padding: "14px",
                   borderRadius: 16,
                   border: "none",
                   background: "#2563eb",
                   color: "white",
-                  fontSize: 16,
-                  fontWeight: 600
+                  fontSize: 16
                 }}
               >
                 {t.title}
@@ -137,15 +133,16 @@ export default function App() {
     );
   }
 
-  // ================= КАРТОЧКИ =================
+  // ================= ПУСТО =================
   if (cards.length === 0) {
     return (
       <div style={{ color: "white", padding: 40 }}>
-        В этой теме пока нет карточек
+        Нет карточек в этой теме
       </div>
     );
   }
 
+  // ================= КАРТОЧКИ =================
   return (
     <div style={{
       minHeight: "100vh",
@@ -154,17 +151,36 @@ export default function App() {
       flexDirection: "column",
       alignItems: "center",
       padding: "20px 12px 110px",
-      fontFamily: "Arial",
-      boxSizing: "border-box"
+      fontFamily: "Arial"
     }}>
 
-      {/* ШАПКА */}
+      {/* ВЕРХ */}
       <div style={{
-        color: "#94a3b8",
-        fontSize: 14,
+        width: "100%",
+        maxWidth: 420,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
         marginBottom: 10
       }}>
-        tenerifeopen
+        <div style={{ color: "#94a3b8", fontSize: 14 }}>
+          tenerifeopen
+        </div>
+
+        {/* 🔀 сверху справа */}
+        <button
+          onClick={() => setRandomMode(!randomMode)}
+          style={{
+            background: randomMode ? "#16a34a" : "#334155",
+            color: "white",
+            border: "none",
+            borderRadius: 10,
+            padding: "6px 10px",
+            fontSize: 14
+          }}
+        >
+          🔀
+        </button>
       </div>
 
       {/* НАЗАД */}
@@ -200,11 +216,12 @@ export default function App() {
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "0.5s",
+              transition: "transform 0.5s",
               transform: show ? "rotateY(180deg)" : "rotateY(0deg)"
             }}
           >
 
+            {/* ВОПРОС */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -221,8 +238,34 @@ export default function App() {
               backfaceVisibility: "hidden"
             }}>
               {cards[index]?.question}
+
+              {/* ⭐ */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const id = index;
+
+                  if (favorites.includes(id)) {
+                    setFavorites(favorites.filter(f => f !== id));
+                  } else {
+                    setFavorites([...favorites, id]);
+                  }
+                }}
+                style={{
+                  position: "absolute",
+                  top: 10,
+                  right: 10,
+                  background: "transparent",
+                  border: "none",
+                  fontSize: 22,
+                  color: favorites.includes(index) ? "#facc15" : "#64748b"
+                }}
+              >
+                ⭐
+              </button>
             </div>
 
+            {/* ОТВЕТ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -252,7 +295,8 @@ export default function App() {
         position: "fixed",
         bottom: 0,
         width: "100%",
-        padding: "12px"
+        padding: "12px 16px 20px",
+        background: "linear-gradient(to top, #0f172a, transparent)"
       }}>
         <div style={{
           maxWidth: 420,
@@ -267,13 +311,9 @@ export default function App() {
         }}>
           <button onClick={() => {
             setShow(false);
-            setIndex((i) => (i - 1 + cards.length) % cards.length);
+            setIndex(i => (i - 1 + cards.length) % cards.length);
           }}>
             ←
-          </button>
-
-          <button onClick={() => setRandomMode(!randomMode)}>
-            🔀
           </button>
 
           <div style={{ color: "white" }}>
@@ -282,7 +322,7 @@ export default function App() {
 
           <button onClick={() => {
             setShow(false);
-            setIndex((i) => {
+            setIndex(i => {
               if (randomMode) {
                 return Math.floor(Math.random() * cards.length);
               }
