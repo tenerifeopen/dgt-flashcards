@@ -37,7 +37,7 @@ export default function App() {
       fontFamily: "Arial"
     }}>
 
-      {/* 🔝 ШАПКА */}
+      {/* ШАПКА */}
       <div style={{
         color: "#94a3b8",
         fontSize: 14,
@@ -46,7 +46,6 @@ export default function App() {
         tenerifeopen
       </div>
 
-      {/* 📦 ОБЩИЙ КОНТЕЙНЕР */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -55,12 +54,11 @@ export default function App() {
         alignItems: "center"
       }}>
 
-        {/* 🧠 КАРТОЧКА */}
+        {/* КАРТОЧКА */}
         <div style={{
           width: "100%",
-          height: "min(40vh, 300px)", // 🔥 ключ: меньше
-          perspective: 1000,
-          marginBottom: 20
+          height: "min(40vh, 300px)",
+          perspective: 1000
         }}>
           <div
             onClick={() => setShow(!show)}
@@ -123,28 +121,31 @@ export default function App() {
           </div>
         </div>
 
-        {/* 🔘 ПАНЕЛЬ (всегда видна) */}
+        {/* 🔥 ОПУЩЕННАЯ ПАНЕЛЬ */}
         <div style={{
           width: "100%",
-          height: 60,
+          height: 64,
           background: "#1e293b",
           borderRadius: 20,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 12px"
+          padding: "0 14px",
+          marginTop: 16, // ✅ вот твой 1 см вниз
+          boxShadow: "0 8px 20px rgba(0,0,0,0.4)"
         }}>
 
+          {/* ← КНОПКА (черная) */}
           <button
             onClick={() => {
               setShow(false);
               setIndex((i) => (i - 1 + cards.length) % cards.length);
             }}
             style={{
-              width: 60,
-              height: 40,
-              borderRadius: 12,
-              background: "#0f172a",
+              width: 64,
+              height: 44,
+              borderRadius: 14,
+              background: "#020617",
               color: "white",
               fontSize: 22,
               border: "none"
@@ -153,23 +154,26 @@ export default function App() {
             ←
           </button>
 
+          {/* СЧЕТЧИК */}
           <div style={{
             color: "white",
-            fontSize: 16
+            fontSize: 16,
+            fontWeight: 500
           }}>
             {index + 1} / {cards.length}
           </div>
 
+          {/* → КНОПКА (синяя как ответ) */}
           <button
             onClick={() => {
               setShow(false);
               setIndex((i) => (i + 1) % cards.length);
             }}
             style={{
-              width: 60,
-              height: 40,
-              borderRadius: 12,
-              background: "#0f172a",
+              width: 64,
+              height: 44,
+              borderRadius: 14,
+              background: "#2563eb",
               color: "white",
               fontSize: 22,
               border: "none"
