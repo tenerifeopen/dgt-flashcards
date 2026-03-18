@@ -1,0 +1,2 @@
+Velocidad máxima en ciudad = 50 km/h
+Velocidad en autopista = 120 km/h
