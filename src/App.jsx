@@ -25,7 +25,6 @@ export default function App() {
 
         setTopics(parsed);
 
-        // 🔥 восстановление темы
         const savedTopic = localStorage.getItem("topic");
         if (savedTopic) {
           setTopic(savedTopic);
@@ -52,7 +51,6 @@ export default function App() {
 
         setCards(parsed);
 
-        // 🔥 восстановление позиции
         const savedIndex = localStorage.getItem("index");
         setIndex(savedIndex ? Number(savedIndex) : 0);
 
@@ -60,7 +58,7 @@ export default function App() {
       });
   }, [topic]);
 
-  // ================= СОХРАНЕНИЕ ИНДЕКСА =================
+  // ================= СОХРАНЕНИЕ =================
   useEffect(() => {
     localStorage.setItem("index", index);
   }, [index]);
@@ -112,7 +110,7 @@ export default function App() {
                   setScreen("cards");
                 }}
                 style={{
-                  padding: "14px",
+                  padding: "14px 16px",
                   borderRadius: 16,
                   border: "none",
                   background: "#2563eb",
@@ -132,7 +130,7 @@ export default function App() {
 
   // ================= КАРТОЧКИ =================
   if (cards.length === 0) {
-    return <div style={{ padding: 40 }}>Нет карточек</div>;
+    return <div style={{ color: "white", padding: 40 }}>Нет карточек</div>;
   }
 
   return (
@@ -142,10 +140,21 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "20px 12px 110px"
+      padding: "20px 12px 110px",
+      fontFamily: "Arial",
+      boxSizing: "border-box"
     }}>
 
-      {/* назад */}
+      {/* ШАПКА */}
+      <div style={{
+        color: "#94a3b8",
+        fontSize: 14,
+        marginBottom: 10
+      }}>
+        tenerifeopen
+      </div>
+
+      {/* НАЗАД */}
       <div
         onClick={() => setScreen("menu")}
         style={{
@@ -158,11 +167,15 @@ export default function App() {
         ← назад
       </div>
 
-      {/* карточка */}
+      {/* КОНТЕЙНЕР */}
       <div style={{
         width: "100%",
-        maxWidth: 420
+        maxWidth: 420,
+        padding: "0 4px",
+        boxSizing: "border-box"
       }}>
+
+        {/* КАРТОЧКА */}
         <div style={{
           width: "100%",
           height: "calc(100vh - 240px)",
@@ -177,12 +190,13 @@ export default function App() {
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "0.5s",
-              transform: show ? "rotateY(180deg)" : "rotateY(0deg)"
+              transition: "transform 0.5s",
+              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
+              cursor: "pointer"
             }}
           >
 
-            {/* вопрос */}
+            {/* ВОПРОС */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -193,15 +207,19 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
+              boxSizing: "border-box",
               fontSize: "clamp(22px, 6vw, 28px)",
               fontWeight: 700,
+              color: "#111827",
               textAlign: "center",
+              lineHeight: 1.3,
+              wordBreak: "break-word",
               backfaceVisibility: "hidden"
             }}>
               {cards[index].question}
             </div>
 
-            {/* ответ */}
+            {/* ОТВЕТ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -213,9 +231,12 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
+              boxSizing: "border-box",
               fontSize: "clamp(24px, 7vw, 32px)",
               fontWeight: 800,
               textAlign: "center",
+              lineHeight: 1.3,
+              wordBreak: "break-word",
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}>
@@ -224,14 +245,17 @@ export default function App() {
 
           </div>
         </div>
+
       </div>
 
-      {/* панель */}
+      {/* НИЖНЯЯ ПАНЕЛЬ */}
       <div style={{
         position: "fixed",
         bottom: 0,
+        left: 0,
         width: "100%",
-        padding: "12px"
+        padding: "12px 16px 20px",
+        background: "linear-gradient(to top, #0f172a, transparent)"
       }}>
         <div style={{
           maxWidth: 420,
@@ -242,25 +266,53 @@ export default function App() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 16px"
+          padding: "0 16px",
+          boxSizing: "border-box"
         }}>
-          <button onClick={() => {
-            setShow(false);
-            setIndex((i) => (i - 1 + cards.length) % cards.length);
-          }}>
+
+          <button
+            onClick={() => {
+              setShow(false);
+              setIndex((i) => (i - 1 + cards.length) % cards.length);
+            }}
+            style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#020617",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}
+          >
             ←
           </button>
 
-          <div style={{ color: "white" }}>
+          <div style={{
+            color: "white",
+            fontSize: 18
+          }}>
             {index + 1} / {cards.length}
           </div>
 
-          <button onClick={() => {
-            setShow(false);
-            setIndex((i) => (i + 1) % cards.length);
-          }}>
+          <button
+            onClick={() => {
+              setShow(false);
+              setIndex((i) => (i + 1) % cards.length);
+            }}
+            style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#2563eb",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}
+          >
             →
           </button>
+
         </div>
       </div>
 
