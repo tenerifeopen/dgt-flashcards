@@ -5,10 +5,9 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
 
-  const [randomMode, setRandomMode] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [randomMode, setRandomMode] = useState(false);
 
-  // загрузка карточек
   useEffect(() => {
     fetch("/cards/speed.txt")
       .then(res => res.text())
@@ -25,11 +24,10 @@ export default function App() {
         setCards(parsed);
       });
 
-    const savedFav = localStorage.getItem("fav");
-    setFavorites(savedFav ? JSON.parse(savedFav) : []);
+    const saved = localStorage.getItem("fav");
+    setFavorites(saved ? JSON.parse(saved) : []);
   }, []);
 
-  // сохранение избранного
   useEffect(() => {
     localStorage.setItem("fav", JSON.stringify(favorites));
   }, [favorites]);
@@ -38,8 +36,7 @@ export default function App() {
     return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
   }
 
-  // 👉 УНИКАЛЬНЫЙ ID
-  const favId = "speed_" + index;
+  const favId = index;
   const isFav = favorites.includes(favId);
 
   return (
@@ -50,18 +47,16 @@ export default function App() {
       flexDirection: "column",
       alignItems: "center",
       padding: "20px 12px 110px",
-      fontFamily: "Arial",
-      boxSizing: "border-box"
+      fontFamily: "Arial"
     }}>
 
-      {/* ШАПКА */}
+      {/* верх */}
       <div style={{
         width: "100%",
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: 10
+        alignItems: "center"
       }}>
         <div style={{ color: "#94a3b8", fontSize: 14 }}>
           tenerifeopen
@@ -76,19 +71,16 @@ export default function App() {
             background: randomMode ? "#16a34a" : "#334155",
             color: "white",
             border: "none",
-            fontSize: 22
+            fontSize: 20
           }}
         >
           🔀
         </button>
       </div>
 
-      {/* 🔙 НАЗАД */}
+      {/* назад */}
       <div
-        onClick={() => {
-          localStorage.clear(); // сброс
-          location.reload();
-        }}
+        onClick={() => location.reload()}
         style={{
           alignSelf: "flex-start",
           color: "#94a3b8",
@@ -99,16 +91,44 @@ export default function App() {
         ← назад
       </div>
 
-      {/* КАРТОЧКА */}
+      {/* КАРТОЧКА + ⭐ ВНЕ ЕЁ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 4px",
-        boxSizing: "border-box"
+        position: "relative"
       }}>
+
+        {/* ⭐ ВАЖНО — ВНЕ flip */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+
+            if (isFav) {
+              setFavorites(favorites.filter(f => f !== favId));
+            } else {
+              setFavorites([...favorites, favId]);
+            }
+          }}
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 10,
+            width: 44,
+            height: 44,
+            borderRadius: 12,
+            border: "none",
+            fontSize: 22,
+            background: "#ffffffcc",
+            color: isFav ? "#facc15" : "#64748b",
+            zIndex: 100
+          }}
+        >
+          ⭐
+        </button>
+
         <div style={{
           width: "100%",
-          height: 360,
+          height: 340,
           perspective: 1000
         }}>
           <div
@@ -123,7 +143,7 @@ export default function App() {
             }}
           >
 
-            {/* ВОПРОС */}
+            {/* вопрос */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -140,36 +160,9 @@ export default function App() {
               backfaceVisibility: "hidden"
             }}>
               {cards[index].question}
-
-              {/* ⭐ */}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-
-                  if (isFav) {
-                    setFavorites(favorites.filter(f => f !== favId));
-                  } else {
-                    setFavorites([...favorites, favId]);
-                  }
-                }}
-                style={{
-                  position: "absolute",
-                  top: 10,
-                  right: 10,
-                  width: 42,
-                  height: 42,
-                  borderRadius: 12,
-                  border: "none",
-                  fontSize: 20,
-                  background: "#ffffffcc",
-                  color: isFav ? "#facc15" : "#64748b"
-                }}
-              >
-                ⭐
-              </button>
             </div>
 
-            {/* ОТВЕТ */}
+            {/* ответ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -194,11 +187,10 @@ export default function App() {
         </div>
       </div>
 
-      {/* ПАНЕЛЬ */}
+      {/* панель */}
       <div style={{
         position: "fixed",
         bottom: 0,
-        left: 0,
         width: "100%",
         padding: "12px 16px 20px",
         background: "linear-gradient(to top, #0f172a, transparent)"
@@ -218,7 +210,7 @@ export default function App() {
           <button
             onClick={() => {
               setShow(false);
-              setIndex((i) => (i - 1 + cards.length) % cards.length);
+              setIndex(i => (i - 1 + cards.length) % cards.length);
             }}
             style={{
               width: 70,
@@ -233,14 +225,14 @@ export default function App() {
             ←
           </button>
 
-          <div style={{ color: "white", fontSize: 18 }}>
+          <div style={{ color: "white" }}>
             {index + 1} / {cards.length}
           </div>
 
           <button
             onClick={() => {
               setShow(false);
-              setIndex((i) => {
+              setIndex(i => {
                 if (randomMode) {
                   return Math.floor(Math.random() * cards.length);
                 }
