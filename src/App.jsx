@@ -33,8 +33,8 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
-      padding: 16,
+      justifyContent: "flex-start",
+      padding: "20px 16px",
       fontFamily: "Arial"
     }}>
 
@@ -52,14 +52,15 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginBottom: 20,
+        height: "55vh",        // 🔥 ключевая строка
+        marginBottom: 24,
         perspective: 1000
       }}>
         <div
           onClick={() => setShow(!show)}
           style={{
             width: "100%",
-            minHeight: 220,
+            height: "100%",
             position: "relative",
             transformStyle: "preserve-3d",
             transition: "transform 0.5s",
@@ -79,7 +80,7 @@ export default function App() {
             alignItems: "center",
             justifyContent: "center",
             padding: 24,
-            fontSize: "clamp(20px, 5vw, 30px)",
+            fontSize: "clamp(20px, 5vw, 32px)",
             fontWeight: 700,
             textAlign: "center",
             backfaceVisibility: "hidden"
@@ -99,7 +100,7 @@ export default function App() {
             alignItems: "center",
             justifyContent: "center",
             padding: 24,
-            fontSize: "clamp(24px, 6vw, 36px)",
+            fontSize: "clamp(24px, 6vw, 40px)",
             fontWeight: 800,
             textAlign: "center",
             transform: "rotateY(180deg)",
@@ -111,7 +112,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* Панель */}
+      {/* Панель управления */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -129,12 +130,12 @@ export default function App() {
             setIndex((i) => (i - 1 + cards.length) % cards.length);
           }}
           style={{
-            width: 60,
-            height: 50,
+            width: 70,
+            height: 55,
             borderRadius: 20,
             background: "#111827",
             color: "white",
-            fontSize: 24,
+            fontSize: 26,
             border: "none"
           }}
         >
@@ -142,8 +143,8 @@ export default function App() {
         </button>
 
         <div style={{
-          fontSize: 18,
-          fontWeight: 600
+          fontSize: 20,
+          fontWeight: 700
         }}>
           {index + 1} / {cards.length}
         </div>
@@ -154,12 +155,12 @@ export default function App() {
             setIndex((i) => (i + 1) % cards.length);
           }}
           style={{
-            width: 60,
-            height: 50,
+            width: 70,
+            height: 55,
             borderRadius: 20,
             background: "#111827",
             color: "white",
-            fontSize: 24,
+            fontSize: 26,
             border: "none"
           }}
         >
