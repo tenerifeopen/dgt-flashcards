@@ -82,6 +82,7 @@ export default function App() {
             justifyContent: "center",
             padding: 20,
             fontWeight: 700,
+            fontSize: 24,
             color: "#1f2937"
           }}>
             {cards[index].question}
