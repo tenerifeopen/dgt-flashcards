@@ -33,35 +33,35 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "space-between",
-      padding: "50px 16px 20px",
-      boxSizing: "border-box",
+      justifyContent: "center", // ✅ ВАЖНО (было space-between)
+      padding: "20px 16px",
       fontFamily: "Arial"
     }}>
 
-      {/* Заголовок */}
-      <h1 style={{
-        color: "white",
-        fontSize: "clamp(24px, 6vw, 36px)",
-        fontWeight: 800,
-        margin: 0
-      }}>
-        DGT Flashcards
-      </h1>
-
-      {/* Центральный блок */}
+      {/* Контейнер */}
       <div style={{
         width: "100%",
         maxWidth: 420,
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
         gap: 20
       }}>
+
+        {/* Заголовок */}
+        <h1 style={{
+          color: "white",
+          fontSize: "clamp(24px, 6vw, 36px)",
+          fontWeight: 800,
+          margin: 0
+        }}>
+          DGT Flashcards
+        </h1>
 
         {/* Карточка */}
         <div style={{
           width: "100%",
-          height: "min(55vh, 420px)", // ✅ фикс высоты
+          height: "min(50vh, 380px)", // 🔥 уменьшили
           perspective: 1000
         }}>
           <div
@@ -88,7 +88,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 24,
-              fontSize: "clamp(26px, 7vw, 40px)", // 🔥 УВЕЛИЧИЛ
+              fontSize: "clamp(26px, 7vw, 36px)",
               fontWeight: 800,
               textAlign: "center",
               lineHeight: 1.2,
@@ -109,7 +109,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 24,
-              fontSize: "clamp(30px, 8vw, 44px)", // 🔥 ЕЩЁ КРУПНЕЕ
+              fontSize: "clamp(32px, 8vw, 42px)",
               fontWeight: 900,
               textAlign: "center",
               lineHeight: 1.2,
@@ -127,7 +127,7 @@ export default function App() {
           width: "100%",
           background: "#e5e7eb",
           borderRadius: 28,
-          padding: "16px 18px",
+          padding: "14px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between"
@@ -139,12 +139,12 @@ export default function App() {
               setIndex((i) => (i - 1 + cards.length) % cards.length);
             }}
             style={{
-              width: 80,
-              height: 55,
+              width: 75,
+              height: 50,
               borderRadius: 22,
               background: "#0f172a",
               color: "white",
-              fontSize: 30,
+              fontSize: 28,
               border: "none"
             }}
           >
@@ -164,12 +164,12 @@ export default function App() {
               setIndex((i) => (i + 1) % cards.length);
             }}
             style={{
-              width: 80,
-              height: 55,
+              width: 75,
+              height: 50,
               borderRadius: 22,
               background: "#0f172a",
               color: "white",
-              fontSize: 30,
+              fontSize: 28,
               border: "none"
             }}
           >
@@ -179,8 +179,6 @@ export default function App() {
         </div>
 
       </div>
-
-      <div style={{ height: 10 }} />
 
     </div>
   );
