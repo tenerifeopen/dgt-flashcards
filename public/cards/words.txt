@@ -139,3 +139,51 @@ Limpiaparabrisas atrás = дворники сзади
 Desactivamos Start-Stop = выключить старт-стоп
 Claxon = сигнал
 Ponemos el aire acondicionado = включить кондиционер
+causar accidentes.= вызывать аварии
+un cambio de sentido = смена направления движения (разворот)
+En aquellos lugares habilitados por la señalización = В тех местах, где это разрешается указаниями.
+¿cuál es su tasa máxima permitida de alcohol? = каков максимально позволенный уровень алкоголя?
+fotocopia esté debidamente cotejada.=  заверена должным образом.
+no podrán superar la tasa de...  = не смогут превышать уровень в…
+durante los dos años = в течение двух лет
+Se puede conducir = Можно ли водить 
+¿Qué tiene que hacer = Что вам необходимо сделать,
+caducado la vigencia = просрочился срок действия
+Solicitar la prórroga = Запросить продление
+Hace un año que = Прошёл год с тех пор, как
+no sea superior a 3.500 kilogramos = не более 3500 килограммов
+algún riesgo para la conducción? = любой риск для вождения
+por litro de aire espirado = на литр выдыхаемого воздуха
+colocar la placa "L" = расположить табличку ¨L¨
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

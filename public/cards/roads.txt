@@ -92,3 +92,5 @@
 ¿Qué hacer al incorporarse? = Уступить дорогу
 ¿Qué significa prioridad? = Преимущество движения
 Un turismo que arrastra un remolque ligero, ¿a qué velocidad máxima puede circular por autopista o autovía? = 90
+¿puede un turismo aumentar la velocidad máxima permitida para adelantar? = Нет (может ли легковой автомобиль увеличивать максимально разрешенную скорость для обгона?)
+
