@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const topics = [
-  { name: "Дороги", file: "/roads.txt" },
-  { name: "Транспорт", file: "/vehicles.txt" },
-  { name: "Скорость", file: "/speed.txt" },
-  { name: "Слова и выражения", file: "/words.txt" },
-  { name: "Знаки", file: "/signs.txt" },
-  { name: "Парковка", file: "/parking.txt" }
+  { name: "Дороги", file: "/cards/roads.txt" },
+  { name: "Транспорт", file: "/cards/vehicles.txt" },
+  { name: "Скорость", file: "/cards/speed.txt" },
+  { name: "Слова и выражения", file: "/cards/words.txt" },
+  { name: "Знаки", file: "/cards/signs.txt" },
+  { name: "Парковка", file: "/cards/parking.txt" }
 ];
+
 export default function App() {
   const [screen, setScreen] = useState("menu");
   const [cards, setCards] = useState([]);
@@ -32,15 +33,20 @@ export default function App() {
         setIndex(0);
         setShow(false);
         setScreen("cards");
+      })
+      .catch(() => {
+        alert("Ошибка загрузки файла");
       });
   };
 
-  const toggleFavorite = () => {
-    const current = cards[index].question;
-    if (favorites.includes(current)) {
-      setFavorites(favorites.filter(f => f !== current));
+  const toggleFavorite = (e) => {
+    e.stopPropagation();
+    const q = cards[index].question;
+
+    if (favorites.includes(q)) {
+      setFavorites(favorites.filter(f => f !== q));
     } else {
-      setFavorites([...favorites, current]);
+      setFavorites([...favorites, q]);
     }
   };
 
@@ -126,7 +132,6 @@ export default function App() {
 
         <div>tenerifeopen</div>
 
-        {/* 🔀 */}
         <button
           onClick={shuffle}
           style={{
@@ -143,15 +148,13 @@ export default function App() {
         </button>
       </div>
 
-      {/* КОНТЕЙНЕР */}
+      {/* КАРТОЧКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
         padding: "0 4px",
         boxSizing: "border-box"
       }}>
-
-        {/* КАРТОЧКА */}
         <div style={{
           width: "100%",
           height: "calc(100vh - 240px)",
@@ -174,16 +177,13 @@ export default function App() {
 
             {/* ⭐ */}
             <div
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleFavorite();
-              }}
+              onClick={toggleFavorite}
               style={{
                 position: "absolute",
                 top: 10,
                 right: 10,
-                fontSize: 24,
-                zIndex: 2
+                fontSize: 26,
+                zIndex: 5
               }}
             >
               {favorites.includes(cards[index].question) ? "⭐" : "☆"}
@@ -238,7 +238,6 @@ export default function App() {
 
           </div>
         </div>
-
       </div>
 
       {/* НИЖНЯЯ ПАНЕЛЬ */}
@@ -264,7 +263,7 @@ export default function App() {
 
           <button onClick={() => {
             setShow(false);
-            setIndex((i) => (i - 1 + cards.length) % cards.length);
+            setIndex(i => (i - 1 + cards.length) % cards.length);
           }} style={{
             width: 70,
             height: 48,
@@ -281,7 +280,7 @@ export default function App() {
 
           <button onClick={() => {
             setShow(false);
-            setIndex((i) => (i + 1) % cards.length);
+            setIndex(i => (i + 1) % cards.length);
           }} style={{
             width: 70,
             height: 48,

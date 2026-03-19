@@ -1,4 +1,0 @@
-¿Línea amarilla continua? = Prohibido parar/estacionar
-Velocidad máxima turismo = 90 km/h
-Alcohol general = 0.25 mg/l
-Distancia de seguridad = 2-3 seg
