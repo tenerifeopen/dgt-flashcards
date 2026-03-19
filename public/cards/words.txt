@@ -174,7 +174,7 @@ tiene una antigüedad de un año y medio = Имеет стаж полтора г
  no se pretende adelantar = Не намереваетесь обогнать
 La distancia de seguridad = Безопасное расстояние
 que circule detrás=тот, кто едет сзади
-frenado brusco=frenado brusco
+frenado brusco=резкое торможение
 
 
 
