@@ -155,6 +155,12 @@ no sea superior a 3.500 kilogramos = не более 3500 килограммов
 algún riesgo para la conducción? = любой риск для вождения
 por litro de aire espirado = на литр выдыхаемого воздуха
 colocar la placa "L" = расположить табличку ¨L¨
+superando la tasa de alcohol = Превышая уровень алкоголя
+antigüedad del permiso = возраст разрешения
+arrastra un remolque ligero = буксировка лёгкого прицепа
+arrojar cualquier objeto = бросить любой предмет
+sus inmediaciones. =  его окрестности
+qué permiso se necesita? = Какое разрешение необходимо?
 
 
 
