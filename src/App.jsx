@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
 const topics = [
-  { name: "Дороги", file: "/cards/roads.txt" },
-  { name: "Транспорт", file: "/cards/transport.txt" },
-  { name: "Скорость", file: "/cards/speed.txt" },
-  { name: "Слова", file: "/cards/words.txt" }
+  { name: "Дороги", file: "/roads.txt" },
+  { name: "Транспорт", file: "/vehicles.txt" },
+  { name: "Скорость", file: "/speed.txt" },
+  { name: "Слова и выражения", file: "/words.txt" },
+  { name: "Знаки", file: "/signs.txt" },
+  { name: "Парковка", file: "/parking.txt" }
 ];
-
 export default function App() {
   const [screen, setScreen] = useState("menu");
   const [cards, setCards] = useState([]);
