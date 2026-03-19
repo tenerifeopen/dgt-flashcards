@@ -91,4 +91,4 @@
 ¿Qué hacer antes de frenar? = Проверить зеркала
 ¿Qué hacer al incorporarse? = Уступить дорогу
 ¿Qué significa prioridad? = Преимущество движения
-
+Un turismo que arrastra un remolque ligero, ¿a qué velocidad máxima puede circular por autopista o autovía? = 90
