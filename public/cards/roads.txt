@@ -93,4 +93,44 @@
 ¿Qué significa prioridad? = Преимущество движения
 Un turismo que arrastra un remolque ligero, ¿a qué velocidad máxima puede circular por autopista o autovía? = 90
 ¿puede un turismo aumentar la velocidad máxima permitida para adelantar? = Нет (может ли легковой автомобиль увеличивать максимально разрешенную скорость для обгона?)
+Los conjuntos de vehículos de más de 10 metros de longitud.=separación mínima de 50 metros con el vehículo de delante/Минимальное расстояние до впереди идущего транспортного средства — 50 метров.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
