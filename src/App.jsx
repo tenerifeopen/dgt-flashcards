@@ -1,16 +1,20 @@
-//Test 1234
 import { useEffect, useState } from "react";
 
+const topics = [
+  { name: "Дороги", file: "/cards/roads.txt" },
+  { name: "Транспорт", file: "/cards/transport.txt" },
+  { name: "Скорость", file: "/cards/speed.txt" },
+  { name: "Слова", file: "/cards/words.txt" }
+];
+
 export default function App() {
+  const [screen, setScreen] = useState("menu");
   const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
 
-  const [favorites, setFavorites] = useState([]);
-  const [randomMode, setRandomMode] = useState(false);
-
-  useEffect(() => {
-    fetch("/cards/speed.txt")
+  const loadTopic = (file) => {
+    fetch(file)
       .then(res => res.text())
       .then(text => {
         const parsed = text
@@ -23,22 +27,56 @@ export default function App() {
           }));
 
         setCards(parsed);
+        setIndex(0);
+        setShow(false);
+        setScreen("cards");
       });
+  };
 
-    const saved = localStorage.getItem("fav");
-    setFavorites(saved ? JSON.parse(saved) : []);
-  }, []);
+  if (screen === "menu") {
+    return (
+      <div style={{
+        minHeight: "100vh",
+        background: "#0f172a",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontFamily: "Arial"
+      }}>
+        <div style={{
+          background: "#e5e7eb",
+          padding: 20,
+          borderRadius: 20,
+          width: 320
+        }}>
+          <h2 style={{ textAlign: "center" }}>📚 Мои карточки</h2>
 
-  useEffect(() => {
-    localStorage.setItem("fav", JSON.stringify(favorites));
-  }, [favorites]);
+          {topics.map((t, i) => (
+            <button
+              key={i}
+              onClick={() => loadTopic(t.file)}
+              style={{
+                width: "100%",
+                marginTop: 10,
+                padding: 14,
+                borderRadius: 12,
+                border: "none",
+                background: "#2563eb",
+                color: "white",
+                fontSize: 16
+              }}
+            >
+              {t.name}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (cards.length === 0) {
     return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
   }
-
-  const favId = index;
-  const isFav = favorites.includes(favId);
 
   return (
     <div style={{
@@ -51,39 +89,10 @@ export default function App() {
       fontFamily: "Arial"
     }}>
 
-      {/* верх */}
-      <div style={{
-        width: "100%",
-        maxWidth: 420,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center"
-      }}>
-        <div style={{ color: "#94a3b8", fontSize: 14 }}>
-          tenerifeopen
-        </div>
-
-        <button
-          onClick={() => setRandomMode(!randomMode)}
-          style={{
-            width: 50,
-            height: 50,
-            borderRadius: 14,
-            background: randomMode ? "#16a34a" : "#334155",
-            color: "white",
-            border: "none",
-            fontSize: 20
-          }}
-        >
-          🔀
-        </button>
-      </div>
-
       {/* назад */}
       <div
-        onClick={() => location.reload()}
+        onClick={() => setScreen("menu")}
         style={{
-          alignSelf: "flex-start",
           color: "#94a3b8",
           marginBottom: 10,
           cursor: "pointer"
@@ -92,44 +101,14 @@ export default function App() {
         ← назад
       </div>
 
-      {/* КАРТОЧКА + ⭐ ВНЕ ЕЁ */}
+      {/* карточка */}
       <div style={{
         width: "100%",
-        maxWidth: 420,
-        position: "relative"
+        maxWidth: 420
       }}>
-
-        {/* ⭐ ВАЖНО — ВНЕ flip */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-
-            if (isFav) {
-              setFavorites(favorites.filter(f => f !== favId));
-            } else {
-              setFavorites([...favorites, favId]);
-            }
-          }}
-          style={{
-            position: "absolute",
-            top: 10,
-            right: 10,
-            width: 44,
-            height: 44,
-            borderRadius: 12,
-            border: "none",
-            fontSize: 22,
-            background: "#ffffffcc",
-            color: isFav ? "#facc15" : "#64748b",
-            zIndex: 100
-          }}
-        >
-          ⭐
-        </button>
-
         <div style={{
           width: "100%",
-          height: 340,
+          height: 300,
           perspective: 1000
         }}>
           <div
@@ -139,12 +118,10 @@ export default function App() {
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "0.5s",
+              transition: "transform 0.5s",
               transform: show ? "rotateY(180deg)" : "rotateY(0deg)"
             }}
           >
-
-            {/* вопрос */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -154,16 +131,15 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 20,
-              fontSize: "clamp(22px, 6vw, 28px)",
+              fontSize: 22,
               fontWeight: 700,
               textAlign: "center",
+              padding: 20,
               backfaceVisibility: "hidden"
             }}>
               {cards[index].question}
             </div>
 
-            {/* ответ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -174,16 +150,15 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 20,
-              fontSize: "clamp(24px, 7vw, 32px)",
+              fontSize: 24,
               fontWeight: 800,
               textAlign: "center",
+              padding: 20,
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}>
               {cards[index].answer}
             </div>
-
           </div>
         </div>
       </div>
@@ -193,66 +168,30 @@ export default function App() {
         position: "fixed",
         bottom: 0,
         width: "100%",
-        padding: "12px 16px 20px",
-        background: "linear-gradient(to top, #0f172a, transparent)"
+        padding: 20
       }}>
         <div style={{
           maxWidth: 420,
           margin: "0 auto",
-          height: 70,
-          background: "#1e293b",
-          borderRadius: 24,
           display: "flex",
-          alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 16px"
+          background: "#1e293b",
+          borderRadius: 20,
+          padding: 10
         }}>
-
-          <button
-            onClick={() => {
-              setShow(false);
-              setIndex(i => (i - 1 + cards.length) % cards.length);
-            }}
-            style={{
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#020617",
-              color: "white",
-              fontSize: 26,
-              border: "none"
-            }}
-          >
-            ←
-          </button>
+          <button onClick={() => {
+            setShow(false);
+            setIndex(i => (i - 1 + cards.length) % cards.length);
+          }}>←</button>
 
           <div style={{ color: "white" }}>
             {index + 1} / {cards.length}
           </div>
 
-          <button
-            onClick={() => {
-              setShow(false);
-              setIndex(i => {
-                if (randomMode) {
-                  return Math.floor(Math.random() * cards.length);
-                }
-                return (i + 1) % cards.length;
-              });
-            }}
-            style={{
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 26,
-              border: "none"
-            }}
-          >
-            →
-          </button>
-
+          <button onClick={() => {
+            setShow(false);
+            setIndex(i => (i + 1) % cards.length);
+          }}>→</button>
         </div>
       </div>
 
