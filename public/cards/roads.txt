@@ -101,7 +101,26 @@ sin colisionar con ella=не столкнувшись с ним
 Mantener la distancia de seguridad= Соблюдайте безопасную дистанцию.
 En un túnel, si no pretende adelantar, ¿qué distancia mínima debe mantener? = В тоннеле, если не собирается обгонять, какую минимальную дистанцию нужно держать? (100 метров или 4 секунды)
 Si circula por un túnel con vehículos de menos de 3.500 kg de MMA, ¿qué separación debe dejar si no pretende adelantar? = Если движется в тоннеле на транспортном средстве до 3500 кг и не собирается обгонять, какую дистанцию нужно держать? (не менее 100 метров)
-
+carril VAO = полоса для машин с несколькими пассажирами
+VAO = Vehículos de Alta Ocupación
+¿Qué es un carril VAO? = Что такое полоса VAO? (полоса для транспортных средств с несколькими пассажирами)
+¿Qué significa VAO? = Что означает VAO? (Vehículos de Alta Ocupación / транспорт с высокой заполняемостью)
+¿Cuántas personas mínimo se necesitan normalmente para usar un carril VAO? = Сколько минимум человек нужно для использования полосы VAO? (2 человека)
+¿Puede un turismo con un solo ocupante usar un carril VAO? = Может ли легковой автомобиль с одним водителем использовать полосу VAO? (no / нет)
+¿Puede una motocicleta utilizar un carril VAO? = Может ли мотоцикл использовать полосу VAO? (sí / да, обычно разрешено)
+¿Cómo se identifica un carril VAO? = Как определить полосу VAO? (знак с ромбом и надпись VAO)
+Tomando las debidas precauciones=Принятие необходимых мер предосторожности
+Una persona en silla de ruedas=Человек в инвалидной коляске
+Si no existe espacio reservado para peatones=Если нет места, отведенного для пешеходов
+Sí, cuando no existe arcén o no es transitable.=Да, если нет обочины или проход невозможен.
+tome las debidas precauciones=Примите необходимые меры предосторожности
+justificado por razones de mayor seguridad.=оправдано соображениями большей безопасности
+discapacidad=инвалидность
+personas con discapacidad en silla de ruedas = люди с инвалидностью в инвалидной коляске
+ razones de mayor seguridad.=причины для повышения безопасности
+debe obedecer las señales de los Agentes=должны подчиняться сигналам Агентов.
+En un paso de peatones señalizado=На обозначенном пешеходном переходе
+Rodeando la glorieta.=Объезжая кольцевую развязку
 
 
 
