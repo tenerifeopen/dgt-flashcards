@@ -175,6 +175,11 @@ tiene una antigüedad de un año y medio = Имеет стаж полтора г
 La distancia de seguridad = Безопасное расстояние
 que circule detrás=тот, кто едет сзади
 frenado brusco=резкое торможение
+sin colisionar con él.=не столкнувшись с ним
+la velocidad y las condiciones de adherencia y frenado.=скорость, сцепление и условия торможения
+si no va a adelantar=если вы не собираетесь обгонять
+
+
 
 
 

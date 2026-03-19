@@ -94,6 +94,16 @@
 Un turismo que arrastra un remolque ligero, ¿a qué velocidad máxima puede circular por autopista o autovía? = 90
 ¿puede un turismo aumentar la velocidad máxima permitida para adelantar? = Нет (может ли легковой автомобиль увеличивать максимально разрешенную скорость для обгона?)
 Los conjuntos de vehículos de más de 10 metros de longitud.=separación mínima de 50 metros con el vehículo de delante/Минимальное расстояние до впереди идущего транспортного средства — 50 метров.
+La que permita detenerse=Тот, который позволяет вам остановиться
+Si se pretende adelantar a este vehículo=Если вы намереваетесь обогнать это транспортное средство
+está permitido disminuir la distancia de seguridad?= Допускается сокращение безопасной дистанции.(НЕЛЬЗЯ)
+sin colisionar con ella=не столкнувшись с ним
+Mantener la distancia de seguridad= Соблюдайте безопасную дистанцию.
+En un túnel, si no pretende adelantar, ¿qué distancia mínima debe mantener? = В тоннеле, если не собирается обгонять, какую минимальную дистанцию нужно держать? (100 метров или 4 секунды)
+Si circula por un túnel con vehículos de menos de 3.500 kg de MMA, ¿qué separación debe dejar si no pretende adelantar? = Если движется в тоннеле на транспортном средстве до 3500 кг и не собирается обгонять, какую дистанцию нужно держать? (не менее 100 метров)
+
+
+
 
 
 
