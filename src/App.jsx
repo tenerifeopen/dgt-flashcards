@@ -82,6 +82,7 @@ export default function App() {
     }
   };
 
+  // ===== МЕНЮ =====
   if (screen === "menu") {
     return (
       <div style={{
@@ -94,10 +95,9 @@ export default function App() {
         fontFamily: "Arial"
       }}>
 
-        {/* имя */}
         <div style={{
           marginBottom: 6,
-          color: "#1e293b",
+          color: "#cbd5f5",
           fontSize: 14,
           fontWeight: 600
         }}>
@@ -110,7 +110,13 @@ export default function App() {
           borderRadius: 20,
           width: 320
         }}>
-          <h2 style={{ textAlign: "center" }}>📚 Мои карточки</h2>
+          <h2 style={{
+            textAlign: "center",
+            color: "#020617",
+            textShadow: "0 1px 1px rgba(0,0,0,0.25)"
+          }}>
+            📚 МОИ КАРТОЧКИ
+          </h2>
 
           {topics.map((t, i) => (
             <button
@@ -139,6 +145,7 @@ export default function App() {
     return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
   }
 
+  // ===== КАРТОЧКИ =====
   return (
     <div style={{
       minHeight: "100vh",
@@ -201,7 +208,7 @@ export default function App() {
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "transform 0.5s",
+              transition: "transform 0.4s ease",
               transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
               cursor: "pointer",
               touchAction: "pan-y"
@@ -213,8 +220,8 @@ export default function App() {
               position: "absolute",
               top: 10,
               right: 10,
-              fontSize: 26,
-              zIndex: 5
+              fontSize: 30,
+              zIndex: 10
             }}>
               {favorites.includes(cards[index].question) ? "⭐" : "☆"}
             </div>
@@ -231,8 +238,9 @@ export default function App() {
               justifyContent: "center",
               padding: 20,
               boxSizing: "border-box",
-              fontSize: "clamp(22px, 6vw, 28px)",
+              fontSize: "clamp(32px, 8vw, 42px)",
               fontWeight: 700,
+              color: "#111111",
               textAlign: "center",
               backfaceVisibility: "hidden"
             }}>
@@ -252,7 +260,7 @@ export default function App() {
               justifyContent: "center",
               padding: 20,
               boxSizing: "border-box",
-              fontSize: "clamp(24px, 7vw, 32px)",
+              fontSize: "clamp(34px, 8vw, 44px)",
               fontWeight: 800,
               textAlign: "center",
               transform: "rotateY(180deg)",
@@ -265,7 +273,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* низ — ВЕРНУЛ КАК БЫЛО */}
+      {/* низ */}
       <div style={{
         position: "fixed",
         bottom: 0,
