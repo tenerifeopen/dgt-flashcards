@@ -99,7 +99,7 @@ export default function App() {
           color: "#e2e8f0",
           fontWeight: 700
         }}>
-          Arakelov Roman
+          Roman Arakelov 
         </div>
 
         <div style={{
