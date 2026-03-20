@@ -178,15 +178,25 @@ frenado brusco=резкое торможение
 sin colisionar con él.=не столкнувшись с ним
 la velocidad y las condiciones de adherencia y frenado.=скорость, сцепление и условия торможения
 si no va a adelantar=если вы не собираетесь обгонять
-
-
-
-
-
-
-
-
-
+sin colisionar=без столкновения
+pretender = планировать / намереваться
+adelantar = обгонять
+Si no pretende adelantar = если не планирует обгон
+tener intención de adelantar = иметь намерение обгонять
+no tiene intención de adelantar = не собирается обгонять
+cuando no pretende adelantar = когда не собирается обгонять
+sensiblemente =заметно
+causa justificada=обоснованная причина
+salvo causa justificada=за исключением случаев наличия уважительной причины
+velocidad anormalmente reducida = слишком низкая скорость
+entorpezca la circulación=препятствовать движению
+Si debido a una avería=Если из-за поломки
+En caso de emergencia=В случае чрезвычайной ситуации
+Cuando debido a una avería=Когда из-за поломки
+abandonar la vía por un carril de deceleración.=съезжайте с дороги через полосу замедления.
+sin dejar entre ellos un espacio libre=не оставляя между ними никакого свободного пространства
+si no pretende adelantar=если вы не намерены обгонять
+Mantener la distancia de seguridad=Соблюдайте безопасную дистанцию.
 
 
 
