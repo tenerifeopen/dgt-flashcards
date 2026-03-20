@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -24,6 +24,8 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
+
+  const [dragX, setDragX] = useState(0);
   const startX = useRef(0);
 
   const loadTopic = (file) => {
@@ -69,17 +71,23 @@ export default function App() {
     startX.current = e.touches[0].clientX;
   };
 
-  const handleTouchEnd = (e) => {
-    const diff = e.changedTouches[0].clientX - startX.current;
+  const handleTouchMove = (e) => {
+    const diff = e.touches[0].clientX - startX.current;
+    setDragX(diff);
+  };
 
-    if (Math.abs(diff) > 50) {
-      setShow(false);
-      if (diff < 0) {
-        setIndex(i => (i + 1) % cards.length);
-      } else {
-        setIndex(i => (i - 1 + cards.length) % cards.length);
-      }
+  const handleTouchEnd = () => {
+    if (dragX > 80) {
+      next(-1);
+    } else if (dragX < -80) {
+      next(1);
     }
+    setDragX(0);
+  };
+
+  const next = (dir) => {
+    setShow(false);
+    setIndex(i => (i + dir + cards.length) % cards.length);
   };
 
   // ===== МЕНЮ =====
@@ -96,9 +104,9 @@ export default function App() {
       }}>
 
         <div style={{
-          marginBottom: 6,
+          marginBottom: 8,
           color: "#cbd5f5",
-          fontSize: 14,
+          fontSize: 15,
           fontWeight: 600
         }}>
           Arakelov Roman
@@ -113,7 +121,7 @@ export default function App() {
           <h2 style={{
             textAlign: "center",
             color: "#020617",
-            textShadow: "0 1px 1px rgba(0,0,0,0.25)"
+            textShadow: "0 1px 2px rgba(0,0,0,0.3)"
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -154,8 +162,7 @@ export default function App() {
       flexDirection: "column",
       alignItems: "center",
       padding: "20px 12px 110px",
-      fontFamily: "Arial",
-      boxSizing: "border-box"
+      fontFamily: "Arial"
     }}>
 
       {/* верх */}
@@ -178,8 +185,7 @@ export default function App() {
           borderRadius: 12,
           border: "none",
           background: "#334155",
-          color: "white",
-          fontSize: 20
+          color: "white"
         }}>
           🔀
         </button>
@@ -189,11 +195,9 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 4px",
-        boxSizing: "border-box"
+        padding: "0 4px"
       }}>
         <div style={{
-          width: "100%",
           height: "calc(100vh - 240px)",
           maxHeight: 420,
           minHeight: 220,
@@ -202,16 +206,15 @@ export default function App() {
           <div
             onClick={() => setShow(!show)}
             onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
             style={{
               width: "100%",
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "transform 0.4s ease",
-              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
-              cursor: "pointer",
-              touchAction: "pan-y"
+              transition: "transform 0.3s ease",
+              transform: `translateX(${dragX}px) rotateY(${show ? 180 : 0}deg)`
             }}
           >
 
@@ -237,10 +240,9 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              boxSizing: "border-box",
               fontSize: "clamp(32px, 8vw, 42px)",
               fontWeight: 700,
-              color: "#111111",
+              color: "#111",
               textAlign: "center",
               backfaceVisibility: "hidden"
             }}>
@@ -259,7 +261,6 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              boxSizing: "border-box",
               fontSize: "clamp(34px, 8vw, 44px)",
               fontWeight: 800,
               textAlign: "center",
@@ -277,7 +278,6 @@ export default function App() {
       <div style={{
         position: "fixed",
         bottom: 0,
-        left: 0,
         width: "100%",
         padding: "12px 16px 20px",
         background: "linear-gradient(to top, #0f172a, transparent)"
@@ -294,10 +294,7 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button onClick={() => {
-            setShow(false);
-            setIndex(i => (i - 1 + cards.length) % cards.length);
-          }} style={{
+          <button onClick={() => next(-1)} style={{
             width: 70,
             height: 48,
             borderRadius: 16,
@@ -311,10 +308,7 @@ export default function App() {
             {index + 1} / {cards.length}
           </div>
 
-          <button onClick={() => {
-            setShow(false);
-            setIndex(i => (i + 1) % cards.length);
-          }} style={{
+          <button onClick={() => next(1)} style={{
             width: 70,
             height: 48,
             borderRadius: 16,
