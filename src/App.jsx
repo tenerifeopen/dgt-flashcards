@@ -1,11 +1,27 @@
 import { useState } from "react";
 
 const topics = [
+  { name: "Слова и выражения", file: "/cards/words.txt" },
+  { name: "Документы", file: "/cards/Документы.txt" },
+  { name: "Дороги и скорость", file: "/cards/Дороги и скорость.txt" },
+  { name: "Знаки и правила", file: "/cards/Знаки и правила.txt" },
+  { name: "Манёвры", file: "/cards/Манёвры.txt" },
+  { name: "Нормы движения", file: "/cards/Нормы движения.txt" },
+  { name: "Определения участников движения", file: "/cards/Определения участников движения.txt" },
+  { name: "Особые полосы", file: "/cards/Особые полосы.txt" },
+  { name: "Перевозка грузов и детей", file: "/cards/Перевозка грузов и детей.txt" },
+  { name: "Права и баллы", file: "/cards/Права и баллы.txt" },
+  { name: "Скорости", file: "/cards/Скорости.txt" },
+  { name: "Транспортные средства", file: "/cards/Транспортные средства.txt" },
+  { name: "Фары и освещение", file: "/cards/Фары и освещение.txt" },
+  { name: "Экстренные ситуации", file: "/cards/Экстренные ситуации.txt" },
+  { name: "Знаки", file: "/cards/Знаки.txt" },
+
+  // старые оставил
   { name: "Дороги", file: "/cards/roads.txt" },
   { name: "Транспорт", file: "/cards/vehicles.txt" },
   { name: "Скорость", file: "/cards/speed.txt" },
-  { name: "Слова и выражения", file: "/cards/words.txt" },
-  { name: "Знаки", file: "/cards/signs.txt" },
+  { name: "Знаки (старые)", file: "/cards/signs.txt" },
   { name: "Парковка", file: "/cards/parking.txt" }
 ];
 
@@ -57,7 +73,6 @@ export default function App() {
     setShow(false);
   };
 
-  // ===== МЕНЮ =====
   if (screen === "menu") {
     return (
       <div style={{
@@ -103,7 +118,6 @@ export default function App() {
     return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
   }
 
-  // ===== КАРТОЧКИ =====
   return (
     <div style={{
       minHeight: "100vh",
@@ -116,7 +130,6 @@ export default function App() {
       boxSizing: "border-box"
     }}>
 
-      {/* ШАПКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -132,23 +145,19 @@ export default function App() {
 
         <div>tenerifeopen</div>
 
-        <button
-          onClick={shuffle}
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 12,
-            border: "none",
-            background: "#334155",
-            color: "white",
-            fontSize: 20
-          }}
-        >
+        <button onClick={shuffle} style={{
+          width: 44,
+          height: 44,
+          borderRadius: 12,
+          border: "none",
+          background: "#334155",
+          color: "white",
+          fontSize: 20
+        }}>
           🔀
         </button>
       </div>
 
-      {/* КАРТОЧКА */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -175,21 +184,16 @@ export default function App() {
             }}
           >
 
-            {/* ⭐ */}
-            <div
-              onClick={toggleFavorite}
-              style={{
-                position: "absolute",
-                top: 10,
-                right: 10,
-                fontSize: 26,
-                zIndex: 5
-              }}
-            >
+            <div onClick={toggleFavorite} style={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+              fontSize: 26,
+              zIndex: 5
+            }}>
               {favorites.includes(cards[index].question) ? "⭐" : "☆"}
             </div>
 
-            {/* ВОПРОС */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -212,7 +216,6 @@ export default function App() {
               {cards[index].question}
             </div>
 
-            {/* ОТВЕТ */}
             <div style={{
               position: "absolute",
               width: "100%",
@@ -240,7 +243,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* НИЖНЯЯ ПАНЕЛЬ */}
       <div style={{
         position: "fixed",
         bottom: 0,
