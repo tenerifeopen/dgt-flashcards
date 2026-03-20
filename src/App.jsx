@@ -76,13 +76,12 @@ export default function App() {
   };
 
   const handleTouchMove = (e) => {
-    const move = e.touches[0].clientX - startX.current;
-    setDragX(move);
+    setDragX(e.touches[0].clientX - startX.current);
   };
 
   const handleTouchEnd = () => {
     if (Math.abs(dragX) > 60) {
-      setDragX(dragX > 0 ? 500 : -500);
+      setDragX(dragX > 0 ? 400 : -400);
 
       setTimeout(() => {
         setIndex(i =>
@@ -109,7 +108,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{ marginBottom: 6, color: "#e2e8f0", fontWeight: 700 }}>
+        <div style={{ color: "#e2e8f0", fontWeight: 700 }}>
           Arakelov Roman
         </div>
 
@@ -138,8 +137,7 @@ export default function App() {
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white",
-                fontSize: 16
+                color: "white"
               }}
             >
               {t.name}
@@ -148,10 +146,6 @@ export default function App() {
         </div>
       </div>
     );
-  }
-
-  if (filteredCards.length === 0) {
-    return <div style={{ color: "white", padding: 40 }}>Нет карточек</div>;
   }
 
   return (
@@ -172,36 +166,29 @@ export default function App() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        color: "#94a3b8",
-        marginBottom: 10
+        color: "#94a3b8"
       }}>
-        <div onClick={() => setScreen("menu")} style={{
-          cursor: "pointer",
-          fontSize: 18,
-          fontWeight: 600
-        }}>
+        <div onClick={() => setScreen("menu")} style={{ fontSize: 18 }}>
           ← назад
         </div>
 
-        <button onClick={() => {
-          setOnlyFav(!onlyFav);
-          setIndex(0);
-        }} style={{
+        <button onClick={() => setOnlyFav(!onlyFav)} style={{
           width: 52,
           height: 52,
           borderRadius: 12,
-          border: "none",
           background: onlyFav ? "#facc15" : "#334155",
-          color: "white",
-          fontSize: 26
-        }}>★</button>
+          fontSize: 26,
+          border: "none"
+        }}>
+          ★
+        </button>
       </div>
 
       {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 6px"
+        marginTop: 10
       }}>
         <div
           onClick={() => setShow(!show)}
@@ -223,17 +210,18 @@ export default function App() {
           {/* ⭐ */}
           <div onClick={toggleFavorite} style={{
             position: "absolute",
-            top: 12,
-            right: 12,
-            fontSize: 28,
+            top: 14,
+            right: 14,
+            fontSize: 30,
             zIndex: 10,
-            color: favorites.includes(filteredCards[index].question)
+            color: favorites.includes(filteredCards[index]?.question)
               ? "#facc15"
               : "#9ca3af"
           }}>
             ★
           </div>
 
+          {/* ВОПРОС */}
           {!show ? (
             <div style={{
               width: "100%",
@@ -242,15 +230,18 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 24,
-              fontSize: "clamp(30px, 7vw, 40px)",
-              fontWeight: 700,
+              padding: 20,
               textAlign: "center",
-              lineHeight: 1.6,
-              color: "#111827",   // темнее текст
+              fontSize: "clamp(26px, 6vw, 36px)",
+              fontWeight: 700,
+              color: "#0f172a",
+              lineHeight: 1.5,
+              overflowWrap: "break-word",
               wordBreak: "break-word"
             }}>
-              {filteredCards[index].question}
+              <div style={{ maxWidth: "100%" }}>
+                {filteredCards[index]?.question}
+              </div>
             </div>
           ) : (
             <div style={{
@@ -261,14 +252,16 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 24,
-              fontSize: "clamp(32px, 7vw, 42px)",
-              fontWeight: 800,
+              padding: 20,
               textAlign: "center",
-              lineHeight: 1.6,
-              wordBreak: "break-word"
+              fontSize: "clamp(28px, 6vw, 38px)",
+              fontWeight: 800,
+              lineHeight: 1.5,
+              overflowWrap: "break-word"
             }}>
-              {filteredCards[index].answer}
+              <div style={{ maxWidth: "100%" }}>
+                {filteredCards[index]?.answer}
+              </div>
             </div>
           )}
 
@@ -280,25 +273,27 @@ export default function App() {
         position: "fixed",
         bottom: 0,
         width: "100%",
-        padding: "16px 16px 24px" // ← увеличен отступ (3мм примерно)
+        padding: "20px 16px 24px"
       }}>
         <div style={{
           maxWidth: 420,
           margin: "0 auto",
           display: "flex",
           flexDirection: "column",
-          gap: 12
+          gap: 14
         }}>
 
           {/* 🔀 */}
           <button onClick={shuffle} style={{
             width: "100%",
-            height: 60,
-            borderRadius: 18,
+            height: 70,
+            borderRadius: 20,
             background: "#334155",
-            color: "white",
-            fontSize: 30, // увеличен значок
-            border: "none"
+            border: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 36
           }}>
             🔀
           </button>
@@ -345,10 +340,8 @@ export default function App() {
             }}>→</button>
 
           </div>
-
         </div>
       </div>
-
     </div>
   );
 }
