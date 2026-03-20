@@ -49,6 +49,10 @@ export default function App() {
       });
   };
 
+  const filteredCards = onlyFav
+    ? cards.filter(c => favorites.includes(c.question))
+    : cards;
+
   const toggleFavorite = (e) => {
     e.stopPropagation();
     const q = filteredCards[index].question;
@@ -67,11 +71,7 @@ export default function App() {
     setShow(false);
   };
 
-  const filteredCards = onlyFav
-    ? cards.filter(c => favorites.includes(c.question))
-    : cards;
-
-  // ===== SWIPE =====
+  // свайп (уменьшенный порог)
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
   };
@@ -82,7 +82,7 @@ export default function App() {
   };
 
   const handleTouchEnd = () => {
-    if (Math.abs(dragX) > 120) {
+    if (Math.abs(dragX) > 60) {
       setDragX(dragX > 0 ? 500 : -500);
 
       setTimeout(() => {
@@ -176,32 +176,26 @@ export default function App() {
         color: "#94a3b8",
         marginBottom: 10
       }}>
-        <div onClick={() => setScreen("menu")} style={{ cursor: "pointer" }}>
+        <div onClick={() => setScreen("menu")} style={{
+          cursor: "pointer",
+          fontSize: 18,
+          fontWeight: 600
+        }}>
           ← назад
         </div>
 
-        <div style={{ display: "flex", gap: 10 }}>
-          <button onClick={shuffle} style={{
-            width: 44,
-            height: 44,
-            borderRadius: 12,
-            border: "none",
-            background: "#334155",
-            color: "white"
-          }}>🔀</button>
-
-          <button onClick={() => {
-            setOnlyFav(!onlyFav);
-            setIndex(0);
-          }} style={{
-            width: 44,
-            height: 44,
-            borderRadius: 12,
-            border: "none",
-            background: onlyFav ? "#facc15" : "#334155",
-            color: "white"
-          }}>★</button>
-        </div>
+        <button onClick={() => {
+          setOnlyFav(!onlyFav);
+          setIndex(0);
+        }} style={{
+          width: 52,
+          height: 52,
+          borderRadius: 12,
+          border: "none",
+          background: onlyFav ? "#facc15" : "#334155",
+          color: "white",
+          fontSize: 26
+        }}>★</button>
       </div>
 
       {/* карточка */}
@@ -217,12 +211,12 @@ export default function App() {
           onTouchEnd={handleTouchEnd}
           style={{
             width: "100%",
-            height: "calc(100vh - 240px)",
+            height: "calc(100vh - 260px)",
             maxHeight: 420,
             minHeight: 220,
             borderRadius: 20,
             overflow: "hidden",
-            transform: `translateX(${dragX}px) rotate(${dragX / 20}deg)`,
+            transform: `translateX(${dragX}px) rotate(${dragX / 25}deg)`,
             transition: dragX === 0 ? "0.3s" : "none"
           }}
         >
@@ -291,43 +285,67 @@ export default function App() {
         <div style={{
           maxWidth: 420,
           margin: "0 auto",
-          height: 70,
-          background: "#1e293b",
-          borderRadius: 24,
           display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0 16px"
+          flexDirection: "column",
+          gap: 10
         }}>
-          <button onClick={() => {
-            setShow(false);
-            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-          }} style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#020617",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>←</button>
 
-          <div style={{ color: "white" }}>
-            {index + 1} / {filteredCards.length}
+          {/* 🔀 НОВАЯ КНОПКА */}
+          <button onClick={shuffle} style={{
+            width: "100%",
+            height: 60,
+            borderRadius: 18,
+            background: "#334155",
+            color: "white",
+            fontSize: 28,
+            border: "none"
+          }}>
+            🔀
+          </button>
+
+          {/* стрелки */}
+          <div style={{
+            height: 70,
+            background: "#1e293b",
+            borderRadius: 24,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 16px"
+          }}>
+
+            <button onClick={() => {
+              setShow(false);
+              setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+            }} style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#020617",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}>←</button>
+
+            <div style={{ color: "white" }}>
+              {index + 1} / {filteredCards.length}
+            </div>
+
+            <button onClick={() => {
+              setShow(false);
+              setIndex(i => (i + 1) % filteredCards.length);
+            }} style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#2563eb",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}>→</button>
+
           </div>
 
-          <button onClick={() => {
-            setShow(false);
-            setIndex(i => (i + 1) % filteredCards.length);
-          }} style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#2563eb",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>→</button>
         </div>
       </div>
 
