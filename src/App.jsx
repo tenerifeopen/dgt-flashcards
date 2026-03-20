@@ -24,9 +24,7 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
-
-  const [dragX, setDragX] = useState(0);
-  const startX = useRef(0);
+  const [anim, setAnim] = useState("");
 
   const loadTopic = (file) => {
     fetch(file)
@@ -59,38 +57,14 @@ export default function App() {
     }
   };
 
-  const shuffle = () => {
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
-    setCards(shuffled);
-    setIndex(0);
-    setShow(false);
-  };
-
-  // свайп
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    let diff = e.touches[0].clientX - startX.current;
-
-    // 🔒 ограничение — чтобы не уезжала далеко
-    if (diff > 120) diff = 120;
-    if (diff < -120) diff = -120;
-
-    setDragX(diff);
-  };
-
-  const handleTouchEnd = () => {
-    if (dragX > 80) next(-1);
-    else if (dragX < -80) next(1);
-
-    setDragX(0);
-  };
-
   const next = (dir) => {
-    setShow(false);
-    setIndex(i => (i + dir + cards.length) % cards.length);
+    setAnim(dir > 0 ? "left" : "right");
+
+    setTimeout(() => {
+      setShow(false);
+      setIndex(i => (i + dir + cards.length) % cards.length);
+      setAnim("");
+    }, 150);
   };
 
   // ===== МЕНЮ =====
@@ -105,11 +79,9 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-
         <div style={{
           marginBottom: 8,
           color: "#e2e8f0",
-          fontSize: 16,
           fontWeight: 700
         }}>
           Arakelov Roman
@@ -174,51 +146,38 @@ export default function App() {
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
         color: "#94a3b8",
         marginBottom: 10
       }}>
         <div onClick={() => setScreen("menu")} style={{ cursor: "pointer" }}>
           ← назад
         </div>
-
-        <button onClick={shuffle} style={{
-          width: 44,
-          height: 44,
-          borderRadius: 12,
-          border: "none",
-          background: "#334155",
-          color: "white"
-        }}>
-          🔀
-        </button>
       </div>
 
       {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 4px",
-        overflow: "hidden" // 🔥 фикс выезда
+        padding: "0 4px"
       }}>
         <div style={{
           height: "calc(100vh - 240px)",
           maxHeight: 420,
-          minHeight: 220,
-          perspective: 1000
+          minHeight: 220
         }}>
           <div
             onClick={() => setShow(!show)}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
             style={{
               width: "100%",
               height: "100%",
               position: "relative",
-              transformStyle: "preserve-3d",
-              transition: dragX === 0 ? "transform 0.3s ease" : "none",
-              transform: `translateX(${dragX}px) rotateY(${show ? 180 : 0}deg)`
+              borderRadius: 20,
+              overflow: "hidden",
+              transform: `
+                translateX(${anim === "left" ? "-30px" : anim === "right" ? "30px" : "0"})
+              `,
+              opacity: anim ? 0 : 1,
+              transition: "all 0.2s ease"
             }}
           >
 
@@ -229,11 +188,12 @@ export default function App() {
                 position: "absolute",
                 top: 12,
                 right: 12,
-                fontSize: 32,
-                zIndex: 100
+                fontSize: 30,
+                zIndex: 10,
+                color: favorites.includes(cards[index].question) ? "#facc15" : "#9ca3af"
               }}
             >
-              {favorites.includes(cards[index].question) ? "⭐" : "☆"}
+              ★
             </div>
 
             {/* вопрос */}
@@ -242,7 +202,6 @@ export default function App() {
               width: "100%",
               height: "100%",
               background: "#e5e7eb",
-              borderRadius: 20,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -251,7 +210,9 @@ export default function App() {
               fontWeight: 700,
               color: "#111",
               textAlign: "center",
-              backfaceVisibility: "hidden"
+              backfaceVisibility: "hidden",
+              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
+              transition: "transform 0.4s"
             }}>
               {cards[index].question}
             </div>
@@ -263,7 +224,6 @@ export default function App() {
               height: "100%",
               background: "#2563eb",
               color: "white",
-              borderRadius: 20,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -271,8 +231,8 @@ export default function App() {
               fontSize: "clamp(36px, 8vw, 46px)",
               fontWeight: 800,
               textAlign: "center",
-              transform: "rotateY(180deg)",
-              backfaceVisibility: "hidden"
+              transform: show ? "rotateY(0deg)" : "rotateY(-180deg)",
+              transition: "transform 0.4s"
             }}>
               {cards[index].answer}
             </div>
@@ -286,8 +246,7 @@ export default function App() {
         position: "fixed",
         bottom: 0,
         width: "100%",
-        padding: "12px 16px 20px",
-        background: "linear-gradient(to top, #0f172a, transparent)"
+        padding: "12px 16px 20px"
       }}>
         <div style={{
           maxWidth: 420,
