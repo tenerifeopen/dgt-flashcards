@@ -72,16 +72,19 @@ export default function App() {
   };
 
   const handleTouchMove = (e) => {
-    const diff = e.touches[0].clientX - startX.current;
+    let diff = e.touches[0].clientX - startX.current;
+
+    // 🔒 ограничение — чтобы не уезжала далеко
+    if (diff > 120) diff = 120;
+    if (diff < -120) diff = -120;
+
     setDragX(diff);
   };
 
   const handleTouchEnd = () => {
-    if (dragX > 80) {
-      next(-1);
-    } else if (dragX < -80) {
-      next(1);
-    }
+    if (dragX > 80) next(-1);
+    else if (dragX < -80) next(1);
+
     setDragX(0);
   };
 
@@ -105,9 +108,9 @@ export default function App() {
 
         <div style={{
           marginBottom: 8,
-          color: "#cbd5f5",
-          fontSize: 15,
-          fontWeight: 600
+          color: "#e2e8f0",
+          fontSize: 16,
+          fontWeight: 700
         }}>
           Arakelov Roman
         </div>
@@ -121,7 +124,7 @@ export default function App() {
           <h2 style={{
             textAlign: "center",
             color: "#020617",
-            textShadow: "0 1px 2px rgba(0,0,0,0.3)"
+            fontWeight: 800
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -195,7 +198,8 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 4px"
+        padding: "0 4px",
+        overflow: "hidden" // 🔥 фикс выезда
       }}>
         <div style={{
           height: "calc(100vh - 240px)",
@@ -213,19 +217,22 @@ export default function App() {
               height: "100%",
               position: "relative",
               transformStyle: "preserve-3d",
-              transition: "transform 0.3s ease",
+              transition: dragX === 0 ? "transform 0.3s ease" : "none",
               transform: `translateX(${dragX}px) rotateY(${show ? 180 : 0}deg)`
             }}
           >
 
             {/* ⭐ */}
-            <div onClick={toggleFavorite} style={{
-              position: "absolute",
-              top: 10,
-              right: 10,
-              fontSize: 30,
-              zIndex: 10
-            }}>
+            <div
+              onClick={toggleFavorite}
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 12,
+                fontSize: 32,
+                zIndex: 100
+              }}
+            >
               {favorites.includes(cards[index].question) ? "⭐" : "☆"}
             </div>
 
@@ -240,7 +247,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              fontSize: "clamp(32px, 8vw, 42px)",
+              fontSize: "clamp(34px, 8vw, 44px)",
               fontWeight: 700,
               color: "#111",
               textAlign: "center",
@@ -261,7 +268,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              fontSize: "clamp(34px, 8vw, 44px)",
+              fontSize: "clamp(36px, 8vw, 46px)",
               fontWeight: 800,
               textAlign: "center",
               transform: "rotateY(180deg)",
