@@ -2,52 +2,29 @@ import { useState, useEffect, useRef } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
-  { name: "Дороги", file: "/cards/roads.txt" },
-  { name: "Транспортные средства", file: "/cards/Транспортные средства.txt" },
-  { name: "Скорости", file: "/cards/Скорости.txt" },
-  { name: "Знаки", file: "/cards/Знаки.txt" },
-  { name: "Парковка", file: "/cards/parking.txt" },
+  { name: "Документы", file: "/cards/Документы.txt" },
+  { name: "Дороги и скорость", file: "/cards/Дороги и скорость.txt" },
+  { name: "Знаки и правила", file: "/cards/Знаки и правила.txt" },
   { name: "Манёвры", file: "/cards/Манёвры.txt" },
   { name: "Нормы движения", file: "/cards/Нормы движения.txt" },
   { name: "Определения участников движения", file: "/cards/Определения участников движения.txt" },
   { name: "Особые полосы", file: "/cards/Особые полосы.txt" },
   { name: "Перевозка грузов и детей", file: "/cards/Перевозка грузов и детей.txt" },
   { name: "Права и баллы", file: "/cards/Права и баллы.txt" },
+  { name: "Скорости", file: "/cards/Скорости.txt" },
+  { name: "Транспортные средства", file: "/cards/Транспортные средства.txt" },
   { name: "Фары и освещение", file: "/cards/Фары и освещение.txt" },
-  { name: "Экстренные ситуации", file: "/cards/Экстренные ситуации.txt" }
+  { name: "Экстренные ситуации", file: "/cards/Экстренные ситуации.txt" },
+  { name: "Знаки", file: "/cards/Знаки.txt" }
 ];
 
 export default function App() {
   const [screen, setScreen] = useState("menu");
   const [cards, setCards] = useState([]);
-  const [filteredCards, setFilteredCards] = useState([]);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
-  const [onlyFav, setOnlyFav] = useState(false);
-
   const startX = useRef(0);
-
-  // загрузка избранного
-  useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("fav") || "[]");
-    setFavorites(saved);
-  }, []);
-
-  // сохранение
-  useEffect(() => {
-    localStorage.setItem("fav", JSON.stringify(favorites));
-  }, [favorites]);
-
-  // фильтр
-  useEffect(() => {
-    if (onlyFav) {
-      setFilteredCards(cards.filter(c => favorites.includes(c.question)));
-      setIndex(0);
-    } else {
-      setFilteredCards(cards);
-    }
-  }, [onlyFav, cards, favorites]);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -63,7 +40,6 @@ export default function App() {
           }));
 
         setCards(parsed);
-        setFilteredCards(parsed);
         setIndex(0);
         setShow(false);
         setScreen("cards");
@@ -72,7 +48,7 @@ export default function App() {
 
   const toggleFavorite = (e) => {
     e.stopPropagation();
-    const q = filteredCards[index].question;
+    const q = cards[index].question;
 
     if (favorites.includes(q)) {
       setFavorites(favorites.filter(f => f !== q));
@@ -82,8 +58,8 @@ export default function App() {
   };
 
   const shuffle = () => {
-    const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
-    setFilteredCards(shuffled);
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    setCards(shuffled);
     setIndex(0);
     setShow(false);
   };
@@ -98,33 +74,32 @@ export default function App() {
 
     if (Math.abs(diff) > 50) {
       setShow(false);
-
       if (diff < 0) {
-        setIndex(i => (i + 1) % filteredCards.length);
+        setIndex(i => (i + 1) % cards.length);
       } else {
-        setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+        setIndex(i => (i - 1 + cards.length) % cards.length);
       }
     }
   };
 
-  // ===== МЕНЮ =====
   if (screen === "menu") {
     return (
       <div style={{
         minHeight: "100vh",
         background: "#0f172a",
         display: "flex",
-        justifyContent: "center",
+        flexDirection: "column",
         alignItems: "center",
-        fontFamily: "Arial",
-        flexDirection: "column"
+        justifyContent: "center",
+        fontFamily: "Arial"
       }}>
 
+        {/* имя */}
         <div style={{
-          position: "absolute",
-          top: 10,
-          color: "#475569",
-          fontSize: 12
+          marginBottom: 6,
+          color: "#1e293b",
+          fontSize: 14,
+          fontWeight: 600
         }}>
           Arakelov Roman
         </div>
@@ -160,11 +135,10 @@ export default function App() {
     );
   }
 
-  if (filteredCards.length === 0) {
-    return <div style={{ color: "white", padding: 40 }}>Нет карточек</div>;
+  if (cards.length === 0) {
+    return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
   }
 
-  // ===== КАРТОЧКИ =====
   return (
     <div style={{
       minHeight: "100vh",
@@ -173,7 +147,8 @@ export default function App() {
       flexDirection: "column",
       alignItems: "center",
       padding: "20px 12px 110px",
-      fontFamily: "Arial"
+      fontFamily: "Arial",
+      boxSizing: "border-box"
     }}>
 
       {/* верх */}
@@ -190,23 +165,26 @@ export default function App() {
           ← назад
         </div>
 
-        <div style={{ display: "flex", gap: 10 }}>
-          <button onClick={() => setOnlyFav(!onlyFav)} style={{
-            width: 50, height: 50, borderRadius: 14,
-            background: onlyFav ? "#facc15" : "#334155",
-            color: "white", border: "none", fontSize: 22
-          }}>⭐</button>
-
-          <button onClick={shuffle} style={{
-            width: 50, height: 50, borderRadius: 14,
-            background: "#334155",
-            color: "white", border: "none", fontSize: 22
-          }}>🔀</button>
-        </div>
+        <button onClick={shuffle} style={{
+          width: 44,
+          height: 44,
+          borderRadius: 12,
+          border: "none",
+          background: "#334155",
+          color: "white",
+          fontSize: 20
+        }}>
+          🔀
+        </button>
       </div>
 
       {/* карточка */}
-      <div style={{ width: "100%", maxWidth: 420 }}>
+      <div style={{
+        width: "100%",
+        maxWidth: 420,
+        padding: "0 4px",
+        boxSizing: "border-box"
+      }}>
         <div style={{
           width: "100%",
           height: "calc(100vh - 240px)",
@@ -225,7 +203,8 @@ export default function App() {
               transformStyle: "preserve-3d",
               transition: "transform 0.5s",
               transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
-              cursor: "pointer"
+              cursor: "pointer",
+              touchAction: "pan-y"
             }}
           >
 
@@ -237,7 +216,7 @@ export default function App() {
               fontSize: 26,
               zIndex: 5
             }}>
-              {favorites.includes(filteredCards[index].question) ? "⭐" : "☆"}
+              {favorites.includes(cards[index].question) ? "⭐" : "☆"}
             </div>
 
             {/* вопрос */}
@@ -251,12 +230,13 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
+              boxSizing: "border-box",
               fontSize: "clamp(22px, 6vw, 28px)",
               fontWeight: 700,
               textAlign: "center",
               backfaceVisibility: "hidden"
             }}>
-              {filteredCards[index].question}
+              {cards[index].question}
             </div>
 
             {/* ответ */}
@@ -271,25 +251,28 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
+              boxSizing: "border-box",
               fontSize: "clamp(24px, 7vw, 32px)",
               fontWeight: 800,
               textAlign: "center",
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}>
-              {filteredCards[index].answer}
+              {cards[index].answer}
             </div>
 
           </div>
         </div>
       </div>
 
-      {/* низ */}
+      {/* низ — ВЕРНУЛ КАК БЫЛО */}
       <div style={{
         position: "fixed",
         bottom: 0,
+        left: 0,
         width: "100%",
-        padding: "12px 16px 20px"
+        padding: "12px 16px 20px",
+        background: "linear-gradient(to top, #0f172a, transparent)"
       }}>
         <div style={{
           maxWidth: 420,
@@ -305,16 +288,32 @@ export default function App() {
 
           <button onClick={() => {
             setShow(false);
-            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+            setIndex(i => (i - 1 + cards.length) % cards.length);
+          }} style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#020617",
+            color: "white",
+            fontSize: 26,
+            border: "none"
           }}>←</button>
 
           <div style={{ color: "white" }}>
-            {index + 1} / {filteredCards.length}
+            {index + 1} / {cards.length}
           </div>
 
           <button onClick={() => {
             setShow(false);
-            setIndex(i => (i + 1) % filteredCards.length);
+            setIndex(i => (i + 1) % cards.length);
+          }} style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#2563eb",
+            color: "white",
+            fontSize: 26,
+            border: "none"
           }}>→</button>
 
         </div>
