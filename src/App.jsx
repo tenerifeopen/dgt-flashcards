@@ -24,6 +24,7 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [onlyFav, setOnlyFav] = useState(false);
   const startX = useRef(0);
 
   const loadTopic = (file) => {
@@ -64,6 +65,11 @@ export default function App() {
     setShow(false);
   };
 
+  // фильтр ⭐
+  const filteredCards = onlyFav
+    ? cards.filter(c => favorites.includes(c.question))
+    : cards;
+
   // свайп
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
@@ -75,14 +81,13 @@ export default function App() {
     if (Math.abs(diff) > 50) {
       setShow(false);
       if (diff < 0) {
-        setIndex(i => (i + 1) % cards.length);
+        setIndex(i => (i + 1) % filteredCards.length);
       } else {
-        setIndex(i => (i - 1 + cards.length) % cards.length);
+        setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
       }
     }
   };
 
-  // ===== МЕНЮ =====
   if (screen === "menu") {
     return (
       <div style={{
@@ -99,7 +104,7 @@ export default function App() {
           color: "#e2e8f0",
           fontWeight: 700
         }}>
-          Roman Arakelov 
+          Arakelov Roman
         </div>
 
         <div style={{
@@ -139,11 +144,10 @@ export default function App() {
     );
   }
 
-  if (cards.length === 0) {
-    return <div style={{ color: "white", padding: 40 }}>Загрузка...</div>;
+  if (filteredCards.length === 0) {
+    return <div style={{ color: "white", padding: 40 }}>Нет карточек</div>;
   }
 
-  // ===== КАРТОЧКИ =====
   return (
     <div style={{
       minHeight: "100vh",
@@ -169,24 +173,41 @@ export default function App() {
           ← назад
         </div>
 
-        <button onClick={shuffle} style={{
-          width: 44,
-          height: 44,
-          borderRadius: 12,
-          border: "none",
-          background: "#334155",
-          color: "white",
-          fontSize: 20
-        }}>
-          🔀
-        </button>
+        <div style={{ display: "flex", gap: 10 }}>
+          <button onClick={shuffle} style={{
+            width: 44,
+            height: 44,
+            borderRadius: 12,
+            border: "none",
+            background: "#334155",
+            color: "white",
+            fontSize: 20
+          }}>
+            🔀
+          </button>
+
+          <button onClick={() => {
+            setOnlyFav(!onlyFav);
+            setIndex(0);
+          }} style={{
+            width: 44,
+            height: 44,
+            borderRadius: 12,
+            border: "none",
+            background: onlyFav ? "#facc15" : "#334155",
+            color: "white",
+            fontSize: 20
+          }}>
+            ★
+          </button>
+        </div>
       </div>
 
       {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        padding: "0 4px"
+        padding: "0 6px"
       }}>
         <div
           onClick={() => setShow(!show)}
@@ -197,10 +218,9 @@ export default function App() {
             height: "calc(100vh - 240px)",
             maxHeight: 420,
             minHeight: 220,
-            position: "relative",
             borderRadius: 20,
             overflow: "hidden",
-            cursor: "pointer"
+            position: "relative"
           }}
         >
 
@@ -213,14 +233,15 @@ export default function App() {
               right: 12,
               fontSize: 28,
               zIndex: 10,
-              color: favorites.includes(cards[index].question) ? "#facc15" : "#9ca3af"
+              color: favorites.includes(filteredCards[index].question)
+                ? "#facc15"
+                : "#9ca3af"
             }}
           >
             ★
           </div>
 
-          {/* вопрос */}
-          {!show && (
+          {!show ? (
             <div style={{
               width: "100%",
               height: "100%",
@@ -228,18 +249,17 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 20,
-              fontSize: "clamp(32px, 8vw, 42px)",
+              padding: 24,
+              fontSize: "clamp(30px, 7vw, 40px)",
               fontWeight: 700,
               color: "#111",
-              textAlign: "center"
+              textAlign: "center",
+              lineHeight: 1.5,
+              wordBreak: "break-word"
             }}>
-              {cards[index].question}
+              {filteredCards[index].question}
             </div>
-          )}
-
-          {/* ответ */}
-          {show && (
+          ) : (
             <div style={{
               width: "100%",
               height: "100%",
@@ -248,12 +268,14 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 20,
-              fontSize: "clamp(34px, 8vw, 44px)",
+              padding: 24,
+              fontSize: "clamp(32px, 7vw, 42px)",
               fontWeight: 800,
-              textAlign: "center"
+              textAlign: "center",
+              lineHeight: 1.5,
+              wordBreak: "break-word"
             }}>
-              {cards[index].answer}
+              {filteredCards[index].answer}
             </div>
           )}
 
@@ -281,7 +303,7 @@ export default function App() {
 
           <button onClick={() => {
             setShow(false);
-            setIndex(i => (i - 1 + cards.length) % cards.length);
+            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
           }} style={{
             width: 70,
             height: 48,
@@ -293,12 +315,12 @@ export default function App() {
           }}>←</button>
 
           <div style={{ color: "white" }}>
-            {index + 1} / {cards.length}
+            {index + 1} / {filteredCards.length}
           </div>
 
           <button onClick={() => {
             setShow(false);
-            setIndex(i => (i + 1) % cards.length);
+            setIndex(i => (i + 1) % filteredCards.length);
           }} style={{
             width: 70,
             height: 48,
