@@ -71,7 +71,6 @@ export default function App() {
     setShow(false);
   };
 
-  // свайп (уменьшенный порог)
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
   };
@@ -216,7 +215,7 @@ export default function App() {
             minHeight: 220,
             borderRadius: 20,
             overflow: "hidden",
-            transform: `translateX(${dragX}px) rotate(${dragX / 25}deg)`,
+            transform: `translateX(${dragX}px)`,
             transition: dragX === 0 ? "0.3s" : "none"
           }}
         >
@@ -247,7 +246,8 @@ export default function App() {
               fontSize: "clamp(30px, 7vw, 40px)",
               fontWeight: 700,
               textAlign: "center",
-              lineHeight: 1.5,
+              lineHeight: 1.6,
+              color: "#111827",   // темнее текст
               wordBreak: "break-word"
             }}>
               {filteredCards[index].question}
@@ -265,7 +265,7 @@ export default function App() {
               fontSize: "clamp(32px, 7vw, 42px)",
               fontWeight: 800,
               textAlign: "center",
-              lineHeight: 1.5,
+              lineHeight: 1.6,
               wordBreak: "break-word"
             }}>
               {filteredCards[index].answer}
@@ -280,24 +280,24 @@ export default function App() {
         position: "fixed",
         bottom: 0,
         width: "100%",
-        padding: "12px 16px 20px"
+        padding: "16px 16px 24px" // ← увеличен отступ (3мм примерно)
       }}>
         <div style={{
           maxWidth: 420,
           margin: "0 auto",
           display: "flex",
           flexDirection: "column",
-          gap: 10
+          gap: 12
         }}>
 
-          {/* 🔀 НОВАЯ КНОПКА */}
+          {/* 🔀 */}
           <button onClick={shuffle} style={{
             width: "100%",
             height: 60,
             borderRadius: 18,
             background: "#334155",
             color: "white",
-            fontSize: 28,
+            fontSize: 30, // увеличен значок
             border: "none"
           }}>
             🔀
