@@ -24,7 +24,7 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
-  const [anim, setAnim] = useState("");
+  const startX = useRef(0);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -57,14 +57,29 @@ export default function App() {
     }
   };
 
-  const next = (dir) => {
-    setAnim(dir > 0 ? "left" : "right");
+  const shuffle = () => {
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    setCards(shuffled);
+    setIndex(0);
+    setShow(false);
+  };
 
-    setTimeout(() => {
+  // свайп
+  const handleTouchStart = (e) => {
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    const diff = e.changedTouches[0].clientX - startX.current;
+
+    if (Math.abs(diff) > 50) {
       setShow(false);
-      setIndex(i => (i + dir + cards.length) % cards.length);
-      setAnim("");
-    }, 150);
+      if (diff < 0) {
+        setIndex(i => (i + 1) % cards.length);
+      } else {
+        setIndex(i => (i - 1 + cards.length) % cards.length);
+      }
+    }
   };
 
   // ===== МЕНЮ =====
@@ -80,7 +95,7 @@ export default function App() {
         fontFamily: "Arial"
       }}>
         <div style={{
-          marginBottom: 8,
+          marginBottom: 6,
           color: "#e2e8f0",
           fontWeight: 700
         }}>
@@ -146,12 +161,25 @@ export default function App() {
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         color: "#94a3b8",
         marginBottom: 10
       }}>
         <div onClick={() => setScreen("menu")} style={{ cursor: "pointer" }}>
           ← назад
         </div>
+
+        <button onClick={shuffle} style={{
+          width: 44,
+          height: 44,
+          borderRadius: 12,
+          border: "none",
+          background: "#334155",
+          color: "white",
+          fontSize: 20
+        }}>
+          🔀
+        </button>
       </div>
 
       {/* карточка */}
@@ -160,45 +188,40 @@ export default function App() {
         maxWidth: 420,
         padding: "0 4px"
       }}>
-        <div style={{
-          height: "calc(100vh - 240px)",
-          maxHeight: 420,
-          minHeight: 220
-        }}>
+        <div
+          onClick={() => setShow(!show)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          style={{
+            width: "100%",
+            height: "calc(100vh - 240px)",
+            maxHeight: 420,
+            minHeight: 220,
+            position: "relative",
+            borderRadius: 20,
+            overflow: "hidden",
+            cursor: "pointer"
+          }}
+        >
+
+          {/* ⭐ */}
           <div
-            onClick={() => setShow(!show)}
+            onClick={toggleFavorite}
             style={{
-              width: "100%",
-              height: "100%",
-              position: "relative",
-              borderRadius: 20,
-              overflow: "hidden",
-              transform: `
-                translateX(${anim === "left" ? "-30px" : anim === "right" ? "30px" : "0"})
-              `,
-              opacity: anim ? 0 : 1,
-              transition: "all 0.2s ease"
+              position: "absolute",
+              top: 12,
+              right: 12,
+              fontSize: 28,
+              zIndex: 10,
+              color: favorites.includes(cards[index].question) ? "#facc15" : "#9ca3af"
             }}
           >
+            ★
+          </div>
 
-            {/* ⭐ */}
-            <div
-              onClick={toggleFavorite}
-              style={{
-                position: "absolute",
-                top: 12,
-                right: 12,
-                fontSize: 30,
-                zIndex: 10,
-                color: favorites.includes(cards[index].question) ? "#facc15" : "#9ca3af"
-              }}
-            >
-              ★
-            </div>
-
-            {/* вопрос */}
+          {/* вопрос */}
+          {!show && (
             <div style={{
-              position: "absolute",
               width: "100%",
               height: "100%",
               background: "#e5e7eb",
@@ -206,20 +229,18 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              fontSize: "clamp(34px, 8vw, 44px)",
+              fontSize: "clamp(32px, 8vw, 42px)",
               fontWeight: 700,
               color: "#111",
-              textAlign: "center",
-              backfaceVisibility: "hidden",
-              transform: show ? "rotateY(180deg)" : "rotateY(0deg)",
-              transition: "transform 0.4s"
+              textAlign: "center"
             }}>
               {cards[index].question}
             </div>
+          )}
 
-            {/* ответ */}
+          {/* ответ */}
+          {show && (
             <div style={{
-              position: "absolute",
               width: "100%",
               height: "100%",
               background: "#2563eb",
@@ -228,16 +249,14 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               padding: 20,
-              fontSize: "clamp(36px, 8vw, 46px)",
+              fontSize: "clamp(34px, 8vw, 44px)",
               fontWeight: 800,
-              textAlign: "center",
-              transform: show ? "rotateY(0deg)" : "rotateY(-180deg)",
-              transition: "transform 0.4s"
+              textAlign: "center"
             }}>
               {cards[index].answer}
             </div>
+          )}
 
-          </div>
         </div>
       </div>
 
@@ -260,7 +279,10 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button onClick={() => next(-1)} style={{
+          <button onClick={() => {
+            setShow(false);
+            setIndex(i => (i - 1 + cards.length) % cards.length);
+          }} style={{
             width: 70,
             height: 48,
             borderRadius: 16,
@@ -274,7 +296,10 @@ export default function App() {
             {index + 1} / {cards.length}
           </div>
 
-          <button onClick={() => next(1)} style={{
+          <button onClick={() => {
+            setShow(false);
+            setIndex(i => (i + 1) % cards.length);
+          }} style={{
             width: 70,
             height: 48,
             borderRadius: 16,
