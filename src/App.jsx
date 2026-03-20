@@ -25,6 +25,8 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
+
+  const [dragX, setDragX] = useState(0);
   const startX = useRef(0);
 
   const loadTopic = (file) => {
@@ -49,7 +51,7 @@ export default function App() {
 
   const toggleFavorite = (e) => {
     e.stopPropagation();
-    const q = cards[index].question;
+    const q = filteredCards[index].question;
 
     if (favorites.includes(q)) {
       setFavorites(favorites.filter(f => f !== q));
@@ -65,26 +67,35 @@ export default function App() {
     setShow(false);
   };
 
-  // фильтр ⭐
   const filteredCards = onlyFav
     ? cards.filter(c => favorites.includes(c.question))
     : cards;
 
-  // свайп
+  // ===== SWIPE =====
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
   };
 
-  const handleTouchEnd = (e) => {
-    const diff = e.changedTouches[0].clientX - startX.current;
+  const handleTouchMove = (e) => {
+    const move = e.touches[0].clientX - startX.current;
+    setDragX(move);
+  };
 
-    if (Math.abs(diff) > 50) {
-      setShow(false);
-      if (diff < 0) {
-        setIndex(i => (i + 1) % filteredCards.length);
-      } else {
-        setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-      }
+  const handleTouchEnd = () => {
+    if (Math.abs(dragX) > 120) {
+      setDragX(dragX > 0 ? 500 : -500);
+
+      setTimeout(() => {
+        setIndex(i =>
+          dragX < 0
+            ? (i + 1) % filteredCards.length
+            : (i - 1 + filteredCards.length) % filteredCards.length
+        );
+        setDragX(0);
+        setShow(false);
+      }, 200);
+    } else {
+      setDragX(0);
     }
   };
 
@@ -99,11 +110,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{
-          marginBottom: 6,
-          color: "#e2e8f0",
-          fontWeight: 700
-        }}>
+        <div style={{ marginBottom: 6, color: "#e2e8f0", fontWeight: 700 }}>
           Arakelov Roman
         </div>
 
@@ -180,11 +187,8 @@ export default function App() {
             borderRadius: 12,
             border: "none",
             background: "#334155",
-            color: "white",
-            fontSize: 20
-          }}>
-            🔀
-          </button>
+            color: "white"
+          }}>🔀</button>
 
           <button onClick={() => {
             setOnlyFav(!onlyFav);
@@ -195,11 +199,8 @@ export default function App() {
             borderRadius: 12,
             border: "none",
             background: onlyFav ? "#facc15" : "#334155",
-            color: "white",
-            fontSize: 20
-          }}>
-            ★
-          </button>
+            color: "white"
+          }}>★</button>
         </div>
       </div>
 
@@ -212,6 +213,7 @@ export default function App() {
         <div
           onClick={() => setShow(!show)}
           onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           style={{
             width: "100%",
@@ -220,24 +222,22 @@ export default function App() {
             minHeight: 220,
             borderRadius: 20,
             overflow: "hidden",
-            position: "relative"
+            transform: `translateX(${dragX}px) rotate(${dragX / 20}deg)`,
+            transition: dragX === 0 ? "0.3s" : "none"
           }}
         >
 
           {/* ⭐ */}
-          <div
-            onClick={toggleFavorite}
-            style={{
-              position: "absolute",
-              top: 12,
-              right: 12,
-              fontSize: 28,
-              zIndex: 10,
-              color: favorites.includes(filteredCards[index].question)
-                ? "#facc15"
-                : "#9ca3af"
-            }}
-          >
+          <div onClick={toggleFavorite} style={{
+            position: "absolute",
+            top: 12,
+            right: 12,
+            fontSize: 28,
+            zIndex: 10,
+            color: favorites.includes(filteredCards[index].question)
+              ? "#facc15"
+              : "#9ca3af"
+          }}>
             ★
           </div>
 
@@ -252,7 +252,6 @@ export default function App() {
               padding: 24,
               fontSize: "clamp(30px, 7vw, 40px)",
               fontWeight: 700,
-              color: "#111",
               textAlign: "center",
               lineHeight: 1.5,
               wordBreak: "break-word"
@@ -300,7 +299,6 @@ export default function App() {
           justifyContent: "space-between",
           padding: "0 16px"
         }}>
-
           <button onClick={() => {
             setShow(false);
             setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
@@ -330,7 +328,6 @@ export default function App() {
             fontSize: 26,
             border: "none"
           }}>→</button>
-
         </div>
       </div>
 
