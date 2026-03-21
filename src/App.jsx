@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+const API_KEY = "19cfe51a800efaf9ecddfdd880654a8ae0eea92f1eaf1529215afc8832b5ca00";
+const VOICE_ID = "8lbMAldPdNgaVy6tKwSs";
+
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
   { name: "Документы", file: "/cards/Документы.txt" },
@@ -72,36 +75,38 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 ОЗВУЧКА (женский голос Monica приоритет)
-  const speak = (e) => {
+  // 🔥 ОЗВУЧКА ElevenLabs
+  const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
 
     const text = show ? current.answer : current.question;
 
-    const voices = speechSynthesis.getVoices();
+    try {
+      const res = await fetch(
+        `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "xi-api-key": API_KEY,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            text: text,
+            model_id: "eleven_multilingual_v2"
+          })
+        }
+      );
 
-    let selectedVoice =
-      voices.find(v => v.name.toLowerCase().includes("monica")) ||
-      voices.find(v => v.lang === "es-ES") ||
-      voices.find(v => v.lang.startsWith("es"));
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
 
-    console.log("Голос:", selectedVoice?.name);
+      const audio = new Audio(url);
+      audio.play();
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES";
-    utterance.rate = 0.9;
-
-    if (selectedVoice) {
-      utterance.voice = selectedVoice;
-      utterance.voiceURI = selectedVoice.voiceURI;
+    } catch (err) {
+      console.error("Ошибка озвучки:", err);
     }
-
-    speechSynthesis.cancel();
-
-    setTimeout(() => {
-      speechSynthesis.speak(utterance);
-    }, 80);
   };
 
   if (screen === "menu") {
@@ -115,11 +120,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: font
       }}>
-        <div style={{
-          color: "#A1A1A1",
-          fontWeight: 700,
-          fontSize: 18
-        }}>
+        <div style={{ color: "#A1A1A1", fontSize: 18 }}>
           Roman Arakelov
         </div>
 
@@ -132,8 +133,7 @@ export default function App() {
           <h2 style={{
             textAlign: "center",
             color: "#000",
-            fontSize: 26,
-            fontWeight: 900
+            fontSize: 26
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -189,21 +189,14 @@ export default function App() {
         }}>★</button>
       </div>
 
-      <div style={{
-        width: "100%",
-        maxWidth: 420,
-        marginTop: 10
-      }}>
-        <div
-          onClick={() => setShow(!show)}
-          style={{
-            width: "100%",
-            height: "60vh",
-            borderRadius: 20,
-            overflow: "hidden",
-            position: "relative"
-          }}
-        >
+      <div style={{ width: "100%", maxWidth: 420, marginTop: 10 }}>
+        <div onClick={() => setShow(!show)} style={{
+          width: "100%",
+          height: "60vh",
+          borderRadius: 20,
+          overflow: "hidden",
+          position: "relative"
+        }}>
 
           <div onClick={toggleFavorite} style={{
             position: "absolute",
@@ -254,12 +247,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* НИЗ */}
-      <div style={{
-        width: "100%",
-        maxWidth: 420,
-        marginTop: 12
-      }}>
+      <div style={{ width: "100%", maxWidth: 420, marginTop: 12 }}>
         <button onClick={shuffle} style={{
           width: "100%",
           height: 70,
@@ -267,9 +255,7 @@ export default function App() {
           background: "#334155",
           border: "none",
           fontSize: 36
-        }}>
-          🔀
-        </button>
+        }}>🔀</button>
 
         <div style={{
           marginTop: 10,
@@ -281,7 +267,6 @@ export default function App() {
           justifyContent: "space-between",
           padding: "0 16px"
         }}>
-
           <button onClick={() => {
             if (!filteredCards.length) return;
             setShow(false);
@@ -313,7 +298,6 @@ export default function App() {
             fontSize: 26,
             border: "none"
           }}>→</button>
-
         </div>
       </div>
 
