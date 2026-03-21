@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -26,17 +26,6 @@ export default function App() {
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
 
-  const [anim, setAnim] = useState("");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("favorites");
-    if (saved) setFavorites(JSON.parse(saved));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
-
   const loadTopic = (file) => {
     fetch(file)
       .then(res => res.text())
@@ -63,22 +52,15 @@ export default function App() {
 
   const current = filteredCards[index];
 
-  const next = () => {
-    setAnim("left");
-    setTimeout(() => {
-      setIndex(i => (i + 1) % filteredCards.length);
-      setShow(false);
-      setAnim("");
-    }, 260);
-  };
+  const toggleFavorite = (e) => {
+    e.stopPropagation();
+    if (!current) return;
 
-  const prev = () => {
-    setAnim("right");
-    setTimeout(() => {
-      setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-      setShow(false);
-      setAnim("");
-    }, 260);
+    if (favorites.includes(current.question)) {
+      setFavorites(favorites.filter(f => f !== current.question));
+    } else {
+      setFavorites([...favorites, current.question]);
+    }
   };
 
   if (screen === "menu") {
@@ -92,11 +74,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{
-          color: "#ffffff",
-          fontWeight: 800,
-          fontSize: 28
-        }}>
+        <div style={{ color: "#fff", fontWeight: 800, fontSize: 28 }}>
           Arakelov Roman
         </div>
 
@@ -108,9 +86,9 @@ export default function App() {
         }}>
           <h2 style={{
             textAlign: "center",
+            color: "#000",
             fontSize: 24,
-            fontWeight: 900,
-            color: "#000"
+            fontWeight: 900
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -143,7 +121,7 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "calc(env(safe-area-inset-top) + 20px) 12px 140px",
+      padding: "20px 12px 160px",
       fontFamily: "Arial"
     }}>
 
@@ -153,6 +131,7 @@ export default function App() {
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         color: "#94a3b8"
       }}>
         <div onClick={() => setScreen("menu")}>← назад</div>
@@ -171,8 +150,7 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10,
-        perspective: 1000
+        marginTop: 10
       }}>
         <div
           onClick={() => setShow(!show)}
@@ -180,80 +158,52 @@ export default function App() {
             width: "100%",
             height: "60vh",
             borderRadius: 20,
-            position: "relative",
-
-            transform: `
-              translateX(${anim === "left" ? "-100%" : anim === "right" ? "100%" : "0"})
-              rotateY(${show ? "180deg" : "0"})
-            `,
-            transition: "transform 0.35s ease",
-            transformStyle: "preserve-3d"
+            overflow: "hidden",
+            position: "relative"
           }}
         >
 
-          {/* FRONT */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            background: "#e5e7eb",
-            borderRadius: 20,
-            backfaceVisibility: "hidden",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20
-          }}>
-            <div style={{
-              width: "100%",
-              textAlign: "center",
-              fontSize: "clamp(30px, 7vw, 40px)",
-              fontWeight: 700
-            }}>
-              {current?.question}
-            </div>
-          </div>
-
-          {/* BACK */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            background: "#2563eb",
-            color: "white",
-            borderRadius: 20,
-            transform: "rotateY(180deg)",
-            backfaceVisibility: "hidden",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20
-          }}>
-            <div style={{
-              width: "100%",
-              textAlign: "center",
-              fontSize: "clamp(30px, 7vw, 40px)",
-              fontWeight: 700
-            }}>
-              {current?.answer}
-            </div>
-          </div>
-
           {/* ⭐ */}
-          {current && (
-            <div style={{
+          <div
+            onClick={toggleFavorite}
+            style={{
               position: "absolute",
               top: 14,
               right: 14,
               fontSize: 30,
-              zIndex: 10,
-              color: favorites.includes(current.question)
+              zIndex: 20,
+              cursor: "pointer",
+              pointerEvents: "auto",
+              color: favorites.includes(current?.question)
                 ? "#facc15"
                 : "#9ca3af"
+            }}
+          >
+            ★
+          </div>
+
+          {/* контент */}
+          <div style={{
+            width: "100%",
+            height: "100%",
+            background: show ? "#2563eb" : "#e5e7eb",
+            color: show ? "#fff" : "#000",
+
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}>
+            <div style={{
+              width: "100%",
+              textAlign: "center",
+              padding: 20,
+              fontSize: "clamp(30px, 7vw, 40px)",
+              fontWeight: 700,
+              lineHeight: 1.5
             }}>
-              ★
+              {show ? current?.answer : current?.question}
             </div>
-          )}
+          </div>
 
         </div>
       </div>
@@ -262,7 +212,7 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10
+        marginTop: 12
       }}>
         <button style={{
           width: "100%",
@@ -284,13 +234,29 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button onClick={prev}>←</button>
+          <button style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#020617",
+            color: "white",
+            fontSize: 26,
+            border: "none"
+          }}>←</button>
 
           <div style={{ color: "white" }}>
             {index + 1} / {filteredCards.length}
           </div>
 
-          <button onClick={next}>→</button>
+          <button style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#2563eb",
+            color: "white",
+            fontSize: 26,
+            border: "none"
+          }}>→</button>
 
         </div>
       </div>
