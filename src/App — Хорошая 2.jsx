@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -25,6 +25,31 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
+
+  const [voice, setVoice] = useState(null);
+
+  // 🔊 выбираем лучший голос
+  useEffect(() => {
+    const pickVoice = () => {
+      const voices = speechSynthesis.getVoices();
+
+      if (!voices.length) return;
+
+      // приоритет
+      let v =
+        voices.find(v => v.name.includes("Google") && v.lang.startsWith("es")) ||
+        voices.find(v => v.name.includes("Microsoft") && v.lang.startsWith("es")) ||
+        voices.find(v => v.name.includes("Monica")) ||
+        voices.find(v => v.name.includes("Sabina")) ||
+        voices.find(v => v.lang.startsWith("es"));
+
+      setVoice(v);
+    };
+
+    pickVoice();
+
+    speechSynthesis.onvoiceschanged = pickVoice;
+  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -70,6 +95,25 @@ export default function App() {
     setShow(false);
   };
 
+  // 🔊 озвучка
+  const speak = (e) => {
+    e.stopPropagation();
+    if (!current) return;
+
+    const text = show ? current.answer : current.question;
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "es-ES";
+    utterance.rate = 0.9;
+
+    if (voice) {
+      utterance.voice = voice;
+    }
+
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+  };
+
   if (screen === "menu") {
     return (
       <div style={{
@@ -81,8 +125,8 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{ color: "#fff", fontWeight: 800, fontSize: 28 }}>
-          Arakelov Roman
+        <div style={{ color: "#A1A1A1", fontWeight: 800, fontSize: 19 }}>
+         Roman Arakelov
         </div>
 
         <div style={{
@@ -110,8 +154,7 @@ export default function App() {
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white",
-                fontSize: 16
+                color: "white"
               }}>
               {t.name}
             </button>
@@ -132,13 +175,11 @@ export default function App() {
       fontFamily: "Arial"
     }}>
 
-      {/* верх */}
       <div style={{
         width: "100%",
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
         color: "#94a3b8"
       }}>
         <div onClick={() => setScreen("menu")}>← назад</div>
@@ -170,6 +211,7 @@ export default function App() {
           }}
         >
 
+          {/* ⭐ */}
           <div
             onClick={toggleFavorite}
             style={{
@@ -186,6 +228,26 @@ export default function App() {
           >
             ★
           </div>
+
+          {/* 🔊 */}
+          <button
+            onClick={speak}
+            style={{
+              position: "absolute",
+              bottom: 14,
+              right: 14,
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#2563eb",
+              color: "white",
+              fontSize: 24,
+              border: "none",
+              zIndex: 20
+            }}
+          >
+            🔊
+          </button>
 
           <div style={{
             width: "100%",
