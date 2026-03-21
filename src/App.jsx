@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const API_KEY = "19cfe51a800efaf9ecddfdd880654a8ae0eea92f1eaf1529215afc8832b5ca00";
-const VOICE_ID = "TxGEqnHWrfWFTfGW9XjX"; // Bella
+const VOICE_ID = "EXAVITQu4vr4xnSDxMaL"; // Bella
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
