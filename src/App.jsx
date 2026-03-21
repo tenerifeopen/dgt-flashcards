@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+const API_KEY = "19cfe51a800efaf9ecddfdd880654a8ae0eea92f1eaf1529215afc8832b5ca00";
+const VOICE_ID = "TxGEqnHWrfWFTfGW9XjX"; // Bella
+
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
   { name: "Документы", file: "/cards/Документы.txt" },
@@ -25,32 +28,8 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
-  const [voice, setVoice] = useState(null);
 
   const font = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-
-  // 🔊 выбор голоса (исправленный)
-  useEffect(() => {
-    const pickVoice = () => {
-      const voices = speechSynthesis.getVoices();
-
-      if (!voices.length) return;
-
-      // 🔥 сначала ищем Jorge
-      let v =
-        voices.find(v => v.name.toLowerCase().includes("jorge")) ||
-        voices.find(v => v.name.toLowerCase().includes("monica")) ||
-        voices.find(v => v.lang === "es-ES") ||
-        voices.find(v => v.lang.startsWith("es"));
-
-      console.log("Выбран голос:", v?.name); // 👈 важно для проверки
-
-      setVoice(v);
-    };
-
-    pickVoice();
-    speechSynthesis.onvoiceschanged = pickVoice;
-  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -96,20 +75,43 @@ export default function App() {
     setShow(false);
   };
 
-  const speak = (e) => {
+  // 🔊 НОВАЯ ОЗВУЧКА (ElevenLabs)
+  const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
 
     const text = show ? current.answer : current.question;
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES";
-    utterance.rate = 0.9;
+    try {
+      const response = await fetch(
+        `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "xi-api-key": API_KEY,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            text: text,
+            model_id: "eleven_multilingual_v2"
+          })
+        }
+      );
 
-    if (voice) utterance.voice = voice;
+      if (!response.ok) {
+        console.log("Ошибка:", await response.text());
+        return;
+      }
 
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const audio = new Audio(url);
+      audio.play();
+
+    } catch (err) {
+      console.log("Ошибка:", err);
+    }
   };
 
   if (screen === "menu") {
@@ -157,7 +159,7 @@ export default function App() {
                 border: "none",
                 background: "#2563eb",
                 color: "white",
-                fontSize: 18 // 🔥 увеличили
+                fontSize: 18
               }}>
               {t.name}
             </button>
@@ -259,7 +261,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* НИЗ НЕ ТРОГАЛ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
