@@ -70,22 +70,6 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 озвучка
-  const speak = (e) => {
-    e.stopPropagation();
-
-    if (!current) return;
-
-    const text = show ? current.answer : current.question;
-
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES";
-    utterance.rate = 0.9;
-
-    window.speechSynthesis.cancel(); // остановить прошлое
-    window.speechSynthesis.speak(utterance);
-  };
-
   if (screen === "menu") {
     return (
       <div style={{
@@ -186,7 +170,6 @@ export default function App() {
           }}
         >
 
-          {/* ⭐ */}
           <div
             onClick={toggleFavorite}
             style={{
@@ -204,27 +187,6 @@ export default function App() {
             ★
           </div>
 
-          {/* 🔊 */}
-          <button
-            onClick={speak}
-            style={{
-              position: "absolute",
-              bottom: 14,
-              right: 14,
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 24,
-              border: "none",
-              zIndex: 20
-            }}
-          >
-            🔊
-          </button>
-
-          {/* текст */}
           <div style={{
             width: "100%",
             height: "100%",
