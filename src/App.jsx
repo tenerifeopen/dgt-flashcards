@@ -119,7 +119,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{ color: "#e2e8f0", fontWeight: 700, fontSize: 20 }}>
+        <div style={{ color: "#e2e8f0", fontWeight: 700, fontSize: 26 }}>
           Arakelov Roman
         </div>
 
@@ -132,7 +132,8 @@ export default function App() {
           <h2 style={{
             textAlign: "center",
             color: "#020617",
-            fontWeight: 800
+            fontWeight: 800,
+            fontSize: 22
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -144,11 +145,12 @@ export default function App() {
               style={{
                 width: "100%",
                 marginTop: 10,
-                padding: 14,
+                padding: 16,
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white"
+                color: "white",
+                fontSize: 16
               }}
             >
               {t.name}
@@ -170,7 +172,6 @@ export default function App() {
       fontFamily: "Arial"
     }}>
 
-      {/* верх */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -195,7 +196,6 @@ export default function App() {
         </button>
       </div>
 
-      {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -236,20 +236,6 @@ export default function App() {
             </div>
           )}
 
-          {!current && (
-            <div style={{
-              width: "100%",
-              height: "100%",
-              background: "#1e293b",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#94a3b8"
-            }}>
-              Нет карточек
-            </div>
-          )}
-
           {current && (
             <div style={{
               width: "100%",
@@ -259,22 +245,22 @@ export default function App() {
 
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
-
-              padding: "20px",
-              fontSize: "clamp(26px, 6vw, 36px)",
-              fontWeight: 700,
-              lineHeight: 1.4,
-
-              overflowY: "auto",
-              WebkitOverflowScrolling: "touch",
-
-              wordBreak: "break-word",
-              whiteSpace: "pre-wrap"
+              justifyContent: "center"
             }}>
               <div style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 width: "100%",
-                textAlign: "center"
+                textAlign: "center",
+
+                padding: 20,
+                fontSize: "clamp(30px, 7vw, 40px)", // 🔥 увеличили
+                fontWeight: 700,
+                lineHeight: 1.3,
+
+                wordBreak: "break-word",
+                whiteSpace: "pre-wrap"
               }}>
                 {show ? current.answer : current.question}
               </div>
@@ -284,7 +270,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* низ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
