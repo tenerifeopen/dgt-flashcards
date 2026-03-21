@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -72,36 +72,38 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 ФИКС ОЗВУЧКИ (iPhone + выбор Jorge)
+  // 🔊 ФИКС ОЗВУЧКИ (главное)
   const speak = (e) => {
     e.stopPropagation();
     if (!current) return;
 
     const text = show ? current.answer : current.question;
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    const voices = speechSynthesis.getVoices();
+
+    let selectedVoice =
+      voices.find(v => v.name.toLowerCase().includes("jorge")) ||
+      voices.find(v => v.name.toLowerCase().includes("monica")) ||
+      voices.find(v => v.lang === "es-ES") ||
+      voices.find(v => v.lang.startsWith("es"));
+
+    console.log("Используем голос:", selectedVoice?.name);
+
+    const utterance = new SpeechSynthesisUtterance();
+    utterance.text = text;
     utterance.lang = "es-ES";
     utterance.rate = 0.9;
 
-    const voices = speechSynthesis.getVoices();
-
-    let v =
-      voices.find(v => v.name.toLowerCase().includes("jorge")) ||
-      voices.find(v => v.name.toLowerCase().includes("male")) ||
-      voices.find(v => v.lang === "es-ES");
-
-    console.log("Голос:", v?.name);
-
-    if (v) {
-      utterance.voice = v;
-      utterance.voiceURI = v.voiceURI;
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
+      utterance.voiceURI = selectedVoice.voiceURI;
     }
 
     speechSynthesis.cancel();
 
     setTimeout(() => {
       speechSynthesis.speak(utterance);
-    }, 50);
+    }, 80);
   };
 
   if (screen === "menu") {
@@ -254,7 +256,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* НИЖНИЕ КНОПКИ ВЕРНУЛИ */}
+      {/* НИЗ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
