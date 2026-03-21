@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -25,6 +25,31 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
+
+  const [voice, setVoice] = useState(null);
+
+  // 🔊 выбираем лучший голос
+  useEffect(() => {
+    const pickVoice = () => {
+      const voices = speechSynthesis.getVoices();
+
+      if (!voices.length) return;
+
+      // приоритет
+      let v =
+        voices.find(v => v.name.includes("Google") && v.lang.startsWith("es")) ||
+        voices.find(v => v.name.includes("Microsoft") && v.lang.startsWith("es")) ||
+        voices.find(v => v.name.includes("Monica")) ||
+        voices.find(v => v.name.includes("Sabina")) ||
+        voices.find(v => v.lang.startsWith("es"));
+
+      setVoice(v);
+    };
+
+    pickVoice();
+
+    speechSynthesis.onvoiceschanged = pickVoice;
+  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -73,7 +98,6 @@ export default function App() {
   // 🔊 озвучка
   const speak = (e) => {
     e.stopPropagation();
-
     if (!current) return;
 
     const text = show ? current.answer : current.question;
@@ -82,8 +106,12 @@ export default function App() {
     utterance.lang = "es-ES";
     utterance.rate = 0.9;
 
-    window.speechSynthesis.cancel(); // остановить прошлое
-    window.speechSynthesis.speak(utterance);
+    if (voice) {
+      utterance.voice = voice;
+    }
+
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
   };
 
   if (screen === "menu") {
@@ -126,8 +154,7 @@ export default function App() {
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white",
-                fontSize: 16
+                color: "white"
               }}>
               {t.name}
             </button>
@@ -148,13 +175,11 @@ export default function App() {
       fontFamily: "Arial"
     }}>
 
-      {/* верх */}
       <div style={{
         width: "100%",
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
         color: "#94a3b8"
       }}>
         <div onClick={() => setScreen("menu")}>← назад</div>
@@ -224,7 +249,6 @@ export default function App() {
             🔊
           </button>
 
-          {/* текст */}
           <div style={{
             width: "100%",
             height: "100%",
