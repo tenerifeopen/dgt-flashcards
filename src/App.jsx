@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -26,16 +26,13 @@ export default function App() {
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
 
-  const [dragX, setDragX] = useState(0);
-  const startX = useRef(0);
+  const [anim, setAnim] = useState(""); // 👉 анимация
 
-  // 💾 загрузка избранного
   useEffect(() => {
     const saved = localStorage.getItem("favorites");
     if (saved) setFavorites(JSON.parse(saved));
   }, []);
 
-  // 💾 сохранение избранного
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
@@ -84,34 +81,28 @@ export default function App() {
     setShow(false);
   };
 
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    const deltaX = e.touches[0].clientX - startX.current;
-    if (Math.abs(deltaX) > 10) e.preventDefault();
-    setDragX(Math.max(-120, Math.min(120, deltaX)));
-  };
-
-  const handleTouchEnd = () => {
+  // 👉 переход вправо
+  const next = () => {
     if (!filteredCards.length) return;
 
-    if (Math.abs(dragX) > 60) {
-      setDragX(dragX > 0 ? 400 : -400);
+    setAnim("left");
+    setTimeout(() => {
+      setIndex(i => (i + 1) % filteredCards.length);
+      setShow(false);
+      setAnim("");
+    }, 200);
+  };
 
-      setTimeout(() => {
-        setIndex(i =>
-          dragX < 0
-            ? (i + 1) % filteredCards.length
-            : (i - 1 + filteredCards.length) % filteredCards.length
-        );
-        setDragX(0);
-        setShow(false);
-      }, 180);
-    } else {
-      setDragX(0);
-    }
+  // 👉 переход влево
+  const prev = () => {
+    if (!filteredCards.length) return;
+
+    setAnim("right");
+    setTimeout(() => {
+      setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+      setShow(false);
+      setAnim("");
+    }, 200);
   };
 
   if (screen === "menu") {
@@ -137,8 +128,6 @@ export default function App() {
         }}>
           <h2 style={{
             textAlign: "center",
-            color: "#020617",
-            fontWeight: 800,
             fontSize: 22
           }}>
             📚 МОИ КАРТОЧКИ
@@ -154,8 +143,7 @@ export default function App() {
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white",
-                fontSize: 16
+                color: "white"
               }}>
               {t.name}
             </button>
@@ -172,7 +160,7 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "calc(env(safe-area-inset-top) + 20px) 12px calc(env(safe-area-inset-bottom) + 110px)",
+      padding: "calc(env(safe-area-inset-top) + 20px) 12px 140px",
       fontFamily: "Arial"
     }}>
 
@@ -181,12 +169,9 @@ export default function App() {
         maxWidth: 420,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
         color: "#94a3b8"
       }}>
-        <div onClick={() => setScreen("menu")} style={{ fontSize: 18 }}>
-          ← назад
-        </div>
+        <div onClick={() => setScreen("menu")}>← назад</div>
 
         <button onClick={() => setOnlyFav(!onlyFav)} style={{
           width: 52,
@@ -195,75 +180,35 @@ export default function App() {
           background: onlyFav ? "#facc15" : "#334155",
           fontSize: 26,
           border: "none"
-        }}>
-          ★
-        </button>
+        }}>★</button>
       </div>
 
-      {/* 🎴 Flip карточка */}
+      {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10,
-        perspective: 1000
+        marginTop: 10
       }}>
         <div
           onClick={() => current && setShow(!show)}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
           style={{
             width: "100%",
             height: "60vh",
-            maxHeight: 500,
-            minHeight: 260,
             borderRadius: 20,
+            overflow: "hidden",
             position: "relative",
-            transform: `translate3d(${dragX}px,0,0) rotateY(${show ? 180 : 0}deg)`,
-            transition: "transform 0.4s",
-            transformStyle: "preserve-3d"
+
+            transform:
+              anim === "left"
+                ? "translateX(-100%)"
+                : anim === "right"
+                ? "translateX(100%)"
+                : "translateX(0)",
+
+            transition: "transform 0.2s"
           }}
         >
 
-          {/* ВОПРОС */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            backfaceVisibility: "hidden",
-            background: "#e5e7eb",
-            borderRadius: 20,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(30px, 7vw, 40px)",
-            textAlign: "center"
-          }}>
-            {current?.question}
-          </div>
-
-          {/* ОТВЕТ */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-            background: "#2563eb",
-            color: "white",
-            borderRadius: 20,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(30px, 7vw, 40px)",
-            textAlign: "center"
-          }}>
-            {current?.answer}
-          </div>
-
-          {/* ⭐ */}
           {current && (
             <div onClick={toggleFavorite} style={{
               position: "absolute",
@@ -274,10 +219,24 @@ export default function App() {
               color: favorites.includes(current.question)
                 ? "#facc15"
                 : "#9ca3af"
-            }}>
-              ★
-            </div>
+            }}>★</div>
           )}
+
+          <div style={{
+            width: "100%",
+            height: "100%",
+            background: show ? "#2563eb" : "#e5e7eb",
+            color: show ? "white" : "#0f172a",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 20,
+            fontSize: "clamp(30px, 7vw, 40px)",
+            textAlign: "center"
+          }}>
+            {show ? current?.answer : current?.question}
+          </div>
+
         </div>
       </div>
 
@@ -294,9 +253,7 @@ export default function App() {
           background: "#334155",
           border: "none",
           fontSize: 36
-        }}>
-          🔀
-        </button>
+        }}>🔀</button>
 
         <div style={{
           marginTop: 10,
@@ -309,11 +266,7 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button onClick={() => {
-            if (!filteredCards.length) return;
-            setShow(false);
-            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-          }} style={{
+          <button onClick={prev} style={{
             width: 70,
             height: 48,
             borderRadius: 16,
@@ -324,14 +277,10 @@ export default function App() {
           }}>←</button>
 
           <div style={{ color: "white" }}>
-            {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
+            {index + 1} / {filteredCards.length}
           </div>
 
-          <button onClick={() => {
-            if (!filteredCards.length) return;
-            setShow(false);
-            setIndex(i => (i + 1) % filteredCards.length);
-          }} style={{
+          <button onClick={next} style={{
             width: 70,
             height: 48,
             borderRadius: 16,
