@@ -26,7 +26,7 @@ export default function App() {
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
 
-  const [anim, setAnim] = useState(""); // 👉 анимация
+  const [anim, setAnim] = useState("");
 
   useEffect(() => {
     const saved = localStorage.getItem("favorites");
@@ -63,46 +63,22 @@ export default function App() {
 
   const current = filteredCards[index];
 
-  const toggleFavorite = (e) => {
-    e.stopPropagation();
-    if (!current) return;
-
-    if (favorites.includes(current.question)) {
-      setFavorites(favorites.filter(f => f !== current.question));
-    } else {
-      setFavorites([...favorites, current.question]);
-    }
-  };
-
-  const shuffle = () => {
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
-    setCards(shuffled);
-    setIndex(0);
-    setShow(false);
-  };
-
-  // 👉 переход вправо
   const next = () => {
-    if (!filteredCards.length) return;
-
     setAnim("left");
     setTimeout(() => {
       setIndex(i => (i + 1) % filteredCards.length);
       setShow(false);
       setAnim("");
-    }, 200);
+    }, 260);
   };
 
-  // 👉 переход влево
   const prev = () => {
-    if (!filteredCards.length) return;
-
     setAnim("right");
     setTimeout(() => {
       setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
       setShow(false);
       setAnim("");
-    }, 200);
+    }, 260);
   };
 
   if (screen === "menu") {
@@ -116,7 +92,11 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{ color: "#e2e8f0", fontWeight: 700, fontSize: 26 }}>
+        <div style={{
+          color: "#ffffff",
+          fontWeight: 800,
+          fontSize: 28
+        }}>
           Arakelov Roman
         </div>
 
@@ -128,7 +108,9 @@ export default function App() {
         }}>
           <h2 style={{
             textAlign: "center",
-            fontSize: 22
+            fontSize: 24,
+            fontWeight: 900,
+            color: "#000"
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -143,7 +125,8 @@ export default function App() {
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white"
+                color: "white",
+                fontSize: 16
               }}>
               {t.name}
             </button>
@@ -164,6 +147,7 @@ export default function App() {
       fontFamily: "Arial"
     }}>
 
+      {/* верх */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -187,30 +171,77 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10
+        marginTop: 10,
+        perspective: 1000
       }}>
         <div
-          onClick={() => current && setShow(!show)}
+          onClick={() => setShow(!show)}
           style={{
             width: "100%",
             height: "60vh",
             borderRadius: 20,
-            overflow: "hidden",
             position: "relative",
 
-            transform:
-              anim === "left"
-                ? "translateX(-100%)"
-                : anim === "right"
-                ? "translateX(100%)"
-                : "translateX(0)",
-
-            transition: "transform 0.2s"
+            transform: `
+              translateX(${anim === "left" ? "-100%" : anim === "right" ? "100%" : "0"})
+              rotateY(${show ? "180deg" : "0"})
+            `,
+            transition: "transform 0.35s ease",
+            transformStyle: "preserve-3d"
           }}
         >
 
+          {/* FRONT */}
+          <div style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background: "#e5e7eb",
+            borderRadius: 20,
+            backfaceVisibility: "hidden",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 20
+          }}>
+            <div style={{
+              width: "100%",
+              textAlign: "center",
+              fontSize: "clamp(30px, 7vw, 40px)",
+              fontWeight: 700
+            }}>
+              {current?.question}
+            </div>
+          </div>
+
+          {/* BACK */}
+          <div style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background: "#2563eb",
+            color: "white",
+            borderRadius: 20,
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 20
+          }}>
+            <div style={{
+              width: "100%",
+              textAlign: "center",
+              fontSize: "clamp(30px, 7vw, 40px)",
+              fontWeight: 700
+            }}>
+              {current?.answer}
+            </div>
+          </div>
+
+          {/* ⭐ */}
           {current && (
-            <div onClick={toggleFavorite} style={{
+            <div style={{
               position: "absolute",
               top: 14,
               right: 14,
@@ -219,23 +250,10 @@ export default function App() {
               color: favorites.includes(current.question)
                 ? "#facc15"
                 : "#9ca3af"
-            }}>★</div>
+            }}>
+              ★
+            </div>
           )}
-
-          <div style={{
-            width: "100%",
-            height: "100%",
-            background: show ? "#2563eb" : "#e5e7eb",
-            color: show ? "white" : "#0f172a",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(30px, 7vw, 40px)",
-            textAlign: "center"
-          }}>
-            {show ? current?.answer : current?.question}
-          </div>
 
         </div>
       </div>
@@ -246,7 +264,7 @@ export default function App() {
         maxWidth: 420,
         marginTop: 10
       }}>
-        <button onClick={shuffle} style={{
+        <button style={{
           width: "100%",
           height: 70,
           borderRadius: 20,
@@ -266,29 +284,13 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button onClick={prev} style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#020617",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>←</button>
+          <button onClick={prev}>←</button>
 
           <div style={{ color: "white" }}>
             {index + 1} / {filteredCards.length}
           </div>
 
-          <button onClick={next} style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#2563eb",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>→</button>
+          <button onClick={next}>→</button>
 
         </div>
       </div>
