@@ -72,7 +72,7 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 ФИКС ОЗВУЧКИ (главное)
+  // 🔊 ОЗВУЧКА (женский голос Monica приоритет)
   const speak = (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -82,15 +82,13 @@ export default function App() {
     const voices = speechSynthesis.getVoices();
 
     let selectedVoice =
-      voices.find(v => v.name.toLowerCase().includes("jorge")) ||
       voices.find(v => v.name.toLowerCase().includes("monica")) ||
       voices.find(v => v.lang === "es-ES") ||
       voices.find(v => v.lang.startsWith("es"));
 
-    console.log("Используем голос:", selectedVoice?.name);
+    console.log("Голос:", selectedVoice?.name);
 
-    const utterance = new SpeechSynthesisUtterance();
-    utterance.text = text;
+    const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "es-ES";
     utterance.rate = 0.9;
 
