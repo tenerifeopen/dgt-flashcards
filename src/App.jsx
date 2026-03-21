@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 
-const API_KEY = "19cfe51a800efaf9ecddfdd880654a8ae0eea92f1eaf1529215afc8832b5ca00";
-const VOICE_ID = "8lbMAldPdNgaVy6tKwSs"; 
-
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
   { name: "Документы", file: "/cards/Документы.txt" },
@@ -28,8 +25,28 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
+  const [voice, setVoice] = useState(null);
 
   const font = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+
+  // 🔊 голос
+  useEffect(() => {
+    const pickVoice = () => {
+      const voices = speechSynthesis.getVoices();
+      if (!voices.length) return;
+
+      const v =
+        voices.find(v => v.name.toLowerCase().includes("jorge")) ||
+        voices.find(v => v.name.toLowerCase().includes("monica")) ||
+        voices.find(v => v.lang === "es-ES") ||
+        voices.find(v => v.lang.startsWith("es"));
+
+      setVoice(v);
+    };
+
+    pickVoice();
+    speechSynthesis.onvoiceschanged = pickVoice;
+  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -57,8 +74,10 @@ export default function App() {
 
   const current = filteredCards[index];
 
+  // ⭐ фикс
   const toggleFavorite = (e) => {
     e.stopPropagation();
+
     if (!current) return;
 
     if (favorites.includes(current.question)) {
@@ -75,43 +94,23 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 НОВАЯ ОЗВУЧКА (ElevenLabs)
-  const speak = async (e) => {
+  // 🔊 стабильная озвучка
+  const speak = (e) => {
     e.stopPropagation();
+
     if (!current) return;
 
     const text = show ? current.answer : current.question;
 
-    try {
-      const response = await fetch(
-        `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
-        {
-          method: "POST",
-          headers: {
-            "xi-api-key": API_KEY,
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            text: text,
-            model_id: "eleven_multilingual_v2"
-          })
-        }
-      );
+    speechSynthesis.cancel();
 
-      if (!response.ok) {
-        console.log("Ошибка:", await response.text());
-        return;
-      }
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "es-ES";
+    utterance.rate = 0.85;
 
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
+    if (voice) utterance.voice = voice;
 
-      const audio = new Audio(url);
-      audio.play();
-
-    } catch (err) {
-      console.log("Ошибка:", err);
-    }
+    speechSynthesis.speak(utterance);
   };
 
   if (screen === "menu") {
@@ -215,27 +214,41 @@ export default function App() {
           }}
         >
 
-          <div onClick={toggleFavorite} style={{
-            position: "absolute",
-            top: 14,
-            right: 14,
-            fontSize: 30,
-            zIndex: 20
-          }}>★</div>
+          <div
+            onClick={toggleFavorite}
+            style={{
+              position: "absolute",
+              top: 14,
+              right: 14,
+              fontSize: 30,
+              zIndex: 30, // 🔥 ВАЖНО
+              cursor: "pointer",
+              color: favorites.includes(current?.question)
+                ? "#facc15"
+                : "#9ca3af"
+            }}
+          >
+            ★
+          </div>
 
-          <button onClick={speak} style={{
-            position: "absolute",
-            bottom: 14,
-            right: 14,
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#2563eb",
-            color: "white",
-            fontSize: 24,
-            border: "none",
-            zIndex: 20
-          }}>🔊</button>
+          <button
+            onClick={speak}
+            style={{
+              position: "absolute",
+              bottom: 14,
+              right: 14,
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#2563eb",
+              color: "white",
+              fontSize: 24,
+              border: "none",
+              zIndex: 30
+            }}
+          >
+            🔊
+          </button>
 
           <div style={{
             width: "100%",
