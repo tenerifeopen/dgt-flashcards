@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -61,6 +61,13 @@ export default function App() {
     } else {
       setFavorites([...favorites, current.question]);
     }
+  };
+
+  const shuffle = () => {
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    setCards(shuffled);
+    setIndex(0);
+    setShow(false);
   };
 
   if (screen === "menu") {
@@ -163,7 +170,6 @@ export default function App() {
           }}
         >
 
-          {/* ⭐ */}
           <div
             onClick={toggleFavorite}
             style={{
@@ -173,7 +179,6 @@ export default function App() {
               fontSize: 30,
               zIndex: 20,
               cursor: "pointer",
-              pointerEvents: "auto",
               color: favorites.includes(current?.question)
                 ? "#facc15"
                 : "#9ca3af"
@@ -182,13 +187,11 @@ export default function App() {
             ★
           </div>
 
-          {/* контент */}
           <div style={{
             width: "100%",
             height: "100%",
             background: show ? "#2563eb" : "#e5e7eb",
             color: show ? "#fff" : "#000",
-
             display: "flex",
             alignItems: "center",
             justifyContent: "center"
@@ -214,14 +217,16 @@ export default function App() {
         maxWidth: 420,
         marginTop: 12
       }}>
-        <button style={{
+        <button onClick={shuffle} style={{
           width: "100%",
           height: 70,
           borderRadius: 20,
           background: "#334155",
           border: "none",
           fontSize: 36
-        }}>🔀</button>
+        }}>
+          🔀
+        </button>
 
         <div style={{
           marginTop: 10,
@@ -234,29 +239,47 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#020617",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>←</button>
+          <button
+            onClick={() => {
+              if (!filteredCards.length) return;
+              setShow(false);
+              setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+            }}
+            style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#020617",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}
+          >
+            ←
+          </button>
 
           <div style={{ color: "white" }}>
-            {index + 1} / {filteredCards.length}
+            {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
           </div>
 
-          <button style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#2563eb",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>→</button>
+          <button
+            onClick={() => {
+              if (!filteredCards.length) return;
+              setShow(false);
+              setIndex(i => (i + 1) % filteredCards.length);
+            }}
+            style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#2563eb",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}
+          >
+            →
+          </button>
 
         </div>
       </div>
