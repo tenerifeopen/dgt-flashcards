@@ -25,32 +25,8 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
-  const [voice, setVoice] = useState(null);
 
   const font = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-
-  // 🔊 выбор голоса (исправленный)
-  useEffect(() => {
-    const pickVoice = () => {
-      const voices = speechSynthesis.getVoices();
-
-      if (!voices.length) return;
-
-      // 🔥 сначала ищем Jorge
-      let v =
-        voices.find(v => v.name.toLowerCase().includes("jorge")) ||
-        voices.find(v => v.name.toLowerCase().includes("monica")) ||
-        voices.find(v => v.lang === "es-ES") ||
-        voices.find(v => v.lang.startsWith("es"));
-
-      console.log("Выбран голос:", v?.name); // 👈 важно для проверки
-
-      setVoice(v);
-    };
-
-    pickVoice();
-    speechSynthesis.onvoiceschanged = pickVoice;
-  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -96,6 +72,7 @@ export default function App() {
     setShow(false);
   };
 
+  // 🔊 ФИКС ОЗВУЧКИ (iPhone + выбор Jorge)
   const speak = (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -106,10 +83,25 @@ export default function App() {
     utterance.lang = "es-ES";
     utterance.rate = 0.9;
 
-    if (voice) utterance.voice = voice;
+    const voices = speechSynthesis.getVoices();
+
+    let v =
+      voices.find(v => v.name.toLowerCase().includes("jorge")) ||
+      voices.find(v => v.name.toLowerCase().includes("male")) ||
+      voices.find(v => v.lang === "es-ES");
+
+    console.log("Голос:", v?.name);
+
+    if (v) {
+      utterance.voice = v;
+      utterance.voiceURI = v.voiceURI;
+    }
 
     speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
+
+    setTimeout(() => {
+      speechSynthesis.speak(utterance);
+    }, 50);
   };
 
   if (screen === "menu") {
@@ -157,7 +149,7 @@ export default function App() {
                 border: "none",
                 background: "#2563eb",
                 color: "white",
-                fontSize: 18 // 🔥 увеличили
+                fontSize: 18
               }}>
               {t.name}
             </button>
@@ -218,7 +210,10 @@ export default function App() {
             top: 14,
             right: 14,
             fontSize: 30,
-            zIndex: 20
+            zIndex: 20,
+            color: favorites.includes(current?.question)
+              ? "#facc15"
+              : "#9ca3af"
           }}>★</div>
 
           <button onClick={speak} style={{
@@ -259,7 +254,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* НИЗ НЕ ТРОГАЛ */}
+      {/* НИЖНИЕ КНОПКИ ВЕРНУЛИ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -272,7 +267,9 @@ export default function App() {
           background: "#334155",
           border: "none",
           fontSize: 36
-        }}>🔀</button>
+        }}>
+          🔀
+        </button>
 
         <div style={{
           marginTop: 10,
@@ -319,6 +316,7 @@ export default function App() {
 
         </div>
       </div>
+
     </div>
   );
 }

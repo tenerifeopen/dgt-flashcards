@@ -25,29 +25,30 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
-
   const [voice, setVoice] = useState(null);
 
-  // 🔊 выбираем лучший голос
+  const font = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+
+  // 🔊 выбор голоса (исправленный)
   useEffect(() => {
     const pickVoice = () => {
       const voices = speechSynthesis.getVoices();
 
       if (!voices.length) return;
 
-      // приоритет
+      // 🔥 сначала ищем Jorge
       let v =
-        voices.find(v => v.name.includes("Google") && v.lang.startsWith("es")) ||
-        voices.find(v => v.name.includes("Microsoft") && v.lang.startsWith("es")) ||
-        voices.find(v => v.name.includes("Monica")) ||
-        voices.find(v => v.name.includes("Sabina")) ||
+        voices.find(v => v.name.toLowerCase().includes("jorge")) ||
+        voices.find(v => v.name.toLowerCase().includes("monica")) ||
+        voices.find(v => v.lang === "es-ES") ||
         voices.find(v => v.lang.startsWith("es"));
+
+      console.log("Выбран голос:", v?.name); // 👈 важно для проверки
 
       setVoice(v);
     };
 
     pickVoice();
-
     speechSynthesis.onvoiceschanged = pickVoice;
   }, []);
 
@@ -95,7 +96,6 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 озвучка
   const speak = (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -106,9 +106,7 @@ export default function App() {
     utterance.lang = "es-ES";
     utterance.rate = 0.9;
 
-    if (voice) {
-      utterance.voice = voice;
-    }
+    if (voice) utterance.voice = voice;
 
     speechSynthesis.cancel();
     speechSynthesis.speak(utterance);
@@ -123,10 +121,14 @@ export default function App() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        fontFamily: "Arial"
+        fontFamily: font
       }}>
-        <div style={{ color: "#A1A1A1", fontWeight: 800, fontSize: 19 }}>
-         Roman Arakelov
+        <div style={{
+          color: "#A1A1A1",
+          fontWeight: 700,
+          fontSize: 18
+        }}>
+          Roman Arakelov
         </div>
 
         <div style={{
@@ -138,7 +140,7 @@ export default function App() {
           <h2 style={{
             textAlign: "center",
             color: "#000",
-            fontSize: 24,
+            fontSize: 26,
             fontWeight: 900
           }}>
             📚 МОИ КАРТОЧКИ
@@ -150,11 +152,12 @@ export default function App() {
               style={{
                 width: "100%",
                 marginTop: 10,
-                padding: 16,
+                padding: 18,
                 borderRadius: 12,
                 border: "none",
                 background: "#2563eb",
-                color: "white"
+                color: "white",
+                fontSize: 18 // 🔥 увеличили
               }}>
               {t.name}
             </button>
@@ -172,7 +175,7 @@ export default function App() {
       flexDirection: "column",
       alignItems: "center",
       padding: "20px 12px 160px",
-      fontFamily: "Arial"
+      fontFamily: font
     }}>
 
       <div style={{
@@ -194,7 +197,6 @@ export default function App() {
         }}>★</button>
       </div>
 
-      {/* карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -211,43 +213,27 @@ export default function App() {
           }}
         >
 
-          {/* ⭐ */}
-          <div
-            onClick={toggleFavorite}
-            style={{
-              position: "absolute",
-              top: 14,
-              right: 14,
-              fontSize: 30,
-              zIndex: 20,
-              cursor: "pointer",
-              color: favorites.includes(current?.question)
-                ? "#facc15"
-                : "#9ca3af"
-            }}
-          >
-            ★
-          </div>
+          <div onClick={toggleFavorite} style={{
+            position: "absolute",
+            top: 14,
+            right: 14,
+            fontSize: 30,
+            zIndex: 20
+          }}>★</div>
 
-          {/* 🔊 */}
-          <button
-            onClick={speak}
-            style={{
-              position: "absolute",
-              bottom: 14,
-              right: 14,
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 24,
-              border: "none",
-              zIndex: 20
-            }}
-          >
-            🔊
-          </button>
+          <button onClick={speak} style={{
+            position: "absolute",
+            bottom: 14,
+            right: 14,
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#2563eb",
+            color: "white",
+            fontSize: 24,
+            border: "none",
+            zIndex: 20
+          }}>🔊</button>
 
           <div style={{
             width: "100%",
@@ -273,7 +259,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* низ */}
+      {/* НИЗ НЕ ТРОГАЛ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -286,9 +272,7 @@ export default function App() {
           background: "#334155",
           border: "none",
           fontSize: 36
-        }}>
-          🔀
-        </button>
+        }}>🔀</button>
 
         <div style={{
           marginTop: 10,
@@ -301,47 +285,37 @@ export default function App() {
           padding: "0 16px"
         }}>
 
-          <button
-            onClick={() => {
-              if (!filteredCards.length) return;
-              setShow(false);
-              setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-            }}
-            style={{
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#020617",
-              color: "white",
-              fontSize: 26,
-              border: "none"
-            }}
-          >
-            ←
-          </button>
+          <button onClick={() => {
+            if (!filteredCards.length) return;
+            setShow(false);
+            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+          }} style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#020617",
+            color: "white",
+            fontSize: 26,
+            border: "none"
+          }}>←</button>
 
           <div style={{ color: "white" }}>
             {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
           </div>
 
-          <button
-            onClick={() => {
-              if (!filteredCards.length) return;
-              setShow(false);
-              setIndex(i => (i + 1) % filteredCards.length);
-            }}
-            style={{
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 26,
-              border: "none"
-            }}
-          >
-            →
-          </button>
+          <button onClick={() => {
+            if (!filteredCards.length) return;
+            setShow(false);
+            setIndex(i => (i + 1) % filteredCards.length);
+          }} style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#2563eb",
+            color: "white",
+            fontSize: 26,
+            border: "none"
+          }}>→</button>
 
         </div>
       </div>
