@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -28,17 +28,6 @@ export default function App() {
 
   const [dragX, setDragX] = useState(0);
   const startX = useRef(0);
-
-  // 💾 загрузка избранного
-  useEffect(() => {
-    const saved = localStorage.getItem("favorites");
-    if (saved) setFavorites(JSON.parse(saved));
-  }, []);
-
-  // 💾 сохранение избранного
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -90,8 +79,13 @@ export default function App() {
 
   const handleTouchMove = (e) => {
     const deltaX = e.touches[0].clientX - startX.current;
-    if (Math.abs(deltaX) > 10) e.preventDefault();
-    setDragX(Math.max(-120, Math.min(120, deltaX)));
+
+    if (Math.abs(deltaX) > 10) {
+      e.preventDefault();
+    }
+
+    const limited = Math.max(-120, Math.min(120, deltaX));
+    setDragX(limited);
   };
 
   const handleTouchEnd = () => {
@@ -145,7 +139,8 @@ export default function App() {
           </h2>
 
           {topics.map((t, i) => (
-            <button key={i}
+            <button
+              key={i}
               onClick={() => loadTopic(t.file)}
               style={{
                 width: "100%",
@@ -156,7 +151,8 @@ export default function App() {
                 background: "#2563eb",
                 color: "white",
                 fontSize: 16
-              }}>
+              }}
+            >
               {t.name}
             </button>
           ))}
@@ -200,12 +196,10 @@ export default function App() {
         </button>
       </div>
 
-      {/* 🎴 Flip карточка */}
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10,
-        perspective: 1000
+        marginTop: 10
       }}>
         <div
           onClick={() => current && setShow(!show)}
@@ -218,52 +212,15 @@ export default function App() {
             maxHeight: 500,
             minHeight: 260,
             borderRadius: 20,
+            overflow: "hidden",
+            transform: `translate3d(${dragX}px,0,0)`,
+            transition: dragX === 0 ? "transform 0.25s ease" : "none",
+            willChange: "transform",
             position: "relative",
-            transform: `translate3d(${dragX}px,0,0) rotateY(${show ? 180 : 0}deg)`,
-            transition: "transform 0.4s",
-            transformStyle: "preserve-3d"
+            touchAction: "pan-y"
           }}
         >
 
-          {/* ВОПРОС */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            backfaceVisibility: "hidden",
-            background: "#e5e7eb",
-            borderRadius: 20,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(30px, 7vw, 40px)",
-            textAlign: "center"
-          }}>
-            {current?.question}
-          </div>
-
-          {/* ОТВЕТ */}
-          <div style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-            background: "#2563eb",
-            color: "white",
-            borderRadius: 20,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-            fontSize: "clamp(30px, 7vw, 40px)",
-            textAlign: "center"
-          }}>
-            {current?.answer}
-          </div>
-
-          {/* ⭐ */}
           {current && (
             <div onClick={toggleFavorite} style={{
               position: "absolute",
@@ -278,10 +235,41 @@ export default function App() {
               ★
             </div>
           )}
+
+          {current && (
+            <div style={{
+              width: "100%",
+              height: "100%",
+              background: show ? "#2563eb" : "#e5e7eb",
+              color: show ? "white" : "#0f172a",
+
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+                textAlign: "center",
+
+                padding: 20,
+                fontSize: "clamp(30px, 7vw, 40px)", // 🔥 увеличили
+                fontWeight: 700,
+                lineHeight: 1.3,
+
+                wordBreak: "break-word",
+                whiteSpace: "pre-wrap"
+              }}>
+                {show ? current.answer : current.question}
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
 
-      {/* низ */}
       <div style={{
         width: "100%",
         maxWidth: 420,
