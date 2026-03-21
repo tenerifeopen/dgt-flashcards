@@ -125,7 +125,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{ color: "#DCDCDCf", fontWeight: 800, fontSize: 19 }}>
+        <div style={{ color: "#E1E1E1", fontWeight: 800, fontSize: 19 }}>
          Roman Arakelov
         </div>
 
