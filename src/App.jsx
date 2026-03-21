@@ -119,7 +119,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: "Arial"
       }}>
-        <div style={{ color: "#e2e8f0", fontWeight: 700 }}>
+        <div style={{ color: "#e2e8f0", fontWeight: 700, fontSize: 20 }}>
           Arakelov Roman
         </div>
 
@@ -199,8 +199,7 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10,
-        flex: 1
+        marginTop: 10
       }}>
         <div
           onClick={() => current && setShow(!show)}
@@ -209,8 +208,9 @@ export default function App() {
           onTouchEnd={handleTouchEnd}
           style={{
             width: "100%",
-            height: "100%",
+            height: "60vh",
             maxHeight: 500,
+            minHeight: 260,
             borderRadius: 20,
             overflow: "hidden",
             transform: `translate3d(${dragX}px,0,0)`,
@@ -221,7 +221,6 @@ export default function App() {
           }}
         >
 
-          {/* ⭐ */}
           {current && (
             <div onClick={toggleFavorite} style={{
               position: "absolute",
@@ -262,10 +261,10 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
 
-              padding: "24px 16px",
-              fontSize: "clamp(22px, 5.5vw, 34px)",
+              padding: "20px",
+              fontSize: "clamp(26px, 6vw, 36px)",
               fontWeight: 700,
-              lineHeight: 1.5,
+              lineHeight: 1.4,
 
               overflowY: "auto",
               WebkitOverflowScrolling: "touch",
@@ -274,7 +273,7 @@ export default function App() {
               whiteSpace: "pre-wrap"
             }}>
               <div style={{
-                maxWidth: "100%",
+                width: "100%",
                 textAlign: "center"
               }}>
                 {show ? current.answer : current.question}
