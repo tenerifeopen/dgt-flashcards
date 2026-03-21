@@ -53,16 +53,16 @@ export default function App() {
     ? cards.filter(c => favorites.includes(c.question))
     : cards;
 
+  const current = filteredCards[index];
+
   const toggleFavorite = (e) => {
     e.stopPropagation();
-    if (!filteredCards.length) return;
+    if (!current) return;
 
-    const q = filteredCards[index].question;
-
-    if (favorites.includes(q)) {
-      setFavorites(favorites.filter(f => f !== q));
+    if (favorites.includes(current.question)) {
+      setFavorites(favorites.filter(f => f !== current.question));
     } else {
-      setFavorites([...favorites, q]);
+      setFavorites([...favorites, current.question]);
     }
   };
 
@@ -78,7 +78,14 @@ export default function App() {
   };
 
   const handleTouchMove = (e) => {
-    setDragX(e.touches[0].clientX - startX.current);
+    const deltaX = e.touches[0].clientX - startX.current;
+
+    if (Math.abs(deltaX) > 10) {
+      e.preventDefault();
+    }
+
+    const limited = Math.max(-120, Math.min(120, deltaX));
+    setDragX(limited);
   };
 
   const handleTouchEnd = () => {
@@ -152,8 +159,6 @@ export default function App() {
     );
   }
 
-  const current = filteredCards[index];
-
   return (
     <div style={{
       minHeight: "100vh",
@@ -161,7 +166,7 @@ export default function App() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "20px 12px 110px",
+      padding: "calc(env(safe-area-inset-top) + 20px) 12px calc(env(safe-area-inset-bottom) + 110px)",
       fontFamily: "Arial"
     }}>
 
@@ -194,7 +199,8 @@ export default function App() {
       <div style={{
         width: "100%",
         maxWidth: 420,
-        marginTop: 10
+        marginTop: 10,
+        flex: 1
       }}>
         <div
           onClick={() => current && setShow(!show)}
@@ -203,15 +209,15 @@ export default function App() {
           onTouchEnd={handleTouchEnd}
           style={{
             width: "100%",
-            height: "calc(100vh - 260px)",
-            maxHeight: 420,
-            minHeight: 220,
+            height: "100%",
+            maxHeight: 500,
             borderRadius: 20,
             overflow: "hidden",
             transform: `translate3d(${dragX}px,0,0)`,
             transition: dragX === 0 ? "transform 0.25s ease" : "none",
             willChange: "transform",
-            position: "relative"
+            position: "relative",
+            touchAction: "pan-y"
           }}
         >
 
@@ -231,7 +237,6 @@ export default function App() {
             </div>
           )}
 
-          {/* пусто */}
           {!current && (
             <div style={{
               width: "100%",
@@ -246,23 +251,34 @@ export default function App() {
             </div>
           )}
 
-          {/* ВОПРОС / ОТВЕТ */}
           {current && (
             <div style={{
               width: "100%",
               height: "100%",
               background: show ? "#2563eb" : "#e5e7eb",
               color: show ? "white" : "#0f172a",
-              padding: 20,
+
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+
+              padding: "24px 16px",
               fontSize: "clamp(22px, 5.5vw, 34px)",
               fontWeight: 700,
               lineHeight: 1.5,
+
               overflowY: "auto",
+              WebkitOverflowScrolling: "touch",
+
               wordBreak: "break-word",
-              whiteSpace: "pre-wrap",
-              display: "block"
+              whiteSpace: "pre-wrap"
             }}>
-              {show ? current.answer : current.question}
+              <div style={{
+                maxWidth: "100%",
+                textAlign: "center"
+              }}>
+                {show ? current.answer : current.question}
+              </div>
             </div>
           )}
 
@@ -271,73 +287,64 @@ export default function App() {
 
       {/* низ */}
       <div style={{
-        position: "fixed",
-        bottom: 0,
         width: "100%",
-        padding: "20px 16px 24px"
+        maxWidth: 420,
+        marginTop: 10
       }}>
+        <button onClick={shuffle} style={{
+          width: "100%",
+          height: 70,
+          borderRadius: 20,
+          background: "#334155",
+          border: "none",
+          fontSize: 36
+        }}>
+          🔀
+        </button>
+
         <div style={{
-          maxWidth: 420,
-          margin: "0 auto",
+          marginTop: 10,
+          height: 70,
+          background: "#1e293b",
+          borderRadius: 24,
           display: "flex",
-          flexDirection: "column",
-          gap: 14
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 16px"
         }}>
 
-          <button onClick={shuffle} style={{
-            width: "100%",
-            height: 70,
-            borderRadius: 20,
-            background: "#334155",
-            border: "none",
-            fontSize: 36
-          }}>
-            🔀
-          </button>
+          <button onClick={() => {
+            if (!filteredCards.length) return;
+            setShow(false);
+            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+          }} style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#020617",
+            color: "white",
+            fontSize: 26,
+            border: "none"
+          }}>←</button>
 
-          <div style={{
-            height: 70,
-            background: "#1e293b",
-            borderRadius: 24,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "0 16px"
-          }}>
-
-            <button onClick={() => {
-              if (!filteredCards.length) return;
-              setShow(false);
-              setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-            }} style={{
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#020617",
-              color: "white",
-              fontSize: 26,
-              border: "none"
-            }}>←</button>
-
-            <div style={{ color: "white" }}>
-              {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
-            </div>
-
-            <button onClick={() => {
-              if (!filteredCards.length) return;
-              setShow(false);
-              setIndex(i => (i + 1) % filteredCards.length);
-            }} style={{
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 26,
-              border: "none"
-            }}>→</button>
-
+          <div style={{ color: "white" }}>
+            {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
           </div>
+
+          <button onClick={() => {
+            if (!filteredCards.length) return;
+            setShow(false);
+            setIndex(i => (i + 1) % filteredCards.length);
+          }} style={{
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#2563eb",
+            color: "white",
+            fontSize: 26,
+            border: "none"
+          }}>→</button>
+
         </div>
       </div>
     </div>
