@@ -55,6 +55,8 @@ export default function App() {
 
   const toggleFavorite = (e) => {
     e.stopPropagation();
+    if (!filteredCards.length) return;
+
     const q = filteredCards[index].question;
 
     if (favorites.includes(q)) {
@@ -80,6 +82,8 @@ export default function App() {
   };
 
   const handleTouchEnd = () => {
+    if (!filteredCards.length) return;
+
     if (Math.abs(dragX) > 60) {
       setDragX(dragX > 0 ? 400 : -400);
 
@@ -91,7 +95,7 @@ export default function App() {
         );
         setDragX(0);
         setShow(false);
-      }, 200);
+      }, 180);
     } else {
       setDragX(0);
     }
@@ -148,6 +152,8 @@ export default function App() {
     );
   }
 
+  const current = filteredCards[index];
+
   return (
     <div style={{
       minHeight: "100vh",
@@ -191,7 +197,7 @@ export default function App() {
         marginTop: 10
       }}>
         <div
-          onClick={() => setShow(!show)}
+          onClick={() => current && setShow(!show)}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -202,66 +208,61 @@ export default function App() {
             minHeight: 220,
             borderRadius: 20,
             overflow: "hidden",
-            transform: `translateX(${dragX}px)`,
-            transition: dragX === 0 ? "0.3s" : "none"
+            transform: `translate3d(${dragX}px,0,0)`,
+            transition: dragX === 0 ? "transform 0.25s ease" : "none",
+            willChange: "transform",
+            position: "relative"
           }}
         >
 
           {/* ⭐ */}
-          <div onClick={toggleFavorite} style={{
-            position: "absolute",
-            top: 14,
-            right: 14,
-            fontSize: 30,
-            zIndex: 10,
-            color: favorites.includes(filteredCards[index]?.question)
-              ? "#facc15"
-              : "#9ca3af"
-          }}>
-            ★
-          </div>
-
-          {/* ВОПРОС */}
-          {!show ? (
-            <div style={{
-              width: "100%",
-              height: "100%",
-              background: "#e5e7eb",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 20,
-              textAlign: "center",
-              fontSize: "clamp(26px, 6vw, 36px)",
-              fontWeight: 700,
-              color: "#0f172a",
-              lineHeight: 1.5,
-              overflowWrap: "break-word",
-              wordBreak: "break-word"
+          {current && (
+            <div onClick={toggleFavorite} style={{
+              position: "absolute",
+              top: 14,
+              right: 14,
+              fontSize: 30,
+              zIndex: 10,
+              color: favorites.includes(current.question)
+                ? "#facc15"
+                : "#9ca3af"
             }}>
-              <div style={{ maxWidth: "100%" }}>
-                {filteredCards[index]?.question}
-              </div>
+              ★
             </div>
-          ) : (
+          )}
+
+          {/* пусто */}
+          {!current && (
             <div style={{
               width: "100%",
               height: "100%",
-              background: "#2563eb",
-              color: "white",
+              background: "#1e293b",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: 20,
-              textAlign: "center",
-              fontSize: "clamp(28px, 6vw, 38px)",
-              fontWeight: 800,
-              lineHeight: 1.5,
-              overflowWrap: "break-word"
+              color: "#94a3b8"
             }}>
-              <div style={{ maxWidth: "100%" }}>
-                {filteredCards[index]?.answer}
-              </div>
+              Нет карточек
+            </div>
+          )}
+
+          {/* ВОПРОС / ОТВЕТ */}
+          {current && (
+            <div style={{
+              width: "100%",
+              height: "100%",
+              background: show ? "#2563eb" : "#e5e7eb",
+              color: show ? "white" : "#0f172a",
+              padding: 20,
+              fontSize: "clamp(22px, 5.5vw, 34px)",
+              fontWeight: 700,
+              lineHeight: 1.5,
+              overflowY: "auto",
+              wordBreak: "break-word",
+              whiteSpace: "pre-wrap",
+              display: "block"
+            }}>
+              {show ? current.answer : current.question}
             </div>
           )}
 
@@ -283,22 +284,17 @@ export default function App() {
           gap: 14
         }}>
 
-          {/* 🔀 */}
           <button onClick={shuffle} style={{
             width: "100%",
             height: 70,
             borderRadius: 20,
             background: "#334155",
             border: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             fontSize: 36
           }}>
             🔀
           </button>
 
-          {/* стрелки */}
           <div style={{
             height: 70,
             background: "#1e293b",
@@ -310,6 +306,7 @@ export default function App() {
           }}>
 
             <button onClick={() => {
+              if (!filteredCards.length) return;
               setShow(false);
               setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
             }} style={{
@@ -323,10 +320,11 @@ export default function App() {
             }}>←</button>
 
             <div style={{ color: "white" }}>
-              {index + 1} / {filteredCards.length}
+              {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
             </div>
 
             <button onClick={() => {
+              if (!filteredCards.length) return;
               setShow(false);
               setIndex(i => (i + 1) % filteredCards.length);
             }} style={{
