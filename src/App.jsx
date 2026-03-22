@@ -128,7 +128,7 @@ export default function App() {
         <div style={{
           color: "#A1A1A1",
           fontWeight: 700,
-          fontSize: 18
+          fontSize: 21
         }}>
           Roman Arakelov
         </div>
