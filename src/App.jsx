@@ -264,8 +264,8 @@ export default function App() {
               width: "100%",
               textAlign: "center",
               padding: 20,
-              fontSize: "clamp(30px, 7vw, 40px)",
-              fontWeight: 700,
+              fontSize: "clamp(24px, 6vw, 32px)",
+              fontWeight: 400,
               lineHeight: 1.5
             }}>
               {show ? current?.answer : current?.question}
