@@ -28,7 +28,7 @@ export default function App() {
   const [onlyFav, setOnlyFav] = useState(false);
   const [voice, setVoice] = useState(null);
 
-  const font = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
   // 🔊 голос
   useEffect(() => {
@@ -265,8 +265,9 @@ export default function App() {
               textAlign: "center",
               padding: 20,
               fontSize: "clamp(24px, 6vw, 32px)",
-              fontWeight: 900,
-              lineHeight: 1.5,
+              fontWeight: 500,
+              lineHeight: 1.6,
+              letterSpacing: "0.2px",
               {show ? current?.answer : current?.question}
             </div>
           </div>
