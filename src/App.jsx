@@ -265,9 +265,8 @@ export default function App() {
               textAlign: "center",
               padding: 20,
               fontSize: "clamp(27px, 7vw, 35px)",
-              fontWeight: 500,
-              lineHeight: 1.9  
-            }}>
+              fontWeight: 700,
+              lineHeight: 1.2
               {show ? current?.answer : current?.question}
             </div>
           </div>
