@@ -40,3 +40,34 @@ padding: 20
 👉 если текст прилипает:
 
 padding: 24
+
+
+.........////////////////////////////////////////////////////////////
+
+🎯 Изменение голоса
+voice_settings: {
+  stability: 0.4,
+  similarity_boost: 0.8
+}
+✅ Сделай так:
+voice_settings: {
+  stability: 0.7,
+  similarity_boost: 0.8,
+  style: 0.2
+}
+🧠 Что это даст
+Параметр	Эффект
+stability ↑	речь медленнее и спокойнее
+style ↓	меньше “эмоций”
+итог	✅ идеально для обучения
+🔥 Если хочешь ЕЩЁ медленнее
+
+👉 можно так:
+
+voice_settings: {
+  stability: 0.85,
+  similarity_boost: 0.8,
+  style: 0.1
+}
+🚀 После изменения
+vercel --prod --force

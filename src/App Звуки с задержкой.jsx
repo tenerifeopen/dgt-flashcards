@@ -73,53 +73,31 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔧 безопасное воспроизведение (не обрезает)
-  const playAudioSafe = async (base64) => {
-    const byteCharacters = atob(base64.split(",")[1]);
-    const byteNumbers = new Array(byteCharacters.length);
-
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-
-    const byteArray = new Uint8Array(byteNumbers);
-    const blob = new Blob([byteArray], { type: "audio/mpeg" });
-    const url = URL.createObjectURL(blob);
-
-    const audio = new Audio(url);
-
-    await new Promise((resolve) => {
-      audio.onloadeddata = resolve;
-    });
-
-    await audio.play();
-  };
-
-  // 🔊 ОЗВУЧКА (исправлен кэш)
+  // 🔊 ОЗВУЧКА С КЭШЕМ + ФИКС ОБРЕЗАНИЯ
   const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
 
-    // ✅ нормализация текста (КЛЮЧЕВОЙ ФИКС)
-    const rawText = show ? current.answer : current.question;
-
-    const text = rawText
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, " ");
-
+    const text = show ? current.answer : current.question;
     const cacheKey = `tts_${text}`;
 
     try {
-      // ✅ проверка кэша
+      // ✅ КЭШ
       const cached = localStorage.getItem(cacheKey);
 
       if (cached) {
-        await playAudioSafe(cached);
+        const audio = new Audio(cached);
+
+        await new Promise((resolve) => {
+          audio.addEventListener("canplaythrough", resolve, { once: true });
+        });
+
+        audio.currentTime = 0;
+        await audio.play();
         return;
       }
 
-      // ✅ запрос
+      // ✅ API
       const res = await fetch("/api/tts", {
         method: "POST",
         headers: {
@@ -132,14 +110,21 @@ export default function App() {
 
       if (!data.audio) throw new Error("No audio");
 
-      // ✅ сохранение
+      // ✅ Сохранение
       try {
         localStorage.setItem(cacheKey, data.audio);
       } catch (err) {
         console.warn("Cache full");
       }
 
-      await playAudioSafe(data.audio);
+      const audio = new Audio(data.audio);
+
+      await new Promise((resolve) => {
+        audio.addEventListener("canplaythrough", resolve, { once: true });
+      });
+
+      audio.currentTime = 0;
+      await audio.play();
 
     } catch (err) {
       console.error("TTS error:", err);
