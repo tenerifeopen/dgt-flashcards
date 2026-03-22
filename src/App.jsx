@@ -26,27 +26,8 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
-  const [voice, setVoice] = useState(null);
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-
-  useEffect(() => {
-    const pickVoice = () => {
-      const voices = speechSynthesis.getVoices();
-      if (!voices.length) return;
-
-      const v =
-        voices.find(v => v.name.toLowerCase().includes("jorge")) ||
-        voices.find(v => v.name.toLowerCase().includes("monica")) ||
-        voices.find(v => v.lang === "es-ES") ||
-        voices.find(v => v.lang.startsWith("es"));
-
-      setVoice(v);
-    };
-
-    pickVoice();
-    speechSynthesis.onvoiceschanged = pickVoice;
-  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -92,7 +73,7 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 НОВАЯ ОЗВУЧКА (ElevenLabs)
+  // 🔊 ИСПРАВЛЕННАЯ ОЗВУЧКА
   const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -102,6 +83,9 @@ export default function App() {
     try {
       const res = await fetch("/api/tts", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify({ text })
       });
 
@@ -248,8 +232,7 @@ export default function App() {
               padding: 20,
               fontSize: "clamp(27px, 6vw, 40px)",
               fontWeight: show ? 700 : 500,
-              lineHeight: 1.6,
-              letterSpacing: "0px"
+              lineHeight: 1.6
             }}>
               {show ? current?.answer : current?.question}
             </div>
