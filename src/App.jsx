@@ -30,7 +30,6 @@ export default function App() {
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
-  // 🔊 голос
   useEffect(() => {
     const pickVoice = () => {
       const voices = speechSynthesis.getVoices();
@@ -75,10 +74,8 @@ export default function App() {
 
   const current = filteredCards[index];
 
-  // ⭐ фикс
   const toggleFavorite = (e) => {
     e.stopPropagation();
-
     if (!current) return;
 
     if (favorites.includes(current.question)) {
@@ -95,10 +92,8 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔊 стабильная озвучка
   const speak = (e) => {
     e.stopPropagation();
-
     if (!current) return;
 
     const text = show ? current.answer : current.question;
@@ -125,11 +120,7 @@ export default function App() {
         justifyContent: "center",
         fontFamily: font
       }}>
-        <div style={{
-          color: "#A1A1A1",
-          fontWeight: 700,
-          fontSize: 21
-        }}>
+        <div style={{ color: "#A1A1A1", fontWeight: 600, fontSize: 18 }}>
           Roman Arakelov
         </div>
 
@@ -143,7 +134,7 @@ export default function App() {
             textAlign: "center",
             color: "#000",
             fontSize: 26,
-            fontWeight: 900
+            fontWeight: 700
           }}>
             📚 МОИ КАРТОЧКИ
           </h2>
@@ -159,7 +150,8 @@ export default function App() {
                 border: "none",
                 background: "#2563eb",
                 color: "white",
-                fontSize: 18
+                fontSize: 18,
+                fontWeight: 500
               }}>
               {t.name}
             </button>
@@ -199,11 +191,7 @@ export default function App() {
         }}>★</button>
       </div>
 
-      <div style={{
-        width: "100%",
-        maxWidth: 420,
-        marginTop: 10
-      }}>
+      <div style={{ width: "100%", maxWidth: 420, marginTop: 10 }}>
         <div
           onClick={() => setShow(!show)}
           style={{
@@ -215,41 +203,31 @@ export default function App() {
           }}
         >
 
-          <div
-            onClick={toggleFavorite}
-            style={{
-              position: "absolute",
-              top: 14,
-              right: 14,
-              fontSize: 30,
-              zIndex: 30, // 🔥 ВАЖНО
-              cursor: "pointer",
-              color: favorites.includes(current?.question)
-                ? "#facc15"
-                : "#9ca3af"
-            }}
-          >
-            ★
-          </div>
+          <div onClick={toggleFavorite} style={{
+            position: "absolute",
+            top: 14,
+            right: 14,
+            fontSize: 30,
+            zIndex: 30,
+            cursor: "pointer",
+            color: favorites.includes(current?.question)
+              ? "#facc15"
+              : "#9ca3af"
+          }}>★</div>
 
-          <button
-            onClick={speak}
-            style={{
-              position: "absolute",
-              bottom: 14,
-              right: 14,
-              width: 70,
-              height: 48,
-              borderRadius: 16,
-              background: "#2563eb",
-              color: "white",
-              fontSize: 24,
-              border: "none",
-              zIndex: 30
-            }}
-          >
-            🔊
-          </button>
+          <button onClick={speak} style={{
+            position: "absolute",
+            bottom: 14,
+            right: 14,
+            width: 70,
+            height: 48,
+            borderRadius: 16,
+            background: "#2563eb",
+            color: "white",
+            fontSize: 24,
+            border: "none",
+            zIndex: 30
+          }}>🔊</button>
 
           <div style={{
             width: "100%",
@@ -264,10 +242,11 @@ export default function App() {
               width: "100%",
               textAlign: "center",
               padding: 20,
-              fontSize: "clamp(24px, 6vw, 32px)",
-              fontWeight: 500,
+              fontSize: "clamp(24px, 6vw, 30px)",
+              fontWeight: show ? 600 : 500,
               lineHeight: 1.6,
-              letterSpacing: "0.2px",
+              letterSpacing: "0.3px"
+            }}>
               {show ? current?.answer : current?.question}
             </div>
           </div>
@@ -275,11 +254,7 @@ export default function App() {
         </div>
       </div>
 
-      <div style={{
-        width: "100%",
-        maxWidth: 420,
-        marginTop: 12
-      }}>
+      <div style={{ width: "100%", maxWidth: 420, marginTop: 12 }}>
         <button onClick={shuffle} style={{
           width: "100%",
           height: 70,
