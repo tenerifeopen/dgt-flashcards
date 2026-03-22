@@ -14,6 +14,7 @@ const topics = [
   { name: "Скорости", file: "/cards/Скорости.txt" },
   { name: "Транспортные средства", file: "/cards/Транспортные средства.txt" },
   { name: "Фары и освещение", file: "/cards/Фары и освещение.txt" },
+  { name: "Ловушки", file: "/cards/Ловушки.txt" },
   { name: "Экстренные ситуации", file: "/cards/Экстренные ситуации.txt" },
   { name: "Знаки", file: "/cards/Знаки.txt" }
 ];

@@ -1,0 +1,14 @@
+¿Se puede superar la velocidad al adelantar? = Можно превышать скорость? / НЕТ (частая ошибка)
+¿Quién tiene prioridad en glorieta? = Кто главный на круге? / Тот кто внутри (часто путают)
+¿Se puede adelantar con línea continua? = Можно обгонять? / НЕТ
+¿Se puede ir por el carril izquierdo? = Можно ехать слева? / Только для обгона
+¿Se puede usar carril bus? = Можно ехать? / НЕТ если не разрешено
+¿Qué hacer en paso de peatones? = Что делать? / Пропустить пешехода
+¿Qué hacer al incorporarse? = Что делать? / Уступить
+¿Se puede parar en doble fila? = Можно остановиться? / НЕТ
+¿Qué distancia en túnel? = Дистанция? / 100 м или 4 секунды
+¿Qué hacer con mala visibilidad? = Что делать? / Снизить скорость
+¿Se puede adelantar sin visibilidad? = Можно обгонять? / НЕТ
+¿Qué hacer en curva? = Что делать? / Снизить скорость
+¿Se puede circular rápido con lluvia? = Можно быстро ехать? / НЕТ
+¿Qué carril usar normalmente? = Какую полосу? / Правую
