@@ -245,7 +245,7 @@ export default function App() {
               fontSize: "clamp(24px, 6vw, 30px)",
               fontWeight: show ? 600 : 500,
               lineHeight: 1.6,
-              letterSpacing: "0.3px"
+              letterSpacing: "0.1px"
             }}>
               {show ? current?.answer : current?.question}
             </div>
