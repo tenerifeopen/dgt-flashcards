@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 const topics = [
   { name: "Слова и выражения", file: "/cards/words.txt" },
@@ -26,41 +26,8 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
-  const [voice, setVoice] = useState(null);
-
-  const audioRef = useRef(null);
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-
-  useEffect(() => {
-    const pickVoice = () => {
-      const voices = speechSynthesis.getVoices();
-      if (!voices.length) return;
-
-      const v =
-        voices.find(v => v.name.toLowerCase().includes("jorge")) ||
-        voices.find(v => v.name.toLowerCase().includes("monica")) ||
-        voices.find(v => v.lang === "es-ES") ||
-        voices.find(v => v.lang.startsWith("es"));
-
-      setVoice(v);
-    };
-
-    pickVoice();
-    speechSynthesis.onvoiceschanged = pickVoice;
-  }, []);
-
-  // 🔥 РАЗБЛОКИРОВКА ЗВУКА ДЛЯ МОБИЛЬНЫХ
-  useEffect(() => {
-    const unlockAudio = () => {
-      if (audioRef.current) {
-        audioRef.current.play().catch(() => {});
-      }
-      document.removeEventListener("touchstart", unlockAudio);
-    };
-
-    document.addEventListener("touchstart", unlockAudio);
-  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -106,6 +73,7 @@ export default function App() {
     setShow(false);
   };
 
+  // 🔊 ФИНАЛЬНАЯ ОЗВУЧКА (iPhone + ElevenLabs)
   const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -121,27 +89,15 @@ export default function App() {
         body: JSON.stringify({ text })
       });
 
-      const blob = await res.blob();
+      const data = await res.json();
 
-      if (blob.size < 1000) {
-        throw new Error("Empty audio");
-      }
+      if (!data.audio) throw new Error("No audio");
 
-      const url = URL.createObjectURL(blob);
-
-      if (audioRef.current) {
-        audioRef.current.src = url;
-        await audioRef.current.play();
-      }
+      const audio = new Audio(data.audio);
+      await audio.play();
 
     } catch (err) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "es-ES";
-      utterance.rate = 0.85;
-
-      if (voice) utterance.voice = voice;
-
-      speechSynthesis.speak(utterance);
+      console.error("Fallback:", err);
     }
   };
 
@@ -208,8 +164,6 @@ export default function App() {
       fontFamily: font
     }}>
 
-      <audio ref={audioRef} />
-
       <div style={{
         width: "100%",
         maxWidth: 420,
@@ -253,10 +207,7 @@ export default function App() {
               : "#9ca3af"
           }}>★</div>
 
-          <button onClick={(e) => {
-            e.stopPropagation();
-            speak(e);
-          }} style={{
+          <button onClick={speak} style={{
             position: "absolute",
             bottom: 14,
             right: 14,
