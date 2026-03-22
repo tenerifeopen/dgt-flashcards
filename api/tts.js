@@ -4,7 +4,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { text } = req.body;
+    // 🔥 универсальный парсинг (решает проблему)
+    let text;
+
+    if (typeof req.body === "string") {
+      text = JSON.parse(req.body).text;
+    } else {
+      text = req.body?.text;
+    }
 
     if (!text) {
       return res.status(400).json({ error: "No text provided" });
@@ -35,6 +42,7 @@ export default async function handler(req, res) {
 
     res.setHeader("Content-Type", "audio/mpeg");
     res.send(Buffer.from(audioBuffer));
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "TTS error" });
