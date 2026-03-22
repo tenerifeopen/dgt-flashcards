@@ -232,7 +232,7 @@ export default function App() {
           <div style={{
             width: "100%",
             height: "100%",
-            background: show ? "#2563eb" : "#e5e7eb",
+            background: show ? "#2563eb" : "#e5e7eb", 
             color: show ? "#fff" : "#000",
             display: "flex",
             alignItems: "center",
@@ -242,7 +242,7 @@ export default function App() {
               width: "100%",
               textAlign: "center",
               padding: 20,
-              fontSize: "clamp(24px, 6vw, 30px)",
+              fontSize: "clamp(24px, 6vw, 37px)",
               fontWeight: show ? 700 : 500,
               lineHeight: 1.6,
               letterSpacing: "0px"
