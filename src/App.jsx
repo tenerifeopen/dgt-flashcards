@@ -266,7 +266,7 @@ export default function App() {
               padding: 20,
               fontSize: "clamp(27px, 7vw, 35px)",
               fontWeight: 500,
-              lineHeight: 1.7
+              lineHeight: 1.2
             }}>
               {show ? current?.answer : current?.question}
             </div>
