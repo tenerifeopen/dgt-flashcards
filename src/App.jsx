@@ -57,7 +57,7 @@ export default function App() {
 
   const toggleFavorite = (e) => {
     e.stopPropagation();
-    if (!current) return;
+     console.log("CLICK"); // 👈 ВАЖНО
 
     if (favorites.includes(current.question)) {
       setFavorites(favorites.filter(f => f !== current.question));
