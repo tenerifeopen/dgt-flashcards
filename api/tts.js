@@ -4,7 +4,6 @@ export default async function handler(req, res) {
   }
 
   try {
-    // 🔥 универсальный парсинг (решает проблему)
     let text;
 
     if (typeof req.body === "string") {
@@ -22,29 +21,26 @@ export default async function handler(req, res) {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "xi-api-key": process.env.ELEVENLABS_API_KEY
+          "xi-api-key": process.env.ELEVENLABS_API_KEY,
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          text,
-          model_id: "eleven_multilingual_v2",
-          voice_settings: {
-            stability: 0.5,
-            similarity_boost: 0.7,
-            style: 0.2,
-            use_speaker_boost: true
-          }
+          text: text
         })
       }
     );
 
-    const audioBuffer = await response.arrayBuffer();
+    if (!response.ok) {
+      const error = await response.text();
+      return res.status(500).json({ error });
+    }
+
+    const audio = await response.arrayBuffer();
 
     res.setHeader("Content-Type", "audio/mpeg");
-    res.send(Buffer.from(audioBuffer));
+    res.send(Buffer.from(audio));
 
   } catch (err) {
-    console.error(err);
     res.status(500).json({ error: "TTS error" });
   }
 }
