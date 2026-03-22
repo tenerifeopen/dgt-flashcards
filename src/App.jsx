@@ -92,21 +92,25 @@ export default function App() {
     setShow(false);
   };
 
-  const speak = (e) => {
+  // 🔊 НОВАЯ ОЗВУЧКА (ElevenLabs)
+  const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
 
     const text = show ? current.answer : current.question;
 
-    speechSynthesis.cancel();
+    try {
+      const res = await fetch("/api/tts", {
+        method: "POST",
+        body: JSON.stringify({ text })
+      });
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES";
-    utterance.rate = 0.85;
-
-    if (voice) utterance.voice = voice;
-
-    speechSynthesis.speak(utterance);
+      const blob = await res.blob();
+      const audio = new Audio(URL.createObjectURL(blob));
+      audio.play();
+    } catch (err) {
+      console.error("TTS error:", err);
+    }
   };
 
   if (screen === "menu") {
