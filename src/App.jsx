@@ -243,7 +243,7 @@ export default function App() {
               textAlign: "center",
               padding: 20,
               fontSize: "clamp(24px, 6vw, 37px)",
-              fontWeight: show ? 700 : 500,
+              fontWeight: show ? 900 : 500,
               lineHeight: 1.6,
               letterSpacing: "0px"
             }}>
