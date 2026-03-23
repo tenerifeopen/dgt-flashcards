@@ -76,12 +76,8 @@
 ¿Qué color tiene intermitente? = Цвет / Оранжевый
 ¿Qué color tiene marcha atrás? = Цвет / Белый
 ¿Qué color tiene luz de posición? = Цвет / Белый спереди, красный сзади
-¿Qué luces deben llevar encendidas las motocicletas de día? = Какой свет должны включать мотоциклы днем? // La luz de corto alcance o cruce//
-
-
-
-
-
+Test = тест / проба
+¿Qué luces deben llevar encendidas las motocicletas de día? = Какой свет должны включать мотоциклы днем? / La luz de corto alcance o cruce
 
 
 
