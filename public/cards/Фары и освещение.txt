@@ -78,7 +78,7 @@
 ¿Qué color tiene luz de posición? = Цвет / Белый спереди, красный сзади
 Test = тест / проба
 ¿Qué luces deben llevar encendidas las motocicletas de día? = Какой свет должны включать мотоциклы днем? / La luz de corto alcance o cruce
-
+Test = тест / проба
 
 
 
