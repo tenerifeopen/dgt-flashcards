@@ -81,6 +81,55 @@ Test = тест / проба
 Test = тест / проба
 Test = тест / проба
 Test = тест / проба
+insuficientemente iluminada = недостаточно освещенный
+Las luces de posición = Габаритные огни
+la agudeza visual=острота зрения
+no varía.=Не меняется
+aumenta=Увеличивается
+ se reduce.=Уменьшается.
+la luz de posición=габаритный свет
+Tan pronto como=Как только
+Utilizar la señal de emergencia.=Воспользуйтесь аварийным сигналом.
+¿está permitido utilizar la luz antiniebla?=Использование противотуманных фар разрешено?
+insuficientemente iluminadas=недостаточно освещенный
+Circulando con fuerte nevada=Вождение в условиях сильного снегопада
+insuficientemente iluminada=insuficientemente iluminada
+largo alcance.= Дальний свет
+entre la puesta y la salida del sol.=между закатом и восходом солнца
+La luz de posición con las de corto o largo alcance=Габаритные огни с ближним или дальним светом
+Si no hay niebla espesa,=Если нет густого тумана
+la luz antiniebla delantera=передняя противотуманная фара
+Encender el intermitente,=Включение поворотника,
+¿qué luces debe llevar encendidas?=Какие фары следует включить?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

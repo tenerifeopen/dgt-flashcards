@@ -198,12 +198,12 @@ sin dejar entre ellos un espacio libre=не оставляя между ними
 si no pretende adelantar=если вы не намерены обгонять
 Mantener la distancia de seguridad=Соблюдайте безопасную дистанцию.
 aaaaaaaaaaa=dddddddddddd
-
-
-
-
-
-
+en determinadas situaciones=в определенных ситуациях
+Se considera que=Считается, что
+desplazamientos=перемещения
+va a cambiar de carril para adelantar.=Он собирается перестроиться в другой ряд, чтобы совершить обгон.
+Ante la duda=Когда сомневаетесь
+¿Dónde está prohibido circular=Где запрещено движение транспорта
 
 
 
