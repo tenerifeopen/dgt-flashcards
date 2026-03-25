@@ -101,8 +101,11 @@ Si no hay niebla espesa,=Если нет густого тумана
 la luz antiniebla delantera=передняя противотуманная фара
 Encender el intermitente,=Включение поворотника,
 ¿qué luces debe llevar encendidas?=Какие фары следует включить?
-
-
+¿es correcto su comportamiento?= правильно ли он поступает ?
+¿Qué función tienen los indicadores de dirección?=Comunicarse con los demás conductores.
+No, ya que puede deslumbrar al conductor=Нет, потому что это может ослепить водителя
+Pisar varias veces el pedal de freno=Нажмите на педаль тормоза несколько раз .
+la puesta y la salida del sol=закат и восход солнца
 
 
 
