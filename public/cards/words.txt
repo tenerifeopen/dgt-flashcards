@@ -215,11 +215,11 @@ Cuando termine el adelantamiento=Когда обгон завершен
 porque existe más probabilidad de caídas.=потому что существует больше вероятности падений
 ¿cómo debe actuar?=как необходимо действовать?
 que nos preceden.=От чего они зависят?
-
-
-
-
-
+Evitar los movimientos bruscos=Избегайте резких движений.
+detener el vehículo=остановить автомобиль
+En un paso estrecho=На узком проезде
+tratando de =пытаясь
+desde un camino privado=с частной дороги
 
 
 

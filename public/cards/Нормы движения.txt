@@ -5,13 +5,14 @@ A partir de esta señal,= Начиная с этого знака,
 detenido en el interior de un túnel=остановившейся в туннеле
 marcas longitudinales discontinuas= разделённая  продольной пунктирной разметкой
 estrechamiento de la vía.= Сужения дороги.
-
-
-
-
-
-
-
+En una intersección=На перекрестке
+en la que debe ceder el paso=где вы должны уступить дорогу
+¿cuándo podrá reanudar la marcha?= когда вы сможете возобновить движение?
+¿por dónde se debe circular?=где следует передвигаться?
+Evitar los movimientos bruscos=Избегайте резких движений.
+cerciorarse previamente de que puede hacerlo sin peligro.=Предварительно убедиться в том, что сможет сделать это без опасности.
+¿Qué vehículo tendrá preferencia=Какое транспортное средство будет иметь приоритет
+¿qué vehículo está obligado a retroceder?=какой автомобиль обязан сдавать назад?
 
 
 
