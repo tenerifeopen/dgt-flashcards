@@ -13,9 +13,9 @@ Evitar los movimientos bruscos=Избегайте резких движений.
 cerciorarse previamente de que puede hacerlo sin peligro.=Предварительно убедиться в том, что сможет сделать это без опасности.
 ¿Qué vehículo tendrá preferencia=Какое транспортное средство будет иметь приоритет
 ¿qué vehículo está obligado a retroceder?=какой автомобиль обязан сдавать назад?
-
-
-
+Los limites de velocidad establecidos en las vías se ponen...=Ограничения скорости на дороге устанавливаются…
+Advertir de la maniobra=Предупреждение о маневре
+Asegurarse de que no hay peligro=Убедится в отсутствии опасности
 
 
 
