@@ -197,13 +197,48 @@ abandonar la vía por un carril de deceleración.=съезжайте с доро
 sin dejar entre ellos un espacio libre=не оставляя между ними никакого свободного пространства
 si no pretende adelantar=если вы не намерены обгонять
 Mantener la distancia de seguridad=Соблюдайте безопасную дистанцию.
-aaaaaaaaaaa=dddddddddddd
+rueda de repuesto.=запасное колесо
 en determinadas situaciones=в определенных ситуациях
 Se considera que=Считается, что
 desplazamientos=перемещения
 va a cambiar de carril para adelantar.=Он собирается перестроиться в другой ряд, чтобы совершить обгон.
 Ante la duda=Когда сомневаетесь
 ¿Dónde está prohibido circular=Где запрещено движение транспорта
+¿es correcto su comportamiento?= правильно ли он поступает ?
+No, ya que puede deslumbrar al conductor=Нет, потому что это может ослепить водителя
+en su mismo sentido=в том же направлении
+¿Qué función tienen los indicadores de dirección?=Comunicarse con los demás conductores.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
