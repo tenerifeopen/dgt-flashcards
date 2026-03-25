@@ -106,7 +106,7 @@ Encender el intermitente,=Включение поворотника,
 No, ya que puede deslumbrar al conductor=Нет, потому что это может ослепить водителя
 Pisar varias veces el pedal de freno=Нажмите на педаль тормоза несколько раз .
 la puesta y la salida del sol=закат и восход солнца
-
+cuántas luces de freno debe llevar?=Сколько стоп-сигналов должно быть на машине?
 
 
 

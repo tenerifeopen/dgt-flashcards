@@ -208,8 +208,8 @@ Ante la duda=Когда сомневаетесь
 en su mismo sentido=в том же направлении
 la puesta y la salida del sol=закат и восход солнца
 emergencia dentro de la vía.=чрезвычайная ситуация на дороге
-
-
+Sí, en todo tipo de vías.=Да, на всех типах дорог.
+Cuando termine el adelantamiento=Когда обгон завершен
 
 
 
