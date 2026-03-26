@@ -16,14 +16,14 @@ cerciorarse previamente de que puede hacerlo sin peligro.=Предварител
 Los limites de velocidad establecidos en las vías se ponen...=Ограничения скорости на дороге устанавливаются…
 Advertir de la maniobra=Предупреждение о маневре
 Asegurarse de que no hay peligro=Убедится в отсутствии опасности
-
-
-
-
-
-
-
-
+Al aproximarnos a un autobús=Когда мы приближаемся к автобусу
+Cediendo el paso=Уступая дорогу
+Cediendo el paso a los vehículos de la derecha.=Уступая дорогу автомобилям справа.
+cuando no obstaculiza gravemente=когда это не создает серьезных препятствий
+lo más cerca posible del borde derecho=как можно ближе к правому краю
+pasar si lo permite el semáforo.=ехать если светофор позволяет.
+¿Cuándo puede abrir las puertas=Когда можно будет открыть двери?
+ Sí, y además está prohibido.= Да, и кроме того это запрещено 
 
 
 

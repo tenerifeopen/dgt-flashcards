@@ -220,6 +220,48 @@ detener el vehículo=остановить автомобиль
 En un paso estrecho=На узком проезде
 tratando de =пытаясь
 desde un camino privado=с частной дороги
+las advertencias acústicas?=Звуковые сигналы?
+Sólo excepcionalmente =Только в исключительных случаях
+Cediendo el paso=Уступая дорогу
+que es previsible=что предсказуемо
+que es previsible quedarse =что вполне вероятно (предсказуемо)
+tormenta=шторм
+charcos y nieve=лужи и снег
+cadenas=цепи
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
