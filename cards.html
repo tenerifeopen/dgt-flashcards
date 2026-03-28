@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DGT Flashcards v3.1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --card-front-bg: #ffffff;
+            --card-back-bg: #2563eb;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+            background-color: #f8fafc;
+            touch-action: manipulation;
+        }
+        .flip-card {
+            perspective: 1000px;
+            height: 320px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+        }
+        .flip-card-front {
+            background-color: var(--card-front-bg);
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+        }
+        .flip-card-back {
+            background-color: var(--card-back-bg);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        /* Увеличенный шрифт для ответа */
+        #back-text {
+            font-size: 2.5rem; /* Значительно крупнее */
+            line-height: 1.1;
+            word-break: break-word;
+        }
+        @media (max-width: 380px) {
+            #back-text {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 font-sans">
+
+    <div class="max-w-md w-full flex flex-col items-center">
+        <header class="my-6 text-center">
+            <h1 class="text-3xl font-black text-slate-900 tracking-tight">DGT Flashcards</h1>
+            <p class="text-slate-500 mt-1">Нажми на карту, чтобы увидеть ответ</p>
+        </header>
+
+        <!-- Карточка -->
+        <div id="card-container" class="flip-card mb-8">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p id="front-text" class="text-xl font-bold leading-tight"></p>
+                </div>
+                <div class="flip-card-back">
+                    <p id="back-text" class="font-black"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопки -->
+        <div class="w-full grid grid-cols-3 gap-4 items-center bg-white p-4 rounded-3xl shadow-sm border border-slate-100">
+            <button id="prev-btn" class="h-14 bg-slate-50 rounded-2xl flex items-center justify-center active:bg-slate-200 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <div class="text-center font-black text-blue-600 text-lg" id="counter">1 / 32</div>
+            <button id="next-btn" class="h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center active:bg-blue-700 shadow-lg shadow-blue-200 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </div>
+        
+        <div class="mt-6 text-center text-slate-400 text-xs font-bold uppercase tracking-widest">
+            Examen DGT 🚗
+        </div>
+    </div>
+
+    <script>
+        const flashcards = [
+            {f: "¿Cómo se considera a una persona que empuja un ciclomotor?", b: "Peatón"},
+            {f: "Velocidad máxima: Turismo en carretera convencional", b: "90 km/h"},
+            {f: "Velocidad máxima: Pick-up en autovía", b: "120 km/h"},
+            {f: "Límite: Calle con plataforma única (без бордюров)", b: "20 km/h"},
+            {f: "Velocidad máxima: Vehículo mixto en autopista", b: "100 km/h"},
+            {f: "Distancia de seguridad (segundos)", b: "2 - 3 seg"},
+            {f: "Velocidad máxima: Autobús en convencional", b: "80 km/h"},
+            {f: "Límite: Vía urbana 2+ carriles por sentido", b: "50 km/h"},
+            {f: "Velocidad máxima: Ciclomotor", b: "45 km/h"},
+            {f: "Velocidad máxima: Calle residencial (S-28)", b: "20 km/h"},
+            {f: "¿Puede un мопед ехать по автомагистрали?", b: "No"},
+            {f: "Adelantamiento: ¿Margen de +20 km/h?", b: "No"},
+            {f: "Velocidad mínima: Autopista / Autovía", b: "60 km/h"},
+            {f: "Velocidad máxima: Camión en convencional", b: "80 km/h"},
+            {f: "Velocidad máxima: VMP (Самокат)", b: "25 km/h"},
+            {f: "Reducción por Mercancías Peligrosas", b: "-10 km/h"},
+            {f: "Límite: Vía urbana 1 carril por sentido", b: "30 km/h"},
+            {f: "Velocidad máxima: Turismo con remolque en autovía", b: "90 km/h"},
+            {f: "¿Línea amarilla continua?", b: "Prohibido parar/estacionar"},
+            {f: "¿Línea amarilla discontinua?", b: "Prohibido estacionar"},
+            {f: "Alcohol: Novel (первые 2 года)", b: "0.15 mg/l"},
+            {f: "Alcohol: General", b: "0.25 mg/l"},
+            {f: "ITV: Turismo > 10 años", b: "Anual"},
+            {f: "Chaleco reflectante: ¿Cuándo?", b: "Vía interurbana"},
+            {f: "Velocidad máxima: Motocicleta en convencional", b: "90 km/h"},
+            {f: "Uso de móvil con soporte (без рук)", b: "Permitido"},
+            {f: "Luz V-16", b: "Luz de emergencia"},
+            {f: "Velocidad mínima: Convencional (máx 90)", b: "45 km/h"},
+            {f: "Tractor con remolque: Máxima", b: "25 km/h"},
+            {f: "Señal S-3 (синий квадрат, машина)", b: "Vía para autos"},
+            {f: "¿Adelantar por la derecha en autopista?", b: "No"},
+            {f: "¿Prioridad en glorietas?", b: "El de dentro"}
+        ];
+
+        let currentIndex = 0;
+        const container = document.getElementById('card-container');
+        const frontT = document.getElementById('front-text');
+        const backT = document.getElementById('back-text');
+        const counter = document.getElementById('counter');
+
+        function updateUI() {
+            container.classList.remove('flipped');
+            setTimeout(() => {
+                frontT.innerText = flashcards[currentIndex].f;
+                backT.innerText = flashcards[currentIndex].b;
+                counter.innerText = `${currentIndex + 1} / ${flashcards.length}`;
+            }, 100);
+        }
+
+        container.addEventListener('click', () => {
+            container.classList.toggle('flipped');
+        });
+
+        document.getElementById('next-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % flashcards.length;
+            updateUI();
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
+            updateUI();
+        });
+
+        updateUI();
+    </script>
+</body>
+</html>

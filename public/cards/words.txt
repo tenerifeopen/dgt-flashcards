@@ -228,7 +228,7 @@ que es previsible quedarse =что вполне вероятно (предска
 tormenta=шторм
 charcos y nieve=лужи и снег
 cadenas=цепи
-
+no obstaculiza gravemente=не создает серьезных препятствий
 
 
 
