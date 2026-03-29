@@ -116,19 +116,38 @@ y en ningún caso encenderemos =и ни при каких обстоятельс
 nubes densas de humo=густые клубы дыма
 las condiciones meteorológicas sean especialmente desfavorables=Погодные условия особенно неблагоприятны.
 disminuye sensiblemente la visibilidad=видимость значительно снижена(Это как Ligera слабый туман только передние п.туман. фары)
-
-
-
-
-
-
-
-
-
-
-
-
-
+En caso de niebla no espesa=В случае легкого тумана
+cuando el vehículo no disponga de luz antiniebla delantera=когда у автомобиля отсутствует передняя противотуманная фара
+En condiciones que disminuyen sensiblemente la visibilidad=В условиях, значительно снижающих видимость
+Sí, si el vehículo no dispone de luz antiniebla delantera=Да, если у автомобиля нет передних противотуманных фар.
+Durante el día y con tiempo soleado=В течение дня и в солнечную погоду
+deberá llevar encendida la luz=Необходимо включить свет
+Cuando termine el adelantamiento=Когда обгон завершен
+¿debe sustituir la luz de carretera por la de corto alcance?=Необходимо заменить дальний свет на ближний.
+Entre dos vehículos=Между двумя транспортными средствами
+una curva cerrada...=крутой поворот
+insuficientemente iluminado=недостаточно освещенный
+¿Qué función tienen los indicadores de dirección?=Какова функция поворотников
+¿Qué luces indican la presencia y anchura del vehículo?=Какие огни указывают на наличие и ширину транспортного средства?/Luz de posición/Габаритные огни
+¿Cuándo es obligatorio encender el alumbrado?=Когда обязательно включать освещение?/Entre el ocaso y la salida del sol/Между закатом и восходом солнца
+¿Qué luz es obligatoria en túneles de día?=Какой свет обязателен в тоннелях днем?/Luz de posición y corto alcance/Габариты и ближний свет
+¿Se puede circular solo con luces de posición?=Можно ли ехать только с габаритными огнями?/No, deben ir con corto o largo alcance/Нет, они должны идти с ближним или дальним
+¿Cuándo usar el largo alcance fuera de poblado?=Когда использовать дальний свет вне города?/Vía insuficiente iluminada y más de 40 km/h/Недостаточно освещенная дорога и скорость выше 40 км/ч
+¿Qué luz usar en poblado de noche?=Какой свет использовать в городе ночью?/Luz de posición y corto alcance/Габариты и ближний свет
+¿Cómo evitar el deslumbramiento al cruzarse сon otro?=Как избежать ослепления при встречном разъезде?/Cambiar a corto alcance/Перейти на ближний свет
+¿Es obligatoria la luz antiniebla delantera?=Обязательна ли передняя противотуманная фара?/No, es opcional/Нет, она по желанию
+¿Cuándo es obligatoria la luz antiniebla trasera?=Когда обязателен задний противотуманный фонарь?/Condiciones especialmente desfavorables/Особо неблагоприятные условия (густой туман)
+¿Se usa la antiniebla trasera con lluvia intensa?=Используется ли задний туман при сильном дожде?/No, solo con lluvia muy intensa/Нет, только при очень сильном дожде
+¿Qué indica la luz de marcha atrás?=Что означает свет заднего хода?/Luz blanca de que el vehículo va hacia atrás/Белый свет, означающий, что машина едет назад
+¿Qué luz llevan los ciclos de noche?=Какой свет на велосипедах ночью?/Luz blanca delantera y roja trasera/Белый свет спереди и красный сзади
+¿Cuándo usar la luz de emergencia en circulación?=Когда включать аварийку во время движения?/Peligro de alcance o frenado brusco/Опасность столкновения или резкое торможение
+¿De qué color son los catadióptricos traseros?=Какого цвета задние светоотражатели?/Rojos y no triangulares/Красные и не треугольные
+¿Qué vehículos llevan catadióptricos triangulares?=Какие ТС имеют треугольные светоотражатели?/Los remolques y semirremolques/Прицепы и полуприцепы
+¿Qué luz usar al estacionar en vía insuficiente iluminada?=Какой свет оставить при стоянке на неосвещенной дороге?/Luz de posición o estacionamiento/Габариты или парковочные огни
+¿Qué hacer si te deslumbran?=Что делать, если тебя ослепили?/Reducir velocidad o detenerse si es necesario/Снизить скорость или остановиться, если нужно
+¿Cuándo usar corto alcance de día?=Когда использовать ближний свет днем?/Carriles reversibles o adicionales/Реверсивные или дополнительные полосы
+¿De qué color es la luz de placa de matrícula?=Какого цвета подсветка номерного знака?/Blanca/Белая
+¿Es obligatorio el alumbrado en condiciones de nieve?=Обязательно ли освещение в снежную погоду?/Sí, por visibilidad reducida/Да, из-за ограниченной видимости
 
 
 
