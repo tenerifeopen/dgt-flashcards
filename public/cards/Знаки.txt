@@ -29,13 +29,13 @@ a partir del paso de esa moto=с того момента, как мимо про
 Con el brazo extendido hacia abajo=Рука вытянута вниз.
 Le ordena detenerse=Он приказывает ему остановиться.
 Detenerse delante del vehículo policial y permanecer en el interior del turismo=Остановитесь перед полицейской машиной и оставайтесь внутри автомобиля.
-
-
-
-
-
-
-
+Donde no genere mayores riesgos ni molestias=Там, где это не влечет за собой серьезных рисков или неудобств.
+Detenerse en el lado derecho, delante del vehículo policial=Остановитесь справа, перед полицейской машиной.
+seguir las instrucciones del agente=следуйте инструкциям агента.
+utilizar dispositivos retrorreflectantes que permitan distinguirlos=использовать светоотражающие устройства, позволяющие их различать
+la calzada está totalmente cerrada al tráfico=Дорога полностью перекрыта для движения транспорта.
+Prohíben el paso a través de la línea imaginaria que las une=Они запрещают пересечение воображаемой линии, соединяющей их.
+Prohíben atravesar la línea real o imaginaria que los une.=Они запрещают пересекать реальную или воображаемую линию, которая их объединяет.
 
 
 

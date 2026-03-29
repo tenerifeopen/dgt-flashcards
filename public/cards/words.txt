@@ -255,12 +255,10 @@ orden de prioridad=порядок приоритета
 Disminuir la velocidad=Замедлять
 de arriba abajo=в верх в низ
 permanecer=оставаться
-
-
-
-
-
-
+resto de usuarios=другие пользователи
+una prueba deportiva=спортивное мероприятие
+permanentemente=навсегда
+siguientes=следующие
 
 
 
