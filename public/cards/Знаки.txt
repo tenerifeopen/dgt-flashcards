@@ -1,1 +1,102 @@
-Norma general = Общее правило
+la señalización horizontal=горизонтальная разметка
+marcas viales=дорожная разметка
+El orden de prioridad entre los distintos tipos de las señales es.=Порядок приоритета среди различных типов сигналов следующий:
+respetar la señal del agentе=уважайте(выполняйте) сигнал офицера.
+orden de prioridad=порядок приоритета
+¿puede continuar la marcha?=вы можете продолжить марш
+distinto tipo=разный тип
+La más restrictiva=Наиболее ограничительный
+¿A cuál se debe obedecer?=Какому из них следует подчиняться?
+por ser contradictorias=потому что они противоречивы
+a qué señal debe obedecer?=Какому сигналу он должен подчиняться?
+Salvo circunstancias especiales=За исключением особых обстоятельств.
+obedecer las señales de circulación...=Соблюдайте дорожные знаки
+La señal de ceda el paso=Знак "Уступи дорогу"(Треугольник)
+aunque su aplicación podrá limitarse=хотя его применение может быть ограничено
+En una vía con varios carriles para el mismo sentid=На дороге с несколькими полосами движения в одном направлении.
+mediante marcas viales=с использованием дорожной разметки
+aunque no haya obreros trabajando=даже если нет работающих
+Cuando el fondo de las señales de orientación es amarillo=Когда фон указателей желтый
+Las órdenes de los agentes=Приказы агентов
+hay que cumplirlas siempre=Их необходимо всегда соблюдать.
+ ya hayan entrado en la intersección=уже въехали на перекресток (останавливаться не надо)
+El agente tenía los brazos en cruz y ha bajado los brazos=Офицер вытянул руки в стороны и опустил их.
+¿cuándo podrá reanudar la marcha?=когда можно возобновить движение
+Solo cuando cambie de posición o efectúe otra señal.=Только когда оно меняет положение или подает другой сигнал.(Регулировщик)
+El Agente balancea una luz amarilla.=Агент размахивает жёлтым фонариком.
+con toques de silbato cortos y frecuentes=короткими, частыми свистками
+a partir del paso de esa moto=с того момента, как мимо проехал мотоцикл
+Con el brazo extendido hacia abajo=Рука вытянута вниз.
+Le ordena detenerse=Он приказывает ему остановиться.
+Detenerse delante del vehículo policial y permanecer en el interior del turismo=Остановитесь перед полицейской машиной и оставайтесь внутри автомобиля.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

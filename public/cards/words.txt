@@ -229,6 +229,42 @@ tormenta=шторм
 charcos y nieve=лужи и снег
 cadenas=цепи
 no obstaculiza gravemente=не создает серьезных препятствий
+ extremar la precaución=проявляйте крайнюю осторожность.
+cuando las ruedas traseras derrapen=когда задние колеса скользят
+Poniendo la 2ª velocidad=Включение второй передачи
+ línea continua=непрерывная линия сплошная
+detenerse lo más lejos=остановка как можно дальше
+indistintamente= безразлично.
+niebla densa=густой туман
+lluvia intensa=сильный дождь
+si la lleva= если имеются
+niebla no espesa=туман не густой
+niebla espesa=густой туман
+y en ningún caso=и ни в коем случае
+se pueden utilizar=Можно ли использовать 
+obligatorio utilizar=обязательно к использовать
+¿cuándo está obligado=Когда он обязан
+¿es correcto su comportamiento?= правильно ли он поступает ?
+Entre dos vehículos=Между двумя транспортными средствами
+una curva cerrada...=крутой поворот
+Cuando se inmovilice el vehículo=Когда транспортное средство обездвижено
+existe peligro=Существует опасность
+prevalece=преобладает
+orden de prioridad=порядок приоритета
+¿A cuál se debe obedecer?=Какому из них следует подчиняться?
+Disminuir la velocidad=Замедлять
+de arriba abajo=в верх в низ
+permanecer=оставаться
+
+
+
+
+
+
+
+
+
+
 
 
 

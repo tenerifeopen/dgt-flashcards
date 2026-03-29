@@ -107,6 +107,31 @@ No, ya que puede deslumbrar al conductor=Нет, потому что это мо
 Pisar varias veces el pedal de freno=Нажмите на педаль тормоза несколько раз .
 la puesta y la salida del sol=закат и восход солнца
 cuántas luces de freno debe llevar?=Сколько стоп-сигналов должно быть на машине?
+Sí, está permitido, pero no es aconsejable.=Да, это разрешено, но не рекомендуется.
+Sí, pero solo la luz antiniebla delantera.=Да, но только передняя противотуманная фара.
+disminuyen sensiblemente la visibilidad=Они значительно снижают видимость.
+En caso de niebla no espesa=В случае легкого тумана
+Debe encender la luz antiniebla delantera=Необходимо включить передние противотуманные фары.
+y en ningún caso encenderemos =и ни при каких обстоятельствах мы не включим
+nubes densas de humo=густые клубы дыма
+las condiciones meteorológicas sean especialmente desfavorables=Погодные условия особенно неблагоприятны.
+disminuye sensiblemente la visibilidad=видимость значительно снижена(Это как Ligera слабый туман только передние п.туман. фары)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
