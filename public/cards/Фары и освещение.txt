@@ -48,3 +48,81 @@
 ¿Qué luces dejar al parar en travesía?=Свет при остановке на проезде через город?/Luz de posición/Габаритные огни
 ¿Cómo avisar una frenada brusca?=Как предупредить о резком торможении?/Pisar el freno varias veces/Нажать на тормоз несколько раз
 ¿Qué indica un intermitente rápido?=О чем говорит быстрый поворотник?/Fallo de una lámpara/Поломка одной лампочки
+¿Qué luces usar en un carril reversible?=Какие огни использовать на реверсивной полосе?/Luz de corto alcance día y noche/Ближний свет днем и ночью
+¿Qué luces usar en un carril adicional?=Какие огни на дополнительной полосе?/Luz de corto alcance día y noche/Ближний свет днем и ночью
+¿Es obligatorio el corto alcance en un carril habilitado en sentido contrario?=Обязателен ли ближний свет на полосе встречного направления?/Sí, siempre/Да, всегда
+¿Qué luz usar en una travesía insuficiente iluminada?=Какой свет на транзитной дороге через город без освещения?/Luz de posición y corto alcance/Габариты и ближний свет
+¿Se puede usar la luz de carretera en travesías?=Можно ли использовать дальний свет в черте города на транзитной дороге?/No, está prohibido/Нет, запрещено
+¿Cuándo se considera una vía insuficiente iluminada?=Когда дорога считается недостаточно освещенной?/No se lee matrícula a 10 metros/Не читается номер с 10 метров
+¿Qué luz usar al estacionar en una travesía iluminada?=Какой свет оставить при стоянке на освещенной транзитной дороге?/Ninguna/Никакой
+¿Qué luz usar si el vehículo está averiado en la calzada?=Какой свет включить, если машина сломалась на проезжей части?/Luz de posición y emergencia/Габариты и аварийка
+¿Qué luces usar con lluvia intensa si no hay antinieblas?=Что включить в сильный дождь, если нет противотуманок?/Luz de corto alcance/Ближний свет
+¿Se puede usar antiniebla delantera con lluvia intensa?=Можно ли использовать передние туманки при сильном дожде?/Sí/Да
+¿Es obligatorio usar la luz de corto alcance con niebla?=Обязательно ли использовать ближний свет в тумане?/Sí/Да
+¿Qué indica un catadióptrico blanco?=Что означает белый светоотражатель?/Parte delantera del vehículo/Передняя часть автомобиля
+¿Qué indica un catadióptrico amarillo auto?=Что означает желтый светоотражатель?/Lateral del vehículo/Боковая часть автомобиля
+¿Pueden los turismos llevar catadióptricos triangulares?=Могут ли легковые авто иметь треугольные отражатели?/No, solo remolques/Нет, только прицепы
+¿Cuántas luces de marcha atrás puede tener un turismo?=Сколько огней заднего хода может быть у легкового авто?/Una o dos luces blancas/Одна или две белые лампы
+¿Qué luz usar en condiciones que disminuyen la visibilidad?=Какой свет использовать при условиях, снижающих видимость?/Corto alcance y antinieblas si existen/Ближний свет и противотуманки, если есть
+¿Qué luz usar en una nube de polvo o humo?=Что включить в облаке пыли или дыма?/Posición y corto alcance/Габариты и ближний свет
+¿Es obligatorio llevar bombillas de repuesto?=Обязательно ли возить запасные лампочки?/No, ya no es obligatorio/Нет, уже не обязательно
+¿Qué luz indica la posición de un vehículo estacionado?=Какой свет указывает на положение припаркованного авто?/Luz de estacionamiento o posición/Парковочный свет или габариты
+¿Qué luz usar al circular a menos de 40 km/h fuera de poblado?=Какой свет при скорости ниже 40 км/ч вне города?/Corto alcance o largo alcance/Ближний или дальний свет
+Lluvia intensa=Сильный дождь/Niebla trasera prohibida/Задний туман ЗАПРЕЩЕН
+Lluvia muy intensa=Очень сильный дождь/Niebla trasera obligatoria/Задний туман ОБЯЗАТЕЛЕН
+Niebla ligera=Слабый туман/Niebla trasera prohibida/Задний туман ЗАПРЕЩЕН
+Niebla espesa=Густой туман/Niebla trasera obligatoria/Задний туман ОБЯЗАТЕЛЕН
+Nevada fuerte=Сильный снегопад/Niebla trasera obligatoria/Задний туман ОБЯЗАТЕЛЕН
+Nieve ligera=Легкий снег/Niebla trasera prohibida/Задний туман ЗАПРЕЩЕН
+Nubes de polvo o humo densas=Густые облака пыли или дыма/Niebla trasera obligatoria/Задний туман ОБЯЗАТЕЛЕН
+Nubes de polvo o humo ligeras=Легкая пыль или дым/Niebla trasera prohibida/Задний туман ЗАПРЕЩЕН
+Condiciones especialmente desfavorables=Особо неблагоприятные условия/Niebla trasera obligatoria/Задний туман ОБЯЗАТЕЛЕН
+Disminuyen sensiblemente la visibilidad=Заметно снижают видимость/Niebla delantera permitida/Передний туман разрешен
+Disminuyen gravemente la visibilidad=Серьезно снижают видимость/Niebla trasera obligatoria/Задний туман ОБЯЗАТЕЛЕН
+¿Cuándo es opcional la antiniebla delantera?=Когда передний туман по желанию?/Cualquier condición de visibilidad reducida/Любое ухудшение видимости
+¿Cuándo es obligatoria la antiniebla delantera?=Когда передний туман обязателен?/Nunca/Никогда (в Испании они всегда опциональны)
+¿Se puede usar antiniebla delantera en vía estrecha?=Можно передний туман на узкой дороге?/Sí, de noche con curvas señalizadas/Да, ночью с опасными поворотами
+Vía estrecha (definición)=Узкая дорога (определение)/Calzada de 6,5 metros o menos/Проезжая часть 6,5 метров или меньше
+Lluvia intensa (delantera)=Сильный дождь (передние)/Niebla delantera permitida/Передний туман РАЗРЕШЕН
+Lluvia intensa (trasera)=Сильный дождь (задние)/Niebla trasera prohibida/Задний туман ЗАПРЕЩЕН
+Antiniebla trasera (finalidad)=Задний туман (цель)/Evitar que nos alcancen por detrás/Чтобы в нас не врезались сзади
+Antiniebla delantera (finalidad)=Передний туман (цель)/Iluminar la calzada y los bordes/Освещать дорогу и обочины
+Encender antiniebla trasera sin necesidad=Включить задний туман без нужды/Prohibido por deslumbramiento/Запрещено из-за ослепления
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
