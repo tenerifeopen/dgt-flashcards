@@ -1,206 +1,50 @@
-¿Qué es el alumbrado del vehículo? = Что такое освещение автомобиля? / Система световых приборов
-¿Cuál es la función principal de las luces? = Главная функция фар? / Видеть и быть видимым
-¿Qué luces permiten ver? = Какие фары освещают дорогу? / Ближний и дальний свет
-¿Qué luces sirven para ser visto? = Какие фары делают авто видимым? / Габариты и задние
-¿Se puede conducir solo con luz de posición? = Можно ехать только с габаритами? / Нет
-¿Qué luz se usa normalmente de noche? = Какой свет ночью? / Ближний
-¿Cuándo usar luz de carretera? = Когда дальний свет? / Без встречных и вне города
-¿Qué hace la luz de cruce? = Что делает ближний свет? / Освещает без ослепления
-¿Qué hace la luz de carretera? = Что делает дальний свет? / Освещает далеко
-¿Cuándo hay que cambiar a luz de cruce? = Когда переключить на ближний? / При встречных
-¿Qué es deslumbramiento? = Что такое ослепление? / Когда свет мешает другим
-¿Cómo evitar deslumbrar? = Как не ослеплять? / Переключить на ближний
-¿Qué luces usar con niebla? = Что включать в туман? / Противотуманные
-¿Se puede usar antiniebla sin niebla? = Можно без тумана? / Нет
-¿Qué luz usar con lluvia intensa? = Что включить в сильный дождь? / Ближний или противотуманки
-¿Qué luces usar de día? = Какие фары днём? / DRL или ближний
-¿Qué es DRL? = Что такое DRL? / Дневные ходовые огни
-¿Las luces DRL sustituyen a las de cruce? = DRL заменяют ближний? / Нет
-¿Qué es luz de posición? = Что такое габариты? / Обозначают авто
-¿Qué indica luz de freno? = Что показывает стоп-сигнал? / Торможение
-¿Qué es intermitente? = Что такое поворотник? / Сигнал поворота
-¿Cuándo usar intermitente? = Когда включать поворотник? / Перед манёвром
-¿Qué es luz de emergencia? = Что такое аварийка? / Одновременные поворотники
-¿Cuándo usar emergencia? = Когда аварийка? / Опасность или остановка
-¿Qué es luz de marcha atrás? = Что это? / Белый свет назад
-¿Cuándo se enciende marcha atrás? = Когда включается? / При заднем ходе
-¿Qué es luz antiniebla delantera? = Передние противотуманки / Улучшают видимость
-¿Qué es luz antiniebla trasera? = Задние противотуманки / Делают авто видимым
-¿Cuándo usar antiniebla trasera? = Когда использовать? / При сильном тумане
-¿Se puede deslumbrar con antiniebla trasera? = Может ослепить? / Да
-¿Qué es luz de matrícula? = Подсветка номера / Освещает номер
-¿Cuántas luces de matrícula hay? = Сколько? / Одна
-¿Qué es catadióptrico? = Что это? / Отражатель без света
-¿Tiene luz propia el catadióptrico? = Есть ли свет? / Нет
-¿Qué color es catadióptrico trasero? = Цвет сзади / Красный
-¿Qué color delante? = Цвет спереди / Белый
-¿Qué forma tienen en remolques? = Форма на прицепе / Треугольник
-¿Qué es luz de gálibo? = Что это? / Для ширины авто
-¿Cuándo se usa luz de gálibo? = Когда? / Ширина >2.10 м
-¿Qué es luz interior? = Внутренний свет / Освещение салона
-¿Se puede conducir con luz interior? = Можно ехать? / Да но нежелательно
-¿Qué es señal V1? = Сигнал V1 / Приоритетный авто
-¿Qué color es V1? = Цвет / Синий
-¿Qué indica luz azul? = Что значит? / Уступить дорогу
-¿Qué es señal V2? = Сигнал V2 / Работы на дороге
-¿Qué velocidad suele tener V2? = Скорость / До 40 км/ч
-¿Qué hacer ante vehículo prioritario? = Что делать? / Уступить
-¿Se pueden usar luces con señales acústicas? = Можно вместе? / Да
-¿Qué es alumbrado de corto alcance? = Что это? / Ближний свет
-¿Qué es alumbrado de largo alcance? = Что это? / Дальний свет
-¿Qué luz usar en túnel? = Свет в тоннеле / Ближний
-¿Es obligatorio en túnel? = Обязательно? / Да
-¿Qué indica señal túnel? = Знак туннеля / Включить свет
-¿Qué indica fin de túnel? = Конец туннеля / Можно выключить
-¿Se puede usar luz larga en ciudad? = Можно дальний? / Нет
-¿Se puede usar luz larga con tráfico? = Можно дальний? / Нет
-¿Cuándo usar luz de estacionamiento? = Когда использовать? / При парковке
-¿Qué es luz de estacionamiento? = Что это? / Свет одной стороны
-¿Qué es señalización óptica? = Что это? / Световые сигналы
-¿Qué es señalización acústica? = Что это? / Звуковые сигналы
-¿Cuándo usar claxon? = Когда сигнал? / Опасность
-¿Se puede usar claxon en ciudad? = Можно? / Ограничено
-¿Qué luces son obligatorias? = Какие обязательны? / Основные световые приборы
-¿Qué revisar antes de conducir? = Что проверить? / Работу фар
-¿Qué pasa si falla una luz? = Если не работает? / Нельзя ехать
-¿Qué luces deben funcionar siempre? = Какие всегда? / Фары и стопы
-¿Se puede circular sin luces de noche? = Можно без света? / Нет
-¿Qué luces usar al amanecer o anochecer? = Что включать? / Ближний
-¿Qué hacer con deslumbramiento? = Что делать? / Смотреть вправо
-¿Qué es visibilidad reducida? = Что это? / Плохая видимость
-¿Qué luces usar con nieve? = Что включить? / Ближний + противотуманки
-¿Qué luces usar con humo o polvo? = Что включить? / Противотуманные
-¿Qué indica intermitente rápido? = Быстро мигает / Поломка лампы
-¿Cuántas luces de freno hay? = Сколько стопов? / 2 или 3
-¿Qué color tiene luz de freno? = Цвет / Красный
-¿Qué color tiene intermitente? = Цвет / Оранжевый
-¿Qué color tiene marcha atrás? = Цвет / Белый
-¿Qué color tiene luz de posición? = Цвет / Белый спереди, красный сзади
-Test = тест / проба
-¿Qué luces deben llevar encendidas las motocicletas de día? = Какой свет должны включать мотоциклы днем? / La luz de corto alcance o cruce
-insuficientemente iluminada = недостаточно освещенный
-Las luces de posición = Габаритные огни
-la agudeza visual=острота зрения
-no varía.=Не меняется
-aumenta=Увеличивается
- se reduce.=Уменьшается.
-la luz de posición=габаритный свет
-Tan pronto como=Как только
-Utilizar la señal de emergencia.=Воспользуйтесь аварийным сигналом.
-¿está permitido utilizar la luz antiniebla?=Использование противотуманных фар разрешено?
-insuficientemente iluminadas=недостаточно освещенный
-Circulando con fuerte nevada=Вождение в условиях сильного снегопада
-insuficientemente iluminada=недостаточно освещенный
-largo alcance.= Дальний свет
-entre la puesta y la salida del sol.=между закатом и восходом солнца
-La luz de posición con las de corto o largo alcance=Габаритные огни с ближним или дальним светом
-Si no hay niebla espesa,=Если нет густого тумана
-la luz antiniebla delantera=передняя противотуманная фара
-Encender el intermitente,=Включение поворотника,
-¿qué luces debe llevar encendidas?=Какие фары следует включить?
-¿es correcto su comportamiento?= правильно ли он поступает ?
-¿Qué función tienen los indicadores de dirección?=Comunicarse con los demás conductores.
-No, ya que puede deslumbrar al conductor=Нет, потому что это может ослепить водителя
-Pisar varias veces el pedal de freno=Нажмите на педаль тормоза несколько раз .
-la puesta y la salida del sol=закат и восход солнца
-cuántas luces de freno debe llevar?=Сколько стоп-сигналов должно быть на машине?
-Sí, está permitido, pero no es aconsejable.=Да, это разрешено, но не рекомендуется.
-Sí, pero solo la luz antiniebla delantera.=Да, но только передняя противотуманная фара.
-disminuyen sensiblemente la visibilidad=Они значительно снижают видимость.
-En caso de niebla no espesa=В случае легкого тумана
-Debe encender la luz antiniebla delantera=Необходимо включить передние противотуманные фары.
-y en ningún caso encenderemos =и ни при каких обстоятельствах мы не включим
-nubes densas de humo=густые клубы дыма
-las condiciones meteorológicas sean especialmente desfavorables=Погодные условия особенно неблагоприятны.
-disminuye sensiblemente la visibilidad=видимость значительно снижена(Это как Ligera слабый туман только передние п.туман. фары)
-En caso de niebla no espesa=В случае легкого тумана
-cuando el vehículo no disponga de luz antiniebla delantera=когда у автомобиля отсутствует передняя противотуманная фара
-En condiciones que disminuyen sensiblemente la visibilidad=В условиях, значительно снижающих видимость
-Sí, si el vehículo no dispone de luz antiniebla delantera=Да, если у автомобиля нет передних противотуманных фар.
-Durante el día y con tiempo soleado=В течение дня и в солнечную погоду
-deberá llevar encendida la luz=Необходимо включить свет
-Cuando termine el adelantamiento=Когда обгон завершен
-¿debe sustituir la luz de carretera por la de corto alcance?=Необходимо заменить дальний свет на ближний.
-Entre dos vehículos=Между двумя транспортными средствами
-una curva cerrada...=крутой поворот
-insuficientemente iluminado=недостаточно освещенный
-¿Qué función tienen los indicadores de dirección?=Какова функция поворотников
-¿Qué luces indican la presencia y anchura del vehículo?=Какие огни указывают на наличие и ширину транспортного средства?/Luz de posición/Габаритные огни
-¿Cuándo es obligatorio encender el alumbrado?=Когда обязательно включать освещение?/Entre el ocaso y la salida del sol/Между закатом и восходом солнца
-¿Qué luz es obligatoria en túneles de día?=Какой свет обязателен в тоннелях днем?/Luz de posición y corto alcance/Габариты и ближний свет
-¿Se puede circular solo con luces de posición?=Можно ли ехать только с габаритными огнями?/No, deben ir con corto o largo alcance/Нет, они должны идти с ближним или дальним
-¿Cuándo usar el largo alcance fuera de poblado?=Когда использовать дальний свет вне города?/Vía insuficiente iluminada y más de 40 km/h/Недостаточно освещенная дорога и скорость выше 40 км/ч
-¿Qué luz usar en poblado de noche?=Какой свет использовать в городе ночью?/Luz de posición y corto alcance/Габариты и ближний свет
-¿Cómo evitar el deslumbramiento al cruzarse сon otro?=Как избежать ослепления при встречном разъезде?/Cambiar a corto alcance/Перейти на ближний свет
-¿Es obligatoria la luz antiniebla delantera?=Обязательна ли передняя противотуманная фара?/No, es opcional/Нет, она по желанию
-¿Cuándo es obligatoria la luz antiniebla trasera?=Когда обязателен задний противотуманный фонарь?/Condiciones especialmente desfavorables/Особо неблагоприятные условия (густой туман)
-¿Se usa la antiniebla trasera con lluvia intensa?=Используется ли задний туман при сильном дожде?/No, solo con lluvia muy intensa/Нет, только при очень сильном дожде
-¿Qué indica la luz de marcha atrás?=Что означает свет заднего хода?/Luz blanca de que el vehículo va hacia atrás/Белый свет, означающий, что машина едет назад
-¿Qué luz llevan los ciclos de noche?=Какой свет на велосипедах ночью?/Luz blanca delantera y roja trasera/Белый свет спереди и красный сзади
-¿Cuándo usar la luz de emergencia en circulación?=Когда включать аварийку во время движения?/Peligro de alcance o frenado brusco/Опасность столкновения или резкое торможение
-¿De qué color son los catadióptricos traseros?=Какого цвета задние светоотражатели?/Rojos y no triangulares/Красные и не треугольные
-¿Qué vehículos llevan catadióptricos triangulares?=Какие ТС имеют треугольные светоотражатели?/Los remolques y semirremolques/Прицепы и полуприцепы
-¿Qué luz usar al estacionar en vía insuficiente iluminada?=Какой свет оставить при стоянке на неосвещенной дороге?/Luz de posición o estacionamiento/Габариты или парковочные огни
-¿Qué hacer si te deslumbran?=Что делать, если тебя ослепили?/Reducir velocidad o detenerse si es necesario/Снизить скорость или остановиться, если нужно
-¿Cuándo usar corto alcance de día?=Когда использовать ближний свет днем?/Carriles reversibles o adicionales/Реверсивные или дополнительные полосы
-¿De qué color es la luz de placa de matrícula?=Какого цвета подсветка номерного знака?/Blanca/Белая
-¿Es obligatorio el alumbrado en condiciones de nieve?=Обязательно ли освещение в снежную погоду?/Sí, por visibilidad reducida/Да, из-за ограниченной видимости
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+¿Qué es el alumbrado del vehículo?=Что такое освещение автомобиля?/Sistema de luces y dispositivos/Система световых приборов
+¿Cuál es la función principal de las luces?=Главная функция фар?/Ver y ser visto/Видеть и быть видимым
+¿Qué luces permiten ver?=Какие фары освещают дорогу?/Luz de cruce y carretera/Ближний и дальний свет
+¿Qué luces sirven para ser visto?=Какие фары делают авто видимым?/Luz de posición y gálibo/Габариты и контурные огни
+¿Se puede conducir solo con luz de posición?=Можно ехать только с габаритами?/No, siempre con corto o largo alcance/Нет, всегда с ближним или дальним
+¿Qué luz se usa normalmente de noche en poblado?=Какой свет ночью в городе?/Luz de posición y corto alcance/Габариты и ближний свет
+¿Cuándo usar luz de carretera?=Когда использовать дальний свет?/Vía interurbana insuficiente iluminada/Вне города на неосвещенной дороге
+¿Qué hace la luz de cruce?=Что делает ближний свет?/Alumbra sin deslumbrar/Освещает без ослепления
+¿Qué hace la luz de carretera?=Что делает дальний свет?/Alumbra a larga distancia/Освещает на большое расстояние
+¿Cuándo hay que cambiar a luz de cruce?=Когда переключить на ближний?/Para no deslumbrar/Чтобы не ослеплять
+¿Qué es el deslumbramiento?=Что такое ослепление?/Molestia visual por luz intensa/Зрительный дискомфорт от яркого света
+¿Cómo evitar deslumbrar?=Как не ослеплять?/Cambiar a luz de corto alcance/Переключить на ближний свет
+¿Qué luces usar con niebla ligera?=Что включать в легкий туман?/Posición y corto alcance/Габариты и ближний свет
+¿Se puede usar antiniebla delantera sin niebla?=Можно передние туманки без тумана?/No, solo con visibilidad reducida/Нет, только при плохой видимости
+¿Qué luz trasera usar con lluvia muy intensa?=Что включить сзади в очень сильный дождь?/Luz antiniebla trasera/Задний противотуманный фонарь
+¿Qué luces deben llevar las motos de día?=Какие фары на мотоциклах днем?/Luz de corto alcance obligatoria/Обязательный ближний свет
+¿Qué es DRL?=Что такое DRL?/Luces de conducción diurna/Дневные ходовые огни
+¿Las luces DRL sustituyen a las de cruce?=DRL заменяют ближний?/No en túneles o de noche/Нет в тоннелях или ночью
+¿Qué indica la luz de freno?=Что показывает стоп-сигнал?/Vehículo frenando/Транспорт тормозит
+¿Cuándo usar el intermitente?=Когда включать поворотник?/Antes de iniciar la maniobra/Перед началом маневра
+¿Qué es la luz de emergencia?=Что такое аварийка?/Todos los intermitentes a la vez/Все поворотники одновременно
+¿Cuándo usar emergencia?=Когда включать аварийку?/Peligro, avería o retención/Опасность, поломка или затор
+¿Qué indica la luz de marcha atrás?=Что означает свет заднего хода?/Luz blanca trasera/Белый свет сзади
+¿Cuándo se enciende la marcha atrás?=Когда включается задний ход?/Automáticamente al engranar la marcha/Автоматически при включении передачи
+¿Cuándo usar antiniebla trasera?=Когда использовать задний туман?/Solo condiciones muy desfavorables/Только в очень неблагоприятных условиях
+¿Se puede deslumbrar con antiniebla trasera?=Может ослепить задний туман?/Sí, es muy intensa/Да, он очень яркий
+¿Qué es el catadióptrico?=Что это такое?/Dispositivo que refleja la luz/Устройство, отражающее свет
+¿Tiene luz propia el catadióptrico?=Есть ли свет у отражателя?/No, refleja luz ajena/Нет, отражает чужой свет
+¿Qué forma tienen en remolques?=Форма отражателей на прицепе?/Triangular roja/Красный треугольник
+¿Qué es la luz de gálibo?=Что такое контурный свет?/Indica anchura total/Указывает общую ширину
+¿Cuándo es obligatoria la luz de gálibo?=Когда габариты gálibo обязательны?/Ancho superior a 2.10 metros/Ширина более 2.10 метров
+¿Se puede conducir con luz interior?=Можно ехать со светом в салоне?/Sí, pero no es recomendable/Да, но не рекомендуется
+¿Qué es la señal V1?=Что такое сигнал V1?/Vehículo prioritario/Приоритетное транспортное средство
+¿Qué indica la luz azul?=Что значит синий свет?/Vehículo de policía o emergencias/Полиция или скорая помощь
+¿Qué es la señal V2?=Что за сигнал V2?/Vehículo de servicios/Транспорт дорожных служб
+¿Qué hacer ante vehículo prioritario?=Что делать перед спецтранспортом?/Facilitar el paso y apartarse/Уступить дорогу и съехать в сторону
+¿Qué luz usar en un túnel?=Какой свет в тоннеле?/Posición y corto alcance/Габариты и ближний свет
+¿Se puede usar luz larga en ciudad?=Можно дальний свет в городе?/No, está prohibido/Нет, запрещено
+¿Cuándo usar claxon en ciudad?=Когда гудеть в городе?/Solo para evitar un accidente/Только для предотвращения аварии
+¿Qué revisar antes de conducir?=Что проверить перед ездой?/Funcionamiento de todo el alumbrado/Работу всего освещения
+¿Qué pasa si falla una luz obligatoria?=Если не работает обязательная фара?/No se debe circular/Нельзя продолжать движение
+¿Qué hacer ante un deslumbramiento?=Что делать при ослеплении?/Reducir velocidad y mirar a la derecha/Снизить скорость и смотреть вправо
+¿Qué luces usar con fuerte nevada?=Что включить в сильный снегопад?/Luz de cruce y antinieblas/Ближний свет и противотуманки
+¿Cuántas luces de freno hay?=Сколько стоп-сигналов?/Dos o tres luces rojas/Два или три красных огня
+¿Qué color tiene el intermitente?=Цвет поворотника?/Amarillo auto/Оранжевый (желтый авто)
+¿Qué función tienen los indicadores?=Функция поворотников?/Comunicarse con los demás/Связь с другими водителями
+¿Qué es una vía insuficiente iluminada?=Что такое неосвещенная дорога?/No se lee matrícula a 10 metros/Не читается номер с 10 метров
+¿Qué luces dejar al parar en travesía?=Свет при остановке на проезде через город?/Luz de posición/Габаритные огни
+¿Cómo avisar una frenada brusca?=Как предупредить о резком торможении?/Pisar el freno varias veces/Нажать на тормоз несколько раз
+¿Qué indica un intermitente rápido?=О чем говорит быстрый поворотник?/Fallo de una lámpara/Поломка одной лампочки
