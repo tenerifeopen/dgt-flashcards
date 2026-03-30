@@ -1,1 +1,168 @@
-Qué es una norma? = Правило
+Orden de prioridad de las señales=Порядок приоритета знаков/Agentes, Circunstanciales, Semáforos, Verticales, Marcas/Регулировщик, Временные, Светофор, Вертикальные, Разметка
+Prioridad entre dos señales del mismo tipo=Приоритет между двумя знаками одного типа/La más restrictiva/Самый строгий (запрещающий)
+Señal de los Agentes: Brazo levantado verticalmente=Жест регулировщика: рука поднята вертикально вверх/Obliga a detenerse a todos/Обязательная остановка для ВСЕХ
+Agente: Brazo o brazos extendidos horizontalmente=Регулировщик: руки вытянуты горизонтально/Detenerse a los que corten la trayectoria/Остановка для тех, чью траекторию они пересекают
+Agente: Balanceo de una luz roja o amarilla=Регулировщик: размахивание красным или желтым фонарем/Obliga a detenerse a quienes se dirige la luz/Остановка для тех, на кого направлен свет
+Agente: Toques de silbato cortos y frecuentes=Регулировщик: короткие и частые свистки/Obliga a detenerse/Приказ остановиться
+Agente: Toques de silbato largos=Регулировщик: длинные свистки/Reanudar la marcha/Возобновить движение
+Señales circunstanciales: Luces amarillas fijas o intermitentes=Временные знаки: желтые огни (горят или мигают)/Prohibido el paso a la vía/Проезд на дорогу запрещен
+Semáforo: Luz amarilla no intermitente=Светофор: желтый свет (не мигающий)/Detenerse como si fuera roja/Остановиться, как на красный
+Semáforo: Luz amarilla intermitente=Светофор: желтый мигающий свет/Extremar la precaución y ceder el paso/Максимальная осторожность и уступить дорогу
+Semáforo circular rojo=Красный круглый светофор/Prohibido el paso/Проезд запрещен
+Semáforo con flecha negra sobre luz roja=Светофор с черной стрелкой на красном фоне/Prohibición de giro en esa dirección/Запрет поворота в этом направлении
+Dos luces rojas alternativamente intermitentes=Две красные попеременно мигающие лампы/Vía cerrada temporalmente (puente, paso a nivel)/Дорога временно закрыта (мост, переезд)
+Marca vial: Línea blanca continua=Разметка: белая сплошная линия/No atravesar ni circular sobre ella/Не пересекать и не ехать по ней
+Marca vial: Doble línea continua=Разметка: двойная сплошная линия/Mismo significado que la línea continua/То же значение, что и одна сплошная
+Marca vial: Línea discontinua=Разметка: прерывистая линия/Se puede atravesar para maniobrar/Можно пересекать для маневра
+Línea discontinua doble=Двойная прерывистая линия/Carril reversible/Реверсивная полоса
+Marca de paso a nivel=Знак переезда на асфальте (P и X)/Paso a nivel con o sin barreras/Переезд со шлагбаумом или без
+Marca de Stop en el suelo=Надпись STOP на асфальте/Obligatorio detenerse siempre/Обязательная остановка всегда
+¿Qué señal prevalece si hay un Stop y un Semáforo en verde?=Какой знак главнее: СТОП или зеленый светофор?/El semáforo/Светофор (он выше в иерархии)
+¿Qué es la obediencia de las señales?=Что такое подчинение сигналам?/Obligación de obedecer prohibiciones y obligaciones/Обязанность соблюдать запреты и предписания
+Prioridad 1: Señales y órdenes de los agentes=Приоритет 1: Сигналы и распоряжения регулировщиков/Máxima prioridad sobre el resto/Высший приоритет над всеми остальными
+Prioridad 2: Señalización circunstancial=Приоритет 2: Временные сигналы/Modifican el régimen normal de la vía/Меняют обычный режим движения
+Prioridad 3: Semáforos=Приоритет 3: Светофоры/Regulan el paso en intersecciones/Регулируют проезд на перекрестках
+Prioridad 4: Señales verticales=Приоритет 4: Вертикальные знаки/Placas en postes a los lados de la vía/Таблички на столбах по бокам дороги
+Prioridad 5: Marcas viales=Приоритет 5: Дорожная разметка/Señales pintadas en el suelo/Знаки, нарисованные на земле
+¿Qué señal manda si hay dos de distinto tipo?=Какой знак главный, если есть два разных типа?/La que tenga el orden de prioridad más alto/Тот, у которого выше приоритет в иерархии
+¿Qué señal manda si son del mismo tipo?=Какой знак главный, если они одного типа?/La señal más restrictiva/Самый строгий (запрещающий) знак
+¿A quién obligan las señales de los agentes?=Кому обязательны сигналы регулировщиков?/A todos los usuarios de la vía/Всем участникам дорожного движения
+Agente con brazo levantado verticalmente=Регулировщик с рукой, поднятой вертикально/Obliga a detenerse a todos los usuarios/Обязывает остановиться всех участников
+Agente con brazo o brazos extendidos=Регулировщик с вытянутой рукой или руками/Detención para quienes corten la dirección indicada/Остановка для тех, кто пересекает указанное направление
+Agente con balanceo de una luz=Регулировщик, размахивающий фонарем/Detenerse los usuarios a los que se dirige la luz/Остановиться тем, на кого направлен свет
+Agente con brazo extendido moviéndolo arriba y abajo=Регулировщик машет вытянутой рукой вверх-вниз/Obliga a disminuir la velocidad/Обязывает снизить скорость
+¿Qué significan los silbidos cortos y frecuentes?=Что значат короткие и частые свистки?/Orden de detención inmediata/Приказ немедленно остановиться
+¿Qué significan los silbidos largos?=Что значат длинные свистки?/Orden de reanudar la marcha/Приказ возобновить движение
+Señal V-1 en vehículo de policía=Сигнал V-1 на полицейской машине/Prioridad de paso en servicio de urgencia/Приоритет проезда при экстренной службе
+Banderas de agentes: Bandera roja=Флаги регулировщиков: Красный флаг/Vía cerrada temporalmente al tráfico/Дорога временно закрыта для движения
+Banderas de agentes: Bandera verde=Флаги регулировщиков: Зеленый флаг/Vía abierta de nuevo al tráfico/Дорога снова открыта для движения
+Banderas de agentes: Bandera amarilla=Флаги регулировщиков: Желтый флаг/Extremar la precaución por peligro próximo/Максимальная осторожность из-за опасности впереди
+¿Qué indica un agente con los brazos en cruz?=Что значит регулировщик с руками крестом?/Detención para los que vienen de frente y por detrás/Остановка для тех, кто едет спереди и сзади
+Agente en moto con bandera roja=Регулировщик на мотоцикле с красным флагом/Calzada queda temporalmente cerrada/Дорога временно закрыта
+Agente en moto con bandera verde=Регулировщик на мотоцикле с зеленым флагом/Calzada queda de nuevo abierta/Дорога снова открыта
+Agente en moto con bandera amarilla=Регулировщик на мотоцикле с желтым флагом/Extremar la precaución por peligro/Крайняя осторожность из-за опасности
+Brazo extendido hacia abajo inclinado y fijo=Рука вытянута наклонно вниз и неподвижна/Obliga a detenerse en el lado derecho/Обязывает остановиться на правой стороне
+Luz roja o amarilla centelleante hacia delante=Мигающий красный или желтый свет вперед (из авто)/Obliga a detenerse al vehículo precedente/Обязывает впереди идущее авто остановиться
+¿Dónde debe detenerse el vehículo ante la señal del agente?=Где должен остановиться автомобиль по сигналу агента?/En el lado derecho y sin generar riesgos/На правой стороне, не создавая риска
+Señales circunstanciales: Paneles de mensaje variable=Временные сигналы: Табло с переменными сообщениями/Dan información, advertencias o prescripciones/Дают информацию, предупреждения или предписания
+Obras: ¿Qué significan las señales con fondo amarillo?=Ремонтные работы: Что значат знаки с желтым фоном?/Mismo significado que las señales fijas/То же значение, что и у обычных знаков
+Semáforo de ocupación de carril: Aspa roja=Светофор над полосой: Красный крест/Prohibido circular por ese carril/Запрещено движение по этой полосе
+Semáforo de ocupación de carril: Flecha verde=Светофор над полосой: Зеленая стрелка/Permitido circular por el carril/Разрешено движение по полосе
+Semáforo de carril: Flecha blanca o amarilla inclinada=Светофор над полосой: Белая или желтая наклонная стрелка/Obligación de incorporarse al carril indicado/Обязанность перестроиться на указанную полосу
+¿Los semáforos de carril eximen de obedecer otras señales?=Освобождают ли светофоры над полосой от других знаков?/No, hay que seguir obedeciendo señales y prioridad/Нет, нужно соблюдать другие знаки и приоритет
+Luz roja no centelleante (semáforo)=Красный немигающий свет (светофор)/Prohibido el paso, no rebasar la línea/Проезд запрещен, не пересекать линию
+Luz roja intermitente (o dos luces)=Красный мигающий свет (или два)/Prohibido el paso temporalmente/Проезд временно запрещен (переезд, мост)
+Luz amarilla no intermitente (semáforo)=Желтый немигающий свет (светофор)/Detenerse como ante una luz roja/Остановиться так же, как на красный
+¿Cuándo se puede pasar con luz amarilla no intermitente?=Когда можно проехать на желтый немигающий?/Si no se puede detener en condiciones de seguridad/Если невозможно остановиться безопасно
+Luz amarilla intermitente (una o dos)=Желтый мигающий свет (один или два)/Extremar la precaución y ceder el paso/Максимальная осторожность и уступить дорогу
+Flecha verde sobre fondo negro (semáforo)=Зеленая стрелка на черном фоне (светофор)/Permitido el giro en la dirección indicada/Разрешен поворот в указанном направлении
+¿Hay que ceder el paso con flecha verde?=Нужно ли уступать дорогу при зеленой стрелке?/Sí, a los vehículos que circulan por la vía transversal/Да, машинам, едущим по пересекаемой дороге
+Semáforo para ciclos y ciclomotores=Светофор для велосипедов и мопедов/Afecta exclusivamente a estos vehículos/Касается исключительно этих ТС
+¿Qué significa el signo de exclamación en un triángulo?=Восклицательный знак в треугольнике/Peligro indefinido/Прочая опасность (не указанная другими знаками)
+Señal de STOP y Semáforo verde=Знак СТОП и зеленый светофор/Obedecer el semáforo/Соблюдать светофор (он главнее знака)
+Señal de STOP y Semáforo amarillo intermitente=Знак СТОП и желтый мигающий светофор/Detenerse siempre ante el STOP/Обязательно остановиться (мигающий желтый не отменяет знаки)
+Triángulo con una X (P-2)=Треугольник с крестом (X)/Prioridad a la derecha/Уступить дорогу тому, кто справа
+Triángulo con flecha gorda y línea fina (P-1)=Треугольник с толстой стрелкой и тонкой линией/Prioridad en la intersección/У тебя приоритет на перекрестке
+¿Dónde detenerse ante un STOP si no hay línea?=Где встать перед СТОП, если нет линии?/Antes de entrar en la intersección/Перед самим пересечением дорог
+¿Hay que detenerse ante un Ceda el Paso?=Нужно ли останавливаться перед «Уступи дорогу»?/Solo si vienen otros vehículos/Только если едут другие машины
+¿Qué significa un STOP pintado en el suelo?=Что значит СТОП, нарисованный на асфальте?/Obligatorio detenerse siempre/Обязательная остановка всегда
+Señal circular roja con entrada prohibida=Красный круг с белым кирпичом/Prohibido el paso a todo vehículo/Въезд запрещен всем ТС
+Señal circular roja vacía=Красный пустой круг/Circulación prohibida en ambos sentidos/Движение запрещено в обоих направлениях
+Círculo rojo con coche y moto=Красный круг с машиной и мотоциклом/Prohibido vehículos de motor/Запрет для всех механических ТС
+¿Afecta la prohibición de camiones a los turismos?=Влияет ли запрет для грузовиков на легковые?/No, solo a camiones y furgones/Нет, только на грузовики и фургоны
+Círculo rojo con una moto sola=Красный круг с одним мотоциклом/Motocicletas prohibidas/Запрет только для мотоциклов (мопедам можно)
+Círculo rojo con un ciclomotor=Красный круг с мопедом/Ciclomotores prohibidos/Запрет для мопедов (мотоциклам можно)
+Círculo azul con una flecha=Синий круг со стрелкой/Obligación de seguir la dirección/Обязательное направление движения
+Círculo azul con un coche=Синий круг с машиной/Vía exclusiva para automóviles/Дорога только для автомобилей
+Círculo azul con una bicicleta=Синий круг с велосипедом/Vía obligatoria para ciclos/Обязательная дорожка для велосипедов
+Fin de prohibición (círculo gris con rayas)=Конец запрета (серый круг с полосками)/Finalizan todas las prohibiciones anteriores/Конец всех предыдущих запретов
+Señal de prohibido adelantar (dos coches)=Запрет обгона (две машины)/No adelantar excepto motocicletas sin sidecar/Не обгонять кроме мотоциклов без коляски
+¿Cuándo termina un límite de velocidad con un triángulo de peligro?=Когда кончается ограничение скорости, стоящее вместе с треугольником опасности?/Cuando termina el peligro/Когда кончается опасный участок
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
