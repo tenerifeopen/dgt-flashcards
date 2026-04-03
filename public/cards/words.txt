@@ -259,22 +259,20 @@ resto de usuarios=другие пользователи
 una prueba deportiva=спортивное мероприятие
 permanentemente=навсегда
 siguientes=следующие
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+parar y ceder el paso=Остановись и уступи дорогу.
+refugio=пешеходный островок
+prevalece sobre...=преобладает над
+extremar la precaución.=проявляйте крайнюю осторожность.
+La flecha verde=зеленая стрелка
+¿Debe ceder el paso al vehículo blanco=Должны ли вы уступить дорогу белому автомобилю
+capaces de contaminar el agua.=способные загрязнять воду
+excepto motocicletas=кроме мотоциклов
+ Moderar la velocidad,=Умерить скорость,
+obligatorios.= Обязательные.
+aconsejados.=Рекомендуемые.
+prohibidos.=Запрещённые
+Un peatón pretende cruzar=Пешеход собирается перейти дорогу.
+discontinua,=прерывистый
 
 
 
