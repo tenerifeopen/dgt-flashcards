@@ -273,8 +273,8 @@ aconsejados.=Рекомендуемые.
 prohibidos.=Запрещённые
 Un peatón pretende cruzar=Пешеход собирается перейти дорогу.
 discontinua,=прерывистый
-
-
+incendios=пожары
+advierte=предупреждает
 
 
 

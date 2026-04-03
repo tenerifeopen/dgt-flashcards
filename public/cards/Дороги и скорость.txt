@@ -12,12 +12,12 @@ No entrar en la intersección.=Не въезжать на перекрёсток
 A partir de esta señal,=Начиная с этого знака,
 Entre dos vehículos=Между двумя транспортными средствами
 Pisar varias veces el pedal de freno=Нажмите на педаль тормоза несколько раз.
-
-
-
-
-
-
+estrechamiento de la vía.=Сужения дороги.
+ quedarse detenido= быть остановленным (застрять)
+ distinto nivel=разный уровень
+mismo nivel.=тот же уровень
+dos líneas continuas=Две сплошные линии
+Bifurcación con desvío del carril izquierdo.=Разветвление с отклонением левой полосы.
 
 
 
