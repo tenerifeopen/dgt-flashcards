@@ -18,6 +18,41 @@ estrechamiento de la vía.=Сужения дороги.
 mismo nivel.=тот же уровень
 dos líneas continuas=Две сплошные линии
 Bifurcación con desvío del carril izquierdo.=Разветвление с отклонением левой полосы.
+Moderar la velocidad, deteniéndose si es necesario.=Умерить скорость, останавливаясь, если понадобится.
+La mayoría de los accidentes de circulación...=Большинство дорожных происшествий…
+¿suceden también durante el día?=Они также происходят в течение дня.
+Al conducir bajo condiciones climatológicas adversas...=Вождение в неблагоприятных погодных условиях
+¿dónde debe colocar la carga en su turismo?=Куда следует разместить груз в автомобиле?
+Por el lado más próximo al borde de la vía.=Со стороны, ближайшей к краю трассы.
+ los heridos=раненые
+El alcohol desaparece de la sangre..=Алкоголь исчезает из крови.
+la carga sobresale por los lados.=груз выступает по бокам
+la carga sobresale por detrás.=груз выступает сзади
+incrementando el consumo de combustible.=увеличение расхода топлива
+Disminuye la capacidad de concentración.= Уменьшает способность концентрации.
+ Avisará con señal acústica breve,=Предупредить кратким звуковым сигналом
+Las flechas de selección de carril..=Стрелки выбора полосы движения
+ Observar constantemente lo que sucede en la vía.=Постоянно наблюдать за происходящим на дороге.
+un carril en sentido contrario al habitual=полоса движения в направлении, противоположном обычному.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

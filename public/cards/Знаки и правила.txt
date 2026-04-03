@@ -122,7 +122,7 @@ Paso superior=Надземный переход/эстакада
 prohíbe el acceso a vehículos=запрещает въезд транспортных средств
  Salida de vehículos de extinción de incendios.=Выход пожарной машины
  La proximidad de un paso a nivel=Опасность из-за близости Ж/Д переезда 
-
+Obliga a girar a la izquierda.= Обязывает поворачивать налево.
 
 
 

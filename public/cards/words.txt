@@ -275,25 +275,22 @@ Un peatón pretende cruzar=Пешеход собирается перейти д
 discontinua,=прерывистый
 incendios=пожары
 advierte=предупреждает
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Aumentar la velocidad=Увеличьте скорость
+Moderar la velocidad=Замедлить скорость
+En el maletero.=В багажнике
+Preventiva = безопасность
+Eficiente = экономия
+Las lámparas del automóvil deben sustituirse...=Лампочки автотранспорта должны меняться…
+pretende=намеревается
+ revisa periódicamente=периодически проверять
+ los reposacabezas=подголовники
+Por un comportamiento exhibicionista=Из-за эксгибиционистского поведения
+los heridos=раненые
+extremando la precaución=проявляя крайнюю осторожность
+excepcionalmente=excepcionalmente adelantará por la derecha.
+que produce fatiga=что вызывает усталость
+velocidad excesiva.=чрезмерная скорость
+ sustituirlo en los plazos =заменить его в установленные сроки
 
 
 
