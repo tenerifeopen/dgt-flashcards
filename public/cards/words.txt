@@ -291,20 +291,19 @@ excepcionalmente=excepcionalmente adelantará por la derecha.
 que produce fatiga=что вызывает усталость
 velocidad excesiva.=чрезмерная скорость
  sustituirlo en los plazos =заменить его в установленные сроки
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+desprendimientos=оползни
+dificultada=сложность/трудный
+congestión del tráfico.=пробки на дорогах
+aproxima algún vehículo=приближается транспортное средство
+ante la línea transversal=перед линией пересечения
+por ambos lados=с обеих сторон
+Sí, salvo que=Да, если только
+la línea transversal=поперечная линия
+ antes de pasar🔺🔻🔺🔻=перед тем, как пройти🔺🔻🔺🔻
+Inmediatamente⛔️=Немедленно
+aumentar la velocidad.=увеличить скорость
+prioridad respecto al sentido contrario=приоритет перед встречным движением
+en ambos sentidos=в обоих направлениях🚶
 
 
 

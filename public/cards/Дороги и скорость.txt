@@ -34,21 +34,24 @@ Disminuye la capacidad de concentración.= Уменьшает способнос
 Las flechas de selección de carril..=Стрелки выбора полосы движения
  Observar constantemente lo que sucede en la vía.=Постоянно наблюдать за происходящим на дороге.
 un carril en sentido contrario al habitual=полоса движения в направлении, противоположном обычному.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Calzada con pavimento irregular.=Дорога с неровным покрытием
+Estrechamiento por el lado derecho de la calzada=Сужение с правой стороны дороги
+Peligro porque pueden producirse desprendimientos.=Опасно, так как возможны оползни.
+congestión del tráfico.=пробки на дорогах
+Obstrucción en la calzada=Затруднение движения на дороге
+la calzada cuyo pavimento puede resultar deslizante=дорога, покрытие которой может быть скользким
+Peligro en la época invernal por posible=Опасность в зимний период из-за возможного
+puede soplar fuerte viento lateral=Возможен сильный боковой ветер.
+sopla frecuentemente=дуть часто
+ viento fuerte en dirección transversal=сильный боковой ветер
+un peligro distinto de los advertidos por otras señales=иная опасность, чем та, о которой предупреждают другие знаки.
+ante la línea transversal, sin rebasarla.=перед линией пересечения, не пересекая её.
+Primero en la línea de detención y luego donde haya visibilidad=Сначала у стоп-линии, а затем везде, где есть видимость.
+Sí, salvo que un semáforo indique lo contrario=Да, если светофор не указывает на обратное.
+Calzada con prioridad de paso=Calzada con prioridad de paso
+prioridad respecto al sentido contrario=приоритет перед встречным движением
+que puedo circular=что мне разрешено ехать
+Entrada prohibida a toda clase de vehículos=Въезд запрещен для всех видов транспортных средств.🏍❌
 
 
 
