@@ -123,7 +123,7 @@ prohíbe el acceso a vehículos=запрещает въезд транспорт
  Salida de vehículos de extinción de incendios.=Выход пожарной машины
  La proximidad de un paso a nivel=Опасность из-за близости Ж/Д переезда 
 Obliga a girar a la izquierda.= Обязывает поворачивать налево.
-¿Debe entrar en una intersección?=Вам необходимо въехать на перекресток?
+¿Debe entrar en una intersección❓=Вам необходимо въехать на перекресток?
 Inmediatamente antes de la intersección=Непосредственно перед перекрестком
 
 

@@ -8,7 +8,7 @@ Al averiarse el vehículo=Когда автомобиль сломался
 El vehículo que haya entrado primero.=Транспортное средство, которое въехало первым.
 Utilizando el dispositivo manos libres= Используя устройство «свободных рук»,
 Evitar los movimientos bruscos= Избегайте резких движений
-No entrar en la intersección.=Не въезжать на перекрёсток.
+No entrar en la intersección.⛔️=Не въезжать на перекрёсток.
 A partir de esta señal,=Начиная с этого знака,
 Entre dos vehículos=Между двумя транспортными средствами
 Pisar varias veces el pedal de freno=Нажмите на педаль тормоза несколько раз.
@@ -48,11 +48,11 @@ un peligro distinto de los advertidos por otras señales=иная опаснос
 ante la línea transversal, sin rebasarla.=перед линией пересечения, не пересекая её.
 Primero en la línea de detención y luego donde haya visibilidad=Сначала у стоп-линии, а затем везде, где есть видимость.
 Sí, salvo que un semáforo indique lo contrario=Да, если светофор не указывает на обратное.
-Calzada con prioridad de paso=Calzada con prioridad de paso
+Calzada con prioridad de paso🔶=Дорога с приоритетом проезда
 prioridad respecto al sentido contrario=приоритет перед встречным движением
 que puedo circular=что мне разрешено ехать
 Entrada prohibida a toda clase de vehículos=Въезд запрещен для всех видов транспортных средств.🏍❌
-
+Al rebasar la intersección🛺=Проехав перекресток
 
 
 

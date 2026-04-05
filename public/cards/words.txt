@@ -1,5 +1,5 @@
-adelantar = обгонять
-frenar = тормозить
+adelantar🚴 = обгонять🚴
+❌frenar❌ = тормозить❌
 acelerar = ускоряться
 girar = поворачивать
 conducir = водить
@@ -255,7 +255,7 @@ orden de prioridad=порядок приоритета
 Disminuir la velocidad=Замедлять
 de arriba abajo=в верх в низ
 permanecer=оставаться
-resto de usuarios=другие пользователи
+resto de usuarios🚴=другие пользователи🚴
 una prueba deportiva=спортивное мероприятие
 permanentemente=навсегда
 siguientes=следующие
@@ -290,11 +290,11 @@ extremando la precaución=проявляя крайнюю осторожност
 excepcionalmente=excepcionalmente adelantará por la derecha.
 que produce fatiga=что вызывает усталость
 velocidad excesiva.=чрезмерная скорость
- sustituirlo en los plazos =заменить его в установленные сроки
+ sustituirlo en los plazos =заменить его в установленные сроки🚚
 desprendimientos=оползни
-dificultada=сложность/трудный
+dificultada=сложность/трудный🟡
 congestión del tráfico.=пробки на дорогах
-aproxima algún vehículo=приближается транспортное средство
+aproxima algún vehículo=🚚приближается транспортное средство🚚
 ante la línea transversal=перед линией пересечения
 por ambos lados=с обеих сторон
 Sí, salvo que=Да, если только
@@ -307,10 +307,10 @@ en ambos sentidos=в обоих направлениях🚶
 🚜🚛🚚🛻🚐🚒🚎=⭕️💢‼️🔺🔻🔺🔻❗️❌🚕
 ⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️=⚪️🟡⚪️🟡⚪️🟡⚪️🟡⚪️
 dedicados=Предназначенный
-
-
-
-
+mercancías explosivas o inflamables=взрывчатые или легковоспламеняющиеся товары
+ contaminar el agua=загрязняют воду
+animales de montura=верховые животные с всадником
+ excepto=кроме
 
 
 
