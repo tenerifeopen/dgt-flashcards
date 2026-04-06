@@ -125,8 +125,26 @@ prohíbe el acceso a vehículos=запрещает въезд транспорт
 Obliga a girar a la izquierda.= Обязывает поворачивать налево.
 ¿Debe entrar en una intersección❓=Вам необходимо въехать на перекресток?
 Inmediatamente antes de la intersección=Непосредственно перед перекрестком
-
-
+Línea blanca continua=Белая сплошная линия/Prohibido atravesarla o circular sobre ella/Запрещено пересекать или ехать по ней
+Línea blanca discontinua=Белая прерывистая линия/Permitido atravesar para maniobrar/Можно пересекать для маневров
+¿Cuándo la línea discontinua es más corta y junta?=Когда прерывистая линия короче и чаще?/Anuncia peligro o tramo especial/Предупреждает об опасности или особом участке
+Línea continua doble=Двойная сплошная линия/Mismo significado que la línea sencilla/То же значение, что и у одной сплошной
+Línea adosada (continua y discontinua)=Смежная линия (сплошная и прерывистая)/Obedecer a la más cercana al vehículo/Соблюдать ту, что ближе к машине
+¿Se puede adelantar con línea adosada discontinua?=Можно обгонять, если ближе прерывистая?/Sí, si es seguro/Да, если это безопасно
+Línea de detención=Линия остановки/No rebasar ante un STOP o semáforo rojo/Не пересекать перед СТОП или красным светом
+Marca de paso para peatones=Пешеходный переход/Ceder el paso siempre/Всегда уступать дорогу
+Línea amarilla zigzag=Желтый зигзаг/Prohibido estacionar, permitido parar/Стоянка запрещена, остановка разрешена
+Línea amarilla continua (bordillo)=Желтая сплошная (у бордюра)/Prohibido parar и estacionar/Запрещена и остановка, и стоянка
+Línea amarilla discontinua (bordillo)=Желтая прерывистая (у бордюра)/Prohibido estacionar, permitido parar/Стоянка запрещена, остановка разрешена
+Cuadrícula de líneas amarillas=Сетка желтых линий (вафельница)/No entrar si puedes quedar detenido/Не въезжать, если можешь застрять на ней
+Marcas azules=Синяя разметка/Estacionamiento limitado (zona azul)/Платная парковка с ограничением по времени
+Marca de bifurcación=Знак развилки (стрелки)/Anuncia el inicio de un carril de salida/Объявляет о начале полосы съезда
+Triángulo pintado en el suelo=Треугольник на асфальте/Obligación de ceder el paso/Обязанность уступить дорогу
+Símbolo de Stop en el suelo=Символ СТОП на асфальте/Obligación de detenerse siempre/Обязанность остановиться всегда
+Flecha de fin de carril=Стрелка конца полосы/Indica que el carril termina pronto/Указывает, что полоса скоро закончится
+Flecha de retorno=Стрелка возврата (изогнутая)/Anuncia proximidad de línea continua/Предупреждает о близости сплошной линии
+Marca de paso a nivel=Разметка переезда (P и X)/Proximidad de un cruce con ferrocarril/Близость пересечения с ж/д путями
+Líneas de borde de calzada=Линии края дороги/Delimitan el borde, no son líneas de carril/Обозначают край, не считаются линиями полос
 
 
 
