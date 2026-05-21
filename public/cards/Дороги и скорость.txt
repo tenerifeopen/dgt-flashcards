@@ -53,7 +53,7 @@ prioridad respecto al sentido contrario=приоритет перед встре
 que puedo circular=что мне разрешено ехать
 Entrada prohibida a toda clase de vehículos=Въезд запрещен для всех видов транспортных средств.🏍❌
 Al rebasar la intersección🛺=Проехав перекресток
-
+En caso de accidente=В случае аварии
 
 
 

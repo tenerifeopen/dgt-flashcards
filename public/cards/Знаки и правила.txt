@@ -145,8 +145,8 @@ Flecha de fin de carril=Стрелка конца полосы/Indica que el car
 Flecha de retorno=Стрелка возврата (изогнутая)/Anuncia proximidad de línea continua/Предупреждает о близости сплошной линии
 Marca de paso a nivel=Разметка переезда (P и X)/Proximidad de un cruce con ferrocarril/Близость пересечения с ж/д путями
 Líneas de borde de calzada=Линии края дороги/Delimitan el borde, no son líneas de carril/Обозначают край, не считаются линиями полос
-
-
+in de la prohibición de adelantamiento=в запрете обгона
+fin de prohibiciones=отмена запретов
 
 
 
