@@ -95,29 +95,12 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 Резервная озвучка через Google Speech (Браузер)
-  const playGoogleSpeech = (text) => {
-    if (!window.speechSynthesis) {
-      console.error("Браузер не поддерживает озвучку");
-      return;
-    }
-
-    // Останавливаем предыдущую озвучку, если была
-    window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES"; // Испанский язык
-    utterance.rate = 0.9;     // Скорость (немного медленнее для понятности)
-    
-    window.speechSynthesis.speak(utterance);
-  };
-
-  // 🔊 ОЗВУЧКА (Обновленная логика с Fallback)
+  // 🔊 ОЗВУЧКА (исправлен кэш)
   const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
 
-    // ✅ нормализация текста
+    // ✅ нормализация текста (КЛЮЧЕВОЙ ФИКС)
     const rawText = show ? current.answer : current.question;
 
     const text = rawText
@@ -128,7 +111,7 @@ export default function App() {
     const cacheKey = `tts_${text}`;
 
     try {
-      // ✅ 1. Проверка локального кеша (localStorage)
+      // ✅ проверка кэша
       const cached = localStorage.getItem(cacheKey);
 
       if (cached) {
@@ -136,7 +119,7 @@ export default function App() {
         return;
       }
 
-      // ✅ 2. Запрос к нашему серверу
+      // ✅ запрос
       const res = await fetch("/api/tts", {
         method: "POST",
         headers: {
@@ -147,33 +130,19 @@ export default function App() {
 
       const data = await res.json();
 
-      // ✅ 3. Если сервер вернул нормальный звук от ElevenLabs
-      if (data.audio) {
-        // Сохраняем в кеш браузера для скорости
-        try {
-          localStorage.setItem(cacheKey, data.audio);
-        } catch (err) {
-          console.warn("Cache full");
-        }
+      if (!data.audio) throw new Error("No audio");
 
-        await playAudioSafe(data.audio);
-        return;
+      // ✅ сохранение
+      try {
+        localStorage.setItem(cacheKey, data.audio);
+      } catch (err) {
+        console.warn("Cache full");
       }
 
-      // ✅ 4. Если сервер сказал использовать резервный звук (fallback: true)
-      if (data.fallback) {
-        console.warn("Используем резервный звук Google");
-        playGoogleSpeech(rawText);
-        return;
-      }
-
-      // Если ответ непонятный, тоже идем в резерв
-      throw new Error("Unexpected response");
+      await playAudioSafe(data.audio);
 
     } catch (err) {
-      // ✅ 5. Если совсем все упало (нет интернета, сервер лежит) — пробуем Гугл
-      console.error("TTS error, switching to Google Speech:", err);
-      playGoogleSpeech(rawText);
+      console.error("TTS error:", err);
     }
   };
 

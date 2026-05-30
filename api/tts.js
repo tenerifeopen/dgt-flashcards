@@ -94,55 +94,78 @@ export default async function handler(req, res) {
     // 🔵 ElevenLabs
     console.log("🌐 FROM ELEVENLABS");
 
-    const response = await fetch(
-      "https://api.elevenlabs.io/v1/text-to-speech/VKNR9COjyw4jDFfruaJ3",
-      {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${process.env.ELEVENLABS_API_KEY}`,
-          "Content-Type": "application/json",
-          "Accept": "audio/mpeg"
-        },
-        body: JSON.stringify({
-          text: normalizedText,
-          model_id: "eleven_multilingual_v2",
-          voice_settings: {
-            stability: 0.9,
-            similarity_boost: 0.8,
-            style: 0.1
-          }
-        })
+    try {
+      const response = await fetch(
+        "https://api.elevenlabs.io/v1/text-to-speech/VKNR9COjyw4jDFfruaJ3",
+        {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${process.env.ELEVENLABS_API_KEY}`,
+            "Content-Type": "application/json",
+            "Accept": "audio/mpeg"
+          },
+          body: JSON.stringify({
+            text: normalizedText,
+            model_id: "eleven_multilingual_v2",
+            voice_settings: {
+              stability: 0.9,
+              similarity_boost: 0.8,
+              style: 0.1
+            }
+          })
+        }
+      );
+
+      // Если ElevenLabs вернул ошибку (нет подписки, лимит и тд)
+      if (!response.ok) {
+        console.error("❌ ELEVENLABS API ERROR:", response.status, response.statusText);
+        return res.status(200).json({ 
+          fallback: true,
+          reason: "ElevenLabs API error" 
+        });
       }
-    );
 
-    const buffer = Buffer.from(await response.arrayBuffer());
+      const buffer = Buffer.from(await response.arrayBuffer());
 
-    const base64 = buffer.toString("base64");
-    const audioData = `data:audio/mpeg;base64,${base64}`;
+      const base64 = buffer.toString("base64");
+      const audioData = `data:audio/mpeg;base64,${base64}`;
 
-    fs.writeFileSync(filePath, buffer);
+      fs.writeFileSync(filePath, buffer);
 
-    console.log("💾 TRY SAVE ELEVEN → SUPABASE");
+      console.log("💾 TRY SAVE ELEVEN → SUPABASE");
 
-    const { error } = await supabase.from("tts_cache").insert({
-      text: normalizedText,
-      audio: audioData
-    });
+      const { error } = await supabase.from("tts_cache").insert({
+        text: normalizedText,
+        audio: audioData
+      });
 
-    if (error) {
-      console.error("❌ INSERT ERROR:", error);
-    } else {
-      console.log("✅ INSERT OK (ELEVEN)");
+      if (error) {
+        console.error("❌ INSERT ERROR:", error);
+      } else {
+        console.log("✅ INSERT OK (ELEVEN)");
+      }
+
+      res.status(200).json({
+        audio: audioData,
+        cached: false,
+        source: "elevenlabs"
+      });
+
+    } catch (elevenError) {
+      // Если ElevenLabs вообще не отвечает (сеть, сервер упал)
+      console.error("🔥 ELEVENLABS CATCH ERROR:", elevenError);
+      return res.status(200).json({ 
+        fallback: true,
+        reason: "ElevenLabs unavailable" 
+      });
     }
-
-    res.status(200).json({
-      audio: audioData,
-      cached: false,
-      source: "elevenlabs"
-    });
 
   } catch (err) {
     console.error("🔥 GLOBAL ERROR:", err);
-    res.status(500).json({ error: "TTS error" });
+    // Даже при глобальной ошибке отдаем fallback, чтобы фронтенд не сломался
+    res.status(200).json({ 
+      fallback: true,
+      reason: "Server error" 
+    });
   }
 }
