@@ -95,37 +95,51 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 Резервная озвучка через Google Speech (УЛУЧШЕНА)
+  // 🔉 Резервная озвучка через Google Speech (ФИКС ДЛЯ ТЕЛЕФОНА)
   const playGoogleSpeech = (text) => {
     if (!window.speechSynthesis) {
       console.error("Браузер не поддерживает озвучку");
       return;
     }
 
-    // Останавливаем предыдущую озвучку
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES"; // Строго испанский
-    utterance.rate = 0.9;     // Скорость
+    utterance.lang = "es-ES"; 
+    utterance.rate = 0.9;     
     
-    // Пытаемся найти хороший мужской голос от Google на испанском
-    const voices = window.speechSynthesis.getVoices();
-    
-    // Ищем голос: сначала Гугл Испания, потом любой мужской Испания, потом любой Испания
-    const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
-    const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
-    const anyEsVoice = voices.find(v => v.lang.startsWith('es-ES'));
+    // Функция выбора лучшего голоса
+    const setBestVoice = () => {
+      const voices = window.speechSynthesis.getVoices();
+      
+      // 1. Ищем Гугл Испания
+      const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
+      // 2. Ищем мужской Испания
+      const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
+      // 3. Любой Испанский (es-ES)
+      const anyEsVoice = voices.find(v => v.lang.startsWith('es-ES'));
+      // 4. Любой испаноговорящий
+      const anyEsLang = voices.find(v => v.lang.startsWith('es'));
 
-    if (googleEsVoice) {
-      utterance.voice = googleEsVoice;
-    } else if (maleEsVoice) {
-      utterance.voice = maleEsVoice;
-    } else if (anyEsVoice) {
-      utterance.voice = anyEsVoice;
+      if (googleEsVoice) {
+        utterance.voice = googleEsVoice;
+      } else if (maleEsVoice) {
+        utterance.voice = maleEsVoice;
+      } else if (anyEsVoice) {
+        utterance.voice = anyEsVoice;
+      } else if (anyEsLang) {
+        utterance.voice = anyEsLang;
+      }
+
+      window.speechSynthesis.speak(utterance);
+    };
+
+    // Телефоны загружают голоса с задержкой, ждем их загрузки
+    if (window.speechSynthesis.getVoices().length > 0) {
+      setBestVoice();
+    } else {
+      window.speechSynthesis.onvoiceschanged = setBestVoice;
     }
-
-    window.speechSynthesis.speak(utterance);
   };
 
   // 🔊 ОЗВУЧКА 
@@ -133,7 +147,6 @@ export default function App() {
     e.stopPropagation();
     if (!current) return;
 
-    // ✅ нормализация текста
     const rawText = show ? current.answer : current.question;
 
     const text = rawText
@@ -144,7 +157,6 @@ export default function App() {
     const cacheKey = `tts_${text}`;
 
     try {
-      // ✅ 1. Проверка локального кеша
       const cached = localStorage.getItem(cacheKey);
 
       if (cached) {
@@ -152,7 +164,6 @@ export default function App() {
         return;
       }
 
-      // ✅ 2. Запрос к нашему серверу
       const res = await fetch("/api/tts", {
         method: "POST",
         headers: {
@@ -163,9 +174,7 @@ export default function App() {
 
       const data = await res.json();
 
-      // ✅ 3. Если сервер вернул нормальный звук от ElevenLabs
       if (data.audio) {
-        // Сохраняем в кеш браузера
         try {
           localStorage.setItem(cacheKey, data.audio);
         } catch (err) {
@@ -176,18 +185,15 @@ export default function App() {
         return;
       }
 
-      // ✅ 4. Если сервер сказал использовать резервный звук (fallback: true)
       if (data.fallback) {
         console.warn("⚠️ Причина использования Гугла:", data.reason); // ВАЖНО: покажет причину!
         playGoogleSpeech(rawText);
         return;
       }
 
-      // Если ответ непонятный
       throw new Error("Unexpected response");
 
     } catch (err) {
-      // ✅ 5. Если совсем все упало (нет интернета)
       console.error("🔥 TTS error, switching to Google Speech:", err);
       playGoogleSpeech(rawText);
     }
