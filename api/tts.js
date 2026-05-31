@@ -1,11 +1,14 @@
-import fs from "fs";
-import path from "path";
-import crypto from "crypto";
 import { createClient } from "@supabase/supabase-js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  // Проверяем, есть ли ключи
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY || !process.env.ELEVENLABS_API_KEY) {
+    console.error("❌ ОШИБКА: Нет ключей в настройках Vercel!");
+    return res.status(200).json({ fallback: true, reason: "Missing env vars" });
   }
 
   const supabase = createClient(
@@ -33,26 +36,18 @@ export default async function handler(req, res) {
 
     console.log("👉 TEXT:", normalizedText);
 
-    const hash = crypto
-      .createHash("md5")
-      .update(normalizedText)
-      .digest("hex");
-
-    const cacheDir = path.join(process.cwd(), "cache");
-    const filePath = path.join(cacheDir, `${hash}.mp3`);
-
-    if (!fs.existsSync(cacheDir)) {
-      fs.mkdirSync(cacheDir);
-    }
-
     // 🟣 ПРОВЕРКА SUPABASE
     console.log("🔍 CHECK SUPABASE");
 
-    const { data: existing } = await supabase
+    const { data: existing, error: supabaseSelectError } = await supabase
       .from("tts_cache")
       .select("audio")
       .eq("text", normalizedText)
       .single();
+
+    if (supabaseSelectError) {
+      console.error("❌ SUPABASE SELECT ERROR:", supabaseSelectError);
+    }
 
     if (existing?.audio) {
       console.log("⚡ FROM SUPABASE");
@@ -60,34 +55,6 @@ export default async function handler(req, res) {
         audio: existing.audio,
         cached: true,
         source: "supabase"
-      });
-    }
-
-    // 🟡 FS
-    if (fs.existsSync(filePath)) {
-      console.log("📁 FROM FS");
-
-      const fileBuffer = fs.readFileSync(filePath);
-      const base64 = fileBuffer.toString("base64");
-      const audioData = `data:audio/mpeg;base64,${base64}`;
-
-      console.log("💾 TRY SAVE FS → SUPABASE");
-
-      const { error } = await supabase.from("tts_cache").insert({
-        text: normalizedText,
-        audio: audioData
-      });
-
-      if (error) {
-        console.error("❌ INSERT ERROR:", error);
-      } else {
-        console.log("✅ INSERT OK (FS)");
-      }
-
-      return res.status(200).json({
-        audio: audioData,
-        cached: true,
-        source: "fs"
       });
     }
 
@@ -116,31 +83,29 @@ export default async function handler(req, res) {
         }
       );
 
-      // Если ElevenLabs вернул ошибку (нет подписки, лимит и тд)
+      // Если ElevenLabs вернул ошибку (нет денег, лимит, неверный ключ)
       if (!response.ok) {
-        console.error("❌ ELEVENLABS API ERROR:", response.status, response.statusText);
+        const errBody = await response.text();
+        console.error("❌ ELEVENLABS API ERROR:", response.status, errBody);
         return res.status(200).json({ 
-          fallback: true,
+          fallback: true, 
           reason: "ElevenLabs API error" 
         });
       }
 
       const buffer = Buffer.from(await response.arrayBuffer());
-
       const base64 = buffer.toString("base64");
       const audioData = `data:audio/mpeg;base64,${base64}`;
 
-      fs.writeFileSync(filePath, buffer);
-
       console.log("💾 TRY SAVE ELEVEN → SUPABASE");
 
-      const { error } = await supabase.from("tts_cache").insert({
+      const { error: insertError } = await supabase.from("tts_cache").insert({
         text: normalizedText,
         audio: audioData
       });
 
-      if (error) {
-        console.error("❌ INSERT ERROR:", error);
+      if (insertError) {
+        console.error("❌ SUPABASE INSERT ERROR:", insertError);
       } else {
         console.log("✅ INSERT OK (ELEVEN)");
       }
@@ -152,19 +117,18 @@ export default async function handler(req, res) {
       });
 
     } catch (elevenError) {
-      // Если ElevenLabs вообще не отвечает (сеть, сервер упал)
+      // Если ElevenLabs вообще не отвечает
       console.error("🔥 ELEVENLABS CATCH ERROR:", elevenError);
       return res.status(200).json({ 
-        fallback: true,
+        fallback: true, 
         reason: "ElevenLabs unavailable" 
       });
     }
 
   } catch (err) {
     console.error("🔥 GLOBAL ERROR:", err);
-    // Даже при глобальной ошибке отдаем fallback, чтобы фронтенд не сломался
     res.status(200).json({ 
-      fallback: true,
+      fallback: true, 
       reason: "Server error" 
     });
   }
