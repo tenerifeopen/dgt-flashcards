@@ -95,24 +95,40 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 Резервная озвучка через Google Speech (Браузер)
+  // 🔉 Резервная озвучка через Google Speech (УЛУЧШЕНА)
   const playGoogleSpeech = (text) => {
     if (!window.speechSynthesis) {
       console.error("Браузер не поддерживает озвучку");
       return;
     }
 
-    // Останавливаем предыдущую озвучку, если была
+    // Останавливаем предыдущую озвучку
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES"; // Испанский язык
-    utterance.rate = 0.9;     // Скорость (немного медленнее для понятности)
+    utterance.lang = "es-ES"; // Строго испанский
+    utterance.rate = 0.9;     // Скорость
     
+    // Пытаемся найти хороший мужской голос от Google на испанском
+    const voices = window.speechSynthesis.getVoices();
+    
+    // Ищем голос: сначала Гугл Испания, потом любой мужской Испания, потом любой Испания
+    const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
+    const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
+    const anyEsVoice = voices.find(v => v.lang.startsWith('es-ES'));
+
+    if (googleEsVoice) {
+      utterance.voice = googleEsVoice;
+    } else if (maleEsVoice) {
+      utterance.voice = maleEsVoice;
+    } else if (anyEsVoice) {
+      utterance.voice = anyEsVoice;
+    }
+
     window.speechSynthesis.speak(utterance);
   };
 
-  // 🔊 ОЗВУЧКА (Обновленная логика с Fallback)
+  // 🔊 ОЗВУЧКА 
   const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -128,7 +144,7 @@ export default function App() {
     const cacheKey = `tts_${text}`;
 
     try {
-      // ✅ 1. Проверка локального кеша (localStorage)
+      // ✅ 1. Проверка локального кеша
       const cached = localStorage.getItem(cacheKey);
 
       if (cached) {
@@ -149,7 +165,7 @@ export default function App() {
 
       // ✅ 3. Если сервер вернул нормальный звук от ElevenLabs
       if (data.audio) {
-        // Сохраняем в кеш браузера для скорости
+        // Сохраняем в кеш браузера
         try {
           localStorage.setItem(cacheKey, data.audio);
         } catch (err) {
@@ -162,17 +178,17 @@ export default function App() {
 
       // ✅ 4. Если сервер сказал использовать резервный звук (fallback: true)
       if (data.fallback) {
-        console.warn("Используем резервный звук Google");
+        console.warn("⚠️ Причина использования Гугла:", data.reason); // ВАЖНО: покажет причину!
         playGoogleSpeech(rawText);
         return;
       }
 
-      // Если ответ непонятный, тоже идем в резерв
+      // Если ответ непонятный
       throw new Error("Unexpected response");
 
     } catch (err) {
-      // ✅ 5. Если совсем все упало (нет интернета, сервер лежит) — пробуем Гугл
-      console.error("TTS error, switching to Google Speech:", err);
+      // ✅ 5. Если совсем все упало (нет интернета)
+      console.error("🔥 TTS error, switching to Google Speech:", err);
       playGoogleSpeech(rawText);
     }
   };
