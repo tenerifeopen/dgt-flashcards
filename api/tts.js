@@ -83,7 +83,7 @@ export default async function handler(req, res) {
         }
       );
 
-      // Если ElevenLabs вернул ошибку (нет денег, лимит, неверный ключ)
+      // Если ElevenLabs вернул ошибку
       if (!response.ok) {
         const errBody = await response.text();
         console.error("❌ ELEVENLABS API ERROR:", response.status, errBody);
@@ -117,7 +117,6 @@ export default async function handler(req, res) {
       });
 
     } catch (elevenError) {
-      // Если ElevenLabs вообще не отвечает
       console.error("🔥 ELEVENLABS CATCH ERROR:", elevenError);
       return res.status(200).json({ 
         fallback: true, 
@@ -132,4 +131,4 @@ export default async function handler(req, res) {
       reason: "Server error" 
     });
   }
-},
+}
