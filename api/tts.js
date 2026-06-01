@@ -39,7 +39,6 @@ export default async function handler(req, res) {
     // 🟣 ПРОВЕРКА SUPABASE
     console.log("🔍 CHECK SUPABASE");
 
-    // ИСПОЛЬЗУЕМ maybeSingle() ВМЕСТО single() ЧТОБЫ НЕ БЫЛО ОШИБКИ PGRST116
     const { data: existing, error: supabaseSelectError } = await supabase
       .from("tts_cache")
       .select("audio")
@@ -68,7 +67,8 @@ export default async function handler(req, res) {
         {
           method: "POST",
           headers: {
-            "Authorization": `Bearer ${process.env.ELEVENLABS_API_KEY}`,
+            // 🔴 ИЗМЕНЕНО: Используем xi-api-key вместо Bearer
+            "xi-api-key": process.env.ELEVENLABS_API_KEY,
             "Content-Type": "application/json",
             "Accept": "audio/mpeg"
           },
