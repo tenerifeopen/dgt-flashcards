@@ -39,11 +39,12 @@ export default async function handler(req, res) {
     // 🟣 ПРОВЕРКА SUPABASE
     console.log("🔍 CHECK SUPABASE");
 
+    // ИСПОЛЬЗУЕМ maybeSingle() ВМЕСТО single() ЧТОБЫ НЕ БЫЛО ОШИБКИ PGRST116
     const { data: existing, error: supabaseSelectError } = await supabase
       .from("tts_cache")
       .select("audio")
       .eq("text", normalizedText)
-      .single();
+      .maybeSingle();
 
     if (supabaseSelectError) {
       console.error("❌ SUPABASE SELECT ERROR:", supabaseSelectError);
