@@ -5,7 +5,6 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  // Проверяем, есть ли ключи OpenAI и Supabase
   if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY || !process.env.OPENAI_API_KEY) {
     console.error("❌ ОШИБКА: Нет ключей в настройках Vercel!");
     return res.status(200).json({ fallback: true, reason: "Missing env vars" });
@@ -17,24 +16,20 @@ export default async function handler(req, res) {
   );
 
   try {
-    let text;
+    let rawText = req.body?.text;
+    let normalizedText = req.body?.normalizedText;
 
-    if (typeof req.body === "string") {
-      text = JSON.parse(req.body).text;
-    } else {
-      text = req.body?.text;
-    }
-
-    if (!text) {
+    if (!rawText) {
       return res.status(400).json({ error: "No text provided" });
     }
 
-    const normalizedText = text
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, " ");
+    // Если фронтенд не прислал нормализованный, сделаем это тут
+    if (!normalizedText) {
+      normalizedText = rawText.trim().toLowerCase().replace(/\s+/g, " ");
+    }
 
-    console.log("👉 TEXT:", normalizedText);
+    console.log("👉 RAW TEXT FOR OPENAI:", rawText);
+    console.log("👉 NORMALIZED FOR CACHE:", normalizedText);
 
     // 🟣 ПРОВЕРКА SUPABASE
     console.log("🔍 CHECK SUPABASE");
@@ -71,16 +66,16 @@ export default async function handler(req, res) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: "tts-1", // 🔴 ИЗМЕНЕНО: базовая модель лучше для испанского
-            input: normalizedText, 
-            voice: "echo", // 🔴 ИЗМЕНЕНО: самый чистый мужской акцент для испанского
+            model: "tts-1-hd", 
+            // 🔴 ИЗМЕНЕНО: Отправляем оригинальный текст с большими буквами и ударами!
+            input: rawText, 
+            voice: "shimmer", // 🔴 Голос Shimmer - очень четкий
             response_format: "mp3",
-            speed: 0.9 // 🔴 ИЗМЕНЕНО: замедлили на 10%, чтобы не глотала слоги
+            speed: 0.95 // Чуть медленнее для ясности
           })
         }
       );
 
-      // Если OpenAI вернул ошибку
       if (!response.ok) {
         const errBody = await response.text();
         console.error("❌ OPENAI API ERROR:", response.status, errBody);
@@ -96,6 +91,7 @@ export default async function handler(req, res) {
 
       console.log("💾 TRY SAVE OPENAI → SUPABASE");
 
+      // 🔴 ИЗМЕНЕНО: Сохраняем в базу по нормализованному ключу
       const { error: insertError } = await supabase.from("tts_cache").insert({
         text: normalizedText,
         audio: audioData

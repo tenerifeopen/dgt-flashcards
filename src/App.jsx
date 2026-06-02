@@ -92,11 +92,9 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 ОЗВУЧКА ГУГЛ (АГРЕССИВНЫЙ ФИКС ДЛЯ АЙФОНА)
   const playGoogleSpeech = (text) => {
     if (!window.speechSynthesis) return;
 
-    // Айфон часто сбрасывает голос, если делать cancel и speak без паузы
     if (window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
     }
@@ -106,23 +104,15 @@ export default function App() {
     const voices = window.speechSynthesis.getVoices();
     let selectedVoice = null;
     
-    // 1. Ищем Jorge
     selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Jorge'));
-    // 2. Гугл
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
-    // 3. Microsoft
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
-    // 4. Premium/Enhanced
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && (v.name.includes('Premium') || v.name.includes('Enhanced')));
-    // 5. es-MX (Мексиканский - часто мужской на айфоне)
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang === 'es-MX');
-    // 6. es-ES
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang === 'es-ES');
-    // 7. Любой испанский
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es'));
 
     if (selectedVoice) {
-      // ВАЖНО: Сначала lang, потом voice! Айфон так лучше понимает.
       utterance.lang = selectedVoice.lang;
       utterance.voice = selectedVoice;
     } else {
@@ -132,8 +122,6 @@ export default function App() {
     utterance.rate = 0.9;     
     utterance.pitch = 0.9;    
 
-    // ФИКС SAFARI: Даем айфону 100 миллисекунд на "переваривание" отмены,
-    // иначе он злится и ставит женский голос по умолчанию.
     setTimeout(() => {
       window.speechSynthesis.speak(utterance);
     }, 100);
@@ -145,12 +133,9 @@ export default function App() {
 
     const rawText = show ? current.answer : current.question;
 
-    const text = rawText
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, " ");
-
-    const cacheKey = `tts_${text}`;
+    // Нормализуем ТОЛЬКО для ключа кеша в браузере
+    const normalizedText = rawText.trim().toLowerCase().replace(/\s+/g, " ");
+    const cacheKey = `tts_${normalizedText}`;
 
     try {
       const cached = localStorage.getItem(cacheKey);
@@ -162,7 +147,11 @@ export default function App() {
       const res = await fetch("/api/tts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text })
+        // 🔴 ИЗМЕНЕНО: Отправляем И оригинал, И нормализованный текст
+        body: JSON.stringify({ 
+          text: rawText, 
+          normalizedText: normalizedText 
+        })
       });
 
       if (!res.ok) {
