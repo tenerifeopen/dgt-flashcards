@@ -58,7 +58,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // 🔵 OPENAI (Вместо ElevenLabs)
+    // 🔵 OPENAI
     console.log("🌐 FROM OPENAI");
 
     try {
@@ -71,9 +71,9 @@ export default async function handler(req, res) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: "tts-1-hd", // Модель высокой четкости
-            input: normalizedText, // Текст для озвучки
-            voice: "onyx", // Самый низкий и мужской голос
+            model: "tts-1-hd", 
+            input: normalizedText, 
+            voice: "alloy", // 🔴 ИЗМЕНЕНО: Самый чистый и нейтральный голос для испанского
             response_format: "mp3"
           })
         }
@@ -89,7 +89,6 @@ export default async function handler(req, res) {
         });
       }
 
-      // OpenAI возвращает готовый аудио-файл (бинарник)
       const buffer = Buffer.from(await response.arrayBuffer());
       const base64 = buffer.toString("base64");
       const audioData = `data:audio/mpeg;base64,${base64}`;
