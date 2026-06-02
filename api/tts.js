@@ -71,10 +71,11 @@ export default async function handler(req, res) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: "tts-1-hd", 
+            model: "tts-1", // 🔴 ИЗМЕНЕНО: базовая модель лучше для испанского
             input: normalizedText, 
-            voice: "nova", // 🔴 ИЗМЕНЕНО: Чистый женский испанский голос
-            response_format: "mp3"
+            voice: "echo", // 🔴 ИЗМЕНЕНО: самый чистый мужской акцент для испанского
+            response_format: "mp3",
+            speed: 0.9 // 🔴 ИЗМЕНЕНО: замедлили на 10%, чтобы не глотала слоги
           })
         }
       );
