@@ -92,34 +92,47 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 ОЗВУЧКА ГУГЛ (Починена проблема первого клика)
+  // 🔉 ОЗВУЧКА ГУГЛ (ФИКС ДЛЯ АЙФОНА)
   const playGoogleSpeech = (text) => {
     if (!window.speechSynthesis) return;
 
-    window.speechSynthesis.cancel();
+    // Останавливаем только если сейчас что-то говорит
+    if (window.speechSynthesis.speaking) {
+      window.speechSynthesis.cancel();
+    }
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "es-ES"; 
     utterance.rate = 0.9;     
     utterance.pitch = 0.9;    
-    
-    // Пытаемся найти лучший голос СРАЗУ (без ожидания)
+
     const voices = window.speechSynthesis.getVoices();
+    let selectedVoice = null;
     
-    const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
-    const msEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
-    const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
-    const anyEsESVoice = voices.find(v => v.lang === 'es-ES');
-    const anyEsVoice = voices.find(v => v.lang.startsWith('es'));
+    // 1. Ищем Jorge (твой скачанный мужской голос на айфоне)
+    selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Jorge'));
+    // 2. Ищем Гугл (на компе)
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
+    // 3. Ищем Microsoft (на компе)
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
+    // 4. Ищем мужской
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
+    // 5. Ищем улучшенный (Premium/Enhanced)
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && (v.name.includes('Premium') || v.name.includes('Enhanced')));
+    // 6. Любой испанский (es-ES)
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang === 'es-ES');
+    // 7. Вообще любой испанский
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es'));
 
-    if (googleEsVoice) utterance.voice = googleEsVoice;
-    else if (msEsVoice) utterance.voice = msEsVoice;
-    else if (maleEsVoice) utterance.voice = maleEsVoice;
-    else if (anyEsESVoice) utterance.voice = anyEsESVoice;
-    else if (anyEsVoice) utterance.voice = anyEsVoice;
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
+      // СЕКРЕТНЫЙ ФИКС АЙФОНА: Берем языковой код прямо из голоса!
+      // Если Jorge имеет код es-MX, мы скажем айфону использовать es-MX.
+      // Тогда айфон не будет сбрасывать голос на женский.
+      utterance.lang = selectedVoice.lang;
+    } else {
+      utterance.lang = "es-ES"; // Запасной вариант
+    }
 
-    // ВАЖНО: Говорим СРАЗУ! Если мы будем ждать загрузки голосов, 
-    // мобильный браузер заблокирует звук, потому что пользователь уже убрал палец с экрана.
     window.speechSynthesis.speak(utterance);
   };
 
