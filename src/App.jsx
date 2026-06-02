@@ -92,7 +92,7 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 УЛУЧШЕННАЯ Резервная озвучка через Google Speech
+  // 🔉 ОЗВУЧКА ГУГЛ (Починена проблема первого клика)
   const playGoogleSpeech = (text) => {
     if (!window.speechSynthesis) return;
 
@@ -100,39 +100,27 @@ export default function App() {
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "es-ES"; 
-    utterance.rate = 0.9;     // Скорость (чуть медленнее = понятнее)
-    utterance.pitch = 0.9;    // ТЕМБР: чуть ниже = звучит мужественнее и приятнее
+    utterance.rate = 0.9;     
+    utterance.pitch = 0.9;    
     
-    // Функция выбора лучшего голоса
-    const chooseBestVoice = () => {
-      const voices = window.speechSynthesis.getVoices();
-      
-      // 1. Ищем Гугл Испания (самый лучший бесплатный)
-      const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
-      // 2. Ищем Microsoft Испания (на компах часто хороший)
-      const msEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
-      // 3. Ищем мужской Испания (редко, но бывает)
-      const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
-      // 4. Любой Испанский (es-ES)
-      const anyEsESVoice = voices.find(v => v.lang === 'es-ES');
-      // 5. Любой испаноговорящий
-      const anyEsVoice = voices.find(v => v.lang.startsWith('es'));
+    // Пытаемся найти лучший голос СРАЗУ (без ожидания)
+    const voices = window.speechSynthesis.getVoices();
+    
+    const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
+    const msEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
+    const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
+    const anyEsESVoice = voices.find(v => v.lang === 'es-ES');
+    const anyEsVoice = voices.find(v => v.lang.startsWith('es'));
 
-      if (googleEsVoice) utterance.voice = googleEsVoice;
-      else if (msEsVoice) utterance.voice = msEsVoice;
-      else if (maleEsVoice) utterance.voice = maleEsVoice;
-      else if (anyEsESVoice) utterance.voice = anyEsESVoice;
-      else if (anyEsVoice) utterance.voice = anyEsVoice;
+    if (googleEsVoice) utterance.voice = googleEsVoice;
+    else if (msEsVoice) utterance.voice = msEsVoice;
+    else if (maleEsVoice) utterance.voice = maleEsVoice;
+    else if (anyEsESVoice) utterance.voice = anyEsESVoice;
+    else if (anyEsVoice) utterance.voice = anyEsVoice;
 
-      window.speechSynthesis.speak(utterance);
-    };
-
-    // Телефоны загружают голоса с задержкой. Ждем их.
-    if (window.speechSynthesis.getVoices().length > 0) {
-      chooseBestVoice();
-    } else {
-      window.speechSynthesis.onvoiceschanged = chooseBestVoice;
-    }
+    // ВАЖНО: Говорим СРАЗУ! Если мы будем ждать загрузки голосов, 
+    // мобильный браузер заблокирует звук, потому что пользователь уже убрал палец с экрана.
+    window.speechSynthesis.speak(utterance);
   };
 
   const speak = async (e) => {
