@@ -5,8 +5,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  // Проверяем, есть ли ключи
-  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY || !process.env.ELEVENLABS_API_KEY) {
+  // Проверяем, есть ли ключи OpenAI и Supabase
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY || !process.env.OPENAI_API_KEY) {
     console.error("❌ ОШИБКА: Нет ключей в настройках Vercel!");
     return res.status(200).json({ fallback: true, reason: "Missing env vars" });
   }
@@ -58,47 +58,43 @@ export default async function handler(req, res) {
       });
     }
 
-    // 🔵 ElevenLabs
-    console.log("🌐 FROM ELEVENLABS");
+    // 🔵 OPENAI (Вместо ElevenLabs)
+    console.log("🌐 FROM OPENAI");
 
     try {
       const response = await fetch(
-        "https://api.elevenlabs.io/v1/text-to-speech/VKNR9COjyw4jDFfruaJ3",
+        "https://api.openai.com/v1/audio/speech",
         {
           method: "POST",
           headers: {
-            // 🔴 ИЗМЕНЕНО: Используем xi-api-key вместо Bearer
-            "xi-api-key": process.env.ELEVENLABS_API_KEY,
-            "Content-Type": "application/json",
-            "Accept": "audio/mpeg"
+            "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+            "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            text: normalizedText,
-            model_id: "eleven_multilingual_v2",
-            voice_settings: {
-              stability: 0.9,
-              similarity_boost: 0.8,
-              style: 0.1
-            }
+            model: "tts-1-hd", // Модель высокой четкости
+            input: normalizedText, // Текст для озвучки
+            voice: "onyx", // Самый низкий и мужской голос
+            response_format: "mp3"
           })
         }
       );
 
-      // Если ElevenLabs вернул ошибку
+      // Если OpenAI вернул ошибку
       if (!response.ok) {
         const errBody = await response.text();
-        console.error("❌ ELEVENLABS API ERROR:", response.status, errBody);
+        console.error("❌ OPENAI API ERROR:", response.status, errBody);
         return res.status(200).json({ 
           fallback: true, 
-          reason: "ElevenLabs API error" 
+          reason: "OpenAI API error" 
         });
       }
 
+      // OpenAI возвращает готовый аудио-файл (бинарник)
       const buffer = Buffer.from(await response.arrayBuffer());
       const base64 = buffer.toString("base64");
       const audioData = `data:audio/mpeg;base64,${base64}`;
 
-      console.log("💾 TRY SAVE ELEVEN → SUPABASE");
+      console.log("💾 TRY SAVE OPENAI → SUPABASE");
 
       const { error: insertError } = await supabase.from("tts_cache").insert({
         text: normalizedText,
@@ -108,20 +104,20 @@ export default async function handler(req, res) {
       if (insertError) {
         console.error("❌ SUPABASE INSERT ERROR:", insertError);
       } else {
-        console.log("✅ INSERT OK (ELEVEN)");
+        console.log("✅ INSERT OK (OPENAI)");
       }
 
       res.status(200).json({
         audio: audioData,
         cached: false,
-        source: "elevenlabs"
+        source: "openai"
       });
 
-    } catch (elevenError) {
-      console.error("🔥 ELEVENLABS CATCH ERROR:", elevenError);
+    } catch (openaiError) {
+      console.error("🔥 OPENAI CATCH ERROR:", openaiError);
       return res.status(200).json({ 
         fallback: true, 
-        reason: "ElevenLabs unavailable" 
+        reason: "OpenAI unavailable" 
       });
     }
 
