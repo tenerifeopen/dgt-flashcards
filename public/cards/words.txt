@@ -415,15 +415,26 @@ inmediatamente=немедленно
  acelerar en punto muerto =ускорение на нейтральной передаче
 procurar que los demás conductores puedan=обеспечить возможность другим водителям
 anticiparse a las maniobras=предвидеть маневры
-
-
-
-
-
-
-
-
-
+sobrevalora sus propias capacidades =переоценивает свои собственные способности
+Visión, anticipación y espacio= Обзор, предвидение и дистанция/пространство
+🔮 Anticipación= предугадывать ситуацию/думать что могут сделать другие водители
+Espacio= оставлять пространство / дистанцию спереди место сбоку
+Visión + anticipación + espacio= три принципа защитного вождения
+obligatorio para bicicletas = обязательно для велосипедов
+otros usuarios pueden utilizarlo = другие тоже могут использовать
+distancia que falta = расстояние до чего-то
+a 4,25 km hay un peligro = через 4,25 км опасность
+longitud = протяжённость
+existe el peligro = существует опасность
+carga excesiva = перегрузка
+afectar = влиять
+carga excesiva = чрезмерная загрузка / перегрузка
+límites permitidos = допустимые пределы
+neumáticos = шины
+afectar al funcionamiento = влиять на работу
+carga excesiva = перегрузка
+límites de carga permitidos = допустимая загрузка
+¿Puede afectar la carga excesiva a los neumáticos? = Может ли перегрузка влиять на шины? (sí / да)
 
 
 

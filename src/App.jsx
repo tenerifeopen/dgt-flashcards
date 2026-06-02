@@ -72,7 +72,11 @@ export default function App() {
   };
 
   const playAudioSafe = async (base64) => {
-    const byteCharacters = atob(base64.split(",")[1]);
+    // Бэкенд возвращает чистый base64 без префикса. 
+    // Если вдруг пришел с префиксом (старый кеш) — отрезаем его.
+    const cleanBase64 = base64.includes(",") ? base64.split(",")[1] : base64;
+    
+    const byteCharacters = atob(cleanBase64);
     const byteNumbers = new Array(byteCharacters.length);
 
     for (let i = 0; i < byteCharacters.length; i++) {
@@ -132,29 +136,25 @@ export default function App() {
     if (!current) return;
 
     const rawText = show ? current.answer : current.question;
-
-    // Нормализуем ТОЛЬКО для ключа кеша в браузере
-    const normalizedText = rawText.trim().toLowerCase().replace(/\s+/g, " ");
-    const cacheKey = `tts_${normalizedText}`;
+    const cacheKey = `tts_${rawText.trim()}`;
 
     try {
+      // 1. Проверяем кеш в браузере
       const cached = localStorage.getItem(cacheKey);
       if (cached) {
         await playAudioSafe(cached);
         return;
       }
 
+      // 2. Идем на наш бэкенд
       const res = await fetch("/api/tts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // 🔴 ИЗМЕНЕНО: Отправляем И оригинал, И нормализованный текст
-        body: JSON.stringify({ 
-          text: rawText, 
-          normalizedText: normalizedText 
-        })
+        body: JSON.stringify({ text: rawText }) // Отправляем оригинальный текст
       });
 
       if (!res.ok) {
+        // Сервер вернул ошибку -> включаем Google Speech
         playGoogleSpeech(rawText);
         return;
       }
@@ -162,19 +162,17 @@ export default function App() {
       const data = await res.json();
 
       if (data.audio) {
+        // Сервер вернул аудио -> сохраняем в браузер и воспроизводим
         try { localStorage.setItem(cacheKey, data.audio); } catch (err) { console.warn("Cache full"); }
         await playAudioSafe(data.audio);
         return;
       }
 
-      if (data.fallback) {
-        playGoogleSpeech(rawText);
-        return;
-      }
-
-      throw new Error("Unexpected response");
+      // Если аудио почему-то нет -> включаем Google Speech
+      playGoogleSpeech(rawText);
 
     } catch (err) {
+      // Любая ошибка (сеть, сервер) -> включаем Google Speech
       playGoogleSpeech(rawText);
     }
   };

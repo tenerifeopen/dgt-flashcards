@@ -1,127 +1,83 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient } from '@supabase/supabase-js';
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  // Разрешаем только POST запросы
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY || !process.env.OPENAI_API_KEY) {
-    console.error("❌ ОШИБКА: Нет ключей в настройках Vercel!");
-    return res.status(200).json({ fallback: true, reason: "Missing env vars" });
+  const { text } = req.body;
+
+  if (!text) {
+    return res.status(400).json({ error: 'Text is required' });
   }
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_KEY
-  );
+  // Инициализация Supabase
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_ANON_KEY;
+  const elevenLabsApiKey = process.env.ELEVENLABS_API_KEY;
+
+  if (!supabaseUrl || !supabaseKey || !elevenLabsApiKey) {
+    return res.status(500).json({ error: 'Server configuration error' });
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseKey);
 
   try {
-    let rawText = req.body?.text;
-    let normalizedText = req.body?.normalizedText;
+    // 1. Проверяем кеш в Supabase
+    const { data: cached, error: dbError } = await supabase
+      .from('tts_cache')
+      .select('audio')
+      .eq('text', text)
+      .single();
 
-    if (!rawText) {
-      return res.status(400).json({ error: "No text provided" });
+    if (cached && cached.audio) {
+      // Если нашли в базе — сразу возвращаем
+      return res.status(200).json({ audio: cached.audio, source: 'supabase' });
     }
 
-    // Если фронтенд не прислал нормализованный, сделаем это тут
-    if (!normalizedText) {
-      normalizedText = rawText.trim().toLowerCase().replace(/\s+/g, " ");
-    }
-
-    console.log("👉 RAW TEXT FOR OPENAI:", rawText);
-    console.log("👉 NORMALIZED FOR CACHE:", normalizedText);
-
-    // 🟣 ПРОВЕРКА SUPABASE
-    console.log("🔍 CHECK SUPABASE");
-
-    const { data: existing, error: supabaseSelectError } = await supabase
-      .from("tts_cache")
-      .select("audio")
-      .eq("text", normalizedText)
-      .maybeSingle();
-
-    if (supabaseSelectError) {
-      console.error("❌ SUPABASE SELECT ERROR:", supabaseSelectError);
-    }
-
-    if (existing?.audio) {
-      console.log("⚡ FROM SUPABASE");
-      return res.status(200).json({
-        audio: existing.audio,
-        cached: true,
-        source: "supabase"
-      });
-    }
-
-    // 🔵 OPENAI
-    console.log("🌐 FROM OPENAI");
-
-    try {
-      const response = await fetch(
-        "https://api.openai.com/v1/audio/speech",
-        {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            model: "tts-1-hd", 
-            // 🔴 ИЗМЕНЕНО: Отправляем оригинальный текст с большими буквами и ударами!
-            input: rawText, 
-            voice: "shimmer", // 🔴 Голос Shimmer - очень четкий
-            response_format: "mp3",
-            speed: 0.95 // Чуть медленнее для ясности
-          })
+    // 2. Если в базе нет — идем в ElevenLabs
+    const voiceId = 'VKNR9COjyw4jDFfruaJ3';
+    const modelId = 'eleven_multilingual_v2';
+    
+    const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
+      method: 'POST',
+      headers: {
+        'xi-api-key': elevenLabsApiKey,
+        'Content-Type': 'application/json',
+        'Accept': 'audio/mpeg'
+      },
+      body: JSON.stringify({
+        text: text,
+        model_id: modelId,
+        voice_settings: {
+          stability: 0.5,
+          similarity_boost: 0.75
         }
-      );
+      })
+    });
 
-      if (!response.ok) {
-        const errBody = await response.text();
-        console.error("❌ OPENAI API ERROR:", response.status, errBody);
-        return res.status(200).json({ 
-          fallback: true, 
-          reason: "OpenAI API error" 
-        });
-      }
-
-      const buffer = Buffer.from(await response.arrayBuffer());
-      const base64 = buffer.toString("base64");
-      const audioData = `data:audio/mpeg;base64,${base64}`;
-
-      console.log("💾 TRY SAVE OPENAI → SUPABASE");
-
-      // 🔴 ИЗМЕНЕНО: Сохраняем в базу по нормализованному ключу
-      const { error: insertError } = await supabase.from("tts_cache").insert({
-        text: normalizedText,
-        audio: audioData
-      });
-
-      if (insertError) {
-        console.error("❌ SUPABASE INSERT ERROR:", insertError);
-      } else {
-        console.log("✅ INSERT OK (OPENAI)");
-      }
-
-      res.status(200).json({
-        audio: audioData,
-        cached: false,
-        source: "openai"
-      });
-
-    } catch (openaiError) {
-      console.error("🔥 OPENAI CATCH ERROR:", openaiError);
-      return res.status(200).json({ 
-        fallback: true, 
-        reason: "OpenAI unavailable" 
-      });
+    if (!response.ok) {
+      // Если ElevenLabs выдал ошибку (лимит, нет доступа и тд)
+      const errorData = await response.json();
+      console.error('ElevenLabs API Error:', errorData);
+      return res.status(503).json({ error: 'ElevenLabs unavailable', details: errorData });
     }
 
-  } catch (err) {
-    console.error("🔥 GLOBAL ERROR:", err);
-    res.status(200).json({ 
-      fallback: true, 
-      reason: "Server error" 
-    });
+    // 3. Конвертируем аудио из ElevenLabs в base64
+    const arrayBuffer = await response.arrayBuffer();
+    const base64Audio = Buffer.from(arrayBuffer).toString('base64');
+
+    // 4. Сохраняем в Supabase для будущего кеша
+    await supabase
+      .from('tts_cache')
+      .upsert({ text: text, audio: base64Audio }, { onConflict: 'text' });
+
+    // 5. Возвращаем на фронтенд
+    return res.status(200).json({ audio: base64Audio, source: 'elevenlabs' });
+
+  } catch (error) {
+    console.error('Server TTS Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

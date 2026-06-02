@@ -54,16 +54,18 @@ que puedo circular=что мне разрешено ехать
 Entrada prohibida a toda clase de vehículos=Въезд запрещен для всех видов транспортных средств.🏍❌
 Al rebasar la intersección🛺=Проехав перекресток
 En caso de accidente=В случае аварии
-
-
-
-
-
-
-
-
-
-
+Visión, anticipación y espacio=Видение, предусмотрительность и пространство (Принципы предусмотрительного вождения)
+Los principios de la conducción preventiva son… = Принципы защитного вождения это… (visión, anticipación y espacio / обзор, предвидение и пространство)
+carril obligatorio para bicicletas = полоса обязательна для велосипедов
+puede ser utilizado por otros usuarios = могут использовать другие участники
+cambio de sentido prohibido en intersecciones = разворот на перекрёстках запрещён
+La longitud en la que existe el peligro= Протяжённость участка, где действует опасность
+¿Qué hacer con fuerte viento lateral? = Что делать при сильном боковом ветре? (снизить скорость и корректировать направление)
+Curva cerrada 🚗↩️= закрытый поворот / ты не видишь, что за поворотом.
+Curva abierta 🚗➡️= открытый поворот / видно продолжение дороги можно раньше увидеть встречные машины.
+visibilidad reducida = плохая видимость
+sin visibilidad = без обзора
+buena visibilidad = хорошая видимость
 
 
 

@@ -88,7 +88,7 @@ Lluvia intensa (trasera)=Сильный дождь (задние)/Niebla trasera
 Antiniebla trasera (finalidad)=Задний туман (цель)/Evitar que nos alcancen por detrás/Чтобы в нас не врезались сзади
 Antiniebla delantera (finalidad)=Передний туман (цель)/Iluminar la calzada y los bordes/Освещать дорогу и обочины
 Encender antiniebla trasera sin necesidad=Включить задний туман без нужды/Prohibido por deslumbramiento/Запрещено из-за ослепления
-
+alumbrado de carretera= дальний свет
 
 
 
