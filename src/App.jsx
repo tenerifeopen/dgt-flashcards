@@ -92,48 +92,51 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 ОЗВУЧКА ГУГЛ (ФИКС ДЛЯ АЙФОНА)
+  // 🔉 ОЗВУЧКА ГУГЛ (АГРЕССИВНЫЙ ФИКС ДЛЯ АЙФОНА)
   const playGoogleSpeech = (text) => {
     if (!window.speechSynthesis) return;
 
-    // Останавливаем только если сейчас что-то говорит
+    // Айфон часто сбрасывает голос, если делать cancel и speak без паузы
     if (window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
     }
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = 0.9;     
-    utterance.pitch = 0.9;    
-
+    
     const voices = window.speechSynthesis.getVoices();
     let selectedVoice = null;
     
-    // 1. Ищем Jorge (твой скачанный мужской голос на айфоне)
+    // 1. Ищем Jorge
     selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Jorge'));
-    // 2. Ищем Гугл (на компе)
+    // 2. Гугл
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
-    // 3. Ищем Microsoft (на компе)
+    // 3. Microsoft
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
-    // 4. Ищем мужской
-    if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
-    // 5. Ищем улучшенный (Premium/Enhanced)
+    // 4. Premium/Enhanced
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && (v.name.includes('Premium') || v.name.includes('Enhanced')));
-    // 6. Любой испанский (es-ES)
+    // 5. es-MX (Мексиканский - часто мужской на айфоне)
+    if (!selectedVoice) selectedVoice = voices.find(v => v.lang === 'es-MX');
+    // 6. es-ES
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang === 'es-ES');
-    // 7. Вообще любой испанский
+    // 7. Любой испанский
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es'));
 
     if (selectedVoice) {
-      utterance.voice = selectedVoice;
-      // СЕКРЕТНЫЙ ФИКС АЙФОНА: Берем языковой код прямо из голоса!
-      // Если Jorge имеет код es-MX, мы скажем айфону использовать es-MX.
-      // Тогда айфон не будет сбрасывать голос на женский.
+      // ВАЖНО: Сначала lang, потом voice! Айфон так лучше понимает.
       utterance.lang = selectedVoice.lang;
+      utterance.voice = selectedVoice;
     } else {
-      utterance.lang = "es-ES"; // Запасной вариант
+      utterance.lang = "es-ES";
     }
 
-    window.speechSynthesis.speak(utterance);
+    utterance.rate = 0.9;     
+    utterance.pitch = 0.9;    
+
+    // ФИКС SAFARI: Даем айфону 100 миллисекунд на "переваривание" отмены,
+    // иначе он злится и ставит женский голос по умолчанию.
+    setTimeout(() => {
+      window.speechSynthesis.speak(utterance);
+    }, 100);
   };
 
   const speak = async (e) => {
