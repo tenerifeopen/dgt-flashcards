@@ -57,8 +57,6 @@ export default function App() {
 
   const toggleFavorite = (e) => {
     e.stopPropagation();
-    console.log("CLICK");
-
     if (favorites.includes(current.question)) {
       setFavorites(favorites.filter(f => f !== current.question));
     } else {
@@ -73,7 +71,6 @@ export default function App() {
     setShow(false);
   };
 
-  // 🔧 безопасное воспроизведение (не обрезает)
   const playAudioSafe = async (base64) => {
     const byteCharacters = atob(base64.split(",")[1]);
     const byteNumbers = new Array(byteCharacters.length);
@@ -95,54 +92,49 @@ export default function App() {
     await audio.play();
   };
 
-  // 🔉 Резервная озвучка через Google Speech (ФИКС ДЛЯ ТЕЛЕФОНА)
+  // 🔉 УЛУЧШЕННАЯ Резервная озвучка через Google Speech
   const playGoogleSpeech = (text) => {
-    if (!window.speechSynthesis) {
-      console.error("Браузер не поддерживает озвучку");
-      return;
-    }
+    if (!window.speechSynthesis) return;
 
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "es-ES"; 
-    utterance.rate = 0.9;     
+    utterance.rate = 0.9;     // Скорость (чуть медленнее = понятнее)
+    utterance.pitch = 0.9;    // ТЕМБР: чуть ниже = звучит мужественнее и приятнее
     
     // Функция выбора лучшего голоса
-    const setBestVoice = () => {
+    const chooseBestVoice = () => {
       const voices = window.speechSynthesis.getVoices();
       
-      // 1. Ищем Гугл Испания
+      // 1. Ищем Гугл Испания (самый лучший бесплатный)
       const googleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
-      // 2. Ищем мужской Испания
+      // 2. Ищем Microsoft Испания (на компах часто хороший)
+      const msEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
+      // 3. Ищем мужской Испания (редко, но бывает)
       const maleEsVoice = voices.find(v => v.lang.startsWith('es') && v.name.toLowerCase().includes('male'));
-      // 3. Любой Испанский (es-ES)
-      const anyEsVoice = voices.find(v => v.lang.startsWith('es-ES'));
-      // 4. Любой испаноговорящий
-      const anyEsLang = voices.find(v => v.lang.startsWith('es'));
+      // 4. Любой Испанский (es-ES)
+      const anyEsESVoice = voices.find(v => v.lang === 'es-ES');
+      // 5. Любой испаноговорящий
+      const anyEsVoice = voices.find(v => v.lang.startsWith('es'));
 
-      if (googleEsVoice) {
-        utterance.voice = googleEsVoice;
-      } else if (maleEsVoice) {
-        utterance.voice = maleEsVoice;
-      } else if (anyEsVoice) {
-        utterance.voice = anyEsVoice;
-      } else if (anyEsLang) {
-        utterance.voice = anyEsLang;
-      }
+      if (googleEsVoice) utterance.voice = googleEsVoice;
+      else if (msEsVoice) utterance.voice = msEsVoice;
+      else if (maleEsVoice) utterance.voice = maleEsVoice;
+      else if (anyEsESVoice) utterance.voice = anyEsESVoice;
+      else if (anyEsVoice) utterance.voice = anyEsVoice;
 
       window.speechSynthesis.speak(utterance);
     };
 
-    // Телефоны загружают голоса с задержкой, ждем их загрузки
+    // Телефоны загружают голоса с задержкой. Ждем их.
     if (window.speechSynthesis.getVoices().length > 0) {
-      setBestVoice();
+      chooseBestVoice();
     } else {
-      window.speechSynthesis.onvoiceschanged = setBestVoice;
+      window.speechSynthesis.onvoiceschanged = chooseBestVoice;
     }
   };
 
-  // 🔊 ОЗВУЧКА 
   const speak = async (e) => {
     e.stopPropagation();
     if (!current) return;
@@ -158,7 +150,6 @@ export default function App() {
 
     try {
       const cached = localStorage.getItem(cacheKey);
-
       if (cached) {
         await playAudioSafe(cached);
         return;
@@ -166,27 +157,24 @@ export default function App() {
 
       const res = await fetch("/api/tts", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text })
       });
+
+      if (!res.ok) {
+        playGoogleSpeech(rawText);
+        return;
+      }
 
       const data = await res.json();
 
       if (data.audio) {
-        try {
-          localStorage.setItem(cacheKey, data.audio);
-        } catch (err) {
-          console.warn("Cache full");
-        }
-
+        try { localStorage.setItem(cacheKey, data.audio); } catch (err) { console.warn("Cache full"); }
         await playAudioSafe(data.audio);
         return;
       }
 
       if (data.fallback) {
-        console.warn("⚠️ Причина использования Гугла:", data.reason); // ВАЖНО: покажет причину!
         playGoogleSpeech(rawText);
         return;
       }
@@ -194,55 +182,18 @@ export default function App() {
       throw new Error("Unexpected response");
 
     } catch (err) {
-      console.error("🔥 TTS error, switching to Google Speech:", err);
       playGoogleSpeech(rawText);
     }
   };
 
   if (screen === "menu") {
     return (
-      <div style={{
-        minHeight: "100vh",
-        background: "#0f172a",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: font
-      }}>
-        <div style={{ color: "#A1A1A1", fontWeight: 600, fontSize: 18 }}>
-          Roman Arakelov
-        </div>
-
-        <div style={{
-          background: "#e5e7eb",
-          padding: 20,
-          borderRadius: 20,
-          width: 320
-        }}>
-          <h2 style={{
-            textAlign: "center",
-            color: "#000",
-            fontSize: 26,
-            fontWeight: 700
-          }}>
-            📚 МОИ КАРТОЧКИ
-          </h2>
-
+      <div style={{ minHeight: "100vh", background: "#0f172a", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: font }}>
+        <div style={{ color: "#A1A1A1", fontWeight: 600, fontSize: 18 }}>Roman Arakelov</div>
+        <div style={{ background: "#e5e7eb", padding: 20, borderRadius: 20, width: 320 }}>
+          <h2 style={{ textAlign: "center", color: "#000", fontSize: 26, fontWeight: 700 }}>📚 МОИ КАРТОЧКИ</h2>
           {topics.map((t, i) => (
-            <button key={i}
-              onClick={() => loadTopic(t.file)}
-              style={{
-                width: "100%",
-                marginTop: 10,
-                padding: 18,
-                borderRadius: 12,
-                border: "none",
-                background: "#2563eb",
-                color: "white",
-                fontSize: 18,
-                fontWeight: 500
-              }}>
+            <button key={i} onClick={() => loadTopic(t.file)} style={{ width: "100%", marginTop: 10, padding: 18, borderRadius: 12, border: "none", background: "#2563eb", color: "white", fontSize: 18, fontWeight: 500 }}>
               {t.name}
             </button>
           ))}
@@ -252,150 +203,30 @@ export default function App() {
   }
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      background: "#0f172a",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      padding: "20px 12px 160px",
-      fontFamily: font
-    }}>
-
-      <div style={{
-        width: "100%",
-        maxWidth: 420,
-        display: "flex",
-        justifyContent: "space-between",
-        color: "#94a3b8"
-      }}>
+    <div style={{ minHeight: "100vh", background: "#0f172a", display: "flex", flexDirection: "column", alignItems: "center", padding: "20px 12px 160px", fontFamily: font }}>
+      <div style={{ width: "100%", maxWidth: 420, display: "flex", justifyContent: "space-between", color: "#94a3b8" }}>
         <div onClick={() => setScreen("menu")}>← назад</div>
-
-        <button onClick={() => setOnlyFav(!onlyFav)} style={{
-          width: 52,
-          height: 52,
-          borderRadius: 12,
-          background: onlyFav ? "#facc15" : "#334155",
-          fontSize: 26,
-          border: "none"
-        }}>★</button>
+        <button onClick={() => setOnlyFav(!onlyFav)} style={{ width: 52, height: 52, borderRadius: 12, background: onlyFav ? "#facc15" : "#334155", fontSize: 26, border: "none" }}>★</button>
       </div>
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 10 }}>
-        <div
-          onClick={() => setShow(!show)}
-          style={{
-            width: "100%",
-            height: "60vh",
-            borderRadius: 20,
-            overflow: "hidden",
-            position: "relative"
-          }}
-        >
-
-          <div onClick={toggleFavorite} style={{
-            position: "absolute",
-            top: 14,
-            right: 14,
-            fontSize: 30,
-            zIndex: 30,
-            cursor: "pointer",
-            color: favorites.includes(current?.question)
-              ? "#facc15"
-              : "#9ca3af"
-          }}>★</div>
-
-          <button onClick={speak} style={{
-            position: "absolute",
-            bottom: 14,
-            right: 14,
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#2563eb",
-            color: "white",
-            fontSize: 24,
-            border: "none",
-            zIndex: 30
-          }}>🔊</button>
-
-          <div style={{
-            width: "100%",
-            height: "100%",
-            background: show ? "#2563eb" : "#e5e7eb",
-            color: show ? "#fff" : "#000",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center"
-          }}>
-            <div style={{
-              width: "100%",
-              textAlign: "center",
-              padding: 20,
-              fontSize: "clamp(27px, 6vw, 40px)",
-              fontWeight: show ? 700 : 500,
-              lineHeight: 1.6
-            }}>
+        <div onClick={() => setShow(!show)} style={{ width: "100%", height: "60vh", borderRadius: 20, overflow: "hidden", position: "relative" }}>
+          <div onClick={toggleFavorite} style={{ position: "absolute", top: 14, right: 14, fontSize: 30, zIndex: 30, cursor: "pointer", color: favorites.includes(current?.question) ? "#facc15" : "#9ca3af" }}>★</div>
+          <button onClick={speak} style={{ position: "absolute", bottom: 14, right: 14, width: 70, height: 48, borderRadius: 16, background: "#2563eb", color: "white", fontSize: 24, border: "none", zIndex: 30 }}>🔊</button>
+          <div style={{ width: "100%", height: "100%", background: show ? "#2563eb" : "#e5e7eb", color: show ? "#fff" : "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ width: "100%", textAlign: "center", padding: 20, fontSize: "clamp(27px, 6vw, 40px)", fontWeight: show ? 700 : 500, lineHeight: 1.6 }}>
               {show ? current?.answer : current?.question}
             </div>
           </div>
-
         </div>
       </div>
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 12 }}>
-        <button onClick={shuffle} style={{
-          width: "100%",
-          height: 70,
-          borderRadius: 20,
-          background: "#334155",
-          border: "none",
-          fontSize: 36
-        }}>🔀</button>
-
-        <div style={{
-          marginTop: 10,
-          height: 70,
-          background: "#1e293b",
-          borderRadius: 24,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0 16px"
-        }}>
-
-          <button onClick={() => {
-            if (!filteredCards.length) return;
-            setShow(false);
-            setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
-          }} style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#020617",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>←</button>
-
-          <div style={{ color: "white" }}>
-            {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
-          </div>
-
-          <button onClick={() => {
-            if (!filteredCards.length) return;
-            setShow(false);
-            setIndex(i => (i + 1) % filteredCards.length);
-          }} style={{
-            width: 70,
-            height: 48,
-            borderRadius: 16,
-            background: "#2563eb",
-            color: "white",
-            fontSize: 26,
-            border: "none"
-          }}>→</button>
-
+        <button onClick={shuffle} style={{ width: "100%", height: 70, borderRadius: 20, background: "#334155", border: "none", fontSize: 36 }}>🔀</button>
+        <div style={{ marginTop: 10, height: 70, background: "#1e293b", borderRadius: 24, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px" }}>
+          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#020617", color: "white", fontSize: 26, border: "none" }}>←</button>
+          <div style={{ color: "white" }}>{filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}</div>
+          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i + 1) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#2563eb", color: "white", fontSize: 26, border: "none" }}>→</button>
         </div>
       </div>
     </div>
