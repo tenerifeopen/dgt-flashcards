@@ -73,7 +73,7 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             model: "tts-1-hd", 
             input: normalizedText, 
-            voice: "alloy", // 🔴 ИЗМЕНЕНО: Самый чистый и нейтральный голос для испанского
+            voice: "nova", // 🔴 ИЗМЕНЕНО: Чистый женский испанский голос
             response_format: "mp3"
           })
         }
