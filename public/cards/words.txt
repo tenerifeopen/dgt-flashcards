@@ -1,12 +1,12 @@
-🚴 🚴 adelantar 🚴 🚴 = 🟡🟡🟡 обгонять 🟡🟡🟡
-❌ frenar ❌ = ❌ тормозить ❌
+adelantar  = 🟡🟡🟡 обгонять 🟡🟡🟡
+ frenar  = ❌ тормозить ❌
 acelerar = ускоряться
 girar = поворачивать
 conducir = водить
 cinturón de seguridad = ремень безопасности
 semáforo = светофор
 señal = знак
-⭐️peatón⭐️ = ⭐️пешеход⭐️
+peatón = ⭐️пешеход⭐️
 carril = полоса
 cruce = перекрёсток
 rotonda = круговое движение
@@ -185,7 +185,7 @@ Si no pretende adelantar = если не планирует обгон
 tener intención de adelantar = иметь намерение обгонять
 no tiene intención de adelantar = не собирается обгонять
 cuando no pretende adelantar = когда не собирается обгонять
-sensiblemente✨ =заметно ✨
+sensiblemente =заметно ✨
 causa justificada=обоснованная причина
 salvo causa justificada=за исключением случаев наличия уважительной причины
 velocidad anormalmente reducida = слишком низкая скорость
@@ -199,7 +199,7 @@ si no pretende adelantar=если вы не намерены обгонять
 Mantener la distancia de seguridad=Соблюдайте безопасную дистанцию.
 rueda de repuesto.=запасное колесо
 en determinadas situaciones=в определенных ситуациях
-Se considera que✨=Считается, что✨
+Se considera que=Считается, что✨
 desplazamientos=перемещения
 va a cambiar de carril para adelantar.=Он собирается перестроиться в другой ряд, чтобы совершить обгон.
 Ante la duda=Когда сомневаетесь
@@ -210,7 +210,6 @@ la puesta y la salida del sol=закат и восход солнца
 emergencia dentro de la vía.=чрезвычайная ситуация на дороге
 Sí, en todo tipo de vías.=Да, на всех типах дорог.
 Cuando termine el adelantamiento=Когда обгон завершен
-аааааааа✨ааааааааааа✨ааааааааааааааааааааааа=ааааааааааааа✨ааааааааааааааааааааааа
  extremar la precaución=Предельно усилить осторожность
 porque existe más probabilidad de caídas.=потому что существует больше вероятности падений
 ¿cómo debe actuar?=как необходимо действовать?
@@ -255,7 +254,7 @@ orden de prioridad=порядок приоритета
 Disminuir la velocidad=Замедлять
 de arriba abajo=в верх в низ
 permanecer=оставаться
-resto de usuarios🚴=другие пользователи🚴
+resto de usuarios=другие пользователи🚴
 una prueba deportiva=спортивное мероприятие
 permanentemente=навсегда
 siguientes=следующие
@@ -299,21 +298,19 @@ ante la línea transversal=перед линией пересечения
 por ambos lados=с обеих сторон
 Sí, salvo que=Да, если только
 la línea transversal=поперечная линия
- antes de pasar🔺🔻🔺🔻=перед тем, как пройти🔺🔻🔺🔻
-Inmediatamente⛔️=Немедленно
+ antes de pasar=перед тем, как пройти🔺🔻🔺🔻
+Inmediatamente=Немедленно
 aumentar la velocidad.=увеличить скорость
 prioridad respecto al sentido contrario=приоритет перед встречным движением
-en ambos sentidos=в обоих направлениях🚶
-🚜🚛🚚🛻🚐🚒🚎=❌ ❌ ❌ 🚕 ❌ ❌ ❌
+en ambos sentidos=в обоих направлениях🚶🚜🚛🚚🛻🚐🚒🚎=❌ ❌ ❌ 🚕 ❌ ❌ ❌
 ⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️=⚪️🟡⚪️🟡⚪️🟡⚪️🟡⚪️
 dedicados=Предназначенный
 mercancías explosivas o inflamables=взрывчатые или легковоспламеняющиеся товары
  contaminar el agua=загрязняют воду
 animales de montura=верховые животные с всадником
 excepto=кроме
-🚜🚛🚚🛻🚐🚒🚎
-🟡⬜️🟨🟧🟥🔶🔸🔻🔺🔻🔺⚪️🟡🟠🔴🟢✅❎❇️✳️⚠️‼️❓❗️💢🚫⛔️🛑⭕️❌🛟🚂🚃🚖🚘🚍🚔🛞🛺🏍🛴🚲🛵🚜🚛🚚🛻🚐🚒🚑🚓🏎🚎🚌🚙🚕🚗🚴💧💦💥⚡️✨⭐️🔥🐏🐏🤷‍♀️👍👎🔀➖1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟=⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢
-fatiga=усталость
+xxx=⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢⚪️🟡🟠🔴🟢
+fatiga=усталость🚜🚛🚚🛻🚐🚒🚎🟡⬜️🟨🟧🟥🔶🔸🔻🔺🔻🔺⚪️🟡🟠🔴🟢✅❎❇️✳️⚠️‼️❓❗️💢🚫⛔️🛑⭕️❌🛟🚂🚃🚖🚘🚍🚔🛞🛺🏍🛴🚲🛵🚜🚛🚚🛻🚐🚒🚑🚓🏎🚎🚌🚙🚕🚗🚴💧💦💥⚡️✨⭐️🔥🐏🐏🤷‍♀️👍👎🔀➖1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟
  o los tiempos excesivos de conducción=или чрезмерное время за рулем
 es aconsejable=целесообразно
 deteriorado=ухудшился
@@ -417,7 +414,7 @@ procurar que los demás conductores puedan=обеспечить возможно
 anticiparse a las maniobras=предвидеть маневры
 sobrevalora sus propias capacidades =переоценивает свои собственные способности
 Visión, anticipación y espacio= Обзор, предвидение и дистанция/пространство
-🔮 Anticipación= предугадывать ситуацию/думать что могут сделать другие водители
+ Anticipación= предугадывать ситуацию/думать что могут сделать другие водители
 Espacio= оставлять пространство / дистанцию спереди место сбоку
 Visión + anticipación + espacio= три принципа защитного вождения
 obligatorio para bicicletas = обязательно для велосипедов
@@ -435,25 +432,68 @@ afectar al funcionamiento = влиять на работу
 carga excesiva = перегрузка
 límites de carga permitidos = допустимая загрузка
 ¿Puede afectar la carga excesiva a los neumáticos? = Может ли перегрузка влиять на шины? (sí / да)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+viento lateral = боковой ветер
+reducir la velocidad = снизить скорость
+desviaciones = отклонения
+corregir la dirección = корректировать направление
+más modernos= более современные
+impide conducir = запрещает водить
+afectar a la conducción= влиять на вождение
+provocar somnolencia = вызывать сонливость
+dos sentidos = двустороннее движение
+proximidad = приближение
+circulación en dos sentidos = движение в двух направлениях
+acompañante = пассажир
+casco protector = защитный шлем
+ser responsable de = отвечать за
+asiento trasero = заднее сиденье
+distracciones = отвлечения
+cada vez más frecuentes = всё более частые
+accidentes por distracciones = аварии из-за отвлечений
+colocar = устанавливать, размещать
+una sillita para niños = детское автокресло
+el asiento = сиденье
+el airbag frontal = фронтальная подушка безопасности
+¿es correcto? = это правильно?
+nunca debe hacerse = никогда не должно делаться
+proteger al niño = защитить ребенка
+en caso de impacto frontal = в случае фронтального (лобового) удара
+se ha desconectado previamente = была предварительно отключена
+el vehículo = транспортное средство, автомобиль
+no disponga de = не располагает, не имеет (в наличии)
+los asientos traseros = задние сиденья
+si hay = если есть
+dos señales = два знака
+de distinto tipo = разного типа
+que parezcan estar = которые кажутся находящимися
+en contradicción = в противоречии
+¿cuál prevalece? = какой преобладает / имеет приоритет?
+la señal menos restrictiva = менее ограничивающий (более мягкий) знак
+la señal más restrictiva = более ограничивающий (более строгий) знак
+la prioritaria = приоритетный (знак)
+según el orden de prioridad = согласно порядку приоритета
+entre señales = между знаками
+salvo circunstancias especiales = за исключением особых обстоятельств
+todo usuario de la vía = каждый участник дорожного движения
+está obligado a obedecer = обязан подчиняться / обязан соблюдать
+las señales de circulación = дорожные знаки / сигналы дорожного движения
+únicamente = только, исключительно
+aun cuando = даже когда
+no estén colocadas = они не установлены / не размещены
+por la que circulen = по которой они движутся
+parezcan estar = кажутся находящимися
+en contradicción con las normas = в противоречии с общими правилами
+sí, mediante = да, посредством / да, с помощью (чего-либо)
+en la calzada = на проезжей части
+no, siempre se aplicará = нет, всегда будет применяться / распространяться
+¿debе respetar...? = должен ли соблюдать...? / должен ли уважать...?
+no, porque no es = нет, потому что это не (является)
+una señal fija = стационарный / постоянный знак
+sí, aunque no haya = да, даже если нет / да, хотя и нет (в наличии)
+los obreros = рабочие
+trabajando = работающие / в процессе работы
+en este tramo de obras = на этом участке дорожных работ
+sí, pero sólo cuando = да, но только тогда когда
 
 
 
