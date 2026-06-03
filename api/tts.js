@@ -41,7 +41,7 @@ export default async function handler(req, res) {
     }
 
     // 2. Идем в ElevenLabs
-    const voiceId = 'Mwj3e7PcAwAtt6twnDiJ';
+    const voiceId = 'RxRxlzki0XvXtoQQfNj4';
     const modelId = 'eleven_multilingual_v2';
     
     const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
