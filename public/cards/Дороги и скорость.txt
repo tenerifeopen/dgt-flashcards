@@ -96,6 +96,63 @@ están obligados a detenerse = обязаны остановиться
 todos = все
 el rojo y el azul = красный и синий
 el verde y el rojo = зеленый и красный
+en una vía = на дороге
+con varios carriles = с несколькими полосами
+para el mismo sentido = для одного и того же направления
+de la circulación = движения
+las indicaciones de las señales = указания знаков
+¿se aplican a...? = распространяются ли на...? / применяются ли к...?
+toda la anchura = вся ширина
+la calzada = проезжая часть
+como regla general = как общее правило
+aunque su aplicación = хотя их применение
+podrá limitarse a = сможет быть ограничено (чем-либо)
+uno o más carriles = одна или несколько полос
+sólo afectarán al carril = повлияют только на полосу
+más próximo a la señalización = ближайшую к знакам / разметке
+en una vía de tres carriles = на дороге с тремя полосами движения
+¿puede limitarse la aplicación de una señal...? = может ли быть ограничено применение знака...?
+a uno o dos carriles = одной или двумя полосами
+sí, mediante = да, посредством / да, с помощью (чего-либо)
+las marcas viales = дорожная разметка
+en la calzada = на проезжей части
+no, siempre se aplicará = нет, всегда будет применяться / распространяться
+a toda la anchura de la calzada = на всю ширину проезжей части
+sí, siempre que = да, при условии что / да, всякий раз когда
+afecte al menos a = затрагивает как минимум (что-то)
+las señales de obras = знаки дорожных работ / временные знаки
+tienen el mismo significado = имеют то же самое значение
+que las usadas вen = чем те, которые используются на
+los tramos sin obras = участки без дорожных работ
+establecen = они устанавливают
+para los tramos de obras = для участков дорожных работ
+una reducción de la velocidad máxima = снижение максимальной скорости
+en 10 km/h (diez kilómetros por hora) = на 10 км/ч
+tienen distinto símbolo = имеют другой символ
+y tamaño = и размер
+estas marcas viales = эта дорожная разметка
+y señales amarillas = и желтые знаки
+¿qué indican? = на что указывают? / что означают?
+que es una zona de obras = что это зона ремонтных работ
+un carril abierto = открытая полоса
+en sentido contrario = в противоположном направлении
+al habitual = обычному / привычному
+cambia el tipo de vía = меняется тип дороги
+que se termina = что заканчивается
+el carril izquierdo = левая полоса
+y que hay obras = и что впереди дорожные работы
+hay una salida obligatoria = есть обязательный съезд / выход
+a la derecha = направо
+un carril para circulación lenta = полоса для медленного движения
+
+
+
+
+
+
+
+
+
 
 
 
