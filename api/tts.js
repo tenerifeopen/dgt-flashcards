@@ -1,7 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-
 export default async function handler(req, res) {
-  // Разрешаем только POST запросы
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -12,31 +9,38 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Text is required' });
   }
 
-  // Инициализация Supabase
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const supabaseKey = process.env.SUPABASE_ANON_KEY;
+  // Читаем ключи (теперь SUPABASE_KEY вместо SUPABASE_ANON_KEY)
   const elevenLabsApiKey = process.env.ELEVENLABS_API_KEY;
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_KEY;
 
-  if (!supabaseUrl || !supabaseKey || !elevenLabsApiKey) {
-    return res.status(500).json({ error: 'Server configuration error' });
+  if (!elevenLabsApiKey) {
+    return res.status(500).json({ error: 'На Vercel не найден ключ ELEVENLABS_API_KEY!' });
+  }
+  if (!supabaseUrl) {
+    return res.status(500).json({ error: 'На Vercel не найден ключ SUPABASE_URL!' });
+  }
+  if (!supabaseKey) {
+    return res.status(500).json({ error: 'На Vercel не найден ключ SUPABASE_KEY!' });
   }
 
-  const supabase = createClient(supabaseUrl, supabaseKey);
-
   try {
+    const { createClient } = await import('@supabase/supabase-js');
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     // 1. Проверяем кеш в Supabase
     const { data: cached, error: dbError } = await supabase
       .from('tts_cache')
       .select('audio')
       .eq('text', text)
-      .single();
+      .limit(1);
 
-    if (cached && cached.audio) {
-      // Если нашли в базе — сразу возвращаем
-      return res.status(200).json({ audio: cached.audio, source: 'supabase' });
+    // Если нашли в базе — сразу возвращаем
+    if (!dbError && cached && cached.length > 0 && cached[0].audio) {
+      return res.status(200).json({ audio: cached[0].audio, source: 'supabase' });
     }
 
-    // 2. Если в базе нет — идем в ElevenLabs
+    // 2. Идем в ElevenLabs
     const voiceId = 'VKNR9COjyw4jDFfruaJ3';
     const modelId = 'eleven_multilingual_v2';
     
@@ -58,26 +62,19 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      // Если ElevenLabs выдал ошибку (лимит, нет доступа и тд)
-      const errorData = await response.json();
-      console.error('ElevenLabs API Error:', errorData);
-      return res.status(503).json({ error: 'ElevenLabs unavailable', details: errorData });
+      const errorText = await response.text();
+      return res.status(503).json({ error: 'ElevenLabs отклонил запрос', details: errorText });
     }
 
-    // 3. Конвертируем аудио из ElevenLabs в base64
     const arrayBuffer = await response.arrayBuffer();
     const base64Audio = Buffer.from(arrayBuffer).toString('base64');
 
-    // 4. Сохраняем в Supabase для будущего кеша
-    await supabase
-      .from('tts_cache')
-      .upsert({ text: text, audio: base64Audio }, { onConflict: 'text' });
+    // 3. Сохраняем в Supabase
+    await supabase.from('tts_cache').upsert({ text: text, audio: base64Audio }, { onConflict: 'text' });
 
-    // 5. Возвращаем на фронтенд
     return res.status(200).json({ audio: base64Audio, source: 'elevenlabs' });
 
   } catch (error) {
-    console.error('Server TTS Error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: 'Ошибка сервера', details: error.message });
   }
 }
