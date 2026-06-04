@@ -17,7 +17,6 @@ permitido = разрешено
 peligro = опасность
 precaución = осторожность
 detenerse = остановиться
-arrancar = трогаться
 Arranque el motor = заведите мотор
 Iniciamos la marcha = начинаем движение
 Comenzamos la prueba = начинаем экзамен
