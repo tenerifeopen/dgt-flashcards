@@ -88,7 +88,7 @@ export default function App() {
     
     // 🔴 СКОРОСТЬ ВОСПРОИЗВЕДЕНИЯ ЗВУКА 🔴
     // 1.0 - обычная скорость, 1.2 - на 20% быстрее, 0.8 - медленнее
-    audio.playbackRate = 0.9; 
+    audio.playbackRate = 0.1; 
 
     await new Promise((resolve) => {
       audio.onloadeddata = resolve;
