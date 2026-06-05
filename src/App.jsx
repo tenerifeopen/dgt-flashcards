@@ -86,9 +86,8 @@ export default function App() {
 
     const audio = new Audio(url);
     
-    // 🔴 СКОРОСТЬ ВОСПРОИЗВЕДЕНИЯ ЗВУКА 🔴
-    // 1.0 - обычная скорость, 1.2 - на 20% быстрее, 0.8 - медленнее
-    audio.playbackRate = 0.9; 
+    // СКОРОСТЬ ВОСПРОИЗВЕДЕНИЯ ЗВУКА
+    audio.playbackRate = 1.2; 
 
     await new Promise((resolve) => {
       audio.onloadeddata = resolve;
@@ -153,7 +152,6 @@ export default function App() {
       });
 
       if (!res.ok) {
-        // ЕСЛИ ОШИБКА — ПОКАЗЫВАЕМ ОКОШКО С ТЕКСТОМ ОШИБКИ!
         const errorData = await res.json();
         alert("ОШИБКА СЕРВЕРА: " + JSON.stringify(errorData));
         playGoogleSpeech(rawText);
@@ -176,6 +174,14 @@ export default function App() {
     }
   };
 
+  // ФУНКЦИЯ ОЧИСТКИ КЕША
+  const clearBrowserCache = () => {
+    if (window.confirm('Удалить весь кеш озвучки из браузера? (При следующем нажатии 🔊 голос скачается заново)')) {
+      localStorage.clear();
+      alert('Кеш очищен!');
+    }
+  };
+
   if (screen === "menu") {
     return (
       <div style={{ minHeight: "100vh", background: "#0f172a", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: font }}>
@@ -187,6 +193,12 @@ export default function App() {
               {t.name}
             </button>
           ))}
+          
+          {/* КНОПКА ОЧИСТКИ КЕША */}
+          <button onClick={clearBrowserCache} style={{ width: "100%", marginTop: 30, padding: 14, borderRadius: 12, border: "none", background: "#94a3b8", color: "white", fontSize: 16, fontWeight: 500 }}>
+            🗑️ Очистить кеш браузера
+          </button>
+
         </div>
       </div>
     );
