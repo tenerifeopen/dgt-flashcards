@@ -1,14 +1,14 @@
 adelantar  = 🟡🟡🟡 обгонять 🟡🟡🟡
  frenar  = ❌ тормозить ❌
 acelerar = ускоряться
-girar = поворачивать
-conducir = водить
-cinturón de seguridad = ремень безопасности
-semáforo = светофор
-señal = знак
+girar? = поворачивать
+conducir? = водить
+cinturón de seguridad? = ремень безопасности
+semáforo? = светофор
+señal? = знак
 peatón = ⭐️пешеход⭐️
-carril = полоса
-cruce = перекрёсток
+carril? = полоса
+cruce? = перекрёсток
 rotonda = круговое движение
 prioridad = приоритет
 ceder el paso = уступить дорогу
@@ -501,7 +501,7 @@ y que hay obras = и что впереди дорожные работы
 hay una salida obligatoria = есть обязательный съезд / выход
 a la derecha = направо
 un carril para circulación lenta = полоса для медленного движения
-acelerar ! = ускоряться
+acelerar? = ускоряться
 
 
 
