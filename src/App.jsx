@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const topics = [
-  { name: "Слова и выражения", file: "/cards/words.txt" },
+  { name: "Слова и выражения", file: "/cards/Слова и выражения.txt" },
   { name: "Документы", file: "/cards/Документы.txt" },
   { name: "Дороги и скорость", file: "/cards/Дороги и скорость.txt" },
   { name: "Знаки и правила", file: "/cards/Знаки и правила.txt" },
