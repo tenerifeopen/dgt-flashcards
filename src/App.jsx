@@ -28,18 +28,15 @@ export default function App() {
   const [onlyFav, setOnlyFav] = useState(false);
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
   
-  // Состояние для хранения количества карточек в каждом разделе
   const [topicCounts, setTopicCounts] = useState({});
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
-  // ЭФФЕКТ: Подсчет карточек при загрузке меню
   useEffect(() => {
     topics.forEach(async (t) => {
       try {
         const res = await fetch(t.file);
         const text = await res.text();
-        // Считаем только строки, где есть знак = (это и есть карточки)
         const count = text.split("\n").filter(line => line.includes("=")).length;
         setTopicCounts(prev => ({ ...prev, [t.file]: count }));
       } catch (e) {
@@ -104,7 +101,7 @@ export default function App() {
     const url = URL.createObjectURL(blob);
 
     const audio = new Audio(url);
-    audio.playbackRate = 0.9; // Скорость 0.9 по твоему желанию
+    audio.playbackRate = 0.9;
 
     await new Promise((resolve) => {
       audio.onloadeddata = resolve;
@@ -215,7 +212,7 @@ export default function App() {
               style={{ 
                 width: "100%", 
                 marginTop: 10, 
-                padding: "12px 18px", // Немного уменьшил паддинг, чтобы кнопка не была слишком толстой
+                padding: "14px 18px", 
                 borderRadius: 12, 
                 border: "none", 
                 background: "#2563eb", 
@@ -225,13 +222,17 @@ export default function App() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                cursor: "pointer"
+                cursor: "pointer",
+                textAlign: "left", // Прижимаем текст влево
+                gap: "10px" // Отступ между текстом и цифрой
               }}
             >
-              <span>{t.name}</span>
-              {/* ВЫВОДИМ ЦИФРУ */}
+              {/* Текст занимает всё свободное место */}
+              <span style={{ flex: 1 }}>{t.name}</span>
+              
+              {/* Цифра строго справа, не сжимается */}
               {topicCounts[t.file] !== undefined && (
-                <span style={{ fontSize: 14, fontWeight: 400, color: "#1e3a8a" }}>
+                <span style={{ fontSize: 14, fontWeight: 400, color: "#1e3a8a", flexShrink: 0 }}>
                   {topicCounts[t.file]}
                 </span>
               )}
@@ -290,12 +291,4 @@ export default function App() {
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 12 }}>
         <button onClick={shuffle} style={{ width: "100%", height: 70, borderRadius: 20, background: "#334155", border: "none", fontSize: 36 }}>🔀</button>
-        <div style={{ marginTop: 10, height: 70, background: "#1e293b", borderRadius: 24, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px" }}>
-          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#020617", color: "white", fontSize: 26, border: "none" }}>←</button>
-          <div style={{ color: "white" }}>{filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}</div>
-          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i + 1) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#2563eb", color: "white", fontSize: 26, border: "none" }}>→</button>
-        </div>
-      </div>
-    </div>
-  );
-}
+        <div style={{ marginTop: 10, height: 70, background: "#1e293b", borderRadius: 24, display: "flex", alignItems: "center", justifyContent:
