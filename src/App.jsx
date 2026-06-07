@@ -88,7 +88,7 @@ export default function App() {
     const url = URL.createObjectURL(blob);
 
     const audio = new Audio(url);
-    audio.playbackRate = 1.2; // Скорость воспроизведения
+    audio.playbackRate = 0.9; // Скорость воспроизведения
 
     await new Promise((resolve) => {
       audio.onloadeddata = resolve;
