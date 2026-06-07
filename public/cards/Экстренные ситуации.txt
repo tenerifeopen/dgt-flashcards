@@ -10,7 +10,11 @@ el café = кофе
 el té = чай
 etc. (etcétera) = и так далее
 sí, pero sólo agua = да, но только воду
-
+causas de mortalidad = причины смертности
+accidentes de moto и ciclomotor = аварии с участием мотоциклов и мопедов
+el arrollamiento = наезд (переезд колесами, сбивание)
+los golpes contra el asfalto = удары об асфальт
+las caídas = падения
 
 
 
