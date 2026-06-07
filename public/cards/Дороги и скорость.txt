@@ -195,7 +195,15 @@ en cualquier caso = в любом случае
 las circunstancias del tráfico = обстоятельства дорожного движения
 no entorpece la marcha = не затрудняет движение
 sólo puede circular = может двигаться только
-
+un camión = грузовик
+dedicado al transporte de mercancías = предназначенный для перевозки грузов
+¿podrá ser sometido a...? = может ли быть подвергнут (чему-либо)...?
+una inspección técnica aleatoria = выборочная / случайная техническая проверка (техосмотр)
+en carretera = на дороге / на трассе
+la sujeción de la carga = крепление / фиксация груза
+en vigor = действующий / имеющий силу
+la inspección técnica periódica = периодический (плановый) техосмотр
+una estación ITV = станция техосмотра (Inspección Técnica de Vehículos)
 
 
 

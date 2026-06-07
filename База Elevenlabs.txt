@@ -1,0 +1,33 @@
+TxGEqnHWrfWFTfGW9XjX
+
+
+
+   Ключ от https://elevenlabs.io/app/settings/workspaces
+
+19cfe51a800efaf9ecddfdd880654a8ae0eea92f1eaf1529215afc8832b5ca00
+
+
+
+Пароль от
+https://supabase.com/dashboard/new/ndazcshuxjczariijhkd
+
+-a7Uz%DNBAg+F!_
+
+
+
+
+
+Публичный ключ 
+sb_publishable_4T34cl0NQe44i6jUqv8Ylw_Le44F-JL
+
+
+
+Project ID
+Reference used in APIs and URLs.
+jctwcztrnewdzzqfjupu
+
+SUPABASE_URL=https://jctwcztrnewdzzqfjupu.supabase.co
+
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjdHdjenRybmV3ZHp6cWZqdXB1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDIwMjY5OCwiZXhwIjoyMDg5Nzc4Njk4fQ.VBJjaoxKZBe657wpEDrg3MsS1q_lS458hyh4QL6LJuE
