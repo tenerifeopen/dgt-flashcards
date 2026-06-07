@@ -204,6 +204,38 @@ la sujeción de la carga = крепление / фиксация груза
 en vigor = действующий / имеющий силу
 la inspección técnica periódica = периодический (плановый) техосмотр
 una estación ITV = станция техосмотра (Inspección Técnica de Vehículos)
+en llano = на ровной поверхности (без уклона)
+pendiente ascendente = подъем (уклон вверх)
+el centro de la calzada = центр проезжей части
+apoyar en el bordillo = упереть в бордюр
+el borde derecho de la calzada = правый край проезжей части
+hay nieve en la calzada = на проезжей части снег
+circular lentamente = ехать (двигаться) медленно
+la velocidad más larga = самая высокая (длинная) передача
+la primera relación de marchas = первая передача (соотношение передач)
+acelerar a fondo = выжимать газ в пол (резко ускоряться)
+patine el vehículo = автомобиль буксует / скользит (теряет сцепление)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

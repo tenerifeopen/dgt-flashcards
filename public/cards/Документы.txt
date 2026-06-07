@@ -18,6 +18,37 @@ que suponga realizar... = которое предполагает выполне
 adaptaciones en su vehículo = адаптация / модификация транспортного средства
 mientras... esté en vigor = пока... остается в силе (действительно)
 un certificado médico = медицинская справка / сертификат
+el seguro obligatorio = обязательная страховка (ОСАГО)
+daños no cubiertos = непокрываемый ущерб (то, что страховка не оплатит)
+el causante de un accidente = виновник (причина) аварии
+el conductor responsable = ответственный (виновный) водитель
+los ocupantes del vehículo = пассажиры (находящиеся в транспортном средстве)
+el vehículo contrario = противоположный (пострадавший) автомобиль
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

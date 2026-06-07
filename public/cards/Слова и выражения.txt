@@ -510,6 +510,39 @@ el cinturón de seguridad = ремень безопасности
 en vez de = вместо
 excepcionalmente=Исключительно
 no disponga de... = не располагает / не имеет в наличии (чего-либо)
+mortalidad = смертность
+caídas = падения
+golpes = удары
+asfalto = асфальт
+contra el asfalto = об асфальт
+arrollamiento = наезд
+únicamente = исключительно / только (слово-ограничитель, которое почти всегда указывает на неверный вариант ответа)
+velocidad lenta = низкая (медленная) скорость
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

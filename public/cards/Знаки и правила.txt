@@ -185,6 +185,37 @@ utilizar dispositivos retrorreflectantes que permitan distinguirlos=исполь
 la calzada está totalmente cerrada al tráfico=Дорога полностью перекрыта для движения транспорта.
 Prohíben el paso a través de la línea imaginaria que las une=Они запрещают пересечение воображаемой линии, соединяющей их.
 Prohíben atravesar la línea real o imaginaria que los une.=Они запрещают пересекать реальную или воображаемую линию, которая их объединяет.
+cuando encuentre estas señales = когда встретите эти знаки
+obedecer la señal = подчиняться знаку
+pasar obligatoriamente = проехать в обязательном порядке
+indica la flecha = указывает стрелка
+la entrada está prohibida = въезд запрещен
+la señal más restrictiva = наиболее ограничивающий (строгий) знак (помним, что это правило работает только при явном противоречии знаков)
+en sentido contrario = в противоположном направлении / по встречке
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

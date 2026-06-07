@@ -24,6 +24,44 @@ lo más cerca posible del borde derecho=как можно ближе к прав
 pasar si lo permite el semáforo.=ехать если светофор позволяет.
 ¿Cuándo puede abrir las puertas=Когда можно будет открыть двери?
  Sí, y además está prohibido.= Да, и кроме того это запрещено 
+estacionar un turismo = припарковать легковой автомобиль
+en llano = на ровной поверхности (без уклона)
+el conductor se aleja = водитель отлучается (уходит)
+impedir su uso sin autorización = предотвратить использование автомобиля без разрешения
+colocar calzos = установить противооткатные упоры ("башмаки")
+apoyar las ruedas en la acera = упереть колеса в бордюр
+la caja de cambios = коробка передач
+posición de estacionamiento = положение парковки (режим "P" на автоматической КПП)
+circular lentamente = ехать (двигаться) медленно
+la velocidad más larga = самая высокая (длинная) передача
+la primera relación de marchas = первая передача (соотношение передач)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

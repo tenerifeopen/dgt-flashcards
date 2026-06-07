@@ -1,1 +1,2 @@
-Qué es una norma? = Правило
+vehículo con remolque = автомобиль с прицепом
+la caja de cambios = коробка передач
