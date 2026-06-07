@@ -26,11 +26,27 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
-  
-  // Флаг: идет ли сейчас загрузка или воспроизведение звука
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
+  
+  // Состояние для хранения количества карточек в каждом разделе
+  const [topicCounts, setTopicCounts] = useState({});
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+
+  // ЭФФЕКТ: Подсчет карточек при загрузке меню
+  useEffect(() => {
+    topics.forEach(async (t) => {
+      try {
+        const res = await fetch(t.file);
+        const text = await res.text();
+        // Считаем только строки, где есть знак = (это и есть карточки)
+        const count = text.split("\n").filter(line => line.includes("=")).length;
+        setTopicCounts(prev => ({ ...prev, [t.file]: count }));
+      } catch (e) {
+        console.error("Ошибка подсчета для", t.file);
+      }
+    });
+  }, []);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -88,7 +104,7 @@ export default function App() {
     const url = URL.createObjectURL(blob);
 
     const audio = new Audio(url);
-    audio.playbackRate = 0.9; // Скорость воспроизведения
+    audio.playbackRate = 0.9; // Скорость 0.9 по твоему желанию
 
     await new Promise((resolve) => {
       audio.onloadeddata = resolve;
@@ -134,10 +150,8 @@ export default function App() {
 
   const speak = async (e) => {
     e.stopPropagation();
-    // Если звук уже грузится/играет - выходим из функции, не делаем ничего
     if (!current || isLoadingAudio) return; 
 
-    // Включаем флаг загрузки (кнопка станет серой с песочными часами)
     setIsLoadingAudio(true);
 
     const rawText = show ? current.answer : current.question;
@@ -177,8 +191,6 @@ export default function App() {
       alert("ОШИБКА ЗАПРОСА: " + err.message);
       playGoogleSpeech(rawText);
     } finally {
-      // finally выполняется ВСЕГДА — и при успехе, и при ошибке
-      // Выключаем флаг загрузки (кнопка снова синяя с динамиком)
       setIsLoadingAudio(false);
     }
   };
@@ -197,8 +209,32 @@ export default function App() {
         <div style={{ background: "#e5e7eb", padding: 20, borderRadius: 20, width: 320 }}>
           <h2 style={{ textAlign: "center", color: "#000", fontSize: 26, fontWeight: 700 }}>📚 МОИ КАРТОЧКИ</h2>
           {topics.map((t, i) => (
-            <button key={i} onClick={() => loadTopic(t.file)} style={{ width: "100%", marginTop: 10, padding: 18, borderRadius: 12, border: "none", background: "#2563eb", color: "white", fontSize: 18, fontWeight: 500 }}>
-              {t.name}
+            <button 
+              key={i} 
+              onClick={() => loadTopic(t.file)} 
+              style={{ 
+                width: "100%", 
+                marginTop: 10, 
+                padding: "12px 18px", // Немного уменьшил паддинг, чтобы кнопка не была слишком толстой
+                borderRadius: 12, 
+                border: "none", 
+                background: "#2563eb", 
+                color: "white", 
+                fontSize: 18, 
+                fontWeight: 500,
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                cursor: "pointer"
+              }}
+            >
+              <span>{t.name}</span>
+              {/* ВЫВОДИМ ЦИФРУ */}
+              {topicCounts[t.file] !== undefined && (
+                <span style={{ fontSize: 14, fontWeight: 400, color: "#1e3a8a" }}>
+                  {topicCounts[t.file]}
+                </span>
+              )}
             </button>
           ))}
           
@@ -222,7 +258,6 @@ export default function App() {
         <div onClick={() => setShow(!show)} style={{ width: "100%", height: "60vh", borderRadius: 20, overflow: "hidden", position: "relative" }}>
           <div onClick={toggleFavorite} style={{ position: "absolute", top: 14, right: 14, fontSize: 30, zIndex: 30, cursor: "pointer", color: favorites.includes(current?.question) ? "#facc15" : "#9ca3af" }}>★</div>
           
-          {/* КНОПКА ОЗВУЧКИ С ЗАЩИТОЙ ОТ ДВОЙНОГО НАЖАТИЯ */}
           <button 
             onClick={speak} 
             disabled={isLoadingAudio} 
@@ -233,16 +268,16 @@ export default function App() {
               width: 70, 
               height: 48, 
               borderRadius: 16, 
-              background: isLoadingAudio ? "#64748b" : "#2563eb", // Серая если грузит, синяя если готова
+              background: isLoadingAudio ? "#64748b" : "#2563eb",
               color: "white", 
               fontSize: 24, 
               border: "none", 
               zIndex: 30,
-              cursor: isLoadingAudio ? "not-allowed" : "pointer", // Курсор "запрещено" при загрузке
-              opacity: isLoadingAudio ? 0.7 : 1 // Чуть прозрачная при загрузке
+              cursor: isLoadingAudio ? "not-allowed" : "pointer", 
+              opacity: isLoadingAudio ? 0.7 : 1 
             }}
           >
-            {isLoadingAudio ? "⏳" : "🔊"} {/* Иконка меняется */}
+            {isLoadingAudio ? "⏳" : "🔊"}
           </button>
 
           <div style={{ width: "100%", height: "100%", background: show ? "#2563eb" : "#e5e7eb", color: show ? "#fff" : "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
