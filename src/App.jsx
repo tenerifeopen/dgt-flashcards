@@ -26,6 +26,9 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
+  
+  // Флаг: идет ли сейчас загрузка или воспроизведение звука
+  const [isLoadingAudio, setIsLoadingAudio] = useState(false);
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
@@ -85,9 +88,7 @@ export default function App() {
     const url = URL.createObjectURL(blob);
 
     const audio = new Audio(url);
-    
-    // СКОРОСТЬ ВОСПРОИЗВЕДЕНИЯ ЗВУКА
-    audio.playbackRate = 0.9; 
+    audio.playbackRate = 1.2; // Скорость воспроизведения
 
     await new Promise((resolve) => {
       audio.onloadeddata = resolve;
@@ -133,7 +134,11 @@ export default function App() {
 
   const speak = async (e) => {
     e.stopPropagation();
-    if (!current) return;
+    // Если звук уже грузится/играет - выходим из функции, не делаем ничего
+    if (!current || isLoadingAudio) return; 
+
+    // Включаем флаг загрузки (кнопка станет серой с песочными часами)
+    setIsLoadingAudio(true);
 
     const rawText = show ? current.answer : current.question;
     const cacheKey = `tts_${rawText.trim()}`;
@@ -171,10 +176,13 @@ export default function App() {
     } catch (err) {
       alert("ОШИБКА ЗАПРОСА: " + err.message);
       playGoogleSpeech(rawText);
+    } finally {
+      // finally выполняется ВСЕГДА — и при успехе, и при ошибке
+      // Выключаем флаг загрузки (кнопка снова синяя с динамиком)
+      setIsLoadingAudio(false);
     }
   };
 
-  // ФУНКЦИЯ ОЧИСТКИ КЕША
   const clearBrowserCache = () => {
     if (window.confirm('Удалить весь кеш озвучки из браузера? (При следующем нажатии 🔊 голос скачается заново)')) {
       localStorage.clear();
@@ -194,7 +202,6 @@ export default function App() {
             </button>
           ))}
           
-          {/* КНОПКА ОЧИСТКИ КЕША */}
           <button onClick={clearBrowserCache} style={{ width: "100%", marginTop: 30, padding: 14, borderRadius: 12, border: "none", background: "#94a3b8", color: "white", fontSize: 16, fontWeight: 500 }}>
             🗑️ Очистить кеш браузера
           </button>
@@ -214,7 +221,30 @@ export default function App() {
       <div style={{ width: "100%", maxWidth: 420, marginTop: 10 }}>
         <div onClick={() => setShow(!show)} style={{ width: "100%", height: "60vh", borderRadius: 20, overflow: "hidden", position: "relative" }}>
           <div onClick={toggleFavorite} style={{ position: "absolute", top: 14, right: 14, fontSize: 30, zIndex: 30, cursor: "pointer", color: favorites.includes(current?.question) ? "#facc15" : "#9ca3af" }}>★</div>
-          <button onClick={speak} style={{ position: "absolute", bottom: 14, right: 14, width: 70, height: 48, borderRadius: 16, background: "#2563eb", color: "white", fontSize: 24, border: "none", zIndex: 30 }}>🔊</button>
+          
+          {/* КНОПКА ОЗВУЧКИ С ЗАЩИТОЙ ОТ ДВОЙНОГО НАЖАТИЯ */}
+          <button 
+            onClick={speak} 
+            disabled={isLoadingAudio} 
+            style={{ 
+              position: "absolute", 
+              bottom: 14, 
+              right: 14, 
+              width: 70, 
+              height: 48, 
+              borderRadius: 16, 
+              background: isLoadingAudio ? "#64748b" : "#2563eb", // Серая если грузит, синяя если готова
+              color: "white", 
+              fontSize: 24, 
+              border: "none", 
+              zIndex: 30,
+              cursor: isLoadingAudio ? "not-allowed" : "pointer", // Курсор "запрещено" при загрузке
+              opacity: isLoadingAudio ? 0.7 : 1 // Чуть прозрачная при загрузке
+            }}
+          >
+            {isLoadingAudio ? "⏳" : "🔊"} {/* Иконка меняется */}
+          </button>
+
           <div style={{ width: "100%", height: "100%", background: show ? "#2563eb" : "#e5e7eb", color: show ? "#fff" : "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <div style={{ width: "100%", textAlign: "center", padding: 20, fontSize: "clamp(27px, 6vw, 40px)", fontWeight: show ? 700 : 500, lineHeight: 1.6 }}>
               {show ? current?.answer : current?.question}
