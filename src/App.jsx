@@ -291,4 +291,12 @@ export default function App() {
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 12 }}>
         <button onClick={shuffle} style={{ width: "100%", height: 70, borderRadius: 20, background: "#334155", border: "none", fontSize: 36 }}>🔀</button>
-        <div style={{ marginTop: 10, height: 70, background: "#1e293b", borderRadius: 24, display: "flex", alignItems: "center", justifyContent:
+        <div style={{ marginTop: 10, height: 70, background: "#1e293b", borderRadius: 24, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px" }}>
+          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#020617", color: "white", fontSize: 26, border: "none" }}>←</button>
+          <div style={{ color: "white" }}>{filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}</div>
+          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i + 1) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#2563eb", color: "white", fontSize: 26, border: "none" }}>→</button>
+        </div>
+      </div>
+    </div>
+  );
+}
