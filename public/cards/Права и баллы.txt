@@ -1,2 +1,7 @@
-Como policía tienes una pistola. Ahora Elena también tiene una. Pero la suya es más peligrosa.=Как у полицейского, у тебя есть пистолет. Теперь и у Лены есть. Но её пистолет опаснее.
-Feliz cumpleaños. Después del baloncesto, Lena ya tiene trabajo=С днем рождения.После баскетбола у Лены теперь есть работа.
+perder puntos = терять баллы
+el saldo (de puntos) = баланс (баллов)
+sin abrochar = непристегнутый
+mal abrochado = плохо/неправильно пристегнутый
+es una infracción = это правонарушение
+supone la pérdida de... = влечет за собой потерю...
+el conductor = водитель

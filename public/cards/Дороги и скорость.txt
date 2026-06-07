@@ -144,6 +144,110 @@ y que hay obras = и что впереди дорожные работы
 hay una salida obligatoria = есть обязательный съезд / выход
 a la derecha = направо
 un carril para circulación lenta = полоса для медленного движения
+causar peligro = создавать опасность
+entorpecer la circulación = мешать движению
+molestar a otros usuarios = создавать неудобства другим
+Todo conductor está obligado a... = Каждый водитель обязан... (не создавать опасность и не мешать другим)
+estar obligado a = быть обязанным
+túnel = тоннель
+un carril para cada sentido = одна полоса в каждом направлении
+distancia de seguridad mínima = минимальная безопасная дистанция
+no pretende adelantar = не собирается обгонять
+En un túnel con un carril por sentido, ¿qué distancia mínima debe dejar? = В тоннеле с одной полосой в каждом направлении какую минимальную дистанцию нужно держать? (100 metros)
+¿Qué distancia mínima? = Какая минимальная дистанция? → 100 metros
+¿Qué distancia o intervalo? = Какая дистанция или интервал? → 100 metros o 4 segundos
+respecto a = уважая (что-то) / что касается / по отношению к
+la velocidad anormalmente reducida = аномально пониженная скорость
+¿a qué velocidad mínima...? = с какой минимальной скоростью...?
+salvo causa justificada = за исключением обоснованной причины
+deberá circular = должен двигаться / обязан циркулировать
+una furgoneta = фургон (малотоннажный грузовой автомобиль)
+por una carretera convencional = по обычной (междугородней) автомобильной дороге
+debido a una avería = из-за поломки / по причине аварии (технической неисправности)
+un turismo = легковой автомобиль
+¿por dónde lo hará? = где он будет это делать?
+por el carril derecho = по правой полосе
+si perturba gravemente = если серьезно мешает / нарушает (порядок)
+la circulación = дорожное движение
+debe circular = должен двигаться
+por el arcén = по обочине
+para no ser un obstáculo = чтобы не быть препятствием
+todo conductor = каждый водитель
+circule detrás de otro = движется позади другого
+está obligado a dejar = обязан оставлять
+entre ambos = между обоими / между ними
+como mínimo = как минимум
+un espacio libre = свободное пространство
+le permita detenerse = позволит ему остановиться
+en caso de frenado brusco = в случае резкого торможения
+sin colisionar con él = без столкновения с ним / не столкнувшись с ним
+una distancia de 50 (cincuenta) metros = дистанция в 50 метров
+los vehículos que le sigan = транспортные средства, которые за ним следуют
+adelantarlo con seguridad = безопасно обогнать его
+en vías interurbanas = на междугородних (загородных) дорогах
+con tres o más carriles = с тремя или более полосами
+para el mismo sentido = для одного и того же направления
+un conjunto de vehículos = состав транспортных средств (автомобиль с прицепом / автопоезд)
+de más de 7 (siete) metros = длиной более 7 метров
+¿podrá utilizar...? = сможет ли использовать...?
+el carril inmediato al derecho = полоса, непосредственно прилегающая к правой (то есть вторая полоса)
+en cualquier caso = в любом случае
+las circunstancias del tráfico = обстоятельства дорожного движения
+no entorpece la marcha = не затрудняет движение
+sólo puede circular = может двигаться только
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

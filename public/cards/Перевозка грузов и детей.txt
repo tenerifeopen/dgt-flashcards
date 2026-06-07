@@ -1,1 +1,4 @@
-Qué es una norma? = Правило
+orientado hacia delante = ориентированный по ходу движения (вперед)
+orientado hacia atrás = ориентированный против хода движения (назад)
+el airbag esté desactivado = подушка безопасности отключена
+no disponga de... = не располагает / не имеет в наличии (чего-либо)

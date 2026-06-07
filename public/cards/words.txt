@@ -499,6 +499,36 @@ hay una salida obligatoria = есть обязательный съезд / вы
 a la derecha = направо
 un carril para circulación lenta = полоса для медленного движения
 acelerar? = ускоряться
+No, está prohibido= Нет, это запрещено
+un menor de edad = несовершеннолетний
+viaje, excepcionalmente = едет, в виде исключения
+en el asiento delantero = на переднем сиденье
+los asientos traseros = задние сиденья
+no sea posible instalar = невозможно установить
+sistemas de retención infantil = детские удерживающие системы (детские кресла / бустеры)
+el cinturón de seguridad = ремень безопасности
+en vez de = вместо
+excepcionalmente=Исключительно
+no disponga de... = не располагает / не имеет в наличии (чего-либо)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

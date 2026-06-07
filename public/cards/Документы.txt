@@ -1,8 +1,23 @@
 Cuáles son los daños no cubiertos?=Какие виды ущерба не покрываются страховкой?
 ¿Quién es el responsable de pasar la ITV=Кто отвечает за прохождение техосмотра транспортного средства (ТТС)?
 Si ha cambiado de domicilio=Если вы изменили свой адрес
-
-
+¿en qué territorio? = на какой территории?
+podrá acreditar = сможет подтвердить / доказать
+ante la policía de tráfico = перед дорожной полицией
+que es titular de... = что является владельцем / обладателем (чего-либо)
+un permiso de conducción = водительское удостоверение / разрешение на вождение
+presentándolo = предъявляя его / представляя его
+en formato digital = в цифровом формате
+a través de la aplicación móvil = через мобильное приложение
+en todo el territorio español = на всей испанской территории
+en todos los países del mundo = во всех странах мира
+¿está obligado a comunicar? = обязан ли сообщить / уведомить?
+la Jefatura Provincial de Tráfico = Провинциальное управление дорожного движения (местное отделение DGT)
+el cambio en sus aptitudes físicas = изменение в физических возможностях / способностях
+que suponga realizar... = которое предполагает выполнение...
+adaptaciones en su vehículo = адаптация / модификация транспортного средства
+mientras... esté en vigor = пока... остается в силе (действительно)
+un certificado médico = медицинская справка / сертификат
 
 
 

@@ -96,8 +96,13 @@ alumbrado de carretera = дальний свет
 alumbrado de cruce = ближний свет
 tomar la curva a la derecha = входить в правый поворот
 luz de cruce = ближний свет
-
-
+la luz de carretera = дальний свет фар (буквально: "дорожный свет")
+la luz de cruce = ближний свет фар (буквально: "свет для разъезда/перекрестка")
+debe sustituirse por = должен быть заменен на
+cuando exista la posibilidad = когда существует возможность
+deslumbrar a otros usuarios = ослепить других участников (дорожного движения)
+al circular por... = при движении по...
+cuando haya niebla = когда есть туман
 
 
 
