@@ -12,7 +12,8 @@ miligramos por litro = миллиграммы на литр (мг/л)
 conductores en general = обычные водители (общая категория)
 en aire espirado (mg/l) = в выдыхаемом воздухе (миллиграммы на литр)
 en sangre (g/l) = в крови (граммы на литр)
-
+tres años de antigüedad = три года стажа (выслуги лет)
+tasa máxima permitida = максимально разрешенный уровень / норма
 
 
 

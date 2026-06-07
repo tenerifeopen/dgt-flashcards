@@ -192,6 +192,46 @@ indica la flecha = указывает стрелка
 la entrada está prohibida = въезд запрещен
 la señal más restrictiva = наиболее ограничивающий (строгий) знак (помним, что это правило работает только при явном противоречии знаков)
 en sentido contrario = в противоположном направлении / по встречке
+ceder el paso = уступить дорогу
+se aproximen por la izquierda = приближаются слева
+se aproximen por la derecha = приближаются справа
+se debe circular = необходимо двигаться / осуществлять движение
+a velocidad moderada = с умеренной скоростью
+si fuera preciso = если необходимо / в случае необходимости
+detener el vehículo = остановить транспортное средство
+al aproximarse a = при приближении к
+paso a nivel = железнодорожный переезд
+en esta intersección = на этом перекрестке
+línea de detención = линия остановки (стоп-линия)
+¿dónde hay que detenerse? = где необходимо остановиться?
+antes de entrar en la intersección = перед въездом на перекресток
+como norma general = в качестве общего правила / как общее правило (базовая норма)
+paso a nivel = железнодорожный переезд
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

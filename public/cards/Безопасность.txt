@@ -10,6 +10,11 @@ los daños personales = личный ущерб (травмы, вред здор
 los daños materiales = материальный ущерб (повреждения автомобиля/имущества)
 no utilizar el casco = не использовать шлем
 Una causa principal de mortalidad en moto es... = Одна из главных причин смертности на мотоцикле... (golpes contra el asfalto)
+l navegador GPS portátil = портативный GPS-навигатор
+no entorpezca la visión = не мешает обзору / не затрудняет видимость
+nunca cerca de un airbag = ни в коем случае не рядом с подушкой безопасности
+
+
 
 
 

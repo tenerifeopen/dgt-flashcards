@@ -15,7 +15,8 @@ adelantar a varios vehículos = обгонять несколько трансп
 a la vez = одновременно / за один раз
 volver a la derecha = вернуться направо (в свою полосу)
 sin peligro = без опасности (безопасно)
-
+¿está prohibido adelantar? = запрещено ли обгонять?
+en sus proximidades = вблизи них / поблизости от них
 
 
 

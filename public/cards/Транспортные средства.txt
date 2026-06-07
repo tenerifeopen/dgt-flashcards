@@ -1,2 +1,38 @@
 vehículo con remolque = автомобиль с прицепом
 la caja de cambios = коробка передач
+vehículo inmovilizado = обездвиженное / неподвижное транспортное средство
+frenos convencionales = обычные (традиционные) тормоза
+mantenga su trayectoria = сохраняет свою траекторию
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
