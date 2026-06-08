@@ -207,6 +207,85 @@ línea de detención = линия остановки (стоп-линия)
 antes de entrar en la intersección = перед въездом на перекресток
 como norma general = в качестве общего правила / как общее правило (базовая норма)
 paso a nivel = железнодорожный переезд
+como norma general = по общему правилу / как общее правило
+las señales se aplican = знаки применяются / действуют
+a toda la anchura de la calzada = на всю ширину проезжей части
+¿puede limitarse la aplicación de una señal? = может ли быть ограничено действие (применение) знака?
+mediante marcas viales = посредством (с помощью) дорожной разметки
+en la calzada = на проезжей части
+donde esté prohibido adelantar = там, где запрещен обгон
+se aproxime a un paso a nivel = приближается к железнодорожному переезду
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

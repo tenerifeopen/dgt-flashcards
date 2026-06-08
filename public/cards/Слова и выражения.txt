@@ -518,6 +518,33 @@ contra el asfalto = об асфальт
 arrollamiento = наезд
 únicamente = исключительно / только (слово-ограничитель, которое почти всегда указывает на неверный вариант ответа)
 velocidad lenta = низкая (медленная) скорость
+no se estropean = не портятся / не ломаются
+el estado de las pastillas = состояние тормозных колодок
+puede suponer una infracción?=может представлять собой нарушение
+en punto muerto = на нейтральной передаче (в нейтральном положении)
+bajar del vehículo = выйти / спуститься из транспортного средства
+apagar el motor = заглушить (выключить) двигатель
+mediante marcas viales = посредством (с помощью) дорожной разметки
+en un túnel = в тоннеле
+no, está prohibido = нет, это запрещено
+marca longitudinal = продольная разметка
+entre la puesta y la salida de sol = между закатом и восходом солнца
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

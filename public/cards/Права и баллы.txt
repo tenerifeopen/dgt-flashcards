@@ -14,9 +14,14 @@ en aire espirado (mg/l) = в выдыхаемом воздухе (миллигр
 en sangre (g/l) = в крови (граммы на литр)
 tres años de antigüedad = три года стажа (выслуги лет)
 tasa máxima permitida = максимально разрешенный уровень / норма
-
-
-
+los agentes podrán inmovilizar = агенты (полиция) смогут обездвижить / задержать
+se niegue a efectuar = отказывается выполнять / проходить
+la prueba de alcoholemia = тест на алкоголь (алкотест)
+aunque el resultado sea negativo = даже если результат отрицательный
+sea positivo = является положительным
+arrojar un cigarro = выбрасывать сигарету (окурок)
+puede suponer una infracción = может повлечь за собой (означать) правонарушение
+conlleva pérdida de puntos = влечет за собой потерю баллов
 
 
 

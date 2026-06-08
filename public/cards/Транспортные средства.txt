@@ -3,6 +3,28 @@ la caja de cambios = коробка передач
 vehículo inmovilizado = обездвиженное / неподвижное транспортное средство
 frenos convencionales = обычные (традиционные) тормоза
 mantenga su trayectoria = сохраняет свою траекторию
+por la ventanilla = из окна / через окно (автомобиля)
+caja de cambios manual = механическая коробка передач
+la primera velocidad = первая передача
+la marcha atrás = задняя передача / задний ход
+en punto muerto = на нейтральной передаче (в нейтральном положении)
+desconectar el sistema de arranque = отключить систему запуска / зажигания
+bajar del vehículo = выйти / спуститься из транспортного средства
+para descargar el equipaje = чтобы разгрузить багаж
+apagar el motor = заглушить (выключить) двигатель
+deje engranada la marcha atrás = оставить включенной заднюю передачу
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

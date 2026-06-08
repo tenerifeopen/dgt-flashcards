@@ -15,6 +15,36 @@ accidentes de moto и ciclomotor = аварии с участием мотоци
 el arrollamiento = наезд (переезд колесами, сбивание)
 los golpes contra el asfalto = удары об асфальт
 las caídas = падения  
+¿es correcto que lo remolque? = правильно ли, если он возьмет его на буксир?
+está prohibido = запрещено
+hasta el taller más cercano = до ближайшей мастерской (сервиса)
+posibles causas de los accidentes = возможные причины аварий
+un vehículo de servicio de extinción de incendios = транспортное средство пожарной службы
+en servicio de urgencia = выполняющий экстренное задание (на вызове)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

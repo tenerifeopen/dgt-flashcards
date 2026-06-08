@@ -35,6 +35,33 @@ posición de estacionamiento = положение парковки (режим "
 circular lentamente = ехать (двигаться) медленно
 la velocidad más larga = самая высокая (длинная) передача
 la primera relación de marchas = первая передача (соотношение передач)
+al menos tres personas = как минимум три человека
+si estaciona un vehículo = если вы паркуете транспортное средство
+con una fuerte pendiente = с крутым уклоном / склоном
+pendiente ascendente = склон на подъем (вверх)
+pendiente descendente = склон на спуск (вниз)
+en una pendiente sensible = на ощутимом (заметном) уклоне/склоне
+colocar calzos = подложить противооткатные упоры (башмаки)
+apoyar las ruedas directrices en el bordillo = упереть управляющие (передние) колеса в бордюр
+si no dispone de calzos = если у вас нет (вы не располагаете) противооткатных упоров
+orientada hacia el centro de la calzada = направленная (вывернутая) к центру проезжей части
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
