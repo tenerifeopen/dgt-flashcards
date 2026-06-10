@@ -224,6 +224,34 @@ al carril derecho = на правую полосу
 en esta carretera estrecha = на этой узкой трассе (дороге)
 en el centro de la calzada = в центре проезжей части
 el carril contrario = встречная полоса
+en esta calzada de sentido único y tres carriles = на этой проезжей части с односторонним движением и тремя полосами
+no hay flechas en el pavimento = нет стрелок на покрытии (асфальте)
+de un sólo sentido de circulación.=с односторонним движением.
+con más de un carril para uno de los sentidos de circulación.=с более чем одной полосой для одного из направлений движения.
+borde izquierdo de la calzada=левый край дороги
+de un sólo sentido de circulación = с односторонним движением
+de doble sentido de circulación = с двусторонним движением
+en esta vía de doble sentido = на этой дороге с двусторонним движением
+el conductor del turismo blanco = водитель белого легкового автомобиля
+en esta vía de doble sentido y tres carriles = на этой дороге с двусторонним движением и тремя полосами
+en una calzada con los dos sentidos = на проезжей части с обоими направлениями
+separados por una línea continua = разделенными сплошной линией
+solo dentro de poblado = только в населенном пункте
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

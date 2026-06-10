@@ -529,9 +529,10 @@ en un túnel = в тоннеле
 no, está prohibido = нет, это запрещено
 marca longitudinal = продольная разметка
 entre la puesta y la salida de sol = между закатом и восходом солнца
-
-
-
+si no tiene visibilidad = если нет видимости
+sí, con precaución = да, с осторожностью
+¿está permitido girar a la izquierda? = разрешено ли поворачивать налево?
+cuando no se comprometa la seguridad = когда это не ставит под угрозу безопасность
 
 
 
