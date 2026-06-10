@@ -538,20 +538,20 @@ sí, con precaución = да, с осторожностью
 ¿está permitido girar a la izquierda? = разрешено ли поворачивать налево?
 cuando no se comprometa la seguridad = когда это не ставит под угрозу безопасность
 carril = полоса
-cruce = перекрёсток
-carril? = полоса
-cruce? = перекрёсток
-carril a = полоса
-cruce a = перекрёсток
-
-
-
-
-
-
-
-
-
+cruce = перекрёсто
+paso a nivel = железнодорожный переезд
+proximidades = непосредственная близость
+permitido = разрешён
+prohibido = запрещён
+excepto = кроме
+salvo = за исключением
+cuando = когда, если
+visibilidad lateral = боковая видимость
+impedir la visibilidad = ограничивать обзор
+permitido = разрешён
+prohibido = запрещён
+por regla general = по общему правилу
+en sus proximidades = в непосредственной близости от него
 
 
 

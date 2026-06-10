@@ -43,7 +43,11 @@ fuera de la calzada siempre que sea posible = за пределами проез
 invadiendo ligeramente = слегка заезжая (занимая)
 sí, pero sólo si lo indica una señal = да, но только если указывает знак
 no, es indiferente = нет, безразлично (не имеет значения)
-
+como norma general = как правило
+siempre = всегда
+nunca = никогда
+excepto = кроме
+salvo = за исключением
 
 
 

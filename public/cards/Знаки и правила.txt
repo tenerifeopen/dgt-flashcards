@@ -215,6 +215,34 @@ mediante marcas viales = посредством (с помощью) дорожн
 en la calzada = на проезжей части
 donde esté prohibido adelantar = там, где запрещен обгон
 se aproxime a un paso a nivel = приближается к железнодорожному переезду
+paso a nivel = железнодорожный переезд
+proximidades = непосредственная близость
+como norma general = как общее правило
+permitido = разрешён
+prohibido = запрещён
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
