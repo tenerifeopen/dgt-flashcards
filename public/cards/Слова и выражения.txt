@@ -552,11 +552,17 @@ permitido = разрешён
 prohibido = запрещён
 por regla general = по общему правилу
 en sus proximidades = в непосредственной близости от него
-
-
-
-
-
+vía = дорога
+anchura = ширина
+carril = полоса движения
+sentido de circulación = направление движения
+atropello = наезд на пешехода
+Excepcionalmente, puede adelantarse=В виде исключения можно обгонять
+peligro de atropello = опасность наезда на пешехода
+únicamente = только
+todo tipo de = любого типа
+que permita = позволяющая
+siempre que = при условии что
 
 
 

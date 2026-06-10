@@ -48,7 +48,10 @@ siempre = всегда
 nunca = никогда
 excepto = кроме
 salvo = за исключением
-
+únicamente = только
+todo tipo de = любого типа
+que permita = позволяющая
+siempre que = при условии что
 
 
 

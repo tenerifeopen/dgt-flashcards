@@ -220,8 +220,12 @@ proximidades = непосредственная близость
 como norma general = как общее правило
 permitido = разрешён
 prohibido = запрещён
-
-
+paso para peatones = пешеходный переход
+cerca de = вблизи
+como norma general = как общее правило
+prohibido = запрещён
+paso para peatones señalizado = обозначенный пешеходный переход
+se podrá adelantar = можно будет обгонять
 
 
 

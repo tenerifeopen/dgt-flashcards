@@ -20,11 +20,16 @@ volver a aparecer = появиться снова / вернуться
 su dificultad para distinguir = их трудность в различении
 los colores de los semáforos = цвета светофоров
 para cruzar la vía = чтобы перейти дорогу
-
-
-
-
-
+atropello = наезд на пешехода
+paso para peatones = пешеходный переход
+proximidades = непосредственная близость
+como norma general = как правило
+siempre que = при условии что
+nunca = никогда
+en caso de = в случае
+velocidad reducida = сниженная скорость
+detenerse = остановиться
+peligro de atropello = опасность наезда на пешехода
 
 
 
