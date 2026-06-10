@@ -84,6 +84,34 @@ una señal que lo autorice expresamente = знак, который прямо э
 un lugar acondicionado expresamente = специально обустроенное место
 ¿puede girar en una intersección a la izquierda? = можно ли повернуть налево на перекрестке?
 no, aunque esté permitido por la señalización = нет, даже если это разрешено знаками/разметкой
+¿está permitido adelantar? = разрешено ли обгонять?
+en un cambio de rasante de visibilidad reducida = на изломе профиля (холме) с ограниченной видимостью
+no se invade el sentido contrario = не занимается встречное направление
+la curva de visibilidad reducida = поворот с ограниченной видимостью
+un carril para cada sentido = одна полоса для каждого направления
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

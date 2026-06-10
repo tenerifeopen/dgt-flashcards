@@ -237,6 +237,33 @@ en esta vía de doble sentido y tres carriles = на этой дороге с д
 en una calzada con los dos sentidos = на проезжей части с обоими направлениями
 separados por una línea continua = разделенными сплошной линией
 solo dentro de poblado = только в населенном пункте
+en una vía con dos carriles para cada sentido = на дороге с двумя полосами для каждого направления
+ambos sentidos están claramente delimitados = оба направления четко разграничены
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

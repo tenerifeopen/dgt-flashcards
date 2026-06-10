@@ -1,7 +1,11 @@
-adelantar  = 🟡🟡🟡 обгонять 🟡🟡🟡
+debe = обязан
+puede = может
+está prohibido = запрещено
+es obligatorio = обязательно
+como norma general = как правило
+excepcionalmente = в виде исключенияadelantar  = 🟡🟡🟡 обгонять 🟡🟡🟡
  frenar  = ❌ тормозить ❌
 acelerar = ускоряться
-girar? = поворачивать
 conducir? = водить
 cinturón de seguridad? = ремень безопасности
 semáforo? = светофор
@@ -533,6 +537,12 @@ si no tiene visibilidad = если нет видимости
 sí, con precaución = да, с осторожностью
 ¿está permitido girar a la izquierda? = разрешено ли поворачивать налево?
 cuando no se comprometa la seguridad = когда это не ставит под угрозу безопасность
+carril = полоса
+cruce = перекрёсток
+carril? = полоса
+cruce? = перекрёсток
+carril a = полоса
+cruce a = перекрёсток
 
 
 
