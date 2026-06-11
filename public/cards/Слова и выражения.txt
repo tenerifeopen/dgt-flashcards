@@ -634,11 +634,15 @@ aunque = даже если
 aunque tenga que = даже если придётся
 carril reservado al sentido contrario = полоса, предназначенная для встречного движения
 estar permitido = быть разрешённым
-
-
-
-
-
+ehículo pesado = тяжёлое транспортное средство
+circular lentamente = двигаться медленно
+aunque la línea sea continua = даже если линия сплошная
+por la velocidad a la que circulen = из-за скорости, с которой они движутся
+invadir el sentido contrario = выехать на встречное направление движения
+obstáculo = препятствие.
+carril contiguo = соседняя полоса
+dicho carril = указанная (эта) полоса
+ocupado = занятый
 
 
 

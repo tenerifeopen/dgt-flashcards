@@ -66,7 +66,9 @@ no tiene prioridad = не имеет приоритета
 prioridad de la derecha = преимущество транспортного средства справа
 Adelantar no es lo mismo que rebasar.= Обгон — это не то же самое, что объезд.
 Se puede ocupar el carril contrario para rebasar un obstáculo o vehículo inmovilizado si puede hacerse sin peligro.= Можно занять встречную полосу для объезда препятствия или неподвижного транспортного средства, если это можно сделать безопасно.
-
+en ningún caso = ни в каком случае
+siempre que = при условии что
+esté o no ocupado = занята или не занята
 
 
 

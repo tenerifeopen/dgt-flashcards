@@ -98,7 +98,8 @@ i se puede hacer la maniobra sin riesgo= если манёвр можно вып
 sin riesgo = без опасности
 hacer la maniobra = выполнить манёвр
 ocupar el carril reservado al sentido contrario = занять полосу встречного движения
-
+rebasar un obstáculo = объехать препятствие
+desplazarse al carril contiguo = перестроиться на соседнюю полосу
 
 
 
