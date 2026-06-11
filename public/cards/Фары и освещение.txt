@@ -110,6 +110,36 @@ el vehículo está parado = транспортное средство совер
 el vehículo está estacionado = транспортное средство находится на стоянке (парковке)
 para avisar a otros usuarios = чтобы предупредить других участников
 un posible peligro = возможная опасность
+señales ópticas = световые сигналы
+advertir mediante señales ópticas = предупреждать с помощью световых сигналов
+señalización luminosa = световая сигнализация
+intermitente = указатель поворота
+¿Cuándo apagar el intermitente?=Когда следует выключать указатель поворота
+señalización luminosa = световой сигнал
+indicar el cambio de carril = обозначать смену полосы
+indicadores de dirección = указатели поворота
+avisar la intención de girar = предупредить о намерении повернуть
+intermitente derecho = правый указатель поворота
+luces de emergencia = аварийная сигнализация
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

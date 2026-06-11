@@ -643,6 +643,115 @@ obstáculo = препятствие.
 carril contiguo = соседняя полоса
 dicho carril = указанная (эта) полоса
 ocupado = занятый
+en la medida de lo posible = насколько это возможно
+llegando incluso a = вплоть до того, чтобы
+tienen preferencia = имеют преимущество
+detener el vehículo = остановить транспортное средство
+vía urbana = городская дорога
+señal luminosa = световой сигнал
+señal realizada con el brazo = сигнал, поданный рукой
+prevalecer = иметь преимущественную силу
+no es reglamentaria = не предусмотрен правилами
+¿cuál prevalece? = какой имеет приоритет
+realizar una señal = подать сигнал
+con el brazo = рукой
+reglamentario = соответствующий правилам
+la señal realizada con el brazo = сигнал рукой.
+¿cuál prevalece? = какой сигнал имеет приоритет
+señal luminosa = световой сигнал
+señal realizada con el brazo = сигнал, поданный рукой
+implique = включает, предполагает
+estar obligado a = быть обязанным
+advertir = предупреждать
+en defecto de = при отсутствии, в случае неисправности
+advertir con el brazo = подавать сигнал рукой
+sacar el brazo = высовывать руку
+estar permitido = быть разрешённым
+vehículo adelantado = обгоняемое транспортное средство.
+concluir = завершаться, прекращаться
+percibir la señalización = заметить сигнал
+adoptar una trayectoria = занять траекторию движения
+una vez = после того как
+haya adoptado = занял, принял
+los demás usuarios = другие участники движения
+los demás usuarios = остальные участники движения
+efectuarse correctamente = выполняться правильно
+ser visible = быть видимым
+si no es posible = если это невозможно
+en su defecto = при отсутствии, в случае невозможности
+avisar = предупреждать
+con antelación suficiente = заблаговременно, с достаточным запасом времени
+justo antes = непосредственно перед
+una vez iniciada = после начала
+advertencia = предупреждение, сигнал
+iniciar = начинать
+intención de detenerse = намерение остановиться
+encender = включать
+advertir a los demás conductores = предупредить других водителей
+palma de la mano hacia atrás = ладонь направлена назад
+de sonido no estridente.=нерезкий звук .
+servicio de urgencia = экстренная служба, срочное задание
+evitar un accidente = предотвратить ДТП
+avisar a los demás usuarios = предупредить других участников движения,
+en un poblado = в населённом пункте
+estar permitido = быть разрешённым
+vía estrecha = узкая дорога
+vía ancha = широкая дорога
+curva = поворот
+advertir el propósito de adelantar = предупредить о намерении выполнить обгон
+muchas curvas = много поворотов
+pocas curvas = мало поворотов
+emplear las señales acústicas = использовать звуковые сигналы
+badén = впадина, перелом профиля дороги, искусственная неровность
+retención = затор, пробка
+tráfico denso = плотное движение
+salvo que = за исключением случая, если
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

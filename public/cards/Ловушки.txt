@@ -69,11 +69,14 @@ Se puede ocupar el carril contrario para rebasar un obstáculo o vehículo inmov
 en ningún caso = ни в каком случае
 siempre que = при условии что
 esté o no ocupado = занята или не занята
-
-
-
-
-
+toda maniobra = любой манёвр
+sólo = только
+implique = включает, предполагает
+en cualquier caso = в любом случае
+a gran velocidad = на высокой скорости
+solamente = только
+en ningún caso = ни в каком случае
+exclusivamente = исключительно, только.
 
 
 

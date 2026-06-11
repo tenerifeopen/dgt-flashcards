@@ -100,6 +100,34 @@ hacer la maniobra = выполнить манёвр
 ocupar el carril reservado al sentido contrario = занять полосу встречного движения
 rebasar un obstáculo = объехать препятствие
 desplazarse al carril contiguo = перестроиться на соседнюю полосу
+Sí, esté o no ocupado el otro carril.=Да, независимо от того, занята другая полоса или нет.
+toda maniobra que implique=любой маневр, который включает в себя
+desplazamiento lateral = боковое смещение
+cambio de carril = смена полосы
+efectuar una maniobra = выполнять манёвр
+Con antelación suficiente al inicio de la maniobra.=Заблаговременно до начала манёвра.
+justo antes = непосредственно перед
+con antelación suficiente = заранее, с достаточным запасом времени
+inicio de la maniobra = начало манёвра
+Encendiendo el intermitente derecho.=Включив правый указатель поворота.
+detener el vehículo = остановить транспортное средство
+lado derecho de la calzada = правая сторона проезжей части
+advertir el propósito de adelantar = предупредить о намерении выполнить обгон
+Fuera de poblado se puede usar el claxon para advertir el propósito de adelantar.= Вне населённого пункта можно использовать звуковой сигнал для предупреждения о намерении выполнить обгон.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
