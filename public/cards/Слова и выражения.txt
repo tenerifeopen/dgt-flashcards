@@ -563,6 +563,133 @@ peligro de atropello = опасность наезда на пешехода
 todo tipo de = любого типа
 que permita = позволяющая
 siempre que = при условии что
+que permita=что позволяет
+que permita detenerse=что позволяет остановиться
+ya que = поскольку
+sólo dispone de = имеет только
+ningún vehículo = ни одно транспортное средство
+en sentido contrario = во встречном направлении
+circular = двигаться, участвовать в движении
+disponer de = иметь в распоряжении, располагать
+su sentido de circulación = своё направление движения
+sentido contrario = встречное направление
+exista = имеется, существует
+más de un carril = более одной полосы
+su marcha = его движение, направление движения
+bien iluminado = хорошо освещённый
+cuando exista = когда имеется
+en el sentido contrario = во встречном направлении
+dentro de poblado = в населённом пункте
+cuando no haya = если нет
+lo prohíban = запрещают это
+para cada sentido de circulación = для каждого направления движения
+regular la circulación = регулировать движение
+luz verde = зелёный сигнал светофора
+la calzada goza de prioridad=дорога имеет приоритет
+como excepción = в виде исключения
+lo indique = указывает на это
+visibilidad suficiente = достаточная видимость
+efectuarse = выполняться, осуществляться
+tener que = быть обязанным, необходимо
+ntersección con prioridad = перекрёсток, где ваша дорога имеет приоритет
+intersección con prioridad de la derecha = перекрёсток, где действует правило помехи справа
+prioridad = преимущество, приоритет
+tener prioridad = иметь преимущество
+vía prioritaria = главная дорога
+con prioridad = с приоритетом (приоритет у вас)
+con prioridad de la derecha = приоритет имеет тот, кто приближается справа
+ceder el paso = уступить дорогу
+vehículo que se aproxima por la derecha = транспортное средство, приближающееся справа
+regla de prioridad a la derecha = правило помехи справа
+rebasar un vehículo parado = объехать стоящее транспортное средство
+vehículo parado = стоящее транспортное средство
+sin peligro = без создания опасности
+se encuentra parado = находится в неподвижном состоянии
+tras comprobar = после того как убедились
+Adelantar no es lo mismo que rebasar.= Обгон — это не то же самое, что объезд.
+camión parado = стоящий грузовик
+sin peligro = без опасности
+tras comprobar = после проверки
+línea longitudinal continua = сплошная продольная линия
+rebasar = объехать, миновать препятствие
+sobrepasarlo = объехать его, миновать его
+sobrepasar / rebasar = объезжать препятствие
+vehículo detenido = остановившееся транспортное средство
+atravesar la línea continua = пересечь сплошную линию
+cuando no exista peligro = когда отсутствует опасность
+detenido por avería = остановившийся из-за поломки
+persona autorizada = уполномоченное лицо
+es correcto = является правильным
+dejar separación = оставить интервал
+invadir el carril contrario = заехать на встречную полосу
+arcén = обочина
+guardar una separación lateral = сохранять боковой интервал
+al menos = не менее
+rebasar la línea continua = пересечь сплошную линию
+ocupar el carril destinado a la circulación en sentido contrario = занять полосу встречного движения
+señal vertical = вертикальный дорожный знак
+tramo de vía = участок дороги
+sin riesgo = без опасности.
+aunque = даже если
+aunque tenga que = даже если придётся
+carril reservado al sentido contrario = полоса, предназначенная для встречного движения
+estar permitido = быть разрешённым
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

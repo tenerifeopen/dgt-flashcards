@@ -30,7 +30,8 @@ en caso de = в случае
 velocidad reducida = сниженная скорость
 detenerse = остановиться
 peligro de atropello = опасность наезда на пешехода
-
+guardar una separación lateral = сохранять боковой интервал
+al menos = не менее
 
 
 

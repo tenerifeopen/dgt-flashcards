@@ -4,7 +4,7 @@ el airbag esté desactivado = подушка безопасности отклю
 no disponga de... = не располагает / не имеет в наличии (чего-либо)
 transporte de mercancías peligrosas = перевозка опасных грузов
 un remolque ligero = легкий прицеп (до 750 кг)
-
+grupo de ciclistas = группа велосипедистов
 
 
 

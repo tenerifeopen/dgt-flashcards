@@ -239,10 +239,13 @@ separados por una línea continua = разделенными сплошной л
 solo dentro de poblado = только в населенном пункте
 en una vía con dos carriles para cada sentido = на дороге с двумя полосами для каждого направления
 ambos sentidos están claramente delimitados = оба направления четко разграничены
-
-
-
-
+túnel = тоннель
+carril para cada sentido = полоса для каждого направления
+sentido de circulación = направление движения
+sentido contrario = встречное направление
+dentro de un túnel = внутри тоннеля
+más de un carril para cada sentido de circulación = более одной полосы для каждого направления движения
+Intersección regulada por semáforo → el adelantamiento puede estar permitido.= На перекрёстке, регулируемом светофором, обгон может быть разрешён.
 
 
 

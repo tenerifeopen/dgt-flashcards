@@ -52,6 +52,42 @@ salvo = за исключением
 todo tipo de = любого типа
 que permita = позволяющая
 siempre que = при условии что
+siempre = всегда
+nunca = никогда
+todas = все
+únicamente = исключительно
+aunque la señalización lo permita = даже если это разрешено знаками или разметкой
+como excepción = в виде исключения
+lo indique = указывает на это
+visibilidad suficiente = достаточная видимость
+con prioridad = с приоритетом (приоритет у вас)
+con prioridad de la derecha = приоритет имеет тот, кто приближается справа
+no tiene prioridad = не имеет приоритета
+prioridad de la derecha = преимущество транспортного средства справа
+Adelantar no es lo mismo que rebasar.= Обгон — это не то же самое, что объезд.
+Se puede ocupar el carril contrario para rebasar un obstáculo o vehículo inmovilizado si puede hacerse sin peligro.= Можно занять встречную полосу для объезда препятствия или неподвижного транспортного средства, если это можно сделать безопасно.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

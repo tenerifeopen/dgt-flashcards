@@ -89,6 +89,38 @@ en un cambio de rasante de visibilidad reducida = на изломе профил
 no se invade el sentido contrario = не занимается встречное направление
 la curva de visibilidad reducida = поворот с ограниченной видимостью
 un carril para cada sentido = одна полоса для каждого направления
+sentido de la marcha = направление движения
+sobrepasar = объехать, миновать
+ocupar parte del sentido contrario = занять часть встречного направления движения
+rebasar la línea continua = пересечь сплошную линию
+ocupar el carril destinado a la circulación en sentido contrario = занять полосу встречного движения
+i se puede hacer la maniobra sin riesgo= если манёвр можно выполнить безопасно.
+sin riesgo = без опасности
+hacer la maniobra = выполнить манёвр
+ocupar el carril reservado al sentido contrario = занять полосу встречного движения
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

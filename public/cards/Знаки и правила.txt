@@ -226,6 +226,42 @@ como norma general = как общее правило
 prohibido = запрещён
 paso para peatones señalizado = обозначенный пешеходный переход
 se podrá adelantar = можно будет обгонять
+señales que lo prohíban = знаки, которые это запрещают
+intersección regulada = регулируемый перекрёсток
+semáforo = светофор
+calzada con prioridad = дорога с приоритетом
+gozar de prioridad = пользоваться приоритетом
+ceda el paso = уступите дорогу
+ntersección con prioridad = перекрёсток, где ваша дорога имеет приоритет
+intersección con prioridad de la derecha = перекрёсток, где действует правило помехи справа
+prioridad = преимущество, приоритет
+tener prioridad = иметь преимущество
+vía prioritaria = главная дорога
+ocupar el carril contrario = занять встречную полосу движения
+línea continua = сплошная линия разметки
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
