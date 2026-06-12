@@ -77,7 +77,7 @@ a gran velocidad = на высокой скорости
 solamente = только
 en ningún caso = ни в каком случае
 exclusivamente = исключительно, только.
-
+avisar a los demás usuarios = предупредить других участников движения
 
 
 
