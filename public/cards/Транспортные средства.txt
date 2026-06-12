@@ -17,6 +17,36 @@ todo tipo de vehículos = любые транспортные средства
 vehículo de dos ruedas = двухколёсное транспортное средство
 ciclo = велосипед
 ciclomotor = мопед
+relación de marchas = передаточное отношение, передача
+marcha larga = высокая передача
+marcha baja = низкая передача
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

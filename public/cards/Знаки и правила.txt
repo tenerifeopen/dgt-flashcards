@@ -239,9 +239,12 @@ tener prioridad = иметь преимущество
 vía prioritaria = главная дорога
 ocupar el carril contrario = занять встречную полосу движения
 línea continua = сплошная линия разметки
-
-
-
+cambio de rasante = перелом профиля дороги, вершина подъёма
+cono = дорожный конус
+baliza de borde provisional = временная направляющая веха
+luz amarilla intermitente = мигающий жёлтый огонь
+luz amarilla fija = постоянный жёлтый огонь
+Los conos prohíben el paso a través de la línea real o imaginaria que los une.= Конусы запрещают пересекать реальную или воображаемую линию, которая их соединяет.
 
 
 

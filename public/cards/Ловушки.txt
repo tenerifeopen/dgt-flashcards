@@ -78,6 +78,35 @@ solamente = только
 en ningún caso = ни в каком случае
 exclusivamente = исключительно, только.
 avisar a los demás usuarios = предупредить других участников движения
+visibilidad reducida = ограниченная видимость
+estar prohibido = быть запрещённым
+uso del teléfono móvil = использование мобильного телефона
+responder a una llamada = ответить на звонок
+relación de marchas más larga posible = максимально высокая передача
+relación de marchas más baja posible = максимально низкая передача
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

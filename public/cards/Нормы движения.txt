@@ -48,6 +48,35 @@ orientada hacia el centro de la calzada = направленная (выверн
 incorporarse a la circulación = вливаться в транспортный поток, начинать движение
 ceder el paso = уступить дорогу
 tener preferencia de paso = иметь преимущество в движении
+parar = остановиться
+estacionar = поставить на стоянку
+detener el vehículo = остановить транспортное средство
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

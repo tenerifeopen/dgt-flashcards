@@ -248,7 +248,7 @@ más de un carril para cada sentido de circulación = более одной по
 Intersección regulada por semáforo → el adelantamiento puede estar permitido.= На перекрёстке, регулируемом светофором, обгон может быть разрешён.
 En poblado, las advertencias acústicas sólo pueden utilizarse de forma excepcional.= В населённом пункте звуковые сигналы можно использовать только в исключительных случаях.
 Fuera de poblado, pueden utilizarse para advertir el propósito de adelantar.= Вне населённого пункта звуковой сигнал можно использовать для предупреждения о намерении выполнить обгон.
-
+Cuando existe nieve en la calzada=Когда на дороге лежит снег
 
 
 

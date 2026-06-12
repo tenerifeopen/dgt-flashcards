@@ -121,6 +121,41 @@ indicadores de dirección = указатели поворота
 avisar la intención de girar = предупредить о намерении повернуть
 intermitente derecho = правый указатель поворота
 luces de emergencia = аварийная сигнализация
+uz de largo alcance = дальний свет
+luz de corto alcance = ближний свет
+luz de cruce = ближний свет
+insuficientemente iluminado = недостаточно освещённый
+existir posibilidad de deslumbrar = существовать риск ослепления
+deslumbrar = ослеплять
+avería del alumbrado de corto alcance = неисправность ближнего света
+vía insuficientemente iluminada = недостаточно освещённая дорога
+producir deslumbramiento = ослеплять
+alumbrado de corto alcance = ближний свет
+alumbrado de largo alcance = дальний свет
+producir deslumbramiento = ослеплять
+avería del alumbrado = неисправность освещения
+vía insuficientemente iluminada = недостаточно освещённая дорога
+evitando = избегая, не допуская
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
