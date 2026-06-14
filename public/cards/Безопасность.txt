@@ -33,6 +33,35 @@ peligro de atropello = опасность наезда на пешехода
 guardar una separación lateral = сохранять боковой интервал
 al menos = не менее
 con antelación suficiente = заблаговременно, с достаточным запасом времени
+conducción eficiente = экономичное вождение
+asumir riesgos = идти на риск
+Los niños alborotando pueden distraer al conductor.= Шумящие дети могут отвлекать водителя.
+seguridad vial = безопасность дорожного движения
+usuario de la vía = участник дорожного движения
+ciclista = велосипедист
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

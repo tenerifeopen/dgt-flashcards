@@ -2,8 +2,13 @@ vehículos de motor = моторные транспортные средства
 ciclista = велосипедист
 bicicleta = велосипед
 motocicleta = мотоцикл
-
-
+conductor = водитель
+motociclista = мотоциклист
+ciclista = велосипедист
+motocicleta = мотоцикл
+bicicleta = велосипед
+vehículo pesado = тяжёлое транспортное средство
+turismo = легковой автомобиль
 
 
 

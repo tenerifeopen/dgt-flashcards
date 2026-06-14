@@ -20,10 +20,13 @@ ciclomotor = мопед
 relación de marchas = передаточное отношение, передача
 marcha larga = высокая передача
 marcha baja = низкая передача
-
-
-
-
+parte posterior del vehículo = задняя часть транспортного средства
+conducción eficiente = экономичное вождение
+consumo de combustible = расход топлива
+emisión de contaminantes = выброс загрязняющих веществ
+camión = грузовой автомобиль
+autobús = автобус
+MMA (masa máxima autorizada) = максимально разрешённая масса
 
 
 
