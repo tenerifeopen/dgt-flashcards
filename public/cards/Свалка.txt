@@ -1,0 +1,452 @@
+aldo de puntos = баланс баллов
+pérdida de puntos = потеря баллов
+saldo total de puntos = полный запас баллов
+permiso de conducción = водительское удостоверение
+pérdida de vigencia = утрата действия удостоверения
+resolución = постановление, решение
+notificación = уведомление
+declaración = официальное признание, объявление
+perder = терять
+vigencia = действие (юридическая сила документа)
+una vez = после того как
+notificada = уведомлённая, доведённая до сведения
+caducar = истекать (о сроке действия документа)
+automáticamente = автоматически
+saldo = остаток, баланс
+puede perder = может потерять
+automáticamente = автоматически
+una vez notificada = после официального уведомления
+distracción = отвлечение внимания
+factor de riesgo = фактор риска
+accidente mortal = ДТП со смертельным исходом
+incidencia = влияние, доля участия
+accidentalidad = аварийность
+causar = вызывать, становиться причиной
+provocar = вызывать, провоцировать
+herido = раненый, пострадавший
+víctima mortal = погибший
+cada vez = всё чаще / всё реже (в зависимости от контекста)
+uno de cada tres = один из трёх
+flecha = стрела
+flecha de retorno = стрела возврата
+pintada en la calzada = нанесённая на проезжую часть
+línea continua = сплошная линия
+proximidad = близость, приближение
+carril = полоса движения
+termina próximamente = скоро заканчивается
+ramal de salida = съезд, ответвление выезда
+indicar = обозначать, указывать
+situada = расположенная
+dirección = направление
+próxima salida = ближайший съезд
+vía urbana = городская дорога
+travesía = участок дороги, проходящий через населённый пункт
+vehículo estacionado = припаркованное транспортное средство
+alumbrado de posición = габаритные огни
+encendido = включённый
+iluminación = освещение
+distinguir = различать, видеть
+distancia suficiente = достаточное расстояние
+ser obligatorio = быть обязательным
+permitir = позволять
+intersección = перекрёсток, пересечение
+carril de circulación = полоса движения
+estacionado = припаркованный
+tener encendido = иметь включённым
+no sea = не является
+sueño = сонливость
+conducir con sueño = управлять автомобилем в сонном состоянии
+capacidad de reacción = способность реагировать
+disminuir = уменьшаться, снижаться
+reacción = реакция
+atención = внимание
+cansancio = усталость
+microsueño = микросон
+factor de riesgo = фактор риска
+es peligroso = это опасно
+más despacio = медленнее
+el viaje dura más = поездка длится дольше
+percibir = воспринимать
+distraerse = отвлекаться
+estado de alerta = состояние бодрствования, готовности к реакции
+somnolencia = сонливость
+sueño = желание спать
+cansancio = усталость
+fatiga = утомление, переутомление
+microsueño = микросон
+estado de alerta = состояние бодрствования
+capacidad de reacción = способность реагировать
+línea amarilla continua = запрещены остановка и стоянка
+línea amarilla discontinua = запрещена только стоянка
+estacionar = парковать, ставить на стоянку
+estacionamiento = стоянка
+parar = остановиться
+parada = остановка
+línea amarilla discontinua = жёлтая прерывистая линия
+línea amarilla continua = жёлтая сплошная линия
+borde de la calzada = край проезжей части
+estar prohibido = быть запрещённым
+señal vertical = вертикальный знак
+señalización horizontal = горизонтальная разметка
+junto al borde = у края
+prohibir = запрещать
+no hay ninguna = нет никакой
+ya que = так как
+luz de carretera = дальний свет
+luz de largo alcance = дальний свет
+luz de corto alcance = ближний свет
+peatón = пешеход
+arcén = обочина
+deslumbrar = ослеплять
+circular de noche = двигаться ночью
+estar obligado a = быть обязанным
+cambiar = переключать, менять
+encendida = включённая
+seguir circulando = продолжать движение
+tramo de vía = участок дороги
+recto = прямой
+para no = чтобы не
+largo alcance = дальний радиус действия
+corto alcance = ближний радиус действия
+fuera de poblado = вне населённого пункта
+espacio especialmente reservado = специально выделенное место
+peatón = пешеход
+persona con discapacidad = человек с инвалидностью
+silla de ruedas = инвалидная коляска
+desplazarse = передвигаться
+obedecer = подчиняться
+señales dirigidas a los conductores = сигналы, адресованные водителям
+rebaño = стадо
+conducir un rebaño = вести стадо
+empujar = толкать
+arrastrar = катить, тащить
+motocicleta de dos ruedas = двухколёсный мотоцикл
+por la derecha = по правой стороне
+por la izquierda = по левой стороне
+conducir un rebaño = вести стадо
+empujar una motocicleta = толкать мотоцикл
+arrastrar una motocicleta = катить мотоцикл
+por la izquierda = по левой стороне
+por la derecha = по правой стороне
+silla de ruedas = инвалидная коляска
+obedecer las señales dirigidas a los conductores = подчиняться сигналам, адресованным водителям
+girar = поворачивать
+entrar en otra vía = въезжать на другую дорогу
+ceder el paso = уступать дорогу
+peatón = пешеход
+cruzar = переходить
+aunque no exista = даже если не существует
+paso para peatones = пешеходный переход
+salvo que = кроме случая, когда
+presencia del vehículo = присутствие транспортного средства
+darse cuenta de = замечать, осознавать
+cruzándola = переходя её
+debe = обязан
+curva = поворот
+pisar el freno = нажимать на тормоз
+pisar el freno muy fuerte = сильно нажимать на тормоз
+derrapar = уходить в занос
+derrape = занос
+adherencia = сцепление
+pérdida de adherencia = потеря сцепления
+frenazo = резкое торможение
+frenar bruscamente = резко тормозить
+trayectoria = траектория движения
+hay peligro = есть опасность
+reventar una rueda = лопнуть шине
+antes de la curva = до поворота
+entrar en una curva = входить в поворот
+luz antiniebla = противотуманная фара
+luces antiniebla = противотуманные фары
+condiciones normales de visibilidad = нормальные условия видимости
+visibilidad = видимость
+travesía = участок дороги, проходящий через населённый пункт
+estar permitido = быть разрешённым
+estar prohibido = быть запрещённым
+encendido = включённый
+niebla = туман
+lluvia intensa = сильный дождь
+nevada = снегопад
+humo = дым
+polvo = пыль
+porque = потому что
+en condiciones normales = при нормальных условиях
+vehículo de urgencia = транспортное средство экстренной службы
+vehículo prioritario = транспортное средство с приоритетом
+hallarse en servicio = находиться при исполнении служебного задания
+cumplir las señales = соблюдать сигналы и знаки
+usuario de la vía = участник дорожного движения
+excepto = кроме
+público o privado = государственный или частный
+estar obligado a = быть обязанным
+señal de circulación = сигнал или знак регулирования движения
+presión de inflado = давление накачки шин
+neumático = шина
+inferior a la recomendada = ниже рекомендованного
+consumo de combustible = расход топлива
+rozamiento = трение
+pavimento = дорожное покрытие
+resistencia a la rodadura = сопротивление качению
+desgaste = износ
+banda de rodamiento = протектор шины
+centro de la banda de rodamiento = центр протектора
+borde del neumático = край шины
+presión baja = низкое давление
+presión alta = высокое давление
+aumentar = увеличиваться
+estar compensadas = быть одинаковыми, сбалансированными
+presión baja = mayor consumo de combustible
+presión baja = desgaste en los bordes
+presión alta = desgaste en el centro del neumático
+trastorno depresivo = депрессивное расстройство
+depresión = депрессия
+ansioso = тревожный
+ansiedad = тревожность
+irritable = раздражительный
+irritabilidad = раздражительность
+al volante = за рулём
+sufrir un trastorno = страдать расстройством
+en general = в целом
+más irritable = более раздражительный
+más ansioso = более тревожный
+menos irritable = менее раздражительный
+menos ansioso = менее тревожный
+estado emocional = эмоциональное состояние
+velocidad anormalmente reducida = ненормально низкая скорость
+salvo causa justificada = кроме случая уважительной причины
+velocidad mínima = минимальная скорость
+furgoneta = фургон
+carretera convencional = обычная дорога
+mitad = половина
+velocidad máxima permitida = максимально разрешённая скорость
+circular = двигаться
+respecto a = относительно, что касается
+causa justificada = уважительная причина
+iniciar una maniobra = начать манёвр
+maniobra de adelantamiento = манёвр обгона
+adelantar a un vehículo = обгонять транспортное средство
+ningún conductor = ни один водитель
+ha iniciado = начал
+intermitente = указатель поворота
+llevar encendido = иметь включённым
+retrovisor = зеркало заднего вида
+comprobar = проверить, убедиться
+antes de iniciar = перед началом
+adelantamiento = обгон
+cinturón de seguridad = ремень безопасности
+ocupante = пассажир, находящийся в транспортном средстве
+vehículo mixto adaptable = грузопассажирский автомобиль (трансформируемый)
+MMA (masa máxima autorizada) = максимально разрешённая масса
+en todo tipo de vías = на всех типах дорог
+vía interurbana = загородная дорога
+travesía = участок дороги, проходящий через населённый пункт
+ser obligatorio = быть обязательным
+utilizar = использовать
+ocupantes del vehículo = находящиеся в транспортном средстве лица
+inmovilizar = обездвижить
+accidente = ДТП
+implicado en un accidente = участвовавший в ДТП
+cortar el contacto = выключить зажигание
+contacto = зажигание
+echar el freno de mano = затянуть ручной тормоз
+freno de mano = стояночный тормоз
+calzo = противооткатный упор
+bornes de la batería = клеммы аккумулятора
+desconectar = отсоединять
+siempre que sea posible = если это возможно
+servir como tal = служить для этой цели
+medida de seguridad = мера безопасности
+seguridad activa = активная безопасность
+seguridad pasiva = пассивная безопасность
+sistema de seguridad = система безопасности
+airbag = подушка безопасности
+carrocería = кузов
+cinturón de seguridad = ремень безопасности
+reposacabezas = подголовник
+ABS = антиблокировочная система тормозов
+ESP = система курсовой устойчивости
+zona de deformación = зона деформации
+depender de = зависеть от
+únicamente = только
+principalmente = главным образом
+evitar un accidente = предотвратить ДТП
+reducir las consecuencias = уменьшить последствия
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

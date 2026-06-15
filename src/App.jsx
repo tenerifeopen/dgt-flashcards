@@ -17,7 +17,7 @@ const topics = [
   { name: "Ловушки", file: "/cards/Ловушки.txt" },
   { name: "Безопасность", file: "/cards/Безопасность.txt" },
   { name: "Экстренные ситуации", file: "/cards/Экстренные ситуации.txt" },
-  { name: "Скорость, Дистанция, Торможения", file: "/Скорость, Дистанция, Торможение.txt" }
+  { name: "DGT База", file: "/DGT База.txt" }
 ];
 
 export default function App() {
