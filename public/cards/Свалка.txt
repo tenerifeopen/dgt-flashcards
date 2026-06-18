@@ -272,6 +272,1504 @@ principalmente = главным образом
 evitar un accidente = предотвратить ДТП
 reducir las consecuencias = уменьшить последствия
 
+de repente = внезапно
+persona mayor = пожилой человек
+peatón = пешеход
+semáforo = светофор
+distinguir los colores = различать цвета
+capacidad de reacción = скорость реакции
+vía ancha = широкая дорога
+imprevisto = неожиданная ситуация
+turismo particular = частный легковой автомобиль
+extintor = огнетушитель
+equipamiento = оснащение, комплект оборудования
+obligatorio = обязательный
+vehículo híbrido = гибридный автомобиль
+vehículo eléctrico = электрический автомобиль
+varilla del aceite = масляный щуп
+aceite del motor = моторное масло
+nivel del aceite = уровень масла
+presión del aceite = давление масла
+temperatura del aceite = температура масла
+comprobar = проверять
+motor = двигатель
+paso a nivel = железнодорожный переезд
+velocidad moderada = умеренная скорость
+aproximarse a = приближаться к
+detener el vehículo = остановить транспортное средство
+si fuera preciso = если потребуется
+ferrocarril = железная дорога
+calor = жара
+al volante = за рулём
+seguridad vial = безопасность дорожного движения
+riesgo = опасность, риск
+fatiga = утомление
+cansancio = усталость
+somnolencia = сонливость
+capacidad de reacción = скорость реакции
+cambio de sentido = разворот
+vía de sentido único = дорога с односторонним движением
+prioridad = преимущество
+efectuar una maniobra = выполнить манёвр
+abstenerse de = воздержаться от
+
+distraerse = отвлекаться
+distracción = отвлечение внимания
+comer = есть
+beber = пить
+conducir = управлять автомобилем
+atención = внимание
+control del vehículo = контроль над автомобилем
+accidente = авария, ДТП
+servicios de emergencia = экстренные службы
+víctima = пострадавший
+número de víctimas = количество пострадавших
+lugar del accidente = место аварии
+persona de contacto = контактное лицо
+avisar = сообщать, уведомлять
+identificación = данные для идентификации
+dispositivo inalámbrico = беспроводное устройство
+homologado = сертифицированный, одобренный
+casco = шлем
+conductor de motocicleta = водитель мотоцикла
+navegación = навигация
+ocio = досуг, развлечение
+distracción = отвлечение внимания
+seguridad de la conducción = безопасность управления
+¿Con qué fines...?=Для каких целей?
+agente = регулировщик
+balancear = покачивать
+luz amarilla = жёлтый фонарь
+obligar a detenerse = обязывать остановиться
+dirigir la luz = направлять свет
+precaución = осторожность
+cuadriciclo ligero = лёгкий квадрицикл
+cuadriciclo no ligero = тяжёлый квадрицикл
+velocidad máxima = максимальная скорость
+herido = пострадавший
+accidente = ДТП
+mover a un herido = перемещать пострадавшего
+cabeza = голова
+cuello = шея
+tronco = туловище
+eje cabeza-cuello-tronco = ось голова–шея–туловище
+completamente recto = полностью прямой
+niebla = туман
+habitáculo = салон автомобиля
+ventilar = проветривать
+bien ventilado = хорошо проветриваемый
+cristales = стёкла
+empañarse = запотевать
+visibilidad = видимость
+niebla espesa = густой туман
+luz de corto alcance / luz de cruce = ближний свет
+luz de largo alcance = дальний свет
+antiniebla delantera = передние противотуманные фары
+antiniebla trasera = задний противотуманный фонарь
+adelantar ciclistas = обгонять велосипедистов
+grupo de ciclistas = группа велосипедистов
+línea continua = сплошная линия
+carril contrario = встречная полоса
+separación lateral = боковой интервал
+al menos = как минимум, не менее
+al máximo = максимум
+menos de 1,5 metros = меньше 1,5 метров
+debe guardar una separación lateral de, al menos, 1,5 metros= должен соблюдать боковой интервал не менее 1,5 метра
+al menos = не менее, как минимум
+al menos 1,5 metros = не менее 1,5 м;
+al menos 18 años = не менее 18 лет;
+al menos una vez = как минимум один раз.
+amortiguador = амортизатор
+carrocería = кузов
+frenar bruscamente = резко тормозить
+bajar excesivamente = чрезмерно опускаться
+suspensión = подвеска
+defectuoso = неисправный
+motocicleta = мотоцикл
+permiso A1 = категория A1
+placa de matrícula = номерной знак
+matrícula = регистрационный номер
+sidecar = коляска
+obligatorio = обязательный
+distintivo ambiental C = экологическая наклейка C
+zona de bajas emisiones = зона низких выбросов (ZBE)
+excepto = кроме, за исключением
+etiqueta 0 = наклейка 0 emisiones
+etiqueta ECO = наклейка ECO
+como norma general = как общее правило
+persona mayor = пожилой человек
+pérdida de la visión = потеря зрения
+pérdida del oído = потеря слуха
+tiempo de reacción = время реакции
+disminución del tiempo de reacción = уменьшение времени реакции
+aumento del tiempo de reacción = увеличение времени реакции
+capacidad para conducir = способность управлять автомобилем
+uno de los problemas más graves es la pérdida de la visión y del oído = одной из самых серьёзных проблем является потеря зрения и слуха
+sistema de navegación GPS = навигационная система GPS
+portátil = переносной
+soporte = крепление, держатель
+soporte adecuado = подходящее крепление
+moverse = двигаться, смещаться
+caerse = падать
+seguir las instrucciones = следовать указаниям
+estar en contradicción con = противоречить
+señalización = дорожные знаки и разметка
+utilizar un soporte adecuado = использовать подходящее крепление
+el GPS no debe dificultar la visión del conductor = GPS не должен ухудшать обзор водителя
+las señales tienen prioridad sobre el GPS = дорожные знаки имеют приоритет над GPS
+vehículo especial = специальное транспортное средство
+reparación de las vías = ремонт дорог
+realizar obras = выполнять дорожные работы
+señal luminosa V-2 = жёлтый проблесковый маяк V-2
+vías de uso público = дороги общего пользования
+desde el momento en que = с момента когда
+puesta del sol = закат
+salida del sol = восход солнца
+un vehículo de conservación o reparación debe llevar encendida la señal V-2 desde que circula por vías públicas = дорожная или ремонтная машина должна включать сигнал V-2 с момента движения по дорогам общего пользования
+cuidar de = следить за
+pasajero = пассажир
+mantener la posición adecuada = сохранять правильное положение
+garantizar la seguridad = обеспечивать безопасность
+asiento delantero = переднее сиденье
+mayor de edad = совершеннолетний
+el conductor es responsable de la seguridad de los pasajeros = водитель отвечает за безопасность пассажиров
+mantener la posición adecuada = сохранять правильное положение тела в автомобиле
+puente = мост
+ancho de calzada = ширина проезжей части
+inferior a 6 metros = менее 6 метров
+cruzarse = разъезжаться навстречу друг другу
+vehículo articulado = сочленённое транспортное средство
+vehículo prioritario = оперативное транспортное средство
+autorización especial = специальное разрешение
+los vehículos con autorización especial tienen prohibido cruzarse en puentes de menos de 6 metros de ancho = транспортным средствам со специальным разрешением запрещено разъезжаться на мостах шириной менее 6 метров
+necesitar una autorización especial para circular = требовать специального разрешения для движения
+anchura = ширина
+superior a = более, свыше
+túnel = тоннель
+luz de gálibo = габаритный фонарь транспортного средства большой ширины
+encendida = включённая
+siempre = всегда
+incluso de día = даже днём
+un vehículo de más de 2,10 metros de anchura debe llevar la luz de gálibo encendida en los túneles = транспортное средство шириной более 2,10 м должно иметь включённый габаритный фонарь в тоннелях
+gálibo = габарит, предельный размер транспортного средства
+equipamiento = оборудование
+conjunto de vehículos = состав транспортных средств
+no agrícola = не сельскохозяйственный
+remolque = прицеп
+semirremolque = полуприцеп
+rueda de repuesto = запасное колесо
+chaleco reflectante = светоотражающий жилет
+alta visibilidad = повышенная видимость
+equipo de extinción de incendios = огнетушитель, средство пожаротушения
+homologado = сертифицированный, одобренный
+en condiciones de uso = в исправном состоянии
+un conjunto de vehículos debe llevar un equipo homologado de extinción de incendios = состав транспортных средств должен иметь сертифицированное средство пожаротушения
+velocidad = скорость
+velocidad inadecuada = неподходящая скорость
+adaptarse a = приспосабливаться к
+condiciones del tráfico = дорожная обстановка
+condiciones de la vía = состояние дороги
+condiciones del conductor = состояние водителя
+no adaptarse a las condiciones = не соответствовать условиям
+una velocidad puede ser inadecuada aunque no supere el límite permitido = скорость может быть неподходящей, даже если не превышает разрешённый предел
+la velocidad debe adaptarse a las circunstancias del tráfico y de la vía = скорость должна соответствовать дорожной обстановке и условиям дороги
+atropello = наезд на пешехода
+peatón = пешеход
+vía interurbana = междугородняя дорога
+vía urbana = городская дорога
+proporcionalmente = пропорционально
+fallecer = погибать
+velocidad de circulación = скорость движения
+a mayor velocidad, mayor gravedad del accidente = чем выше скорость, тем тяжелее последствия ДТП
+en las vías interurbanas los atropellos suelen ser más graves por la mayor velocidad = на междугородних дорогах наезды обычно тяжелее из-за более высокой скорости движения
+pese a que = несмотря на то что
+
+vehículo accidentado = автомобиль, попавший в ДТП
+arder = гореть
+comenzar a arder = начать гореть
+herido = пострадавший
+sacar a los heridos = извлечь пострадавших
+rápidamente = быстро
+apagar el fuego = тушить огонь
+buscar ayuda = искать помощь
+lo primero es sacar a los heridos = первое, что нужно сделать, — извлечь пострадавших
+la vida de las personas tiene prioridad sobre el vehículo = жизнь людей имеет приоритет перед автомобилем
+motocicleta = мотоцикл
+señal de emergencia = аварийная сигнализация
+disponer de = иметь, быть оборудованным
+cilindrada = объём двигателя
+centímetro cúbico (cm³) = кубический сантиметр
+intermitente = указатель поворота
+una motocicleta puede disponer de señal de emergencia = мотоцикл может быть оборудован аварийной сигнализацией
+la señal de emergencia hace funcionar todos los intermitentes a la vez = аварийная сигнализация включает все указатели поворота одновременно
+vía interurbana = междугородняя дорога
+nevar = идти о снеге
+nevada ligera = лёгкий снегопад
+alumbrado antiniebla = противотуманное освещение
+luz antiniebla delantera = передняя противотуманная фара
+luz antiniebla trasera = задний противотуманный фонарь
+emplear = использовать
+con nevada ligera puede utilizarse la luz antiniebla delantera = при лёгком снегопаде можно использовать передние противотуманные фары
+la luz antiniebla trasera está reservada para situaciones de visibilidad muy reducida = задний противотуманный фонарь предназначен для случаев очень плохой видимости
+nevar = идти (о снеге)
+llover = идти (о дожде)
+nieve = снег
+nevada = снегопад
+nevada ligera = лёгкий снегопад
+Nevó toda la noche. = Снег шёл всю ночь.
+Empieza a nevar. = Начинает идти снег.
+nevada intensa = сильный снегопад
+empieza a nevar = начинает идти снег
+está nevando = идёт снег
+ocupante = пассажир
+asiento trasero = заднее сиденье
+sistema de retención = удерживающее устройство (ремень безопасности, детское кресло)
+retención adecuada = надлежащая фиксация
+lesión = травма
+lesión grave = серьёзная травма
+resto de ocupantes = остальные пассажиры
+en caso de accidente = в случае ДТП
+los ocupantes traseros deben utilizar el sistema de retención = пассажиры задних сидений должны использовать удерживающие устройства
+un pasajero sin cinturón puede causar lesiones graves a otros ocupantes = пассажир без ремня может нанести серьёзные травмы другим пассажирам
+carril de aceleración = полоса разгона
+incorporarse a una vía = выезжать на дорогу, вливаться в поток
+cerciorarse de = убедиться в
+sin peligro = без опасности
+maniobra = манёвр
+tener prioridad de paso = иметь преимущество в движении
+estar seguro = быть уверенным, что безопасно
+el conductor que se incorpora debe cerciorarse de que puede hacerlo sin peligro = водитель, въезжающий на дорогу, должен убедиться, что может сделать это безопасно
+facilitar la incorporación = облегчать въезд в поток
+quien se incorpora no tiene prioridad de paso = въезжающий не имеет преимущества движения
+intersección sin señalizar = нерегулируемый перекрёсток
+prioridad de paso = преимущество движения
+glorieta = круговой перекрёсток
+pretender entrar = намереваться въехать
+carril reservado = выделенная полоса
+incorporarse a una autopista = въезжать на автомагистраль
+en una glorieta tienen prioridad los vehículos que ya circulan por ella = на круговом перекрёстке преимущество имеют транспортные средства, уже движущиеся по нему
+quien entra en una glorieta debe ceder el paso = въезжающий на круговой перекрёсток обязан уступить дорогу
+quien se incorpora a una autopista debe ceder el paso = въезжающий на автомагистраль обязан уступить дорогу
+vehículo de movilidad personal (VMP) = средство индивидуальной мобильности
+patinete eléctrico = электросамокат
+velocidad máxima = максимальная скорость
+por construcción = конструктивно, по техническим характеристикам
+alcanzar una velocidad = развивать скорость
+un VMP puede alcanzar como máximo 25 km/h = VMP может развивать максимум 25 км/ч
+si supera los 25 km/h no se considera un VMP = если превышает 25 км/ч, он не считается VMP
+la velocidad de un VMP debe estar entre 6 y 25 km/h = скорость VMP должна быть от 6 до 25 км/ч
+distracción = отвлечение внимания
+al volante = за рулём
+sufrir una distracción = отвлечься
+situación de riesgo = опасная ситуация
+tiempo de reacción = время реакции
+tardar más tiempo en reaccionar = дольше реагировать
+concentración = концентрация
+una distracción aumenta el tiempo de reacción = отвлечение увеличивает время реакции
+un conductor distraído tarda más en reaccionar ante un peligro = отвлёкшийся водитель дольше реагирует на опасность
+la distracción es una de las principales causas de accidente = отвлечение является одной из основных причин ДТП
+tiempo de reacción = время реакции
+variar = изменяться
+en función de = в зависимости от
+factor = фактор
+estado físico = физическое состояние
+fatiga = усталость
+distracción = отвлечение внимания
+alcohol = алкоголь
+medicamentos = лекарства
+el tiempo de reacción puede variar = время реакции может изменяться
+el estado físico influye en el tiempo de reacción = физическое состояние влияет на время реакции
+la fatiga aumenta el tiempo de reacción = усталость увеличивает время реакции
+un conductor cansado tarda más en reaccionar = уставший водитель реагирует медленнее
+airbag = подушка безопасности
+eficaz = эффективный
+evitar = избегать
+impacto = удар
+cara = лицо
+volante = рулевое колесо, руль
+distancia = расстояние
+parte más cercana del cuerpo = ближайшая часть тела
+unos 25 centímetros = около 25 сантиметров
+el airbag necesita espacio para desplegarse correctamente = подушке безопасности нужно пространство для правильного раскрытия
+la distancia recomendada entre el conductor y el volante es de unos 25 centímetros = рекомендуемое расстояние между водителем и рулём около 25 см
+desplegarse = раскрываться (о подушке безопасности)
+prestar atención = уделять внимание
+atención especial = особое внимание
+niño = ребёнок
+vulnerable = уязвимый
+accidente de tráfico = ДТП
+especialmente = особенно
+peligro = опасность
+los niños son usuarios vulnerables de la vía = дети являются уязвимыми участниками дорожного движения
+hay que prestar especial atención a los niños = необходимо уделять детям особое внимание
+los niños pueden actuar de forma imprevisible = дети могут действовать непредсказуемо
+vía urbana = городская дорога
+zona urbana = населённый пункт, городская зона
+autobús = автобус
+parada señalizada = обозначенная остановка
+incorporación = выезд, вливание в поток
+facilitar = облегчать, предоставлять возможность
+siempre que sea posible = если это возможно
+obligatorio = обязательный
+en zona urbana hay que facilitar la incorporación de los autobuses = в населённом пункте нужно облегчать выезд автобусам
+un autobús que sale de una parada señalizada tiene prioridad para incorporarse = автобус, выезжающий от обозначенной остановки, имеет преимущество для вливания в поток
+facilitar la incorporación no significa detenerse siempre = облегчить выезд не означает всегда останавливаться
+sistema de alumbrado = система освещения
+alumbrado = освещение
+carretera = дорога
+ser visto = быть замеченным
+conductor = водитель
+únicamente = только
+poner en funcionamiento = вводить в действие, включать
+ahorrar energía = экономить энергию
+el alumbrado sirve para ver y ser visto = освещение служит для того, чтобы видеть и быть видимым
+ver bien la carretera = хорошо видеть дорогу
+ser visto por los demás usuarios = быть замеченным другими участниками движения
+la función del alumbrado es ver y ser visto = функция освещения — видеть и быть видимым
+marcha atrás = движение задним ходом
+circular marcha atrás = двигаться задним ходом
+circunstancia = обстоятельство
+marchar hacia adelante = двигаться вперёд
+cambiar de dirección = изменить направление движения
+cambiar de sentido = развернуться
+no sea posible = невозможно
+maniobra complementaria = вспомогательный манёвр
+autopista = автомагистраль
+autovía = скоростная дорога
+la marcha atrás solo está permitida en casos excepcionales = движение задним ходом разрешено только в исключительных случаях
+en autopistas y autovías está prohibido circular marcha atrás = на автомагистралях и скоростных дорогах движение задним ходом запрещено
+cambiar de sentido = развернуться, изменить направление движения на противоположное
+carril reversible = реверсивная полоса
+estar abierto = быть открытым для движения
+atravesar = пересекать
+línea doble discontinua = двойная прерывистая линия
+adelantar = обгонять
+carril libre = свободная полоса
+la línea que delimita un carril reversible no puede cruzarse para adelantar = линию, ограничивающую реверсивную полосу, нельзя пересекать для обгона
+entrar en un carril reversible = въехать на реверсивную полосу
+salir de un carril reversible = выехать с реверсивной полосы
+un carril reversible se utiliza según la señalización luminosa = реверсивная полоса используется в соответствии со световой сигнализацией
+intermitente = указатель поворота
+no funciona = не работает
+girar a la izquierda = повернуть налево
+girar a la derecha = повернуть направо
+brazo izquierdo = левая рука
+posición horizontal = горизонтальное положение
+palma hacia abajo = ладонь вниз
+doblar el brazo hacia arriba = согнуть руку вверх
+con el brazo izquierdo en posición horizontal y la palma hacia abajo = с вытянутой горизонтально левой рукой и ладонью вниз
+doblando el brazo izquierdo hacia arriba = согнув левую руку вверх
+invadir = въезжать, занимать пространство
+cruce de vías = перекрёсток
+marcha atrás = движение задним ходом
+como norma general = как общее правило
+recorrer = проехать расстояние
+no se puede invadir un cruce circulando marcha atrás = нельзя въезжать на перекрёсток задним ходом
+la marcha atrás está limitada a casos excepcionales = движение задним ходом разрешено только в исключительных случаях
+paso a nivel = железнодорожный переезд
+paso para peatones = пешеходный переход
+está prohibido entrar marcha atrás en un cruce = запрещено въезжать на перекрёсток задним ходом
+alcohol = алкоголь
+afectar = воздействовать
+por igual = одинаково
+consumir = употреблять
+cantidad = количество
+tipo de alcohol = вид алкогольного напитка
+menor de 18 años = лицо младше 18 лет
+persona de mediana edad = человек среднего возраста
+sensible a los efectos = чувствительный к воздействию
+el alcohol no afecta por igual a todas las personas = алкоголь воздействует на разных людей по-разному
+los menores suelen ser más sensibles al alcohol = несовершеннолетние обычно более чувствительны к алкоголю
+los efectos del alcohol dependen de varios factores = воздействие алкоголя зависит от многих факторов
+titular = владелец
+permiso A = водительское удостоверение категории A
+motocicleta = мотоцикл
+sidecar = боковая коляска мотоцикла
+conducir = управлять транспортным средством
+cilindrada = объём двигателя
+superar = превышать
+el permiso A permite conducir cualquier motocicleta = категория A позволяет управлять любым мотоциклом
+motocicleta con sidecar = мотоцикл с коляской
+el titular del permiso A puede conducir motocicletas con sidecar = владелец категории A может управлять мотоциклами с коляской
+precaución = мера предосторожности
+atropello = наезд
+ciclista = велосипедист
+riesgo = риск
+adelantamiento = обгон
+sentido contrario = встречное направление
+señal luminosa = световой сигнал
+señal acústica = звуковой сигнал
+avisar = предупреждать
+propósito = намерение
+no hacer señales acústicas cerca de los ciclistas = не подавать звуковые сигналы рядом с велосипедистами
+los ciclistas son usuarios vulnerables = велосипедисты являются уязвимыми участниками движения
+una señal acústica puede asustar a un ciclista = звуковой сигнал может испугать велосипедиста
+cerca de = рядом с, вблизи от
+pérdida = потеря
+capacidades psicofísicas = психофизические способности
+persona mayor = пожилой человек
+probabilidad = вероятность
+sufrir un accidente = попасть в ДТП
+situación compleja = сложная ситуация
+respuesta rápida = быстрая реакция
+exigir = требовать
+con la edad disminuye la capacidad de reacción = с возрастом снижается способность быстро реагировать
+las personas mayores tienen más riesgo en situaciones complejas = у пожилых людей выше риск в сложных ситуациях
+una situación que exige una respuesta rápida = ситуация, требующая быстрой реакции
+restricción de circulación = ограничение движения
+imponer = вводить, устанавливать
+autoridad = орган власти
+alta contaminación = высокое загрязнение воздуха
+episodio de contaminación = период загрязнения воздуха
+obligado = обязанный
+respetar = соблюдать
+incumplimiento = несоблюдение
+infracción grave = серьёзное нарушение
+los conductores deben respetar las restricciones de circulación = водители обязаны соблюдать ограничения движения
+el incumplimiento es una infracción grave = несоблюдение является серьёзным нарушением
+las restricciones temporales también son obligatorias = временные ограничения также обязательны для
+velocidad inadecuada = неподходящая скорость
+condiciones del vehículo = состояние автомобиля
+condiciones de la vía = состояние дороги
+distancia de frenado = тормозной путь
+aumentar = увеличивать
+influir = влиять
+estado de los neumáticos = состояние шин
+estado de los frenos = состояние тормозов
+calzada mojada = мокрая дорога
+la distancia de frenado depende de varios factores = тормозной путь зависит от нескольких факторов
+una velocidad elevada aumenta la distancia de frenado = высокая скорость увеличивает тормозной путь
+las malas condiciones de la vía aumentan la distancia de frenado = плохое состояние дороги увеличивает тормозной путь
+frenar = тормозить
+cargar combustible = заправлять топливо
+combustible = топливо
+apagar = выключать
+motor = двигатель
+luces = световые приборы
+aparatos eléctricos = электрические устройства
+teléfono móvil = мобильный телефон
+antes de cargar combustible = перед заправкой топливом
+hay que apagar el motor antes de repostar = перед заправкой необходимо заглушить двигатель
+repostar combustible = заправлять автомобиль топливом
+riesgo de incendio = риск возгорания
+estación de servicio = автозаправочная станция (АЗС)
+facilitar = облегчать, способствовать
+incorporación = вливание в поток, выезд в движение
+circulación = движение
+vehículo = транспортное средство
+transporte colectivo de viajeros = общественный пассажирский транспорт
+parada señalizada = обозначенная остановка
+salir de una parada = выезжать от остановки
+sobre todo = особенно
+facilitar la incorporación de otros vehículos = способствовать вливанию других транспортных средств в поток
+los autobuses que salen de una parada señalizada tienen prioridad para incorporarse = автобусы, выезжающие от обозначенной остановки, имеют преимущество при вливании в поток
+vehículo de transporte colectivo = общественный транспорт
+incorporarse a la circulación = вливаться в транспортный поток
+llover = идти (о дожде)
+lluvia = дождь
+prestar atención = обращать внимание
+especial atención = особое внимание
+badén = низкий участок дороги, лежачий полицейский
+charco = лужа
+producirse = образовываться
+acuaplaning = аквапланирование
+pérdida de adherencia = потеря сцепления
+cuando llueve hay que prestar atención a los charcos = во время дождя нужно обращать внимание на лужи
+los badenes pueden acumular agua = в низких местах дороги может скапливаться вода
+la lluvia aumenta el riesgo de accidente = дождь увеличивает риск ДТП
+señal = знак
+itinerario = маршрут, направление дороги
+prioridad = преимущество, главная дорога
+ramal = ответвление
+de frente = прямо
+a la izquierda = налево
+a la derecha = направо
+vía principal = главная дорога
+vía secundaria = второстепенная дорога
+la línea gruesa indica la vía con prioridad = толстая линия показывает главную дорогу
+el ramal izquierdo tiene prioridad = левое ответвление является главным
+la carretera principal gira a la izquierda = главная дорога поворачивает налево
+luz antiniebla delantera = передняя противотуманная фара
+antiniebla = противотуманный
+condiciones ambientales = погодные условия
+disminuir la visibilidad = ухудшать видимость
+sensiblemente = значительно
+niebla = туман
+lluvia intensa = сильный дождь
+nevada intensa = сильный снегопад
+nube de polvo = облако пыли
+visibilidad reducida = ограниченная видимость
+la luz antiniebla delantera puede utilizarse cuando disminuye la visibilidad = переднюю противотуманную фару можно использовать при ухудшении видимости
+puesta del sol = закат
+salida del sol = восход солнца
+travesía = участок дороги, проходящий через населённый пункт
+agente de la autoridad = сотрудник полиции, представитель власти
+vigilancia del tráfico = контроль дорожного движения
+inmovilización = задержание, обездвиживание транспортного средства
+motocicleta = мотоцикл
+casco de protección = защитный шлем
+llevar puesto = быть надетым
+conductor = водитель
+carga = груз
+sobresalir = выступать за габарит
+parte trasera = задняя часть
+los agentes pueden inmovilizar una motocicleta si el conductor no lleva casco = полиция может задержать мотоцикл, если водитель едет без шлема
+el casco es obligatorio para los motoristas = шлем обязателен для мотоциклистов
+inmovilizar un vehículo = запретить дальнейшее движение транспортного средства
+consumo de combustible = расход топлива
+combustible = топливо
+aumentar = увеличиваться
+neumático = шина
+dibujo del neumático = протектор шины
+carecer de = не иметь, быть лишённым
+ventanilla = боковое окно автомобиля
+subida = поднятая (закрытая)
+vehículo cargado = загруженный автомобиль
+circular = двигаться, ехать
+un vehículo muy cargado consume más combustible = сильно загруженный автомобиль расходует больше топлива
+el peso aumenta el consumo = вес увеличивает расход топлива
+las ventanillas subidas mejoran la aerodinámica = закрытые окна улучшают аэродинамику
+el consumo depende del peso del vehículo = расход зависит от массы автомобиля
+turismo = легковой автомобиль
+placa de matrícula = номерной знак
+matrícula = регистрационный номер
+iluminada = освещённая
+puesta del sol = закат
+salida del sol = восход солнца
+placa delantera = передний номерной знак
+placa trasera = задний номерной знак
+alumbrado de matrícula = подсветка номерного знака
+la placa trasera debe estar iluminada = задний номерной знак должен быть освещён
+entre la puesta y la salida del sol = от заката до восхода солнца
+el alumbrado de matrícula ilumina la placa trasera = подсветка номера освещает задний номерной знак
+navegador GPS = GPS-навигатор
+conducción = управление автомобилем
+peligroso = опасный
+distracción = отвлечение внимания
+producir distracciones = вызывать отвлечение внимания
+ruta = маршрут
+ruta habitual = привычный маршрут
+de gran ayuda = очень полезный
+el GPS puede ser peligroso cuando distrae al conductor = GPS может быть опасен, когда отвлекает водителя
+mirar la pantalla = смотреть на экран
+prestar atención a la carretera = уделять внимание дороге
+la distracción aumenta el riesgo de accidente = отвлечение внимания увеличивает риск ДТП
+masa máxima = максимальная масса
+no superar = не превышать
+plaza de asiento = пассажирское место
+zona de carga = грузовой отсек
+compartimento único = единый отсек
+pick-up = пикап
+vehículo mixto = грузопассажирский автомобиль
+furgón = фургон
+furgoneta = фургонетка
+cabina = кабина
+plataforma de carga = грузовая платформа
+las plazas de asiento y la zona de carga están separadas = пассажирские места и грузовая зона разделены
+un pick-up tiene una cabina y una caja de carga independientes = у пикапа кабина и грузовая платформа разделены
+compartimento = отсек, отделение
+presenciar = быть свидетелем
+accidente = ДТП
+víctima = пострадавший
+implicado = участник происшествия
+detenerse = остановиться
+prestar auxilio = оказать помощь
+herido = раненый, пострадавший
+colaboración = помощь, содействие
+estar obligado = быть обязанным
+ayuda organizada = организованная помощь
+un conductor que presencia un accidente debe prestar auxilio = водитель, ставший свидетелем ДТП, обязан оказать помощь
+excepto si no es necesaria su colaboración = кроме случаев, когда его помощь не требуется
+los testigos también tienen obligación de ayudar = свидетели также обязаны помогать
+prestar auxilio a los heridos = оказать помощь пострадавшим
+conducción preventiva = защитное (предупредительное) вождение
+permitir = позволять
+reaccionar = реагировать
+con tiempo suficiente = с достаточным запасом времени
+evitar riesgos = избегать опасностей
+riesgo = опасность, риск
+atropello = наезд на пешехода
+ahorrar combustible = экономить топливо
+prever situaciones peligrosas = предвидеть опасные ситуации
+la conducción preventiva ayuda a evitar riesgos = защитное вождение помогает избегать опасностей
+reaccionar a tiempo = вовремя реагировать
+mantener una distancia de seguridad = соблюдать безопасную дистанцию
+velocidad = скорость
+reducir la velocidad = снижать скорость
+freno = тормоз
+freno de servicio = рабочий тормоз
+freno motor = торможение двигателем
+motor = двигатель
+marcha inferior = пониженная передача
+retención del motor = тормозящее действие двигателя
+la velocidad se puede reducir con los frenos y con el motor = скорость можно снижать тормозами и двигателем
+utilizar el freno motor reduce el desgaste de los frenos = использование торможения двигателем уменьшает износ тормозов
+en una pendiente es recomendable usar el freno motor = на спуске рекомендуется использовать торможение двигателем
+accidentalidad = аварийность, статистика ДТП
+fallecer = погибать
+accidente de tráfico = ДТП
+mayor número = наибольшее количество
+turismo = легковой автомобиль
+furgoneta = фургон, фургонетка
+motocicleta = мотоцикл
+conforme a los datos = согласно данным
+un mayor número de conductores fallece en turismos = наибольшее число водителей погибает в легковых автомобилях
+número absoluto = абсолютное количество
+riesgo de accidente = риск ДТП
+conductor fallecido = погибший водитель
+conducir de forma segura = управлять безопасно
+conductor = водитель
+atención = внимание
+centrar la atención = сосредоточить внимание
+tarea de la conducción = процесс управления автомобилем
+auriculares = наушники
+casco = гарнитура, наушник
+carril izquierdo = левая полоса
+carril derecho = правая полоса
+toda su atención = всё своё внимание
+el conductor debe centrar toda su atención en la conducción = водитель должен полностью сосредоточиться на управлении автомобилем
+la distracción aumenta el riesgo de accidente = отвлечение увеличивает риск ДТП
+mantener la concentración al volante = сохранять концентрацию за рулём
+herido = пострадавший, раненый
+accidente = ДТП
+comprobar = проверять
+respiración = дыхание
+pulso = пульс
+consciente = в сознании
+inconsciente = без сознания
+primeros auxilios = первая помощь
+llevar al hospital = отвезти в больницу
+dar de beber = дать пить
+lo primero es comprobar la respiración y el pulso = прежде всего нужно проверить дыхание и пульс
+prestar primeros auxilios = оказывать первую помощь
+estado de conciencia = состояние сознания
+no se debe dar bebida a un herido = пострадавшему нельзя давать пить
+vehículo destinado al transporte de mercancías = транспортное средство для перевозки грузов
+mercancía = груз, товар
+carga indivisible = неделимый груз
+sobresalir = выступать за габарит
+parte anterior = передняя часть
+parte posterior = задняя часть
+longitud = длина
+más de 5 metros = более 5 метров
+una carga indivisible puede sobresalir 2 metros por delante y 3 por detrás = неделимый груз может выступать на 2 метра спереди и на 3 метра сзади
+transporte de mercancías = перевозка грузов
+sobresalir por la parte posterior = выступать за задний габарит
+sobresalir por la parte anterior = выступать за передний габарит
+cantidad de alcohol = количество алкоголя
+idéntica cantidad = одинаковое количество
+tasa de alcoholemia = уровень алкоголя в крови
+alcoholemia = содержание алкоголя в крови
+peso = вес
+sexo = пол
+estado psicofísico = психофизическое состояние
+depender de = зависеть от
+consumir alcohol = употреблять алкоголь
+la tasa de alcoholemia no es igual en todas las personas = уровень алкоголя не одинаков у всех людей
+el peso influye en la alcoholemia = вес влияет на уровень алкоголя
+el sexo influye en la alcoholemia = пол влияет на уровень алкоголя
+la misma cantidad de alcohol puede producir efectos distintos = одинаковое количество алкоголя может вызывать разные последствия
+cantidad de alcohol = количество алкоголя
+idéntica cantidad = одинаковое количество
+tasa de alcoholemia = уровень алкоголя в крови
+alcoholemia = содержание алкоголя в крови
+peso = вес
+sexo = пол
+estado psicofísico = психофизическое состояние
+depender de = зависеть от
+consumir alcohol = употреблять алкоголь
+la tasa de alcoholemia no es igual en todas las personas = уровень алкоголя не одинаков у всех людей
+el peso influye en la alcoholemia = вес влияет на уровень алкоголя
+el sexo influye en la alcoholemia = пол влияет на уровень алкоголя
+la misma cantidad de alcohol puede producir efectos distintos = одинаковое количество алкоголя может вызывать разные последствия
+autopista = автомагистраль
+camión = грузовик
+MMA (masa máxima autorizada) = максимально разрешённая масса
+distancia de seguridad = безопасная дистанция
+adelantar = обгонять
+frenado brusco = резкое торможение
+colisionar = столкнуться
+detenerse = остановиться
+vehículo que va delante = впереди идущее транспортное средство
+dejar distancia suficiente = оставлять достаточную дистанцию
+sin colisionar = без столкновения
+la distancia debe permitir detenerse con seguridad = дистанция должна позволять безопасно остановиться
+MMA inferior a 3500 kg = ММА менее 3500 кг
+distancia de seguridad adecuada = достаточная безопасная дистанция
+vehículo amarillo = жёлтый автомобиль
+turismo azul = синий легковой автомобиль
+incorporación = включение в поток движения, перестроение
+incorporarse a la circulación = вливаться в движение
+facilitar = облегчать, способствовать
+en la medida de lo posible = по мере возможности
+ceder el paso = уступать дорогу
+detenerse = остановиться
+facilitar la incorporación = облегчить включение в поток
+el conductor debe facilitar la incorporación de otros vehículos = водитель должен по возможности облегчать включение в поток другим транспортным средствам
+sin poner en peligro la circulación = не создавая опасности для движения
+curva = поворот
+curva a la izquierda = левый поворот
+velocidad excesiva = чрезмерная скорость
+fuerza centrífuga = центробежная сила
+trayectoria = траектория
+desplazarse = смещаться
+calzada = проезжая часть
+hacia la derecha = вправо
+hacia la izquierda = влево
+afectar a la trayectoria = влиять на траекторию
+la fuerza centrífuga empuja el vehículo hacia el exterior de la curva = центробежная сила выталкивает автомобиль наружу поворота
+entrar demasiado rápido en una curva = войти в поворот на слишком большой скорости
+en una curva a la izquierda el vehículo tiende a desplazarse a la derecha = в левом повороте автомобиль стремится сместиться вправо
+paso para peatones = пешеходный переход
+peatón = пешеход
+parada = остановка
+estacionamiento = стоянка, парковка
+estacionar = парковаться
+estar permitido = быть разрешённым
+estar prohibido = быть запрещённым
+ni... ni... = ни... ни...
+visibilidad = обзорность
+seguridad vial = безопасность дорожного движения
+en un paso para peatones no se puede parar ni estacionar = на пешеходном переходе нельзя ни останавливаться, ни парковаться
+la parada está prohibida en el paso para peatones = остановка на пешеходном переходе запрещена
+el estacionamiento está prohibido en el paso para peatones = стоянка на пешеходном переходе запрещена
+motivo = причина
+mortalidad = смертность
+distracción = отвлечение внимания
+conductor = водитель
+accidente = ДТП
+salida de la vía = съезд (вылет) с дороги
+colisión = столкновение
+atropello = наезд на пешехода
+principalmente = главным образом
+perder el control del vehículo = потерять контроль над автомобилем
+la distracción es una causa frecuente de salida de la vía = отвлечение является частой причиной съезда с дороги
+mantener la atención = сохранять внимание
+la falta de atención aumenta el riesgo de accidente = невнимательность увеличивает риск ДТП
+neumático = шина
+duración del neumático = срок службы шины
+reducir = уменьшать
+alta temperatura = высокая температура
+desgaste = износ
+circular = двигаться, ехать
+vía urbana = городская дорога
+cambiar de marcha = переключать передачу
+de forma innecesaria = без необходимости
+las altas temperaturas reducen la duración del neumático = высокие температуры сокращают срок службы шины
+el calor acelera el desgaste de los neumáticos = жара ускоряет износ шин
+la temperatura influye en la vida útil del neumático = температура влияет на срок службы шины
+vida útil = срок службы, ресурс
+neumático = шина
+duración del neumático = срок службы шины
+reducir = уменьшать
+alta temperatura = высокая температура
+desgaste = износ
+circular = двигаться, ехать
+vía urbana = городская дорога
+cambiar de marcha = переключать передачу
+de forma innecesaria = без необходимости
+las altas temperaturas reducen la duración del neumático = высокие температуры сокращают срок службы шины
+el calor acelera el desgaste de los neumáticos = жара ускоряет износ шин
+la temperatura influye en la vida útil del neumático = температура влияет на срок службы шины
+vida útil = срок службы, ресурс
+arrojar = бросать
+dejar = оставлять
+vía = дорога
+objeto = предмет
+entorpecer = затруднять, мешать
+libre circulación = свободное движение
+parada = остановка
+estacionamiento = стоянка
+estar prohibido = быть запрещённым
+instalaciones de la vía = дорожные сооружения и оборудование
+arrojar objetos a la vía está prohibido = бросать предметы на дорогу запрещено
+un objeto puede causar un accidente = предмет может стать причиной ДТП
+obstáculo en la calzada = препятствие на проезжей части
+la circulación debe ser libre y segura = движение должно быть свободным и безопасным
+marca vial = дорожная разметка
+marca vial azul = синяя дорожная разметка
+estacionamiento = стоянка, парковка
+estacionar = парковаться
+duración = продолжительность
+limitada = ограниченная
+ciertos periodos del día = определённые периоды дня
+zona azul = зона платной/ограниченной парковки
+permitir = разрешать
+la duración del estacionamiento está limitada = время стоянки ограничено
+las marcas azules indican estacionamiento limitado = синяя разметка обозначает ограниченную по времени парковку
+las marcas blancas indican estacionamiento normal = белая разметка обозначает обычную парковку
+estacionamiento regulado = регулируемая парковка
+velocidad máxima = максимальная скорость
+permitida = разрешённая
+turismo = легковой автомобиль
+carretera convencional = обычная загородная дорога
+separación física = физическое разделение
+sentido de circulación = направление движения
+vía = дорога
+limitación de velocidad = ограничение скорости
+en carretera convencional la velocidad máxima es de 90 km/h = на обычной дороге максимальная скорость 90 км/ч
+sin separación física de sentidos = без физического разделения направлений движения
+la velocidad debe adaptarse a las circunstancias = скорость должна соответствовать условиям движения
+titular de la vía = владелец дороги
+fijar una velocidad máxima = установить максимальную скорость
+separación física = физическое разделение
+sentido de circulación = направление движения
+carretera convencional = обычная дорога
+arcén = обочина
+anchura = ширина
+tres o más carriles = три или более полос
+autocaravana = автодом
+M.M.A. (masa máxima autorizada) = максимально разрешённая масса
+el titular de la vía puede fijar 100 km/h = владелец дороги может установить лимит 100 км/ч
+separación física de los sentidos de circulación = физическое разделение встречных потоков
+la velocidad máxima general es de 90 km/h = общее ограничение скорости составляет 90 км/ч
+viento lateral = боковой ветер
+soplar = дуть (о ветре)
+con mucha fuerza = очень сильно
+resistencia = воздействие, сопротивление
+adaptar la velocidad = подобрать скорость
+marcha adecuada = подходящая передача
+volante = рулевое колесо
+estabilidad = устойчивость
+ráfaga de viento = порыв ветра
+sujetar firmemente el volante = крепко держать руль
+el viento lateral puede desviar el vehículo = боковой ветер может отклонить автомобиль
+hay que adaptar la velocidad al viento = необходимо подбирать скорость с учётом ветра
+seleccionar una marcha adecuada = выбрать подходящую передачу
+abrir las ventanillas no mejora la estabilidad = открытие окон не улучшает устойчивость автомобиля
+autobús = автобус
+pretender = намереваться
+incorporarse a la circulación = включиться в движение
+maniobra = манёвр
+facilitar = облегчать, способствовать
+llegar a detenerse = вплоть до остановки
+si fuera preciso = если это необходимо
+prioridad de paso = преимущество в движении
+parada señalizada = обозначенная остановка
+facilitar la maniobra del autobús = облегчить манёвр автобуса
+el conductor debe facilitar la salida del autobús = водитель должен облегчить выезд автобуса
+incorporarse al tráfico = вливаться в поток движения
+adoptar precauciones = соблюдать меры предосторожности
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

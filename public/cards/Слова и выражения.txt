@@ -1256,6 +1256,67 @@ depender de = зависеть от
 principalmente = главным образом
 evitar un accidente = предотвратить ДТП
 reducir las consecuencias = уменьшить последствия
+excepto = кроме, за исключением
+eficaz = эффективный
+evitar = избегать
+impacto = удар
+cara = лицо
+presenciar = быть свидетелем
+accidente = ДТП
+víctima = пострадавший
+implicado = участник происшествия
+detenerse = остановиться
+prestar auxilio = оказать помощь
+herido = раненый, пострадавший
+colaboración = помощь, содействие
+depender de = зависеть от
+colisión = столкновение
+atropello = наезд на пешехода
+duración del neumático = срок службы шины
+arrojar = бросать
+dejar = оставлять
+entorpecer = затруднять, мешать
+afectar a = распространяться на
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
