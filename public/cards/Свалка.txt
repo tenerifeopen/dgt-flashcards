@@ -1288,6 +1288,1789 @@ el efecto submarino puede causar lesiones graves = эффект поднырив
 el cinturón debe apoyarse sobre la pelvis = ремень должен проходить по тазу
 una toalla sobre el asiento aumenta el riesgo de efecto submarino = полотенце на сиденье увеличивает риск эффекта подныривания
 
+qué precaución = какую меру предосторожности
+debe adoptar = должен принять / соблюдать
+todo conductor = каждый водитель
+para reducir = чтобы уменьшить
+el riesgo de = риск
+atropello = наезд
+peatones = пешеходы
+prestar atención = быть внимательным
+sobre todo = особенно
+atropello = наезд
+peatón = пешеход
+calzada = проезжая часть
+carril = полоса движения
+rampa = рампа
+advertir = предупреждать
+conductor = водитель
+camión = грузовик
+estar obligado a = быть обязанным
+llevar = иметь при себе, возить
+chaleco = жилет
+chaleco reflectante = светоотражающий жилет
+reflectante = светоотражающий
+vehículo = транспортное средство
+estar obligado a llevar = быть обязанным иметь при себе
+sólo si = только если
+circular = двигаться, ехать
+circula = движется, едет
+habitualmente = обычно, регулярно
+vía interurbana = загородная дорога
+vías interurbanas = загородные дороги
+llevar en el vehículo = иметь в транспортном средстве
+llevar documentación = иметь при себе документы
+llevar un chaleco reflectante = иметь при себе светоотражающий жилет
+estar obligado a llevar = быть обязанным иметь при себе / иметь в автомобиле
+el paso de dos a tres carriles = переход от двух полос к трём
+aconsejada = рекомендуемая
+velocidad máxima permitida = максимально разрешённая скорость
+indicar = указывать
+indica = указывает
+señal = дорожный знак
+esta señal = этот знак
+paso de dos a tres carriles = переход от двух полос к трём
+carril = полоса движения
+carriles = полосы движения
+carril especial = специальная полоса
+vehículo lento = тихоходное транспортное средство
+vehículos lentos = тихоходные транспортные средства
+señalización = обозначение знаком
+velocidad = скорость
+velocidad máxima = максимальная скорость
+velocidad máxima permitida = максимально разрешённая скорость
+permitida = разрешённая
+permitir = разрешать
+velocidad aconsejada = рекомендуемая скорость
+aconsejada = рекомендуемая
+aconsejar = рекомендовать
+obligatorio = обязательный
+obligatorio para = обязательный для
+señal = дорожный знак
+carril = полоса движения
+velocidad máxima permitida = максимально разрешённая скорость
+velocidad aconsejada = рекомендуемая скорость
+permitida = разрешённая
+aconsejada = рекомендуемая
+obligatorio = обязательный
+vehículo lento = тихоходное транспортное средство
+círculo rojo = обязательное ограничение
+panel azul cuadrado = рекомендация
+velocidad máxima permitida = максимально разрешённая скорость
+velocidad máxima aconsejada = рекомендуемая максимальная скорость
+siempre que = при условии что, если
+existir = существовать
+exista = существует, имеется
+espacio suficiente = достаточное пространство
+espacio = пространство, место
+suficiente = достаточный
+adoptar = принимать, соблюдать
+adoptando = соблюдая, принимая
+precaución = мера предосторожности
+máximas precauciones = максимальные меры предосторожности
+estar permitido = быть разрешённым
+permitido = разрешённый
+adelantar = обгонять, опережать
+adelantamiento = обгон
+por la derecha = справа
+vía interurbana = загородная дорога
+vías interurbanas = загородные дороги
+intersección = перекрёсток
+proximidades = окрестности, прилегающий участок
+autopista = автомагистраль
+autovía = скоростная дорога
+exclusivamente = исключительно
+dentro de poblado = внутри населённого пункта
+vía urbana = городская дорога
+vías urbanas = городские дороги
+dos o más carriles = две или более полосы
+delimitado = обозначенный, разграниченный
+línea longitudinal = продольная линия разметки
+líneas longitudinales = продольные линии разметки
+adelantar = обгонять
+adelantamiento = обгон
+por la derecha = справа
+por la izquierda = слева
+vía urbana = городская дорога
+vía interurbana = загородная дорога
+intersección = перекрёсток
+estar permitido = быть разрешённым
+espacio suficiente = достаточное пространство
+línea longitudinal = продольная линия разметки
+la falta de = отсутствие, нехватка
+experiencia = опыт
+pasajero = пассажир
+puede ser = может быть
+la causa de = причиной
+accidente = авария, ДТП
+moto = мотоцикл
+sí = да
+sobre todo = особенно
+curvas = повороты
+debido a = из-за
+aumento = увеличение
+peso = вес
+falta de = отсутствие, нехватка
+experiencia = опыт
+falta de experiencia = отсутствие опыта
+pasajero = пассажир
+puede ser = может быть
+causa = причина
+la causa de = причина чего-либо
+accidente = авария, ДТП
+moto = мотоцикл
+motocicleta = мотоцикл
+sobre todo = особенно
+curva = поворот
+curvas = повороты
+debido a = из-за
+aumento = увеличение
+peso = вес
+aumento de peso = увеличение веса
+falta de experiencia = отсутствие опыта
+pasajero = пассажир
+causa de accidente = причина ДТП
+sobre todo = особенно
+curva = поворот
+debido a = из-за
+aumento de peso = увеличение веса
+moto = мотоцикл
+la falta de atención = невнимательность
+la falta de experiencia = отсутствие опыта
+la causa del accidente = причина ДТП
+puede ser la causa de = может быть причиной чего-либо
+cuál de las siguientes razones = какая из следующих причин
+puede explicar = может объяснить
+vehículo = транспортное средство
+factor de riesgo = фактор риска
+aparece = появляется, фигурирует
+en un grado menor = в меньшей степени
+causa principal = основная причина
+accidentes de tráfico = дорожно-транспортные происшествия
+importantes = важные, значительные
+mejoras técnicas = технические улучшения
+introducidas = внедрённые
+diseño = проектирование, конструкция
+construcción = изготовление, конструкция
+edad media = средний возраст
+vehículos = транспортные средства
+cada vez mayor = всё больше и больше
+cuál = какой
+siguiente = следующий
+razón = причина
+las siguientes razones = следующие причины
+explicar = объяснять
+puede explicar = может объяснить
+vehículo = транспортное средство
+factor de riesgo = фактор риска
+aparecer = появляться
+aparece = появляется
+grado menor = меньшая степень
+causa principal = основная причина
+accidente de tráfico = ДТП
+accidentes de tráfico = ДТП
+importante = важный
+mejora técnica = техническое улучшение
+mejoras técnicas = технические улучшения
+introducir = внедрять
+introducidas = внедрённые
+diseño = проектирование, конструкция
+construcción = изготовление, конструкция
+edad media = средний возраст
+cada vez mayor = всё больше и больше
+últimos años = последние годы
+kilómetros recorridos = пройденные километры
+recorrer = проезжать, проходить расстояние
+han disminuido = уменьшились
+disminuir = уменьшаться
+año tras año = год за годом
+factor de riesgo = фактор риска
+causa principal = основная причина
+accidente de tráfico = ДТП
+mejora técnica = техническое улучшение
+diseño = конструкция
+edad media = средний возраст
+cada vez mayor = всё больше
+recorrer kilómetros = проезжать километры
+disminuir = уменьшаться
+año tras año = год за годом
+como norma general = по общему правилу
+circulación = движение
+peatones = пешеходы
+está prohibida = запрещено
+autopistas = автомагистрали
+autovías = скоростные дороги
+como norma general = по общему правилу
+circulación = движение
+circular = двигаться
+peatón = пешеход
+peatones = пешеходы
+circulación de peatones = движение пешеходов
+estar prohibido = быть запрещённым
+está prohibida = запрещено
+prohibido = запрещённый
+autopista = автомагистраль
+autopistas = автомагистрали
+autovía = скоростная дорога
+autovías = скоростные дороги
+pero no = но не
+como norma general = как правило
+peatón = пешеход
+circulación = движение
+estar prohibido = быть запрещённым
+prohibido = запрещённый
+autopista = автомагистраль
+autovía = скоростная дорога
+como norma general = по общему правилу
+para girar a la izquierda = чтобы повернуть налево
+vía interurbana = загородная дорога
+en la que = на которой
+no existe = не существует
+carril especialmente acondicionado = специально оборудованная полоса
+para cambiar de dirección = для изменения направления движения
+conductores de ciclos = водители велосипедов
+deberán = должны
+ceñirse a = придерживаться, держаться возле
+marca longitudinal = продольная линия разметки
+separación entre sentidos = разделение встречных направлений
+abstenerse de = воздерживаться от
+realizar = выполнять
+maniobra = манёвр
+situarse = расположиться, занять положение
+a la derecha = справа
+fuera de la calzada = вне проезжей части
+si fuera posible = если возможно
+iniciar = начинать
+giro = поворот
+desde ahí = оттуда
+girar = поворачивать
+girar a la izquierda = поворачивать налево
+vía interurbana = загородная дорога
+existir = существовать
+no existe = не существует
+carril = полоса движения
+carril especialmente acondicionado = специально оборудованная полоса
+acondicionado = оборудованный
+cambiar de dirección = изменить направление движения
+dirección = направление
+ciclo = велосипед
+conductores de ciclos = велосипедисты
+deber = быть должным
+deberán = должны
+ceñirse a = держаться возле, придерживаться
+marca longitudinal = продольная линия разметки
+separación entre sentidos = разделение направлений движения
+sentido de circulación = направление движения
+abstenerse de = воздерживаться от
+realizar = выполнять
+maniobra = манёвр
+situarse = занять положение
+a la derecha = справа
+fuera de la calzada = вне проезжей части
+calzada = проезжая часть
+si fuera posible = если возможно
+iniciar = начинать
+giro = поворот
+iniciar el giro = начать поворот
+desde ahí = оттуда
+girar a la izquierda = повернуть налево
+cambiar de dirección = изменить направление движения
+conductores de ciclos = велосипедисты
+maniobra = манёвр
+situarse = занять положение
+fuera de la calzada = вне проезжей части
+si fuera posible = если возможно
+iniciar el giro = начать поворот
+sentido de circulación = направление движения
+ceñirse a = держаться возле, придерживаться
+------------------------------------------------------------------------
+qué infracción = какое нарушение
+conductores = водители
+está relacionada con = связано с
+atropellos = наезды
+peatones = пешеходы
+infracción = нарушение
+qué infracción = какое нарушение
+estar relacionado con = быть связанным с
+está relacionada con = связано с
+atropello = наезд
+atropellos = наезды
+peatón = пешеход
+paso para peatones = пешеходный переход
+paso de peatones = пешеходный переход
+estacionar = парковать
+estacionamiento = парковка
+deslumbrar = ослеплять
+deslumbramiento = ослепление
+parar = останавливаться
+doble fila = второй ряд
+parar en doble fila = останавливаться во втором ряду
+aproximarse a = приближаться к
+al aproximarnos a = при приближении к
+autobús = автобус
+señal = знак
+parte posterior = задняя часть
+posterior = задний
+encontrarse = находиться
+se encuentra = находится
+parado = остановившийся
+recoger pasajeros = подбирать пассажиров
+recogiendo pasajeros = подбирая пассажиров
+deber = быть должным
+se deberá = необходимо, следует
+avisar = предупреждать
+presencia = присутствие
+nuestra presencia = наше присутствие
+ráfaga = вспышка, короткий сигнал
+ráfagas de luz = мигание дальним светом
+reducir la velocidad = снизить скорость
+si fuera preciso = если потребуется
+preciso = необходимый
+detener = остановить
+detener el vehículo = остановить транспортное средство
+siempre = всегда
+detrás de = позади
+hasta que = пока не
+reanudar = возобновить
+reanudar la marcha = продолжить движение
+marcha = движение
+transporte escolar = школьный транспорт
+aproximarse a = приближаться к
+recoger pasajeros = подбирать пассажиров
+reducir la velocidad = снизить скорость
+si fuera preciso = если потребуется
+detener el vehículo = остановить транспортное средство
+reanudar la marcha = продолжить движение
+transporte escolar = школьный транспорт
+doble fila = второй ряд
+en doble fila = во втором ряду
+parar = останавливаться
+parada = остановка
+estacionar = парковаться
+estacionamiento = стоянка, парковка
+parar y estacionar = останавливаться и парковаться
+estar prohibido = быть запрещённым
+está prohibido = запрещено
+carretera = дорога
+en esta carretera = на этой дороге
+velocidad = скорость
+velocidad máxima = максимальная скорость
+a qué velocidad = с какой скоростью
+máxima = максимальная
+poder = мочь
+puede = может
+adelantar = обгонять
+adelantamiento = обгон
+motocicleta = мотоцикл
+moto = мотоцикл
+carretera convencional = обычная загородная дорога
+límite de velocidad = ограничение скорости
+superar la velocidad máxima = превышать максимальную скорость
+para evitar = чтобы избежать
+evitar = избегать
+accidente = авария, ДТП
+accidentes = аварии, ДТП
+motocicleta = мотоцикл
+motocicletas = мотоциклы
+ciclomotor = мопед
+ciclomotores = мопеды
+es importante = важно
+avisar = предупреждать
+ráfaga = вспышка, короткий сигнал
+ráfagas = мигание
+luces largas = дальний свет
+aproximarse a = приближаться к
+se aproxime a = приближается к
+aumentar = увеличивать
+distancia = расстояние
+distancia de frenado = тормозной путь
+frenado = торможение
+circular = двигаться
+en paralelo = параллельно
+en paralelo a = параллельно с
+vehículo de dos ruedas = двухколёсное транспортное средство
+paso para peatones = пешеходный переход
+paso de peatones = пешеходный переход
+semáforo = светофор
+funcionar = работать
+no funciona = не работает
+es obligatorio = обязательно
+obligatorio = обязательный
+parar = остановиться
+ceder el paso = уступить дорогу
+ceder = уступать
+peatón = пешеход
+peatones = пешеходы
+intentar = пытаться, намереваться
+intenten = пытаются, намереваются
+cruzar = переходить
+cruzarlo = перейти его
+prioridad de paso = преимущество в движении
+tener prioridad = иметь преимущество
+marca vial = дорожная разметка
+indicar = указывать
+indica = указывает
+indicación = указание
+sin = без
+semáforo = светофор
+funcionar = работать
+ceder el paso = уступить дорогу
+prioridad de paso = преимущество в движении
+marca vial = дорожная разметка
+paso para peatones = пешеходный переход
+es obligatorio = обязательно
+cuando = когда
+rueda = колесо
+ruedas = колёса
+vehículo = транспортное средство
+rebotar = подпрыгивать, отскакивать
+rebotan = подпрыгивают
+bache = выбоина, яма на дороге
+baches = выбоины
+puede ser = может быть
+porque = потому что
+freno = тормоз
+embrague = сцепление
+amortiguador = амортизатор
+amortiguadores = амортизаторы
+estar en mal estado = быть в плохом состоянии
+esté en mal estado = находится в плохом состоянии
+estén en mal estado = находятся в плохом состоянии
+debido a = из-за
+avería = поломка, неисправность
+vehículo = транспортное средство
+obstaculizar = препятствовать, затруднять
+obstaculiza = затрудняет
+circulación = движение
+qué debe hacer = что должен сделать
+conductor = водитель
+sacar = убрать, вывести
+sacarlo = убрать его
+calzada = проезжая часть
+cumplir = соблюдать
+cumpliendo = соблюдая
+norma = правило
+normas de estacionamiento = правила стоянки
+estacionamiento = стоянка
+siempre que sea posible = если это возможно
+posible = возможный
+dejar = оставить
+mediana = разделительная полоса
+sitio = место
+seguro = безопасный
+lugar seguro = безопасное место
+remolcar = буксировать
+remolque = буксировка
+cualquier = любой
+hasta = до
+para evitar = чтобы избежать
+evitar = избегать
+atropello = наезд
+atropellos = наезды
+ciclista = велосипедист
+ciclistas = велосипедисты
+es conveniente = рекомендуется, целесообразно
+hacer = делать
+hacer señales acústicas = подавать звуковые сигналы
+señal acústica = звуковой сигнал
+apartarse = отойти в сторону, принять вправо
+se aparten = отошли в сторону
+adelantar = обгонять
+al adelantarlos = при их обгоне
+dejar = оставлять
+en todo momento = в любой момент, всегда
+separación lateral = боковой интервал
+suficiente = достаточный
+aumentar = увеличивать
+velocidad = скорость
+cuanto antes = как можно скорее
+ciclista = велосипедист
+adelantar = обгонять
+separación lateral = боковой интервал
+en todo momento = всегда
+es conveniente = рекомендуется
+hacer señales acústicas = подавать звуковые сигналы
+cuanto antes = как можно скорее
+distracción = отвлечение внимания
+distracciones = отвлечения внимания
+influir = влиять
+influyen = влияют
+accidente = авария, ДТП
+accidentes = аварии, ДТП
+sufrir = переносить, попадать в
+sufridos por = произошедшие с, перенесённые
+ciclista = велосипедист
+ciclistas = велосипедисты
+grupo = группа
+grupo de conductores = группа водителей
+índice = показатель, уровень
+muy bajo = очень низкий
+por parte de = со стороны
+propio = собственный, сам
+los propios ciclistas = сами велосипедисты
+tener relación = быть связанным
+relación directa = прямая связь
+de forma directa = напрямую
+afectar = влиять
+afectan = влияют
+otro tipo de causas = другие причины
+conductor = водитель
+turismo = легковой автомобиль
+averiado = неисправный, сломавшийся
+avería = поломка
+deber = быть должным
+debe = должен
+colocar = устанавливать, размещать
+un solo = только один
+dispositivo = устройство
+dispositivo de preseñalización de peligro = устройство предварительной сигнализации опасности
+preseñalización = предварительное обозначение
+peligro = опасность
+calzada = проезжая часть
+doble sentido = двустороннее движение
+más de = более чем
+carril = полоса движения
+más de tres carriles = более трёх полос
+dos sentidos = два направления движения
+de día = днём
+es obligatorio = обязательно
+obligatorio = обязательный
+encender = включать
+alumbrado = освещение, световые приборы
+alumbrado que corresponda = соответствующие световые приборы
+corresponder = соответствовать
+corresponda = соответствует, требуется
+cuando = когда
+se circule = осуществляется движение
+paso inferior = подземный проезд
+pasos inferiores = подземные проезды
+tramo = участок
+tramo de vía = участок дороги
+vía = дорога
+afectado por = подпадающий под действие, обозначенный
+señal de túnel = знак «Тоннель»
+túnel = тоннель
+condición = условие
+condiciones = условия
+disminuir = уменьшать
+disminuyan = уменьшают
+visibilidad = видимость
+carril VAO = полоса VAO
+vehículos de alta ocupación = транспортные средства с высокой заполняемостью
+señal = дорожный знак
+indicar = означать, указывать
+indica = означает
+velocidad máxima = максимальная скорость
+velocidad mínima = минимальная скорость
+aconsejar = рекомендовать
+se aconseja = рекомендуется
+aconsejada = рекомендуемая
+sobrepasar = превышать
+no sobrepasar = не превышать
+aunque = хотя, даже если
+circunstancias = обстоятельства, условия
+circunstancias meteorológicas = погодные условия
+meteorológico = метеорологический, погодный
+favorable = благоприятный
+sean favorables = являются благоприятными
+poder = мочь
+podemos = можем
+circular = двигаться
+
+señal = дорожный знак
+prohibir = запрещать
+prohíbe = запрещает
+prohibir el paso = запрещать движение
+paso = проезд, движение
+vehículo = транспортное средство
+vehículos = транспортные средства
+conjunto de vehículos = состав транспортных средств
+camión = грузовик
+longitud = длина
+longitud máxima = максимальная длина
+medir = измерять, иметь длину
+mide = имеет длину
+incluida la carga = включая груз
+carga = груз
+superior a = более, превышающая
+metro = метр
+aparcar = парковаться
+bicicleta = велосипед
+conductor de bicicleta = велосипедист
+ciclista = велосипедист
+prioridad de paso = преимущество в движении
+tener prioridad = иметь преимущество
+respecto a = по отношению к
+vehículo de motor = механическое транспортное средство
+cuando = когда
+circular = двигаться
+circulando = двигаясь
+en grupo = группой
+primer ciclista = первый велосипедист
+iniciar = начинать
+haya iniciado = уже начал
+cruce = пересечение, перекрёсток
+entrar = въезжать
+haya entrado = уже въехал
+glorieta = круговое движение
+definir = определять
+se define como = определяется как
+motocicleta = мотоцикл
+automóvil = механическое транспортное средство
+dos ruedas = два колеса
+tres ruedas = три колеса
+motor = двигатель
+cilindrada = рабочий объём двигателя
+centímetro cúbico = кубический сантиметр
+cilindrada superior a = объём двигателя более
+cilindrada inferior a = объём двигателя менее
+superior a = более
+inferior a = менее
+velocidad máxima = максимальная скорость
+y/o = и/или
+ciclomotor = мопед
+situación = ситуация
+lluvia = дождь
+ciclista = велосипедист
+ciclistas = велосипедисты
+circular = двигаться
+circulando = двигаясь
+deber = быть должным
+debemos = мы должны
+estar cerca de = находиться рядом с
+hacer señales acústicas = подавать звуковые сигналы
+señal acústica = звуковой сигнал
+indicar = указывать, сообщать
+presencia = присутствие
+nuestra presencia = наше присутствие
+mantener = сохранять
+mantener la velocidad = сохранять скорость
+estar atento = быть внимательным
+cumplimiento = соблюдение
+cumplir = соблюдать
+señalización vertical = вертикальные дорожные знаки
+extremar = максимально усилить
+extremar la precaución = проявлять максимальную осторожность
+precaución = осторожность
+probabilidad = вероятность
+más probabilidad = большая вероятность
+caída = падение
+caídas = падения
+poder = мочь
+pueden = могут
+algunos = некоторые
+enfermedad = заболевание
+enfermedades = заболевания
+implicar = влечь за собой, представлять
+algún = какой-либо
+riesgo = риск
+factor de riesgo = фактор риска
+conducción = управление автомобилем
+estado = состояние
+estado del conductor = состояние водителя
+afectar a = влиять на
+afecta a = влияет на
+seguridad vial = безопасность дорожного движения
+crónico = хронический
+enfermedad crónica = хроническое заболевание
+señal = дорожный знак
+indicar = указывать, означать
+indica = означает
+entrada = въезд
+entrada prohibida = въезд запрещён
+prohibido = запрещён
+proximidad = приближение, близость
+paso para ciclistas = велосипедный переезд
+paso ciclista = велосипедный переезд
+ciclista = велосипедист
+ciclistas = велосипедисты
+bicicleta = велосипед
+ciclomotor = мопед
+lugar reservado = специально отведённое место
+reservado para = предназначенный для
+circulación = движение
+adelantar = обгонять
+al adelantar = при обгоне
+ciclista = велосипедист
+aparecer = появляться, быть изображённым
+aparece = изображён
+fotografía = фотография
+es obligatorio = обязательно
+obligatorio = обязательный
+invadir = выезжать на, занимать
+invadir el carril = выехать на полосу
+carril = полоса движения
+sentido contrario = встречное направление
+carril de sentido contrario = полоса встречного движения
+calzada = проезжая часть
+prohibido = запрещён
+está prohibido = запрещено
+línea blanca = белая линия
+vertical = вертикальная
+horizontal = горизонтальная
+intermitente = мигающая
+indicar = означать, указывать
+indica = означает
+poder = мочь
+pueden = могут
+circular = двигаться
+autobús = автобус
+autobuses = автобусы
+taxi = такси
+detenerse = остановиться
+deber = быть должным
+deben = должны
+todos los vehículos = все транспортные средства
+línea blanca vertical = вертикальная белая линия
+línea blanca horizontal = горизонтальная белая линия
+intermitente = мигающая
+autobús = автобус
+taxi = такси
+circular = двигаться
+detenerse = остановиться
+distracción = отвлечение внимания
+distracciones = отвлечения внимания
+soler = обычно иметь привычку, обычно происходить
+suelen = обычно
+estar relacionado con = быть связанным с
+relacionado = связанный
+factor = фактор
+factor externo = внешний фактор
+externo = внешний
+conductor = водитель
+comportamiento = поведение
+estado = состояние
+estado del conductor = состояние водителя
+propio = собственный, сам
+propio conductor = сам водитель
+únicamente = только
+distracción = отвлечение внимания
+estar relacionado con = быть связанным с
+comportamiento = поведение
+estado del conductor = состояние водителя
+factor externo = внешний фактор
+únicamente = только
+alumbrado = освещение, световые приборы
+neumático = шина
+neumáticos = шины
+freno = тормоз
+frenos = тормоза
+pertenecer a = относиться к
+pertenecen a = относятся к
+sistema = система
+seguridad = безопасность
+seguridad activa = активная безопасность
+seguridad pasiva = пассивная безопасность
+conducción = вождение
+conducción eficiente = экономичное вождение
+eficiente = эффективный, экономичный
+evitar un accidente = избежать аварии
+proteger a los ocupantes = защищать пассажиров
+cinturón de seguridad = ремень безопасности
+airbag = подушка безопасности
+reposacabezas = подголовник
+ABS = антиблокировочная система тормозов
+ESP = система курсовой устойчивости
+seguridad activa = активная безопасность
+seguridad pasiva = пассивная безопасность
+alumbrado = освещение
+neumáticos = шины
+frenos = тормоза
+pertenecer a = относиться к
+cinturón de seguridad = ремень безопасности
+airbag = подушка безопасности
+sistema de seguridad = система безопасности
+sistemas de seguridad = системы безопасности
+poder = мочь
+pueden = могут
+perder = терять
+eficacia = эффективность
+perder eficacia = терять эффективность
+llevar = носить, использовать
+llevar abrochado = быть пристёгнутым
+abrochar = застёгивать
+abrochado = застёгнутый
+cinturón de seguridad = ремень безопасности
+suspensión = подвеска
+amortiguador = амортизатор
+amortiguadores = амортизаторы
+airbag = подушка безопасности
+reposacabezas = подголовник
+freno = тормоз
+frenos = тормоза
+ABS = антиблокировочная система
+proteger = защищать
+protección = защита
+cinturón de seguridad = ремень безопасности
+llevar abrochado = быть пристёгнутым
+abrochar = пристёгивать
+airbag = подушка безопасности
+reposacabezas = подголовник
+perder eficacia = терять эффективность
+sistema de seguridad = система безопасности
+carril VAO = полоса VAO
+VAO = Vehículos de Alta Ocupación
+vehículos de alta ocupación = транспортные средства с высокой заполняемостью
+motocicleta = мотоцикл
+utilizar = использовать
+utilizar un carril = пользоваться полосой
+ser utilizado = использоваться
+normalmente = обычно
+turismo = легковой автомобиль
+turismos = легковые автомобили
+tráfico = дорожное движение
+existir = существовать
+exista = существует
+dicho = указанный
+dicho carril = указанная полоса
+siempre que = при условии, что
+carril VAO = полоса VAO
+vehículos de alta ocupación = транспортные средства с высокой заполняемостью
+motocicleta = мотоцикл
+utilizar = использовать
+normalmente = обычно
+siempre que = при условии, что
+tráfico = дорожное движение
+carga = груз
+transportar = перевозить
+transporta = перевозит
+vehículo = транспортное средство
+colocar = размещать
+colocarse = размещаться
+estar colocada = быть размещённым
+sujetar = закреплять
+sujeta = закреплённый
+estar sujeta = быть закреплённым
+de forma que = таким образом, чтобы
+comprometer = подвергать опасности, ухудшать
+no comprometa = не ухудшал, не подвергал опасности
+estabilidad = устойчивость
+estabilidad del vehículo = устойчивость транспортного средства
+ocultar = закрывать, заслонять
+dispositivo = устройство
+dispositivos de señalización luminosa = световые сигнальные приборы
+convenir = быть удобным
+convenga = удобно
+carga = груз
+sujetar = закреплять
+estar sujeta = быть закреплённым
+estabilidad = устойчивость
+comprometer la estabilidad = ухудшать устойчивость
+ocultar = закрывать
+dispositivos de señalización luminosa = световые сигнальные приборы
+turismo = легковой автомобиль
+deber = быть должным
+debe = должен
+llevar = иметь при себе, возить
+herramienta = инструмент
+herramientas = инструменты
+indispensable = необходимый
+indispensables = необходимые
+efectuar = выполнять, производить
+pequeño = маленький
+pequeñas reparaciones = мелкий ремонт
+reparación = ремонт
+cambio = замена
+rueda = колесо
+rueda de repuesto = запасное колесо
+cambiar una rueda = заменить колесо
+manguito = патрубок, шланг системы охлаждения
+correa = ремень
+correas = ремни
+bujía = свеча зажигания
+bujías = свечи зажигания
+turismo = легковой автомобиль
+herramientas = инструменты
+rueda de repuesto = запасное колесо
+cambiar una rueda = заменить колесо
+cambio = замена
+efectuar = выполнять
+bujía = свеча зажигания
+correa = ремень
+intersección = перекрёсток
+semáforo = светофор
+funcionar = работать
+no funciona = не работает
+deber = быть должным
+se debe hacer = следует сделать
+detenerse = остановиться
+estar prohibido = быть запрещённым
+está prohibido = запрещено
+paso = проезд
+pasar = проехать
+entender = понимать, считать
+se entiende = считается
+estar en verde = горит зелёный свет
+ceder el paso = уступить дорогу
+vehículo = транспортное средство
+vehículos = транспортные средства
+venir = приезжать, приближаться
+vengan = приближаются
+por la derecha = справа
+extremar = максимально усилить
+precaución = осторожность
+extremar la precaución = проявлять максимальную осторожность
+intersección = перекрёсток
+semáforo = светофор
+no funciona = не работает
+ceder el paso = уступить дорогу
+por la derecha = справа
+extremar la precaución = проявлять максимальную осторожность
+vengan = приближаются
+principal = главный
+causa = причина
+principal causa = главная причина
+fatiga = усталость
+al volante = за рулём
+conducir = управлять автомобилем
+largo = длинный, длительный
+largos periodos = длительные периоды
+corto = короткий
+cortos periodos = короткие периоды
+periodo = период
+descanso = отдых, перерыв
+descansos = перерывы
+adecuado = достаточный, подходящий
+adecuados = достаточные
+breve = короткий
+muy breve = очень короткий
+descansos muy breves = очень короткие перерывы
+descansar = отдыхать
+fatiga = усталость
+al volante = за рулём
+principal causa = главная причина
+descanso = отдых
+largos periodos = длительное время
+descansar = отдыхать
+muy breve = очень короткий
+vía = дорога
+vías = дороги
+vía urbana = городская дорога
+vía interurbana = загородная дорога
+travesía = участок межгородской дороги, проходящий через населённый пункт
+emplear = использовать
+luces = фары, огни
+luces de carretera = дальний свет
+luces de largo alcance = дальний свет
+luces de cruce = ближний свет
+largo alcance = дальнее освещение
+insuficientemente = недостаточно
+iluminado = освещённый
+iluminadas = освещённые
+cualquier = любой
+tipo de vía = тип дороги
+siempre que = при условии, что
+sea necesario = это необходимо
+ces de carretera = дальний свет
+luces de largo alcance = дальний свет
+luces de cruce = ближний свет
+vía interurbana = загородная дорога
+vía urbana = городская дорога
+travesía = участок дороги через населённый пункт
+insuficientemente iluminada = недостаточно освещённая
+persona = человек
+personas mayores = пожилые люди
+mayor = пожилой
+peatón = пешеход
+peatones = пешеходы
+generalmente = обычно
+apreciar = оценивать
+aprecian = оценивают
+correctamente = правильно
+velocidad = скорость
+vehículo = транспортное средство
+oír = слышать
+oyen = слышат
+perfectamente = отлично
+acercarse = приближаться
+se acerca = приближается
+necesitar = нуждаться
+necesitan = нуждаются
+más tiempo = больше времени
+cruzar = переходить
+cruzar una calle = переходить улицу
+calle = улица
+personas mayores = пожилые люди
+peatón = пешеход
+generalmente = обычно
+necesitar = нуждаться
+más tiempo = больше времени
+cruzar una calle = переходить улицу
+acercarse = приближаться
+bajo = под
+bajo los efectos de = под воздействием
+efecto = воздействие, эффект
+efectos = последствия, воздействие
+sueño = сон, сонливость
+movimiento = движение
+movimientos = движения
+conductor = водитель
+tender a = иметь тенденцию
+tienden a = имеют тенденцию
+automático = автоматический
+automáticos = автоматические
+lento = медленный
+más lento = более медленный
+preciso = точный
+menos preciso = менее точный
+precisión = точность
+reacción = реакция
+tiempo de reacción = время реакции
+concentración = концентрация внимания
+somnolencia = сонливость
+sueño = сонливость
+somnolencia = сонливость
+bajo los efectos de = под воздействием
+movimientos = движения
+más lentos = более медленные
+menos precisos = менее точные
+tiempo de reacción = время реакции
+concentración = концентрация внимания
+distancia = расстояние
+distancia de reacción = расстояние реакции
+reacción = реакция
+tiempo de reacción = время реакции
+distancia de frenado = тормозной путь
+frenado = торможение
+frenar = тормозить
+distancia de detención = остановочный путь
+detención = остановка
+detener = останавливать
+detenerse = останавливаться
+peligro = опасность
+descubrir un peligro = обнаружить опасность
+pisar el freno = нажать на тормоз
+pedal de freno = педаль тормоза
+parada completa = полная остановка
+lo mismo = одно и то же
+algunos casos = некоторые случаи
+poder = мочь
+pueden = могут
+algunas = некоторые
+motocicleta = мотоцикл
+motocicletas = мотоциклы
+llevar = иметь, быть оборудованным
+sistema = система
+sistemas = системы
+estabilidad = устойчивость
+sistema de estabilidad = система стабилизации
+frenado = торможение
+sistema de estabilidad de frenado = система стабилизации при торможении
+airbag = подушка безопасности
+estar prohibido = быть запрещённым
+está prohibido = запрещено
+estar disponible = быть доступным
+están disponibles = доступны
+turismo = легковой автомобиль
+turismos = легковые автомобили
+evitar = предотвращать
+accidente = авария, ДТП
+accidentes = аварии, ДТП
+reducir = уменьшать, снижать
+gravedad = тяжесть
+lesión = травма
+lesiones = травмы
+reducir la gravedad de las lesiones = уменьшать тяжесть травм
+estar permitido = быть разрешённым
+está permitido = разрешено
+adelantar = обгонять
+adelantamiento = обгон
+intersección = перекрёсток
+salvo que = за исключением случая, когда
+calzada = проезжая часть
+gozar de = пользоваться, обладать
+goce de prioridad = иметь преимущество
+prioridad = преимущество
+tener prioridad = иметь преимущество
+vía con prioridad = главная дорога
+ceder el paso = уступить дорогу
+visibilidad = видимость
+visibilidad suficiente = достаточная видимость
+expresamente = специально, явно
+señalizar = обозначать дорожными знаками
+señalizada = обозначенная знаками
+indicar = указывать, обозначать
+indican = указывают
+serie = ряд, серия
+luces amarillas = жёлтые огни
+luz amarilla = жёлтый огонь
+calzada = проезжая часть
+cerrar = закрывать
+cerrada = закрытая
+estar cerrada al tráfico = быть закрытой для движения
+tráfico = дорожное движение
+tanto si... como si... = независимо от того..., будь то...
+prohibir = запрещать
+prohíben = запрещают
+paso = проезд, пересечение
+prohibir el paso = запрещать проезд
+a través de = через
+línea imaginaria = воображаемая линия
+unir = соединять
+une = соединяет
+fijo = постоянный
+luces fijas = постоянные огни
+intermitente = мигающий
+luces intermitentes = мигающие огни
+vía interurbana = загородная дорога
+ciclomotor = мопед
+tractor agrícola = сельскохозяйственный трактор
+tractor = трактор
+agrícola = сельскохозяйственный
+adelantar = обгонять
+adelantamiento = обгон
+arcén = обочина
+circular = двигаться
+circula = движется
+circulan = движутся
+recorrido = путь, участок движения
+en paralelo = параллельно
+superar = превышать
+no supere = не превышает
+200 metros = 200 метров
+15 segundos = 15 секунд
+siempre que = при условии, что
+de día = днём
+ocupante = пассажир
+ocupantes = пассажиры
+asiento = сиденье
+asientos traseros = задние сиденья
+menor de edad = несовершеннолетний
+menores de edad = несовершеннолетние
+estatura = рост
+altura = высота, рост
+igual o inferior a = равный или менее
+dispositivo = устройство
+dispositivo de seguridad = средство безопасности
+dispositivo de retención infantil = детское удерживающее устройство
+sistema de retención infantil = детская удерживающая система
+retención = удержание
+adaptado a = подобранный в соответствии с
+talla = рост, размер
+peso = вес
+cinturón de seguridad = ремень безопасности
+venir instalado = быть установленным
+carrocería = кузов автомобиля
+soldado = приваренный
+utilizar = использовать
+deben utilizar = должны использовать
+conducir = управлять автомобилем
+conduce = вы управляете
+turismo = легковой автомобиль
+remolque = прицеп
+remolque de un eje = одноосный прицеп
+eje = ось
+de un solo eje = с одной осью
+afectar = распространяться, касаться
+le afecta = распространяется на вас
+señal vertical = дорожный знак
+MMA = masa máxima autorizada
+masa máxima autorizada = максимально разрешённая масса
+masa = масса
+máxima = максимальная
+autorizada = разрешённая
+superar = превышать
+supere = превышает
+cifra = число, значение
+indicada = указанная
+salvo que = за исключением случая, когда
+tonelada = тонна
+2 toneladas = 2 тонны
+a medida que = по мере того как
+aumentar = увеличивать
+aumentarse = увеличиваться
+se aumenta = увеличивается
+velocidad = скорость
+controlar = контролировать, управлять
+control del vehículo = управление автомобилем
+vehículo = транспортное средство
+más difícil = более трудно
+más fácil = легче
+difícil = трудный
+fácil = лёгкий
+peligroso = опасный
+menos peligroso = менее опасный
+circular = двигаться
+distancia de reacción = расстояние реакции
+distancia de frenado = тормозной путь
+distancia de detención = остановочный путь
+tiempo de reacción = время реакции
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

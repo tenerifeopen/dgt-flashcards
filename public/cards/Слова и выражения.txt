@@ -1277,6 +1277,63 @@ arrojar = бросать
 dejar = оставлять
 entorpecer = затруднять, мешать
 afectar a = распространяться на
+🔺 Треугольник = предупреждает об опасности.
+⭕ Красный круг = запрещает.
+🔵 Синий круг = предписывает обязательное действие.
+🔷 Синий квадрат/прямоугольник = информирует.
+proximidad = приближение
+paso para ciclistas = велосипедный переезд
+entrada prohibida = въезд запрещён
+ciclista = велосипедист
+ciclomotor = мопед
+lugar reservado = специально отведённое место
+línea blanca vertical fija = движение разрешено.
+línea blanca vertical intermitente = подготовиться к остановке / автобусы и такси должны остановиться.
+línea blanca horizontal = остановка обязательна.
+comportamiento = поведение
+Seguridad activa = предотвращает ДТП. (тормоза, шины, свет, рулевое управление, ABS, ESP)
+Seguridad pasiva = уменьшает последствия ДТП. (ремни, подушки, подголовники, кузов)
+carga = груз
+sujetar = закреплять
+estar sujeta = быть закреплённым
+estabilidad = устойчивость
+comprometer la estabilidad = ухудшать устойчивость
+ocultar = закрывать
+dispositivos de señalización luminosa = световые сигнальные приборы
+efectuar = выполнять
+bujía = свеча зажигания
+correa = ремень
+en qué = на каких
+emplear = использовать
+luces de carretera = дальний свет
+luces de largo alcance = фары дальнего света
+insuficientemente = недостаточно
+no tiene que = не должен
+es aconsejable = рекомендуется.
+ir a + infinitivo = собираться что-либо сделать
+se van a realizar = будут сделаны.
+voy a salir = я собираюсь выехать.
+vamos a descansar = мы собираемся отдохнуть.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

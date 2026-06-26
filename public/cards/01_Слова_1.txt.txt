@@ -114,3 +114,247 @@ prueba de alcoholemia = тест на алкоголь
 saldo de puntos = баланс баллов
 evitar un accidente = предотвратить ДТП
 usuario = участник движения
+
+infracción = нарушение
+estar relacionado con = быть связанным с
+atropello = наезд
+paso para peatones = пешеходный переход
+paso de peatones = пешеходный переход
+estacionar = парковать
+deslumbrar = ослеплять
+doble fila = второй ряд
+parar = останавливаться
+parada = остановка
+estacionar = парковаться
+estacionamiento = стоянка
+doble fila = второй ряд
+en doble fila = во втором ряду
+estar prohibido = быть запрещённым
+adelantar = обгонять
+adelantamiento = обгон
+velocidad máxima = максимальная скорость
+carretera convencional = обычная загородная дорога
+motocicleta = мотоцикл
+límite de velocidad = ограничение скорости
+superar la velocidad máxima = превышать максимальную скорость
+evitar = избегать
+ciclomotor = мопед
+distancia de frenado = тормозной путь
+circular = двигаться
+en paralelo = параллельно
+vehículo de dos ruedas = двухколёсное транспортное средство
+aproximarse a = приближаться к
+semáforo = светофор
+funcionar = работать
+ceder el paso = уступить дорогу
+prioridad de paso = преимущество в движении
+marca vial = дорожная разметка
+paso para peatones = пешеходный переход
+es obligatorio = обязательно
+bache = выбоина
+amortiguador = амортизатор
+estar en mal estado = быть неисправным
+freno = тормоз
+embrague = сцепление
+rebotar = подпрыгивать
+avería = поломка
+obstaculizar la circulación = затруднять движение
+sacar de la calzada = убрать с проезжей части
+cumplir las normas = соблюдать правила
+siempre que sea posible = если это возможно
+mediana = разделительная полоса
+remolcar = буксировать
+lugar seguro = безопасное место
+influir = влиять
+tener relación = быть связанным
+relación directa = прямая связь
+por parte de = со стороны
+afectar = влиять
+índice = показатель
+encender el alumbrado = включить свет
+alumbrado = световые приборы
+paso inferior = подземный проезд
+tramo de vía = участок дороги
+señal de túnel = знак «Тоннель»
+visibilidad = видимость
+carril VAO = полоса VAO
+velocidad aconsejada = рекомендуемая скорость
+velocidad máxima permitida = максимально разрешённая скорость
+aconsejar = рекомендовать
+sobrepasar = превышать
+aunque = даже если
+circunstancias meteorológicas = погодные условия
+
+prohibir el paso = запрещать проезд
+conjunto de vehículos = состав транспортных средств
+longitud = длина
+longitud máxima = максимальная длина
+incluida la carga = включая груз
+superior a = более
+carga = груз
+prioridad de paso = преимущество в движении
+ciclista = велосипедист
+vehículo de motor = механическое транспортное средство
+en grupo = группой
+cruce = перекрёсток, пересечение
+glorieta = круговое движение
+haya iniciado = уже начал
+haya entrado = уже въехал
+motocicleta = мотоцикл
+ciclomotor = мопед
+cilindrada = рабочий объём двигателя
+superior a = более
+inferior a = менее
+velocidad máxima = максимальная скорость
+dos ruedas = два колеса
+y/o = и/или
+lluvia = дождь
+extremar la precaución = проявлять максимальную осторожность
+probabilidad = вероятность
+caída = падение
+mantener la velocidad = сохранять скорость
+estar atento = быть внимательным
+señalización vertical = вертикальные дорожные знаки
+enfermedad = заболевание
+factor de riesgo = фактор риска
+conducción = управление автомобилем
+estado del conductor = состояние водителя
+afectar a = влиять на
+seguridad vial = безопасность дорожного движения
+enfermedad crónica = хроническое заболевание
+proximidad = приближение
+paso para ciclistas = велосипедный переезд
+entrada prohibida = въезд запрещён
+ciclista = велосипедист
+ciclomotor = мопед
+lugar reservado = специально отведённое место
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
