@@ -228,7 +228,12 @@ entrada prohibida = въезд запрещён
 ciclista = велосипедист
 ciclomotor = мопед
 lugar reservado = специально отведённое место
-
+adelantar = обгонять
+invadir el carril = выехать на полосу
+carril de sentido contrario = полоса встречного движения
+ciclista = велосипедист
+sentido contrario = встречное направление
+es obligatorio = обязательно
 
 
 

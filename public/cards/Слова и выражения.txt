@@ -1314,6 +1314,194 @@ ir a + infinitivo = собираться что-либо сделать
 se van a realizar = будут сделаны.
 voy a salir = я собираюсь выехать.
 vamos a descansar = мы собираемся отдохнуть.
+encontrarse = находиться
+situado = расположенный
+abandonar el carril = покинуть полосу
+cambiar de carril = перестроиться
+🔴 Aspa roja (X) = полоса закрыта, занимать её запрещено.
+🟢 Flecha verde hacia abajo = по этой полосе движение разрешено.
+↘️ Flecha amarilla intermitente = необходимо покинуть полосу и перестроиться в направлении стрелки.
+en qué = на каких
+visibilidad reducida = ограниченная видимость;
+falta de visibilidad = недостаточная видимость;
+visibilidad suficiente = достаточная видимость.
+con qué = какой, с помощью какой
+accionar = приводить в действие, управлять
+embrague = сцепление
+cambio de marchas = переключение передач
+marcha = передача
+palanca de cambios = рычаг переключения передач
+Tomar medicamentos = принимать лекарства
+ciclo = любое транспортное средство с педальным приводом (велосипед, некоторые трёхколёсные и четырёхколёсные педальные ТС);
+ciclomotor = мопед (это не ciclo!).
+consumo = расход
+revoluciones = обороты двигателя
+subir de marcha = перейти на более высокую передачу
+bajar de marcha = перейти на более низкую передачу
+de que = того, что
+conversación = разговор
+distracción = отвлечение
+salvo = кроме
+Extintor = огнетушитель
+quiénes = кто
+morir = погибнуть
+sufrir lesiones = получить травмы
+Usuarios vulnerables = уязвимые участники дорожного движения.
+se puede = можно ли
+sin peligro = без опасности
+tenga que = придётся
+instantes = мгновения, несколько секунд
+antes de que = перед тем как
+quedarse dormido = заснуть
+a más de = более чем
+sobrevivir = выжить
+Excepciones = исключения.
+a la que = с которой, на которой
+recorre = проходит, преодолевает
+desde que = с того момента, как
+se percibe = воспринимается
+un estímulo = раздражитель, сигнал, опасность
+se pretende = намереваются
+dotados de = оснащены, оборудованы
+el acceso = въезд
+destinados a = предназначенные для
+entendiendo como tales = понимая под ними, считая таковыми
+favorecen = способствуют
+la aparición = появлению
+circunstancias = обстоятельства, условия
+favorables = благоприятные
+debidos a = вызванные, обусловленные
+prestar atención = обращать внимание
+según = согласно
+a la vez = одновременно
+a retroceder = сдавать назад
+una subida = подъёме
+quedarse = остаться
+sufrir = получать, попадать в
+la celebración = проведение
+previa = предварительного
+congestión = затор, перегруженность
+emplear = использовать
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
