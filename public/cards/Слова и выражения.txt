@@ -1382,6 +1382,113 @@ la celebración = проведение
 previa = предварительного
 congestión = затор, перегруженность
 emplear = использовать
+alterar el orden = нарушить порядок
+alterar la circulación = нарушить движение
+alterar el sueño = нарушить сон
+alterar el ritmo cardíaco = нарушить сердечный ритм
+alterar las capacidades = ухудшить (изменить) способности
+alterar = изменять, нарушать, ухудшать
+alterar las capacidades = ухудшать способности
+alterar la conducción = ухудшать способность управлять автомобилем
+a atender = оказывать помощь
+a las víctimas = пострадавшим
+densidad = плотность
+fallo = неисправность, отказ, поломка
+al volante = за рулём
+se debe a = происходит из-за, обусловлено
+implicado = вовлечённый
+directamente = непосредственно
+percibir = воспринимать, замечать
+con nitidez = чётко
+queda = остаётся, оказывается
+ha ordenado detenerse = приказал остановиться
+reanudar la marcha = продолжить движение
+cambiar de posición = изменить положение
+efectuar otra señal = подать другой сигнал
+en columna de a dos = колонной по двое
+en hilera = в один ряд
+inferior a = ниже, меньше чем
+siempre que = при условии, что; если
+permitido = разрешено;
+obligatorio = обязательно;
+prohibido = запрещено.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
