@@ -3892,6 +3892,885 @@ está prohibido = запрещено
 más despacio = медленнее
 más seguro = безопаснее
 velocidad máxima permitida = максимально разрешённая скорость
+durante = во время
+operación = операция
+operaciones = операции
+carga = погрузка
+descarga = разгрузка
+carga y descarga = погрузка и разгрузка
+estar permitido = быть разрешённым
+depositar = класть, оставлять, складировать
+mercancía = товар, груз
+mercancías = товары, груз
+calzada = проезжая часть
+arcén = обочина
+zona peatonal = пешеходная зона
+como = как
+norma = правило
+general = общий
+como norma general = по общему правилу
+vía = дорога
+no existe = не существует, нет
+carril = полоса движения
+especialmente = специально
+acondicionado = оборудованный
+carril especialmente acondicionado = специально оборудованная полоса
+girar = поворачивать
+girar a la izquierda = повернуть налево
+ciclo = велосипед (немоторное двухколёсное ТС)
+ciclomotor = цикломотор, мопед
+de dos ruedas = двухколёсный
+situarse = занять положение
+situarse a la derecha = занять положение справа
+fuera de la calzada = вне проезжей части
+siempre que = при условии, что; если
+sea posible = это возможно
+desde allí = оттуда
+realizar el giro = выполнить поворот
+intersección = перекрёсток
+poder = мочь
+puede = может, можно
+emplear = использовать, применять
+vehículo = транспортное средство
+luces = фары, свет
+luces adaptativas = адаптивные фары
+adaptativo = адаптивный
+obligatorio = обязательный
+obligatorias = обязательны
+prohibido = запрещённый
+están prohibidas = запрещены
+permitido = разрешённый
+cuándo = когда
+poder = мочь
+puede = может
+utilizar = использовать
+teléfono móvil = мобильный телефон
+utilizando = используя
+dispositivo = устройство
+manos libres = громкая связь (hands-free)
+dispositivo manos libres = устройство громкой связи
+durante = в течение
+período = период
+períodos = периоды
+corto = короткий
+cortos = короткие
+tiempo = время
+semáforo = светофор
+en rojo = на красный сигнал
+parado = остановившийся
+leer = читать
+enviar = отправлять
+mensaje = сообщение
+mensajes = сообщения
+altura = высота
+a qué altura = на какой высоте
+deber = быть обязанным
+debe = должен, должна
+quedar = находиться, располагаться
+parte = часть
+central = центральная
+parte central = центральная часть
+reposacabezas = подголовник
+a la altura de = на уровне
+cuello = шея
+ojos = глаза
+indisi = если
+circular = двигаться
+circula = движется
+tener = иметь
+tiene = имеет
+duda = сомнение
+dudas = сомнения
+ante = перед, при
+ante la duda = при сомнении
+condición = условие
+condiciones = условия
+luminosidad = освещённость
+condiciones de luminosidad = условия освещённости
+qué = что
+deber = быть обязанным
+debe = должен
+hacer = делать
+encender = включить
+apagar = выключить
+luces = фары, свет
+luces de cruce = ближний свет
+luces de carretera = дальний свет
+provocar = вызывать
+deslumbramiento = ослепление
+deslumbramientos = ослепленияferente = безразличный, не имеет значения
+panel = дополнительная табличка
+panel complementario = дополнительная табличка
+se coloca = устанавливается
+debajo de = под
+señal de peligro = предупреждающий знак
+indicar = указывать
+distancia = расстояние
+comenzar = начинаться
+comienza = начинается
+terminar = заканчиваться
+termina = заканчивается
+tramo = участок
+tramo peligroso = опасный участок
+longitud = длина
+panel complementario = дополнительная табличка
+sin flechas = без стрелок
+con flechas = со стрелками
+distancia al peligro = расстояние до опасности
+longitud del tramo peligroso = длина опасного участка
+comienzo del peligro = начало опасности
+fin del peligro = конец опасности
+zona de peligro = опасный участок
+peatón = пешеход
+pretender = намереваться
+pretende = намеревается
+cruzar = переходить, пересекать
+paso de peatones = пешеходный переход
+debidamente = должным образом
+señalizado = обозначенный
+debidamente señalizado = должным образом обозначенный
+penetrar en = выходить на, вступать в
+calzada = проезжая часть
+solamente = только
+cerca = рядом, поблизости
+distancia = расстояние
+velocidad = скорость
+permitir = позволять
+permitan = позволяют
+hacerlo = сделать это
+con seguridad = безопасно
+decidir = решать
+lo decida = решит
+puesto que = поскольку, так как
+disponer de = обладать, иметь
+preferencia de paso = преимущество в движении
+si = если
+tener que = быть вынужденным, должен
+reducir = снижать, уменьшать
+considerablemente = значительно
+velocidad = скорость
+vehículo = транспортное средство
+conducir = управлять автомобилем
+conduce = управляет
+cómo = как
+avisar = предупреждать
+circular = двигаться
+circulan = движутся
+detrás = сзади
+mediante = посредством, с помощью
+empleo = использование
+empleo reiterado = неоднократное использование
+reiterado = повторный, неоднократный
+luces de frenado = стоп-сигналы
+luces de posición = габаритные огни
+intermitente = указатель поворота
+intermitente derecho = правый указатель поворота
+intersección = перекрёсток
+sin = без
+señalizar = обозначать знаками
+sin señalizar = без дорожных знаков, нерегулируемый
+vehículo = транспортное средство
+preferencia = преимущество
+preferencia de paso = преимущество проезда
+tener preferencia = иметь преимущество
+ceder el paso = уступить дорогу
+a la derecha = справа
+regla de la derecha = правило правой руки
+
+situación = ситуация
+encender = включать
+solamente = только
+luz = свет
+luz de posición = габаритные огни
+luces de posición = габаритные огни
+puesta del sol = заход солнца
+salida del sol = восход солнца
+entre la puesta y la salida del sol = между заходом и восходом солнца
+inmovilizar = обездвижить, оставить неподвижным
+vehículo = транспортное средство
+arcén = обочина
+fuera de poblado = вне населённого пункта
+calle = улица
+carretera = дорога (загородная)
+suficientemente = достаточно
+iluminado = освещённый
+circular = двигаться
+circule = движется, будет двигаться
+luz de cruce = ближний свет
+estar inmovilizado = быть неподвижным
+accidente = авария, ДТП
+accidentes = аварии, ДТП
+estar involucrado = быть вовлечённым, участвовать
+involucrado = вовлечённый
+ciclista = велосипедист
+ciclistas = велосипедисты
+ocurrir = происходить
+ocurren = происходят
+frecuentemente = часто
+más frecuentemente = наиболее часто
+carretera convencional = обычная дорога
+carreteras convencionales = обычные дороги
+recta = прямой участок дороги
+rectas = прямые участки
+intersección = перекрёсток
+intersecciones = перекрёстки
+vía urbana = городская улица
+vías urbanas = городские улицы
+autovía = автомагистраль, скоростная дорога
+sobre todo = особенно
+e = и (вместо y перед словами на i)
+algunos = некоторые
+síntoma = симптом, признак
+síntomas = симптомы
+poder = мочь
+pueden = могут
+anunciar = предупреждать, сообщать о приближении
+anunciarle = предупреждать вас
+fatiga = усталость
+cansancio = утомление, усталость
+bostezo = зевок
+bostezos = зевота, зевки
+acomodo = изменение положения, попытка устроиться удобнее
+acomodos en el asiento = постоянное изменение положения на сиденье
+asiento = сиденье
+molestia = неприятное ощущение, дискомфорт
+molestias = неприятные ощущения
+nuca = затылок, задняя часть шеи
+molestias en la nuca = неприятные ощущения в затылке
+picor = зуд
+picores = зуд, зудящие ощущения
+fuerte = сильный
+fuertes = сильные
+ansiedad = тревожность
+depresión = депрессия
+indicar = указывать, обозначать, означать
+indica = указывает, обозначает
+señal = знак, сигнал
+señalización = обозначение, маркировка, сигнальное обозначение
+vehículo = транспортное средство
+transportar = перевозить, транспортировать
+transporta = перевозит
+carga = груз
+sobresalir = выступать, выдаваться, выходить за пределы
+sobresale = выступает, выдается
+detrás = сзади, позади
+por detrás = с задней стороны, сзади
+limitación = ограничение
+velocidad = скорость
+mercancía = товар, груз
+mercancías = товары, грузы
+mercancías peligrosas = опасные грузы
+se trata de = речь идёт о, это
+exceso = избыток, превышение
+exceso de velocidad = превышение скорости
+hacer = делать, вызывать, приводить к
+hacer que = приводить к тому, что
+capacidad = способность, возможность
+anticipación = предвидение, предугадывание
+capacidad de anticipación = способность предвидеть развитие ситуации
+ante = перед, при, перед лицом
+situación = ситуация
+situación de tráfico = дорожная ситуация
+tráfico = дорожное движение
+mayor = больший
+menor = меньший
+la misma = та же самая
+poca = малая, небольшая
+velocidad = скорость
+sea = была, являлась (форма глагола ser)
+recomendable = рекомендуемый, целесообразный
+utilización = использование, применение
+utilizar = использовать
+cojín = подушка
+cojines = подушки
+asiento = сиденье
+asientos = сиденья
+evitar = избегать, предотвращать
+fatiga = усталость
+mejorar = улучшать
+mejora = улучшает
+visibilidad = обзор, видимость
+seguridad = безопасность
+conducir = управлять автомобилем
+se conduce = осуществляется управление автомобилем
+poder = мочь
+puede = может
+afectar = влиять, воздействовать
+eficacia = эффективность
+cinturón = ремень
+cinturón de seguridad = ремень безопасности
+cuando = когда
+tomar = брать, принимать, употреблять
+tomamos = принимаем, употребляем
+alcohol = алкоголь
+droga = наркотик, психоактивное вещество
+drogas = наркотики, психоактивные вещества
+potenciar = усиливать, увеличивать
+se potencian = усиливаются
+efecto = эффект, воздействие
+efectos = эффекты, последствия
+negativo = отрицательный
+negativos = отрицательные
+capacidad = способность
+capacidad para conducir = способность управлять автомобилем
+anular = отменять, устранять, сводить на нет
+se anulan = устраняются, нейтрализуются
+menor = несовершеннолетний
+menores = несовершеннолетние
+señal = знак
+carretera = дорога
+carretera convencional = обычная дорога
+indicar = указывать, обозначать
+indica = указывает
+distancia = расстояние
+dirección = направление
+ramal = съезд, ответвление дороги
+salida = съезд, выезд
+próximo = следующий, ближайший
+hacia = к, в направлении
+autopista = автомагистраль
+autovía = скоростная автомагистраль
+procedente = происходящий, прибывающий, ведущий от
+poder = мочь
+puede = может
+adelantar = обгонять
+vehículo = транспортное средство
+circular = двигаться, ехать
+circule = движется, едет
+vía = дорога
+velocidad = скорость
+kilómetros por hora = километры в час
+coincidir = совпадать
+coincida = совпадает
+genérico = общий, установленный по умолчанию
+genérica = общая
+nunca = никогда
+sistema = система
+sistemas = системы
+seguridad = безопасность
+seguridad activa = активная безопасность
+seguridad pasiva = пассивная безопасность
+incluir = включать
+incluyen = включают
+alumbrado = освещение, система освещения
+neumático = шина
+neumáticos = шины
+freno = тормоз
+frenos = тормоза
+suspensión = подвеска
+dirección = рулевое управление
+chasis = шасси, рама
+carrocería = кузов
+airbag = подушка безопасности
+airbags = подушки безопасности
+cinturón de seguridad = ремень безопасности
+cinturones de seguridad = ремни безопасности
+reposacabezas = подголовник
+casco = шлем
+fatiga = усталость, утомление
+producir = вызывать, приводить к
+produce = вызывает
+conducción = управление автомобилем, вождение
+hacer que = приводить к тому, что
+disminuir = уменьшать, снижать
+disminuyan = уменьшаются, снижаются
+capacidad = способность
+concentración = концентрация, сосредоточенность
+capacidad de concentración = способность концентрироваться
+seguridad = безопасность
+tiempo = время
+tiempo de reacción = время реакции
+corto = короткий
+sensibilidad = чувствительность
+deslumbramiento = ослепление светом, ослепление фарами
+durante = во время
+noche = ночь
+semáforo = светофор
+encender = зажигать, включать
+se enciende = загорается
+luz = свет, сигнал
+luz amarilla = жёлтый сигнал
+luz amarilla fija = постоянный жёлтый сигнал
+luz roja = красный сигнал
+deber = быть должным
+debe = должен
+detenerse = остановиться
+detenerme = остановиться
+antes de = перед, до
+ceder = уступать
+ceder el paso = уступить дорогу
+pasar = проехать, пройти
+antes de que = до того как
+cuando = когда
+poder = мочь
+pueda = могу (сослагательное наклонение)
+sin = без
+peligro = опасность
+sin peligro = безопасно, без опасности
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

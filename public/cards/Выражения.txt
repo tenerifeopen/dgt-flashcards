@@ -57,6 +57,248 @@ dispositivo manos libres = устройство громкой связи
 durante períodos cortos de tiempo = в течение коротких промежутков времени
 estar parado en un semáforo en rojo = стоять на красном сигнале светофора
 leer o enviar mensajes = читать или отправлять сообщения
+a qué altura = на какой высоте
+a la altura de los ojos = на уровне глаз
+a la altura del cuello = на уровне шеи
+parte central del reposacabezas = центральная часть подголовника
+ante la duda = при сомнении
+condiciones de luminosidad = условия освещённости
+encender las luces = включить фары
+apagar las luces = выключить фары
+luces de cruce = ближний свет
+luces de carretera = дальний свет
+provocar deslumbramientos = ослеплять других водителей
+debajo de una señal = под знаком
+señal de peligro = предупреждающий знак
+la distancia a la que comienza el peligro = расстояние до начала опасности
+la longitud del tramo peligroso = длина опасного участка
+la distancia a la que termina el peligro = расстояние до конца опасности
+paso de peatones = пешеходный переход
+debidamente señalizado = должным образом обозначенный
+penetrar en la calzada = выйти на проезжую часть
+con seguridad = безопасно
+preferencia de paso = преимущество в движении
+la distancia y velocidad de los vehículos = расстояние и скорость транспортных средств
+permitan hacerlo con seguridad = позволяют сделать это безопасно
+reducir considerablemente la velocidad = значительно снизить скорость
+avisar a los vehículos que circulan detrás = предупредить транспортные средства, движущиеся сзади
+mediante el empleo reiterado = посредством неоднократного использования
+luces de frenado = стоп-сигналы
+luces de posición = габаритные огни
+tener que + infinitivo = должен, необходимо
+tiene que reducir = должен снизить.
+mediante = посредством, с помощью.
+empleo reiterado = неоднократное использование.
+intersección sin señalizar = нерегулируемый перекрёсток
+tener preferencia = иметь преимущество
+preferencia de paso = преимущество проезда
+ceder el paso = уступить дорогу
+a la derecha = справа
+regla de la derecha = правило правой руки
+los síntomas anuncian la fatiga = симптомы предвещают усталость;
+pueden anunciarle la fatiga = могут предупреждать вас о наступлении усталости.
+transportar una carga = перевозить груз
+una carga que sobresale = выступающий груз
+sobresalir por detrás = выступать за задний габарит
+tener limitación de velocidad = иметь ограничение скорости
+transportar mercancías peligrosas = перевозить опасные грузы
+se trata de = речь идёт о..., это...
+exceso de velocidad = превышение скорости
+hacer que = приводить к тому, что
+capacidad de anticipación = способность предвидеть развитие ситуации
+ante una situación de tráfico = в дорожной ситуации, перед дорожной ситуацией
+a poca velocidad = при небольшой скорости
+utilización de cojines = использование подушек
+evitar la fatiga = предотвращать усталость
+mejorar la visibilidad = улучшать обзор
+mejorar la seguridad = повышать безопасность
+afectar a la eficacia = влиять на эффективность
+eficacia del cinturón = эффективность ремня безопасности
+cuando se conduce = во время управления автомобилем
+afectar a la eficacia = влиять на эффективность;
+afectar a la seguridad = влиять на безопасность;
+afectar a la conducción = влиять на управление автомобилем.
+tomar alcohol = употреблять алкоголь
+otras drogas = другие наркотические вещества
+se potencian los efectos = эффекты усиливаются
+efectos negativos = отрицательные последствия
+sobre la capacidad para conducir = для способности управлять автомобилем
+se anulan los efectos = эффекты нейтрализуются
+potenciar los efectos = усиливать действие;
+potenciar el riesgo = увеличивать риск;
+potenciar la seguridad = повышать безопасность.
+sobre una carretera convencional = на обычной дороге
+indica la distancia = указывает расстояние
+indica la dirección = указывает направление
+la dirección del ramal = направление съезда
+la próxima salida = ближайший съезд
+salida hacia = съезд в направлении...
+procedente de = ведущий от..., прибывающий из...
+adelantar a un vehículo = обгонять транспортное средство
+circular a 70 kilómetros por hora = двигаться со скоростью 70 км/ч
+velocidad genérica de la vía = общий скоростной режим дороги
+coincidir con = совпадать с
+no, nunca = нет, никогда
+sistemas de seguridad activa = системы активной безопасности
+sistemas de seguridad pasiva = системы пассивной безопасности
+cinturón de seguridad = ремень безопасности
+dirección del vehículo = рулевое управление автомобиля
+sistema de alumbrado = система освещения
+la fatiga produce = усталость вызывает...
+hacer que = приводить к тому, что
+disminuir la capacidad de concentración = снижать способность концентрироваться
+disminuir la seguridad = снижать безопасность
+tiempo de reacción = время реакции
+durante la noche = в ночное время
+sensibilidad al deslumbramiento = чувствительность к ослеплению
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

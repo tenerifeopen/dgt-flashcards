@@ -1412,6 +1412,63 @@ siempre que = при условии, что; если
 permitido = разрешено;
 obligatorio = обязательно;
 prohibido = запрещено.
+quedar = находиться, располагаться, оставать
+dudas = сомнения
+ante la duda = при сомнении
+penetrar = входить, вступать, выходить на
+puesto que = поскольку, так как
+dispone de = обладает, имеет
+tener preferencia = иметь преимущество;
+actuar con seguridad = действовать безопасно.
+pretender + infinitivo = намереваться что-то сделать.
+pretende cruzar = собирается перейти.
+disponer de = обладать, иметь в распоряжении.
+dispone de la preferencia de paso = имеет преимущество в движении.
+el empleo = использование
+reiterado = повторное, неоднократное
+tener que + infinitivo = должен, необходимо
+mediante = посредством, с помощью.
+empleo reiterado = неоднократное использование.
+reiterado = повторный, многократный
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
