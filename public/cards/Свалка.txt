@@ -4308,6 +4308,542 @@ sin = без
 peligro = опасность
 sin peligro = безопасно, без опасности
 
+señal = знак
+prohibir = запрещать
+prohíbe = запрещает
+parada = остановка
+estacionamiento = стоянка, парковка
+día = день
+días = дни
+indicado = указанный
+indicados = указанные
+desde = с
+hasta = до
+entre = между
+hora = час
+horas = часы
+
+límite = предел, ограничение
+límites de velocidad = ограничения скорости
+establecer = устанавливать
+establecidos = установленные
+vía = дорога
+vías = дороги
+objetivo = цель
+garantizar = гарантировать, обеспечивать
+seguridad = безопасность
+fluidez = плавность движения, свободное движение транспорта
+adaptar = приспосабливать
+conducción = управление автомобилем
+nuevas tecnologías = новые технологии
+medio ambiente = окружающая среда
+únicamente = только, исключительно
+permiso = водительское удостоверение, права
+clase = категория
+clase B = категория B
+clase A1 = категория A1
+clase A = категория A
+autorizar = разрешать
+autoriza = разрешает
+conducir = управлять транспортным средством
+motocicleta = мотоцикл
+motocicletas = мотоциклы
+ciclomotor = мопед
+ciclomotores = мопеды
+antigüedad = стаж владения, срок действия документа
+superior a = больше чем
+velocidad máxima = максимальная скорость
+cuadriciclo = квадрицикл
+cuadriciclo ligero = лёгкий квадрицикл
+cuadriciclo no ligero = тяжёлый квадрицикл
+ligero = лёгкий
+vía = дорога
+cuál = какой
+tasa = уровень, норма, допустимый предел
+tasa máxima = максимально допустимый уровень
+alcoholemia = содержание алкоголя
+permitida = разрешённая, допустимая
+aire = воздух
+aire espirado = выдыхаемый воздух
+para = для
+conductores = водители
+en general = в общем случае, для большинства водителей
+tasa = уровень, допустимый предел, норма
+tasa máxima = максимально допустимый уровень
+alcoholemia = содержание алкоголя
+permitido = разрешённый, допустимый
+permitida = разрешённая
+aire = воздух
+aire espirado = выдыхаемый воздух
+conductor = водитель
+conductores = водители
+en general = в общем случае, для большинства водителей
+miligramo = миллиграмм
+gramo = грамм
+litro = литр
+durante = во время
+conducción = управление автомобилем, вождение
+conectar = включать, подключать
+conecta = включает
+sistema = система
+aire acondicionado = кондиционер
+consumo = расход, потребление
+carburante = топливо
+variar = изменяться
+varía = изменяется
+aumentar = увеличиваться, возрастать
+aumenta = увеличивается
+disminuir = уменьшаться, снижаться
+disminuye = уменьшается
+temperatura = температура
+temperaturas = температуры
+bajo = низкий
+bajas = низкие
+indicar = указывать, обозначать
+indica = указывает, обозначает
+señal = знак
+señal circular = круглый знак
+azul = синий
+permitir = разрешать
+permite = разрешает
+circular = двигаться, ехать
+bicicleta = велосипед
+bicicletas = велосипеды
+vehículo = транспортное средство
+vehículos = транспортные средства
+dos ruedas = два колеса
+ciclomotor = мопед
+ciclomotores = мопеды
+solamente = только
+
+accidente = ДТП, авария
+ayuda = помощь
+organizar = организовывать
+organizada = организована
+prestar auxilio = оказывать помощь
+implicado = участник (ДТП)
+continuar la marcha = продолжить движение
+detenerse = остановиться
+casco = шлем
+pantalla = визор, защитный экран
+pantalla de protección = защитный визор
+gafas = очки
+gafas de seguridad = защитные очки
+proteger = защищать
+ojos = глаза
+conveniente = рекомендуется, целесообразно
+obligatorio = обязательный
+ponerse = надевать на себя
+fumar = курить
+mientras = пока, во время
+conducir = управлять автомобилем
+provocar = вызывать
+distracción = отвлечение
+distracciones = отвлечения
+problemas de visión = проблемы со зрением
+visión = зрение
+a causa de = из-за
+humo = дым
+capacidad de atención = способность концентрировать внимание
+aumento = увеличение
+somnolencia = сонливость
+adelantar = обгонять
+adelantamiento = обгон
+túnel = тоннель
+túneles = тоннели
+prohibido = запрещён
+carril = полоса движения
+sentido = направление движения
+cada = каждый
+solo = только
+existir = существовать
+existe = существует
+más de = более
+peatón = пешеход
+arcén = обочина
+fuera de poblado = вне населённого пункта
+ocaso = закат
+salida del sol = восход солнца
+elemento luminoso = светящийся элемент
+elemento retrorreflectante = светоотражающий элемент
+hacerse visible = стать видимым
+distancia mínima = минимальное расстояние
+aproximarse = приближаться
+todo = каждый
+peatón = пешеход
+circule = движется
+arcén = обочина
+vía = дорога
+fuera de poblado = вне населённого пункта
+entre = между
+ocaso = закат
+salida del sol = восход солнца
+debe = должен
+ir provisto de = быть оснащённым, иметь при себе
+elemento = элемент, предмет
+luminoso = светящийся
+retrorreflectante = световозвращающий
+
+autoprotección = собственная безопасность
+proteger = защищать
+protección = защита
+protección del lugar del accidente = обеспечение безопасности места ДТП
+víctima = пострадавший
+víctimas = пострадавшие
+tener en cuenta = учитывать
+por este orden = в таком порядке
+avisar = сообщить, вызвать помощь
+socorrer = оказывать помощь
+estar exento de = быть освобождённым от
+llevar el cinturón de seguridad = пользоваться ремнём безопасности
+salvo que... = если только...
+estar en posesión de un certificado = иметь при себе справку
+por razones médicas graves = по серьёзным медицинским причинам
+certificado de exención = справка об освобождении
+estar = быть, находиться
+exento = освобождённый
+exenta = освобождённая
+embarazada = беременная женщина
+llevar = носить, использовать
+cinturón = ремень
+cinturón de seguridad = ремень безопасности
+salvo que = если только не, за исключением случая
+posesión = владение, обладание
+en posesión de = иметь при себе, быть обладателем
+certificado = справка, сертификат
+exención = освобождение
+razón = причина
+razones = причины
+médico = медицинский
+médica = медицинская
+grave = серьёзный
+graves = серьёзные
+dañar = причинять вред
+feto = плод
+además = кроме того
+requerir = требовать
+calcular = вычислять, рассчитывать
+tasa = уровень, показатель
+tasa de alcoholemia = уровень алкоголя в организме
+en función de = в зависимости от
+cantidad = количество
+tipo = вид, тип
+ingerir = употреблять внутрь
+ingerido = употреблённый
+número = количество, число
+copa = бокал, рюмка, порция спиртного
+bebida = напиток
+depender de = зависеть от
+factor = фактор
+además de = кроме, помимо
+muchos = многие
+accidente = авария, ДТП
+tráfico = дорожное движение
+importancia = важность
+causa = причина
+principal = главный, основной
+muerte = смерть
+mortalidad = смертность
+país = страна
+nivel = уровень
+mundial = мировой
+hacer = делать
+conductor = водитель
+usuario = участник, пользователь
+usuarios = участники дорожного движения
+anticiparse = заранее предвидеть, предугадать
+intención = намерение
+intenciones = намерения
+señalizar = подавать сигнал, обозначать
+maniobra = манёвр
+con antelación = заранее
+permanecer = оставаться
+ángulo muerto = мёртвая зона
+retrovisor = зеркало заднего вида
+trayectoria = траектория движения
+producto = продукт, вещество, средство
+perjudicar = вредить, ухудшать
+capacidad = способность
+capacidad de conducir = способность управлять автомобилем
+modo = способ, образ
+similar = похожий, аналогичный
+determinado = определённый, некоторый
+medicamento = лекарство
+estupefaciente = наркотическое вещество
+taza = чашка
+café = кофе
+té = чай
+determinados medicamentos = некоторые лекарства;
+determinadas circunstancias = некоторые обстоятельства;
+determinados vehículos = некоторые транспортные средства.
+Perjudicar la capacidad de conducir. — Ухудшать способность управлять автомобилем.
+Perjudicar la visión. — Ухудшать зрение.
+Perjudicar la atención. — Ухудшать внимание.
+efecto = воздействие, эффект
+alcoholemia = уровень алкоголя в организме
+alcanzar = достигать
+máximo = максимальный
+nivel = уровень
+inmediatamente = немедленно, сразу
+después de = после
+tomar = пить, принимать
+último = последний
+copa = бокал, рюмка, порция алкоголя
+entre = между
+minuto = минута
+haber = иметь (вспомогательный глагол)
+ingerir = употреблять внутрь
+ingerido = употреблённый
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

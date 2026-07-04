@@ -151,6 +151,258 @@ disminuir la seguridad = снижать безопасность
 tiempo de reacción = время реакции
 durante la noche = в ночное время
 sensibilidad al deslumbramiento = чувствительность к ослеплению
+prohibir el estacionamiento = запрещать стоянку
+prohibir la parada = запрещать остановку
+los días indicados = в указанные дни
+desde las 9 horas = с 9 часов
+hasta las 9 horas = до 9 часов
+desde el día 1 hasta el día 16 = с 1-го по 16-е число
+límites de velocidad = ограничения скорости
+tener como objetivo = иметь целью
+garantizar la seguridad = обеспечивать безопасность
+garantizar la fluidez = обеспечивать плавность движения
+adaptar la conducción = приспосабливать управление автомобилем
+autorizar a conducir = разрешать управлять
+permiso de la clase B = водительское удостоверение категории B
+permiso de la clase A1 = водительское удостоверение категории A1
+antigüedad del permiso = стаж владения водительским удостоверением
+superior a 3 años = более трёх лет
+velocidad máxima = максимальная скорость
+cuadriciclo no ligero = тяжёлый квадрицикл
+en esta vía = на этой дороге
+tasa máxima de alcoholemia = максимально допустимый уровень алкоголя
+aire espirado = выдыхаемый воздух
+conductores en general = обычные водители
+miligramos por litro = миллиграммов на литр
+gramos por litro = граммов на литр
+durante la conducción = во время движения
+conectar el aire acondicionado = включить кондиционер
+consumo de carburante = расход топлива
+el consumo aumenta = расход увеличивается
+las temperaturas son bajas = температура низкая
+señal circular azul = круглый синий знак
+permite circular = разрешает движение
+circular en bicicleta = двигаться на велосипеде
+vehículos de dos ruedas = двухколёсные транспортные средства
+bicicletas solamente = только велосипеды
+
+en caso de un accidente = в случае ДТП
+la ayuda ya está organizada = помощь уже организована
+prestar auxilio = оказать помощь
+continuar la marcha = продолжить движение
+estar implicado en un accidente = быть участником ДТП
+casco sin pantalla = шлем без визора
+pantalla de protección = защитный визор
+gafas de seguridad = защитные очки
+proteger los ojos = защищать глаза
+es conveniente = рекомендуется
+fumar mientras conduce = курить во время управления автомобилем
+provocar distracciones = вызывать отвлечение внимания
+problemas de visión = проблемы со зрением
+a causa del humo = из-за дыма
+capacidad de atención = способность концентрировать внимание
+adelantar en los túneles = обгонять в тоннелях
+está prohibido = запрещено
+un carril para cada sentido = одна полоса для каждого направления
+más de un carril = более одной полосы
+circular por el arcén = идти по обочине
+fuera de poblado = вне населённого пункта
+entre el ocaso y la salida del sol = между закатом и восходом солнца
+ir provisto de = иметь при себе, быть оснащённым
+hacerse visible = быть заметным
+a una distancia mínima de 150 metros = на расстоянии не менее 150 метров
+tener en cuenta = учитывать
+por este orden = в таком порядке
+proteger a las víctimas = защищать пострадавших
+proteger el lugar del accidente = обезопасить место ДТП
+autoprotección = собственная безопасность
+estar exento de = быть освобождённым от
+llevar el cinturón de seguridad = пользоваться ремнём безопасности
+salvo que... = если только...
+estar en posesión de un certificado = иметь при себе справку
+por razones médicas graves = по серьёзным медицинским причинам
+certificado de exención = справка об освобождении
+calcular la tasa de alcoholemia = рассчитать уровень алкоголя
+en función de = в зависимости от
+depender de muchos factores = зависеть от многих факторов
+además de la cantidad de alcohol = помимо количества алкоголя
+tipo de bebida = вид напитка
+accidentes de tráfico = дорожно-транспортные происшествия
+tener importancia = иметь значение
+la causa principal = главная причина
+una de las principales causas = одна из основных причин
+a nivel mundial = на мировом уровне, во всём мире
+causas de mortalidad = причины смертности
+en nuestro país = в нашей стране
+los demás usuarios = остальные участники дорожного движения
+anticiparse a sus intenciones = заранее понять ваши намерения
+señalizar las maniobras = обозначать манёвры сигналами
+con antelación = заблаговременно, заранее
+ángulo muerto de los retrovisores = мёртвая зона зеркал
+con suficiente antelación = с достаточным запасом времени;
+anticiparse a... = заранее предвидеть что-либо.
+para que + subjuntivo=«чтобы...»
+perjudicar la capacidad de conducir = ухудшать способность управлять автомобилем
+de modo similar = аналогичным образом
+similar al alcohol = подобно алкоголю
+determinados medicamentos = некоторые лекарственные препараты
+el efecto de la alcoholemia = воздействие алкоголя
+alcanzar su máximo nivel = достигать максимального уровня
+después de haber ingerido = после употребления
+entre 30 y 90 minutos = через 30–90 минут
+tomar la última copa = выпить последнюю рюмку (бокал)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1430,6 +1430,70 @@ tener que + infinitivo = должен, необходимо
 mediante = посредством, с помощью.
 empleo reiterado = неоднократное использование.
 reiterado = повторный, многократный
+medio ambiente = окружающая среда
+antigüedad del permiso = стаж водительского удостоверения;
+están = находятся, являются
+exento / exenta = освобождённый, освобождённая
+exentas = освобождены (ж.р., мн.ч.)
+salvo que... = если только...
+Salvo que exista peligro. — Если только нет опасности.
+Salvo que tenga autorización. — Если только нет соответствующего разрешения.
+Salvo que estén en posesión de un certificado. — Если только у них нет (если только они не имеют) соответствующей справки.
+anticiparse = заранее предвидеть, предугадать
+intenciones = намерения
+permanecer = оставаться
+con antelación = заранее
+determinados medicamentos = некоторые лекарства;
+determinadas circunstancias = некоторые обстоятельства;
+determinados vehículos = некоторые транспортные средства.
+Perjudicar la capacidad de conducir. — Ухудшать способность управлять автомобилем.
+Perjudicar la visión. — Ухудшать зрение.
+Perjudicar la atención. — Ухудшать внимание.
+estupefacientes = наркотические вещества
+principio = начало
+Al principio = в начале.
+El principio de la autopista = начало автомагистрали.
+El principio del túnel = начало тоннеля.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
