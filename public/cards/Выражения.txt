@@ -251,21 +251,78 @@ alcanzar su máximo nivel = достигать максимального уро
 después de haber ingerido = после употребления
 entre 30 y 90 minutos = через 30–90 минут
 tomar la última copa = выпить последнюю рюмку (бокал)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+consumir estupefacientes = употреблять наркотики
+poca cantidad = небольшое количество
+vehículo a motor = механическое транспортное средство
+poder circular = иметь право двигаться
+conductor de un vehículo = водитель транспортного средства
+esta señal indica = этот знак обозначает
+el principio de = начало чего-либо
+el final de = конец чего-либо
+principio de una autopista = начало автомагистрали
+principio de una autovía = начало скоростной дороги
+revisiones periódicas = периодические проверки
+mantenimiento adecuado = надлежащее техническое обслуживание
+sufrir un accidente = попасть в ДТП
+probabilidad de sufrir un accidente = вероятность попасть в ДТП
+disminuir la probabilidad = уменьшать вероятность
+aumentar la probabilidad = увеличивать вероятность
+tener influencia en = оказывать влияние на
+no tener influencia en = не оказывать влияния на
+dos ruedas por lo menos = не менее двух колёс
+accionado por su conductor = приводимый в движение водителем
+mediante pedales = при помощи педалей
+mediante pedales o manivelas = при помощи педалей или ручного привода
+tener en cuenta = учитывать, иметь в виду
+tiempo de reacción = время реакции
+al frenar = при торможении
+rueda trasera = заднее колесо
+quedarse bloqueada = заблокироваться
+distancia de frenado = тормозной путь
+ser más difícil = быть более трудным
+ahorrar = экономить
+cantidad = количество
+cantidad de combustible = количество топлива
+ahorrar combustible = экономить топливо
+técnicas de conducción eficiente = приёмы экономичного вождения
+se puede ahorrar = можно сэкономить
+combustible que se consume = расходуемое топливо
+se puede + infinitivo=«можно что-либо сделать».
+Se puede ahorrar combustible. = Можно экономить топливо.
+Se puede adelantar. = Можно обгонять.
+No se puede aparcar. = Нельзя парковаться.
+zona urbana = населённый пункт, городская зона
+por dónde = по чему, где
+estar obligado a = быть обязанным
+como norma general = как общее правило
+por la calzada = по проезжей части
+por las aceras = по тротуарам
+velocidad adecuada = подходящая скорость
+adaptar la velocidad = подстраивать скорость
+condiciones del conductor = состояние водителя
+condiciones del vehículo = состояние транспортного средства
+condiciones del medio = окружающие дорожные условия
+límites máximos de velocidad = максимальные ограничения скорости
+por motivos de emergencia = по причине чрезвычайной ситуации
+quedar inmovilizado = оказаться обездвиженным
+dentro de un túnel = внутри туннеля
+solicitar auxilio = запросить помощь
+a través del = через, посредством
+poste de socorro = аварийный пункт связи
+más próximo = ближайший
+si existe = если имеется
+reanudar la marcha = возобновить движение
+abandonar el vehículo = покинуть транспортное средство
+obligar a circular = обязывать двигаться
+circular por la vía = двигаться по дороге
+a todos los automóviles = всем автомобилям
+excepto a = кроме
+motocicleta sin sidecar = мотоцикл без бокового прицепа
+entrada de garaje = въезд в гараж
+estar permitido = быть разрешённым
+estacionar el vehículo = парковать транспортное средство
+luz de emergencia = аварийная сигнализация
+encender la luz de emergencia = включить аварийную сигнализацию
 
 
 

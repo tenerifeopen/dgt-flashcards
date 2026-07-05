@@ -1454,16 +1454,23 @@ principio = начало
 Al principio = в начале.
 El principio de la autopista = начало автомагистрали.
 El principio del túnel = начало тоннеля.
-
-
-
-
-
-
-
-
-
-
+probabilidad = вероятность
+aumentar = увеличивать.
+disminuir = уменьшать.
+accionado = приводимый в движение
+por lo menos = по меньшей мере, как минимум
+mediante = посредством, при помощи
+manivelas = рукоятки, ручные приводы (кривошипы)
+mediante pedales = при помощи педалей;
+mediante una señal = с помощью сигнала;
+mediante un documento = посредством документа.
+adaptar ... a ...=«приспосабливать что-либо к чему-либо».
+Adaptar la velocidad a las condiciones. = Подстраивать скорость под условия.
+Adaptar la conducción al tráfico. = Подстраивать манеру вождения под дорожную обстановку.
+Adaptar el vehículo al uso. = Приспособить автомобиль к условиям эксплуатации.
+quedar inmovilizado = оказаться обездвиженным;
+quedar bloqueado = оказаться заблокированным;
+quedar detenido = оказаться остановленным.
 
 
 
