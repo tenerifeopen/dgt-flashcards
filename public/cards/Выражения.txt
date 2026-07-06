@@ -323,10 +323,50 @@ estar permitido = быть разрешённым
 estacionar el vehículo = парковать транспортное средство
 luz de emergencia = аварийная сигнализация
 encender la luz de emergencia = включить аварийную сигнализацию
-
-
-
-
+influir en = влиять на
+capacidad de anticipación = способность предвидения
+a mayor velocidad = чем выше скорость
+menor capacidad de anticipación = меньшая способность предвидеть
+depender de = зависеть от
+condiciones de la vía = дорожные условия
+uso adecuado = правильное использование
+correa de sujeción = ремешок крепления
+llevar correctamente abrochada = правильно застегнуть
+para que = чтобы
+cumplir su función = выполнять свою функцию
+cumplir eficazmente su función = эффективно выполнять свою функцию
+vía urbana = городская дорога
+tener por finalidad = иметь целью
+permitir una visibilidad clara = обеспечивать хороший обзор
+hacia atrás = назад
+hacia los lados = по сторонам
+hacia atrás y hacia los lados = назад и по сторонам
+dotar de = снабжать чем-либо
+menor resistencia al viento = меньшее сопротивление воздуху
+acabar de = только что
+acaba de superar = только что успешно прошёл
+superar favorablemente = успешно пройти
+primera ITV = первый технический осмотр
+próxima inspección = следующий технический осмотр
+al año siguiente = в следующем году
+a los 2 años = через два года
+consumo de alcohol = употребление алкоголя
+comportamiento del conductor = поведение водителя
+dar una falsa seguridad = создавать ложную уверенность
+en sí mismo = в себе
+por lo que = поэтому, вследствие чего
+asumir más riesgos = идти на больший риск
+hacer que = приводить к тому, что
+al volante = за рулём
+el final de un tramo = конец участка
+en el que = на котором
+es obligatorio = является обязательным
+alumbrado de cruce = ближний свет фар
+corto alcance = ближний свет (дословно «короткая дальность»)
+largo alcance = дальний свет
+alumbrado de carretera = дальний свет фар
+llevar encendidos = иметь включёнными
+alumbrado de posición = габаритные огни
 
 
 

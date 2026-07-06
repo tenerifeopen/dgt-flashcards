@@ -1471,13 +1471,13 @@ Adaptar el vehículo al uso. = Приспособить автомобиль к 
 quedar inmovilizado = оказаться обездвиженным;
 quedar bloqueado = оказаться заблокированным;
 quedar detenido = оказаться остановленным.
-
-
-
-
-
-
-
+anticipación = предвидение, прогнозирование
+para que = чтобы
+acabar de = только что
+favorablemente = успешно, с положительным результатом
+comportamiento=поведение
+dándole = давая ему
+Para evitar=Чтобы избежать
 
 
 

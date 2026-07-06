@@ -4729,6 +4729,92 @@ deber = быть должным
 encender = включать
 luz = свет
 emergencia = чрезвычайная ситуация
+velocidad = скорость
+influir = влиять
+capacidad = способность
+anticipación = предвидение
+conductor = водитель
+mayor = больший
+menor = меньший
+depender = зависеть
+condición = условие
+vía = дорога
+uso = использование
+adecuado = правильный, надлежащий
+casco = шлем
+implicar = подразумевать
+correa = ремешок
+sujeción = крепление, фиксация
+abrochar = застёгивать
+llevar = носить, использовать
+correctamente = правильно
+cumplir = выполнять
+eficazmente = эффективно
+función = функция
+desabrochado = расстёгнутый
+retrovisor = зеркало заднего вида
+dispositivo = устройство
+finalidad = цель, назначение
+permitir = позволять
+visibilidad = обзор, видимость
+claro = ясный, чёткий
+atrás = назад
+lado = сторона
+vehículo = транспортное средство
+dotar = снабжать, обеспечивать
+menor = меньший
+resistencia = сопротивление
+viento = ветер
+turismo = легковой автомобиль
+acabar = заканчивать
+superar = проходить, успешно проходить
+favorablemente = успешно
+primero = первый
+ITV = технический осмотр
+próximo = следующий
+inspección = осмотр, инспекция
+realizar = проводить
+siguiente = следующий
+consumo = употребление, потребление
+alcohol = алкоголь
+alterar = изменять, нарушать
+comportamiento = поведение
+conductor = водитель
+dar = давать
+falso = ложный
+seguridad = уверенность
+asumir = брать на себя
+riesgo = риск
+hacer = делать
+infravalorar = недооценивать
+capacidad = способность
+volante = рулевое колесо
+indicar = указывать, обозначать
+señal = дорожный знак
+final = конец
+tramo = участок
+obligatorio = обязательный
+alumbrado = освещение, свет
+cruce = разъезд, встречное движение
+corto = короткий
+alcance = дальность, расстояние действия
+obligación = обязанность
+utilizar = использовать
+largo = длинный, большой
+carretera = дорога, шоссе
+llevar = носить, иметь
+encendido = включённый
+posición = положение
+
+
+
+
+
+
+
+
+
+
 
 
 
