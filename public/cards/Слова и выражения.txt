@@ -1479,6 +1479,8 @@ comportamiento=поведение
 dándole = давая ему
 Para evitar=Чтобы избежать
 temeraria...=безрассудный...
+suelen= обычно
+
 
 
 
