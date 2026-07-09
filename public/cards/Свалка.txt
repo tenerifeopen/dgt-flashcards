@@ -4902,6 +4902,22 @@ relacionado = связанный
 vía = дорога
 vehículo = транспортное средство
 conductor = водитель
+en = в
+qué = какой
+tipo = тип
+accidente = авария, ДТП
+más = более, самый
+frecuente = частый
+producirse = происходить, возникать
+latigazo = удар хлыстом
+cervical = шейный
+colisión = столкновение
+alcance = наезд сзади, столкновение сзади
+especialmente = особенно
+atropello = наезд на пешехода
+lesión = травма
+darse = происходить, возникать
+solitario = одиночный
 
 
 

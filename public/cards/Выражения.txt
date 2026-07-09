@@ -388,6 +388,31 @@ por la izquierda = по левой стороне
 por la calzada = по проезжей части
 por el arcén = по обочине
 según su sentido de la marcha = в зависимости от направления движения
+la señal indica = знак указывает
+finaliza la prohibición = заканчивается запрет
+prohibición impuesta = установленный запрет
+señales anteriores = предыдущие дорожные знаки
+vehículos en movimiento = движущиеся транспортные средства
+entre otras = среди прочего
+el accidente más frecuente = самое частое ДТП
+por el uso del teléfono móvil = из-за использования мобильного телефона
+mientras se conduce = во время управления автомобилем
+la salida de la vía = съезд с дороги
+el choque frontolateral = лобово-боковое столкновение
+el alcance = наезд сзади, столкновение с впереди идущим транспортным средством
+qué circunstancias = какие обстоятельства
+favorecer la aparición = способствовать появлению
+aparición de la fatiga = появление усталости
+circunstancias relacionadas con = обстоятельства, связанные с
+la vía, el vehículo y el conductor = дорога, транспортное средство и водитель
+es cuestión de tiempo = это лишь вопрос времени
+tipo de accidente = тип ДТП
+es más frecuente = встречается чаще всего
+se produzca = происходит, возникает
+latigazo cervical = хлыстовая травма шеи
+colisión por alcance = столкновение сзади
+en los atropellos = при наездах на пешеходов
+accidente en solitario = ДТП с участием одного транспортного средства
 
 
 
