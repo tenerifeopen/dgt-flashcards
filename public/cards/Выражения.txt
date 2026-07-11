@@ -413,7 +413,7 @@ latigazo cervical = хлыстовая травма шеи
 colisión por alcance = столкновение сзади
 en los atropellos = при наездах на пешеходов
 accidente en solitario = ДТП с участием одного транспортного средства
-
+En las colisiones por alcance.=При столкновениях сзади.
 
 
 
