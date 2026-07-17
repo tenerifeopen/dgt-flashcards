@@ -1481,9 +1481,32 @@ Para evitar=Чтобы избежать
 temeraria...=безрассудный...
 suelen= обычно
 Latigazo cervical.=хлыстовая травма шеи
-
-
-
+¿Qué indica...? = Что обозначает...?
+pasar sin detenerse = проехать без остановки
+telepeaje o peaje dinámico = электронная оплата проезда или динамический пункт оплаты
+intersección próxima = ближайший перекрёсток
+🔥siempre = всегда
+🔥nunca = никогда
+🔥únicamente = только
+🔥solamente = только
+🔥en todos los casos = во всех случаях
+🔥en cualquier caso = в любом случае
+🔥sin excepción = без исключения
+🔥no importa = не имеет значения
+🔥es indiferente = безразлично
+🟢adecuado = подходящий, правильный
+🟢correctamente = правильно
+🟢seguridad = безопасность
+🟢anticiparse = предвидеть, заранее учитывать
+🟢prevenir = предотвращать
+🟢recomendable = рекомендуется
+🟢con precaución = с осторожностью
+🟢siempre que = при условии, что
+🟢cuando sea necesario = когда это необходимо
+🟢de forma adecuada = надлежащим образом
+🟢mantener = поддерживать
+🟢comprobar = проверять
+🟢revisar = осматривать, проверять
 
 
 

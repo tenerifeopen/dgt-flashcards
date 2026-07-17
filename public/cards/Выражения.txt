@@ -414,9 +414,70 @@ colisión por alcance = столкновение сзади
 en los atropellos = при наездах на пешеходов
 accidente en solitario = ДТП с участием одного транспортного средства
 En las colisiones por alcance.=При столкновениях сзади.
-
-
-
+al circular = при движении
+bajo condiciones de visibilidad = в условиях видимости
+condiciones especialmente desfavorables = особенно неблагоприятные условия
+encender la luz antiniebla trasera = включить задний противотуманный фонарь
+indicar su posición = обозначить своё местоположение
+al resto de los usuarios = остальным участникам дорожного движения
+luz de largo alcance = дальний свет фар
+al = при
+circular = двигаться
+bajo = под
+condición = условие
+visibilidad = видимость
+especialmente = особенно
+desfavorable = неблагоприятный
+obligatorio = обязательный
+encender = включать
+luz = свет, фара
+antiniebla = противотуманный
+trasero = задний
+indicar = указывать
+posición = положение, местоположение
+resto = остальные
+usuario = участник дорожного движения, пользователь
+sólo = только
+opcional = необязательный, по желанию
+siendo = будучи, при этом
+también = также
+largo = длинный
+alcance = дальностьes recomendable = рекомендуется
+aumentar la distancia de seguridad = увеличить безопасную дистанцию
+al circular = при движении
+vehículo de detrás = транспортное средство, движущееся сзади
+acercarse demasiado = слишком близко приближаться
+en perfecto estado = в отличном состоянии
+dar negativo = показать отрицательный результат
+prueba de detección de alcoholemia = тест на содержание алкоголя
+mostrar síntomas = проявлять симптомы
+estar bajo los efectos del alcohol = находиться под воздействием алкоголя
+recoger los datos sintomatológicos = зафиксировать симптомы
+comunicarlos al juzgado = сообщить их в суд
+inmovilizar el vehículo = задержать транспортное средство
+multar al conductor = оштрафовать водителя
+vía de doble sentido = дорога с двусторонним движением
+adelantar correctamente = правильно выполнять обгон
+tener prioridad = иметь преимущество
+en la intersección = на перекрёстке
+aproximarse por la vía transversal = приближаться по поперечной дороге
+respecto a = по отношению к
+aproximarse por la derecha = приближаться справа
+en caso de = в случае
+paso inferior = подземный проезд
+dejar el motor apagado = заглушить двигатель; оставить двигатель выключенным
+dejar el motor encendido = оставить двигатель включённым
+las puertas cerradas = двери закрыты
+las puertas abiertas = двери открыты
+la llave puesta = ключ оставлен в замке зажигания
+estar permitido = быть разрешённым
+realizar una parada = выполнить остановку
+carril reservado para autobuses = полоса, выделенная для автобусов
+en ningún caso = ни в каком случае
+con el fin de = с целью
+subir o bajar viajeros = посадить или высадить пассажиров
+estar reservado para circular = быть предназначенным для движения
+no está permitido = не разрешается
 
 
 
