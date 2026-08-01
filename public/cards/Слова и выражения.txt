@@ -1507,11 +1507,60 @@ intersección próxima = ближайший перекрёсток
 🟢mantener = поддерживать
 🟢comprobar = проверять
 🟢revisar = осматривать, проверять
-
-
-
-
-
+ mediante=через
+estar exento de = быть освобождённым от
+permiso de conducción = водительское удостоверение
+permiso de circulación = свидетельство о регистрации транспортного средства (СТС)
+Distancia de detención = Distancia de reacción + Distancia de frenado
+distancia de frenado = тормозной путь
+distancia de reacción = путь реакции
+distancia de detención = остановочный путь
+percibir un peligro = заметить опасность
+pisar el freno = нажать на тормоз
+hasta que = до тех пор пока
+detenerse totalmente = полностью остановиться
+continuos estornudos=непрерывное чихание
+depender = зависеть
+puesto que = поскольку; так как
+V-16 = аварийный проблесковый маячок, который заменяет аварийный треугольник.
+V-27 = виртуальный треугольник, который отображается в автомобиле.
+espesa = густой ✅ задние противотуманки
+niebla espesa = густой туман✅ задние противотуманки
+muy intensa = очень сильный ✅ задние противотуманки
+lluvia muy intensa = очень сильный дождь✅ задние противотуманки
+nevada muy intensa = очень сильный снегопад✅ задние противотуманк
+espeso = густой
+denso = плотный; густой
+intenso = сильный
+niebla = туман
+lluvia = дождь
+nevada = снегопад
+humo = дым
+polvo = пыль
+visibilidad = видимость
+antiniebla = противотуманный
+delantero = передний
+trasero = задний
+niebla espesa = густой туман
+nube densa de humo = густое облако дыма
+nube densa de polvo = густое облако пыли
+lluvia muy intensa = очень сильный дождь
+nevada muy intensa = очень сильный снегопад
+disminuir sensiblemente la visibilidad = значительно ухудшать видимость
+luz antiniebla delantera = передняя противотуманная фара
+luz antiniebla trasera = задний противотуманный фонарь
+temeraria.=безрассудно.
+ángulo cerrado = крутая, более резкая траектория
+ángulo abierto = более широкая, плавная траектория
+tomar una curva = проходить поворот
+carretera mojada = мокрая дорога
+ángulo de giro = угол поворота
+ángulo de giro más cerrado = более крутая траектория поворота
+ángulo de giro más abierto = более широкая траектория поворота
+disminuir la inclinación = уменьшить наклон
+inclinar demasiado la motocicleta = слишком сильно наклонять мотоцикл
+abrir el ángulo de giro = проходить поворот по более широкой траектории
+si fuera posible = если это возможно
 
 
 
