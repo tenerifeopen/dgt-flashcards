@@ -1561,6 +1561,7 @@ disminuir la inclinación = уменьшить наклон
 inclinar demasiado la motocicleta = слишком сильно наклонять мотоцикл
 abrir el ángulo de giro = проходить поворот по более широкой траектории
 si fuera posible = если это возможно
+inmediatamente=немедленно
 
 
 

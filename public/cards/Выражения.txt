@@ -646,12 +646,67 @@ efectuar la maniobra = выполнить манёвр
 tener prioridad = иметь преимущество
 vía de sentido único = дорога с односторонним движением
 lugar adecuado para efectuar la maniobra = подходящее место для выполнения манёвра
-
-
-
-
-
-
+conjunto de vehículos = состав транспортных средств
+vehículos no agrícolas = несельскохозяйственные транспортные средства
+equipo homologado de extinción de incendios = сертифицированное средство пожаротушения
+en condiciones de uso = в исправном состоянии
+rueda de repuesto = запасное колесо
+chaleco reflectante de alta visibilidad = светоотражающий жилет высокой видимости
+uno de los principales motivos = одна из основных причин
+deberse a una distracción = быть вызванным отвлечением
+tipo de accidente = тип ДТП
+salida de la vía = съезд с дороги
+colisión entre vehículos = столкновение транспортных средств
+atropello a personas = наезд на пешеходов
+sufrir una caída = упасть
+deslizarse por el suelo = скользить по дорожному покрытию
+lo más relajadamente posible = как можно более расслабленно
+quedar detenido = полностью остановиться
+antes de haberse detenido = до полной остановки
+ser golpeado contra el suelo = удариться о дорожное покрытие
+rodar el cuerpo = перекатывать тело
+lo antes posible = как можно скорее
+soplar con fuerza = сильно дуть
+por el lado derecho = с правой стороны
+tener en cuenta = учитывать; принимать во внимание
+camión de grandes dimensiones = крупногабаритный грузовик
+verse impulsado hacia = быть отброшенным; смещаться в сторону
+llegar a su altura = поравняться с ним
+finalizar la maniobra = завершить манёвр
+girar la dirección hacia la derecha = повернуть руль вправо
+estar obligado a = быть обязанным
+llevar en el vehículo = иметь; возить в автомобиле
+inspección técnica periódica = периодический технический осмотр
+resultado favorable = положительный результат
+tarjeta de inspección técnica = карточка технического осмотра
+distintivo acreditativo de la ITV = наклейка, подтверждающая прохождение ITV
+informe de la inspección = отчёт о техническом осмотре
+lado izquierdo del parabrisas = левая сторона ветрового стекла
+ángulo superior derecho del parabrisas = верхний правый угол ветрового стекла
+cinturón de seguridad = ремень безопасности
+estar obligado a = быть обязанным
+usar el cinturón de seguridad = пользоваться ремнём безопасности
+plazas delanteras = передние места
+tráfico urbano = городское движение
+no superar los 135 centímetros = не превышать 135 сантиметров
+135 centímetros de estatura = рост 135 сантиметров
+asientos traseros = задние сиденья
+accidente con víctimas = ДТП с пострадавшими
+furgoneta implicada = фургон, участвующий в ДТП
+vías urbanas = городские дороги
+vías interurbanas = междугородние дороги
+carreteras convencionales = обычные загородные дороги
+más del doble = более чем в два раза
+terceros implicados = другие участники ДТП; третьи лица
+más de la mitad = более половины
+3 de cada 4 = 3 из 4
+entre semana = в будние дни
+sobre todo = прежде всего; особенно
+momento del día = время суток
+mayor siniestralidad = наибольшая аварийность
+de 15:00 a 16:00 horas = с 15:00 до 16:00
+4 de cada 5 = 4 из 5
+días de la semana = дни недели
 
 
 
