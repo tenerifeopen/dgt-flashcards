@@ -707,7 +707,10 @@ mayor siniestralidad = наибольшая аварийность
 de 15:00 a 16:00 horas = с 15:00 до 16:00
 4 de cada 5 = 4 из 5
 días de la semana = дни недели
-
+con antelación suficiente = достаточно заблаговременно
+iniciación de la maniobra = начало манёвра
+justo antes = непосредственно перед
+iniciar la maniobra = начать манёвр
 
 
 

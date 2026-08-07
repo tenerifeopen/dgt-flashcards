@@ -1562,11 +1562,14 @@ inclinar demasiado la motocicleta = слишком сильно наклонят
 abrir el ángulo de giro = проходить поворот по более широкой траектории
 si fuera posible = если это возможно
 inmediatamente=немедленно
-
-
-
-
-
+prescindir de = ОБОЙТИСЬ БЕЗ
+entrañar = влечь, заключать в себе
+entrañar peligro = создавать / влечь опасность
+no entrañar peligro = не создавать опасности
+salvo que = если только не / за исключением случая, когда
+CON ANTELACIÓN SUFICIENTE = ДОСТАТОЧНО ЗАБЛАГОВРЕМЕННО
+antelación = заблаговременность; предварительность
+justo = точный; как раз
 
 
 
