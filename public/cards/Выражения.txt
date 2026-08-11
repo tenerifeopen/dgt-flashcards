@@ -711,8 +711,8 @@ con antelación suficiente = достаточно заблаговременно
 iniciación de la maniobra = начало манёвра
 justo antes = непосредственно перед
 iniciar la maniobra = начать манёвр
-
-
+El vehículo blanco debe ceder el paso.=Белый автомобиль уступает.
+¿Debe cederle el paso?=Нужно ли уступать ЕМУ?
 
 
 

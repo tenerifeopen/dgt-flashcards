@@ -1570,18 +1570,20 @@ salvo que = если только не / за исключением случа�
 CON ANTELACIÓN SUFICIENTE = ДОСТАТОЧНО ЗАБЛАГОВРЕМЕННО
 antelación = заблаговременность; предварительность
 justo = точный; как раз
-
-
-
-
-
-
-
-
-
-
-
-
+El vehículo blanco debe ceder el paso.=Белый автомобиль уступает.
+¿Debe cederle el paso?=Нужно ли уступать ЕМУ?
+comportamiento = поведение
+influir = влиять
+cierto = некоторый
+incitar = побуждать; подстрекать
+arriesgado = рискованный
+en ningún caso = ни в каком случае
+ser arrastrado por otro vehículo = быть буксируемым другим транспортным средством
+a paso de persona = со скоростью пешехода
+circular por el arcén = двигаться по обочине
+circular por las aceras = двигаться по тротуарам
+inmediato = ближайший
+circunstancia = обстоятельство
 
 
 
