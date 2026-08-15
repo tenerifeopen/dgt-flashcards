@@ -5567,7 +5567,21 @@ recta = прямой участок
 viernes = пятница
 lunes = понедельник
 martes = вторник
-
+averiado = неисправный; сломанный
+circular = двигаться
+velocidad = скорость
+anormalmente = ненормально
+reducido = сниженный; уменьшенный
+luz = свет
+emergencia = чрезвычайная ситуация; авария
+encendido = включённый
+correcto = правильный
+comportamiento = поведение
+detenido = остановленный
+prohibido = запрещённый
+uso = использование
+alumbrado = освещение
+urbano = городской
 
 
 

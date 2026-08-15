@@ -1584,8 +1584,10 @@ circular por el arcén = двигаться по обочине
 circular por las aceras = двигаться по тротуарам
 inmediato = ближайший
 circunstancia = обстоятельство
-
-
+existe=имеется.
+fraude=мошенничество
+destinado = предназначенный
+el más a la izquierda = самый левый
 
 
 

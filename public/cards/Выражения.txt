@@ -713,7 +713,13 @@ justo antes = непосредственно перед
 iniciar la maniobra = начать манёвр
 El vehículo blanco debe ceder el paso.=Белый автомобиль уступает.
 ¿Debe cederle el paso?=Нужно ли уступать ЕМУ?
-
+estar averiado = быть неисправным
+circular a velocidad anormalmente reducida = двигаться с аномально низкой скоростью
+luz de emergencia = аварийный свет; аварийная сигнализация
+luces de emergencia = аварийная световая сигнализация
+vehículo averiado = неисправный автомобиль
+vehículo detenido = остановленный автомобиль
+uso de este alumbrado = использование этого освещения
 
 
 
