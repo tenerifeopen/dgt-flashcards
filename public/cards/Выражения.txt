@@ -720,8 +720,17 @@ luces de emergencia = аварийная световая сигнализаци
 vehículo averiado = неисправный автомобиль
 vehículo detenido = остановленный автомобиль
 uso de este alumbrado = использование этого освещения
-
-
+flecha de selección de carril = стрелка выбора полосы движения
+seguir la dirección indicada = следовать указанному направлению
+cambio de carril = смена полосы движения
+si la señalización lo permite = если это позволяет дорожная сигнализация
+obligar a seguir = обязывать следовать
+registrador de datos de incidencias = регистратор данных о происшествиях
+sistema avanzado de advertencia de distracciones = усовершенствованная система предупреждения об отвлечении
+sistema de monitorización de la disponibilidad del conductor = система мониторинга готовности водителя
+antes de un siniestro = до аварии
+durante un siniestro = во время аварии
+inmediatamente después de un siniestro = непосредственно после аварии
 
 
 

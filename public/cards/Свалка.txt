@@ -5582,8 +5582,41 @@ prohibido = запрещённый
 uso = использование
 alumbrado = освещение
 urbano = городской
-
-
+flecha = стрелка
+selección = выбор
+carril = полоса
+aconsejar = советовать
+seguir = следовать
+dirección = направление
+indicar = указывать
+obligar = обязывать
+señalización = сигнализация, дорожные обозначения
+permitir = позволять
+autorizar = разрешать
+cambio = изменение, смена
+prohibir = запрещать
+siempre = всегда
+sistema = система
+registrar = регистрировать, записывать
+almacenar = хранить
+información = информация
+relevante = существенный, относящийся к делу
+conocer = знать, узнавать
+ocurrir = происходить
+antes = до, раньше
+durante = во время
+inmediatamente = немедленно, непосредственно
+después = после
+siniestro = происшествие, авария
+avanzado = передовой, усовершенствованный
+advertencia = предупреждение
+distracción = отвлечение
+conductor = водитель
+registrador = регистратор
+dato = данные, сведения
+incidencia = происшествие, инцидент
+monitorización = мониторинг, наблюдение
+disponibilidad = доступность, готовность
 
 
 
