@@ -10,24 +10,23 @@ contaminación=загрязнение
 Si desea=Если вы хотите
 suspensión=подвеска
 Cómo se puede evitar=как этого можно избежать
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+provisional = временный
+advertir = предупреждать
+dirección = направление
+panel direccional provisional = временная направляющая панель
+panel direccional permanente = постоянная направляющая панель
+nformar sobre el sentido de la circulación = информировать о направлении движения
+presencia de una curva = наличие поворота
+ padece= страдает
+tratamiento=лечение
+amanecer.=рассвет.
+contradicción=противоречие
+parece=кажется
+incumplir=нарушать
+correspondiente=соответствующий
+quemaduras=ожоги
+contaminar=загрязнять
+corriente de agua=поток воды
 
 
 
