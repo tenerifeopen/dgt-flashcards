@@ -1,2 +1,52 @@
 comportamiento=поведение
 evitar=избегать
+exista=есть
+pendiente ascendente= восходящий уклон Подьем 
+para evitar=чтобы избежать
+puede arrastrar un remolque= можете тащить прицеп
+Cumplir=Соблюдать
+Abstenerse=воздержаться
+contaminación=загрязнение
+Si desea=Если вы хотите
+suspensión=подвеска
+Cómo se puede evitar=как этого можно избежать
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
