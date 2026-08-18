@@ -27,7 +27,26 @@ correspondiente=соответствующий
 quemaduras=ожоги
 contaminar=загрязнять
 corriente de agua=поток воды
-
+perturba gravemente=это серьезно мешает
+Si, para proporcionar=Да, для обеспечения
+En caso de accidente=В случае аварии
+prestar especial atención =обратите особое внимание 
+trastorno depresivo...=депрессивное расстройство...
+ahorrar carburante=экономия топлива
+suele=обычно
+que son inevitables=которые неизбежны
+a distinto nivel=на другом уровне
+distinto nivel=различный уровень
+aparición=появление
+pendiente descendente=нисходящий уклон
+daños materiales=материальный ущерб
+responsable de las infracciones=ответственность за нарушения
+Para evitar =Чтобы избежать 
+porque todavía=потому что все еще
+todavía=все еще
+impedir=предотвратить
+Los días laborales=Рабочие дни
+para evitar la rotura del parabrisas=чтобы предотвратить поломку лобового стекла
 
 
 
