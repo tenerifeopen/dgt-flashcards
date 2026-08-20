@@ -47,6 +47,60 @@ todavía=все еще
 impedir=предотвратить
 Los días laborales=Рабочие дни
 para evitar la rotura del parabrisas=чтобы предотвратить поломку лобового стекла
+comportamiento debe evitar=поведения следует избегать
+Hacerle la respiración artificial.=Сделайте ему искусственное дыхание.
+existe=существует
+tener en cuenta=иметь в виду
+antelación suficiente=достаточно заблаговременно
+existe relación entre=существует связь между
+si fuera preciso=если бы это было необходимо
+auxiliar a un herido=помощь раненому
+que se encuentra=который находится
+ influir en la eficacia= влияние на эффективность
+La distancia que recorre =Расстояние, которое он преодолевает 
+Sí, salvo que se prohíba=Да, если это не запрещено
+ADAS = asistencia, conducción, ayuda — системы помощи водителю
+TPMS = presión, neumáticos — контроль давления в шинах
+AEB = frenado, colisión — экстренное торможение при опасности столкновения
+AEB-PCD = frenado, peatones — экстренное торможение перед пешеходами
+EBD = frenada, delante — предупреждение об экстренном торможении автомобиля впереди
+EDR = registrar, incidencias — запись данных о происшествии
+REV = marcha, atrás — обнаружение препятствий при движении назад
+RCTA = tráfico, cruzado — предупреждение о поперечном движении сзади
+BSIS-BSM = ángulo, muerto — контроль слепой зоны
+LDW = abandono, carril — предупреждение о выезде из полосы
+LKA = mantener, carril — удержание автомобиля в полосе
+DDR = sueño, somnolencia — предупреждение о сонливости
+ADR = distracción, conductor — предупреждение об отвлечении водителя
+ISA = velocidad, inteligente — интеллектуальный контроль скорости
+SLI = límite, velocidad — ограничение скорости
+TSR = señales, tráfico — распознавание дорожных знаков
+carece de señalización de frenado=в нем отсутствует сигнализация торможения
+caso de sufrir un reventón=в случае прорыва шины
+carrocería =кузов автомобиля 
+es correcto su comportamiento?=правильно ли его поведение?
+volumen=объем
+bifurcación = разветвление
+cuello=шея
+incremento = увеличение
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
