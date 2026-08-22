@@ -83,6 +83,48 @@ volumen=объем
 bifurcación = разветвление
 cuello=шея
 incremento = увеличение
+causante = виновник, тот, кто причинил
+siniestros de tráfico=дорожные происшествия
+sin provocar riesgos a los demás usuarios.=не подвергая риску других пользователей.
+heridos leves =незначительные травмы
+incumplir=нарушать
+correspondiente=соответствующий
+existe=существует 
+disponible = доступный
+Bostezos=зевает
+cantidad=количество
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
