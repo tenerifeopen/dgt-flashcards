@@ -93,34 +93,33 @@ existe=существует
 disponible = доступный
 Bostezos=зевает
 cantidad=количество
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sucesos predecibles=предсказуемые события
+Constituye un riesgo=Представляет собой риск
+aproximarse = приблизиться
+cansancio=усталость
+diseñada para = предназначенной / спроектированной для
+afecta = влияет
+en función de = в зависимости от
+a la vista de = при виде, увидев
+permanecer=оставаться
+Respecto a = относительно, что касается
+1.300–2.000 rpm = diésel
+2.000–2.500 rpm = gasolina
+la mayor causa = главная / наиболее частая причина
+mala colocación = неправильное размещение
+requisito obligatorio=обязательное требование
+en el tiempo más breve posible = в максимально короткий срок
+lo antes posible = как можно скорее
+puede llegar a = может в итоге, всё же может
+en tanto que = поскольку, так как
+aunque = хотя, даже если
+adecuarse a = соответствовать, подстраиваться под
+las circunstancias de la vía = условия, обстоятельства дороги
+siempre que = при условии, что
+capacidades =возможности
+retirar=снять
+ alejarme=уводить, отодвинуть,  отогнать, отвратить, удалять,отдалить от себя, отбросить гл
+puede rebasarle?=Сможет ли он его обогнать?
 
 
 
