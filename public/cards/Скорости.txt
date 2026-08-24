@@ -120,11 +120,19 @@ capacidades =возможности
 retirar=снять
  alejarme=уводить, отодвинуть,  отогнать, отвратить, удалять,отдалить от себя, отбросить гл
 puede rebasarle?=Сможет ли он его обогнать?
-
-
-
-
-
+ sustituir=заменить, 
+Depende=это зависит
+la seguridad vial = безопасность дорожного движения
+¿en qué época del año? = в какое время года?
+se producen = происходят
+requieren una mayor supervisión=они требуют повышенного надзора
+requieren=проверять
+La sensación = ощущение
+puede ser debido a = может быть вызвана / может быть связана с
+cómo debe distribuirse la mercancía=как должен распределяться товар
+De forma uniforme=Равномерно
+impide manejar=мешает управлять
+con el hombro=плечом.
 
 
 
