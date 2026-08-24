@@ -145,7 +145,7 @@ El de posición = габаритный свет
 destinados=предназначенные для
 se refieren= они относятся
 dos ruedas por lo menos=два колеса как минимум
-
+por lo menos= к минимум
 
 
 
