@@ -125,7 +125,7 @@ Depende=это зависит
 la seguridad vial = безопасность дорожного движения
 ¿en qué época del año? = в какое время года?
 se producen = происходят
-requieren una mayor supervisión=они требуют повышенного надзора
+requieren una mayor supervisión=они требуют повышенного надзора 
 requieren=проверять
 La sensación = ощущение
 puede ser debido a = может быть вызвана / может быть связана с
@@ -146,16 +146,149 @@ destinados=предназначенные для
 se refieren= они относятся
 dos ruedas por lo menos=два колеса как минимум
 por lo menos= к минимум
-
-
-
-
-
-
-
-
-
-
+ reanudar=возобновить
+implicado=вовлеченный
+tiene que cumplir=он должен соответствовать 
+se consigue=это достигается
+semestral = раз в полгода, каждые 6 месяцев
+anual = ежегодный, раз в год
+bienal = двухгодичный, раз в два года
+exento = освобождённый от обязательного прохождения
+de dos a seis años = от двух до шести лет
+de más de diez años = старше десяти лет
+plazas = места для пассажиров
+se ha estropeado = сломался, вышел из строя
+colaborar = сотрудничать,
+excepto cuando = за исключением случаев, когда
+no alcanzar = не достигать
+alcanzar una estatura de = достигать определённого роста
+concertar = оформить, заключить
+goce de = пользуется, обладает
+por lo menos = по крайней мере, как минимум
+no está implicado = не причастен
+prestar auxilio = оказать помощь
+con dos carriles por sentido de circulación
+destinados a = предназначенных для
+parte = часть
+contiguo = соседнюю, смежную
+carril contiguo = соседняя полоса
+excepto = за исключением
+en aquellos tramos = на тех участках
+con independencia de = независимо от
+que existan = которые существуют
+distinto = другой, отличающийся
+no puede alcanzar = не может достичь
+exigida = требуемой, установленной
+existe = существует, имеется
+de alcance = наезда сзади
+destellos = мигание, световые сигналы
+pisar = нажимать
+peligro de alcance = опасность наезда сзади
+apurar = максимально использовать
+ir subiendo = постепенно повышать
+saltarse = пропускать
+marcha corta = низкая передача
+marcha alta = высокая передача
+incluso = даже
+utilizar marchas altas, incluso en ciudad = использовать высокие передачи, даже в городе
+se inclina — наклоняется
+se inclina hacia delante = наклоняется вперёд
+sencillo = простой
+complejo = сложный
+desconocido = незнакомый
+favorecer las distracciones = способствовать отвлечению внимания
+una situación excesivamente compleja = чрезмерно сложная ситуация
+parece=кажется
+incumplir = не соблюдать, нарушать
+anticiparse = предвидеть
+pasar antes = проехать первым
+por si = на случай если
+un retraso =задержка 
+reparación = ремонт
+reparar = ремонтировать
+hacer una reparación = проводить ремонт
+si un vehículo se avería = если автомобиль сломался
+qué ocurre — что происходит
+si lleva — если вы носите, используете
+con holgura — с провисанием, слабо натянутым
+recorre — проходит, преодолевает
+existe — существует
+de impactar — столкнуться, удариться
+holgura = слабина, провисание
+llevar el cinturón con holgura = носить ремень с провисанием
+ocurrir = происходить
+existir riesgo de = существовать риск
+impactar contra = удариться о, столкнуться с
+llevar el cinturón bien ajustado = носить ремень правильно и плотно отрегулированным
+el traslado — перевозку, транспортировку
+de un enfermo — больного
+Según — согласно
+congestión — затор, скопление, плотное движение
+congestión del tráfico — затор, скопление транспорта
+peligro por la aproximación — опасность при приближении
+estupefacientes=Наркотики
+equipaje=багаж
+colocar los espejos = настраивать зеркала
+rebasarlo = объехать его, обогнать его
+de recogida de residuos = для сбора отходов
+rebasar = объезжать, обгонять
+ya que = поскольку, так как
+siempre que = при условии, что
+sustituirse = быть заменённым
+El vehículo que entre primero=Транспортное средство, въезжающее первым.
+sustracción = кража
+extravío = утеря
+fecha de expedición = дата выдачи
+al resto = остальным
+de los usuarios = пользователям
+el indicador de dirección = указатель поворота
+correspondiente = соответствующий
+hasta cuándo = до какого времени, до каких пор
+hasta que = до тех пор, пока
+sepa = буду знать
+con seguridad = с уверенностью, наверняка
+me sigue = следует за мной
+Hasta que finalice la maniobra.=До тех пор, пока не завершится манёвр.
+mayores de edad = совершеннолетние
+carril adicional de circulación = дополнительная полоса движения
+en sentido contrario al habitual = в направлении, противоположном обычному
+carril reversible = реверсивная полоса
+de qué depende=от чего это зависит?
+intentar = пытаться
+restablecer = восстановить
+pedir ayuda = обращаться за помощью
+plazo = срок
+someter = подвергать, представлять
+denunciar = оформлять нарушение, составлять протокол
+estar al día = быть в порядке, быть актуальным
+ permitido realizar competiciones= разрешено проводить соревнования
+depositarlas = складывать их, оставлять их
+depositar mercancías = складывать, оставлять груз
+con la máxima celeridad= с максимальной быстротой
+La carga se descarga, pero no se deposita en la vía= Груз можно разгружать, но нельзя оставлять его на дороге как склад
+es conveniente=это удобно
+darle algún alimento o bebida?=дать ему какую-нибудь еду или питье?
+No, aunque lo pida=Нет, даже если он спросит.
+excepcionalmente = в порядке исключения
+inexcusable = неизбежным, необходимым, обязательным
+depende de=это зависит от
+🔵 70 = минимум 70 обязателен
+🟦 70 = 70 рекомендуется
+⚪🔴 70 = максимум 70 разрешено
+🔺ADVERTENCIA=предупреждающий знак
+⭕ PROHIBICIÓN=запрещающий знак
+🔵 OBLIGACIÓN=обязывающий знак
+🟦 RECOMENDACIÓN= РЕКОМЕНДУЕМЫЕ
+por los laterales = по бокам
+dirija = направляет
+hacia los que el Agente dirija su luz = на кого направлен световой сигнал
+Ante la línea de detención más cercana.=Перед ближайшей линией остановки.
+quién = кто
+responsable = ответственный
+corriente = актуальный, без просрочки
+al corriente de = актуальный, без просрочек
+se encuentre = находилось
+a partir de = начиная с, после
 
 
 
