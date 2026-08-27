@@ -289,6 +289,38 @@ corriente = актуальный, без просрочки
 al corriente de = актуальный, без просрочек
 se encuentre = находилось
 a partir de = начиная с, после
+sustituir =заменить
+implicado en un accidente=вовлеченный в аварию
+Exceso de seguridad en sí mismo=Чрезмерная уверенность в себе.
+En las que exijan una respuesta rápida.=В тех случаях, когда требуется быстрая реакция.
+menores de doce años=младше двенадцати лет
+un tiempo prudencial=разумное время
+Debe abstenerse=Должны воздержаться
+difícil apreciar=трудно оценить
+sobrevaloración =завышенная оценка, Переоценка себя
+prestar a los heridos =оказывать помощь раненым
+el equipaje transportado=перевозимый багаж
+la que recorre = то, которое проходит
+desde que = с момента, когда
+Distancia de frenado = тормозной путь Начало: водитель нажал на тормоз Конец: автомобиль полностью остановился
+Distancia de detención = общий остановочный путь Начало: водитель заметил опасность Конец: автомобиль полностью остановился
+percibe un peligro = заметил опасность
+pisa el freno = нажал на тормоз
+afecta al agarre=это влияет на сцепление с дорогой
+sobre todo = особенно, прежде всего
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
