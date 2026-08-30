@@ -308,10 +308,39 @@ percibe un peligro = заметил опасность
 pisa el freno = нажал на тормоз
 afecta al agarre=это влияет на сцепление с дорогой
 sobre todo = особенно, прежде всего
-
-
-
-
+aproximadamente=примерно.
+disminuyan sensiblemente la visibilidad=значительно уменьшают видимость
+ empañen los cristales= запотевают стекла.
+sino que es obligatorio=но это обязательно.      
+llegar = достигать, доезжать
+rebasar = проезжать, миновать
+salir = выезжать, выходить
+uso compartido=совместное использование
+casco no tiene visera=шлем без козырька ( Вот этого прозрачного)
+capacidad de anticipación=способность предвидеть
+La toma de decisiones =Принятие решений
+sujeción = удержание, фиксация
+sistema de sujeción = система удержания
+sujeto = пристёгнутый, закреплённый
+resalte o badén=неровность или яма
+❌ ascenso = подъём
+✅ descenso = спуск
+en caso de = в случае
+rectángulos=прямоугольник
+se trata de = речь идёт о
+un camino = дорога, путь
+es más irritable y más ansioso al volante=он более раздражителен и более тревожен за рулем
+habilitado por la autoridad = уполномочен соответствующим органом
+impedir = препятствовать, запрещать
+acceso = въезд, доступ
+❌siempre que = при условии, что
+ itinerario que sigue =маршрут, который следует
+avisador acústico=Акустический сигнал
+Sí, en determinados casos.=Да, в некоторых случаях.
+más a la izquierda=самый левый
+actúa — действует, вмешивается
+ sustituir=заменить
+vehículo de propulsión = автомобиль с задним приводом.
 
 
 
