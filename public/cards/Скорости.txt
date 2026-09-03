@@ -341,13 +341,20 @@ más a la izquierda=самый левый
 actúa — действует, вмешивается
  sustituir=заменить
 vehículo de propulsión = автомобиль с задним приводом.
-
-
-
-
-
-
-
+tracción delantera — передний привод
+tracción trasera — задний привод
+tracción total — полный привод
+tracción a las cuatro ruedas — привод на все четыре колеса / полный привод
+eje motriz — ведущая ось
+motric — ведущий, приводной
+llevar un chaleco reflectante=иметь жилет при себе / возить с собой
+llevar puesto un chaleco reflectante=→ быть в надетом жилете
+llevar puesto el cinturón= → быть пристёгнутым ремнём
+llevar puesto un casco= → носить надетый шлем
+llevar un extintor =→ возить огнетушитель
+llevar herramientas =→ возить инструменты
+llevar la documentación =→ иметь при себе документы
+de socorro — помощи
 
 
 

@@ -5617,7 +5617,42 @@ dato = данные, сведения
 incidencia = происшествие, инцидент
 monitorización = мониторинг, наблюдение
 disponibilidad = доступность, готовность
-
+qué = какой, кто
+persona = человек, лицо
+incurrir = совершать, допускать, подпадать под
+omisión = неоказание, невыполнение
+socorro = помощь
+víctima = пострадавший, жертва
+accidente = авария, происшествие
+tráfico = дорожное движение
+ayudar = помогать
+correr riesgo = подвергаться опасности
+riesgo = опасность, риск
+propio = собственный, свой
+socorrer = оказывать помощь пострадавшему
+desatendido = оставленный без помощи
+pudiendo = имея возможность, будучи в состоянии
+hacerlo = сделать это
+sin = без
+ni = ни
+tercero = третье лицо, другой человек
+pedir = просить
+auxilio = помощь
+cuando = когда
+poder = мочь
+prestar = оказывать
+prestar ayuda = оказывать помощь
+prestar auxilio = оказывать помощь
+pedir auxilio = вызывать, просить о помощи
+correr riesgo propio = подвергать себя опасности
+riesgo propio = опасность для себя
+riesgo de terceros = опасность для других лиц
+víctima desatendida = пострадавший, оставшийся без помощи
+pudiendo hacerlo = имея возможность это сделать
+sin riesgo propio ni de terceros = без опасности для себя и других
+omisión de socorro = неоказание помощи
+incurrir en la omisión de socorro = совершить неоказание помощи
+socorrer a una víctima = оказать помощь пострадавшему
 
 
 
