@@ -354,18 +354,18 @@ llevar puesto un casco= → носить надетый шлем
 llevar un extintor =→ возить огнетушитель
 llevar herramientas =→ возить инструменты
 llevar la documentación =→ иметь при себе документы
-de socorro — помощи
-
-
-
-
-
-
-
-
-
-
-
+de socorro = помощи
+Omisión de socorro = не оказал помощь
+incurren = совершают, допускают,
+la omisión = неоказание, невыполнение
+incurrir en la omisión de socorro = совершить неоказание помощи
+desatendida = оставленному без помощи
+piden auxilio = вызывают помощь
+carga indivisible = неделимый груз
+carga divisible = делимый груз
+sobresalir por la parte posterior = выступать сзади
+Merendero = место для перекуса/еды.
+merienda — полдник, перекус
 
 
 
