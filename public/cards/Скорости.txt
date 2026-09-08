@@ -366,6 +366,42 @@ carga divisible = делимый груз
 sobresalir por la parte posterior = выступать сзади
 Merendero = место для перекуса/еды.
 merienda — полдник, перекус
+inalámbrico = беспроводной
+ocio = досуг, развлечения
+con fines de comunicación = для целей связи
+con fines de distracción = для целей отвлечения
+con fines de ocio = для развлечения, досуга
+rebasar a... = объехать / миновать / обогнать кого-либо
+colisión por alcance = столкновение сзади
+alcance = достижение, догоняние
+CLAVÍCULA + CADERA = правильно там проходит ремень безопасности
+debido = вследствие / из-за
+torácico = грудной
+cuello = шея
+pecho = грудь
+abdominal = поясной / брюшной
+hueso = кость
+cadera = таз / бедро
+abdomen = живот
+clavícula = ключица
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
