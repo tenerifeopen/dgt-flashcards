@@ -384,6 +384,54 @@ hueso = кость
 cadera = таз / бедро
 abdomen = живот
 clavícula = ключица
+por debajo del abdomen = ниже живота
+huesos de la cadera = кости таза
+cazar = охотиться
+jabalí = кабан
+en el que = на котором
+en fila = в ряд / друг за другом
+encontrar = находиться
+detenido = остановленный
+dificultar = затруднять
+congestión = затор
+tráfico = движение / транспорт
+congestión de tráfico = транспортный затор
+circulación dificultada = затруднённое движение
+circular en fila = двигаться друг за другом
+confluencia = слияние потоков
+bifurcación = разветвление
+determinados = определённым / конкретным
+según = в зависимости от / согласно
+distintivo = обозначение / знак
+ambiental = экологический
+contaminación = загрязнение
+distintivo ambiental = экологическое обозначение автомобиля
+según el distintivo ambiental = в зависимости от экологического обозначения
+determinados vehículos = определённые транспортные средства
+panel complementario = дополнительная табличка
+exceder = превышать
+alternando = чередуя
+alternar su uso = чередовать её использование
+ambos sentidos de circulación = оба направления движения
+sentido contrario = встречное направление
+sentido habitual = обычное направление
+carril adicional = дополнительная полоса
+carril habilitado = разрешённая/открытая полоса
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
