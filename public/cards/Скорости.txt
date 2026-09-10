@@ -417,6 +417,38 @@ sentido contrario = встречное направление
 sentido habitual = обычное направление
 carril adicional = дополнительная полоса
 carril habilitado = разрешённая/открытая полоса
+colisionar = столкнуться
+intención = намерение
+mantener una distancia = соблюдать дистанцию
+permitir detener el vehículo = позволять остановить автомобиль
+sin colisionar con él = не столкнувшись с ним
+tener intención de adelantar = намереваться обгонять
+absorción = всасывание
+independientemente = независимо
+depender = зависеть
+ingerir = употреблять
+RCTA → tráfico trasero transversal= → поперечный трафик сзади → предупреждение при выезде задним ходом.
+LKA = ПОЛОСА удержание полосы
+ante — перед, при, в случае
+imprevisto — непредвиденное обстоятельство
+atasco — пробка, затор
+ahorrarse — сэкономить, избежать расходов
+mantenimiento — техническое обслуживание
+preventivo — профилактический
+ante cualquier imprevisto = при любом непредвиденном обстоятельстве
+evitar atascos = избегать пробок
+mantenimiento preventivo del vehículo = профилактическое техническое обслуживание автомобиля
+innecesario = ненужный
+depender = зависеть
+ahorrar combustible = экономить топливо
+evitar cambios de marcha innecesarios = избегать ненужных переключений передач
+cambio de marcha = переключение передачи
+depender de = зависеть от
+
+
+
+
+
 
 
 
