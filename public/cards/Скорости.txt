@@ -444,6 +444,50 @@ ahorrar combustible = экономить топливо
 evitar cambios de marcha innecesarios = избегать ненужных переключений передач
 cambio de marcha = переключение передачи
 depender de = зависеть от
+transmitir = передавать
+antelación = заблаговременность
+oculto = скрытый
+prever un peligro = предвидеть опасность
+situación de riesgo = опасная ситуация
+peatones ocultos = скрытые пешеходы
+estar oculto por el autobús = быть скрытым автобусом
+cruzar la vía = пересекать дорогу
+por el propio autobús = из-за самого автобуса
+apagar = выключать
+ralentí = холостой ход
+impedir = препятствовать
+apagar el motor = выключать двигатель
+estar a ralentí = работать на холостом ходу
+arranque automático = автоматический запуск
+reanudar la marcha = возобновить движение
+no debe penetrar en la intersección=Оно не должно пересекать перекресток.
+algunos medicamentos deterioran=некоторые лекарства ухудшают
+adelantar detrás de otro vehículo = обгонять вслед за другим автомобилем
+otro vehículo está adelantando = другой автомобиль совершает обгон
+tener visibilidad suficiente = иметь достаточную видимость
+no tener visibilidad suficiente = не иметь достаточной видимости
+determinado = определённый
+desistir del adelantamiento = отказаться от обгона
+reducir rápidamente la marcha = быстро снизить скорость
+regresar a su carril = вернуться на свою полосу
+sin obstaculizar = не создавая помех
+terminar el adelantamiento = завершить обгон
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
