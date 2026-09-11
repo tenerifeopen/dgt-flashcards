@@ -472,20 +472,40 @@ reducir rápidamente la marcha = быстро снизить скорость
 regresar a su carril = вернуться на свою полосу
 sin obstaculizar = не создавая помех
 terminar el adelantamiento = завершить обгон
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+en lugar del= вместо
+caída = падение
+sufrir = испытывать
+procurar = стараться
+deslizarse = скользить
+suelo = поверхность
+relajadamente = расслабленно
+levantarse = вставать
+totalmente = полностью
+golpear = ударять
+rodar = вращать
+rápidamente = быстро
+provocar = вызывать
+lo antes posible = как можно скорее
+reblandecer = размягчать
+endurecer = затвердевать
+agrietar = покрывать трещинами
+elasticidad = эластичность
+dilatar = расширять
+cumpliendo = соблюдая
+preventivo = предупредительный
+suficiente = достаточный
+cumplir = соблюдать
+cometer = совершать
+infracción = нарушение
+cumplir las normas = соблюдать правила
+la mayor parte = большая часть
+distintivos = обозначения / знака
+ambientales = экологические
+contaminante = загрязняющему / загрязнения
+unidad de tráfico = отделение дорожно-транспортного травматизма (в больнице)
+siniestros = аварии / происшествия
+lesiones físicas y emocionales = физические и эмоциональные травмы
+salpicadero.=приборная панель.
 
 
 
