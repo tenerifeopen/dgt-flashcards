@@ -506,20 +506,25 @@ unidad de tráfico = отделение дорожно-транспортног�
 siniestros = аварии / происшествия
 lesiones físicas y emocionales = физические и эмоциональные травмы
 salpicadero.=приборная панель.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+asegurarse = убедиться
+es conveniente = целесообразно / рекомендуется
+desarrolla una velocidad=развивает скорость
+ocurre = происходит
+servofreno = усилителем тормозов
+saturado = перегружено / затруднено
+acuda = направляется / прибывает
+exento = освобождённый
+acudir = направляться, прибывать
+cumplir = соблюдать, выполнять
+Qué sucede=Что происходит
+arrimándose = прижимаясь / приближаясь
+parachoques = бампер
+suelen = обычно имеют обыкновение / как правило
+diseñarse = проектироваться
+lo más cerca posible = как можно ближе
+dejar completamente libre = оставить полностью свободным
+la mitad de la calzada = половина проезжей части
+corresponder al sentido contrario = соответствовать встречному направлению
 
 
 
