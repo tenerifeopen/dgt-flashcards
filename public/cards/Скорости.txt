@@ -525,15 +525,24 @@ lo más cerca posible = как можно ближе
 dejar completamente libre = оставить полностью свободным
 la mitad de la calzada = половина проезжей части
 corresponder al sentido contrario = соответствовать встречному направлению
-
-
-
-
-
-
-
-
-
+obtener el permiso de la clase B = получить права категории B
+justo un año después = ровно через один год после
+haber obtenido = получить / уже получить
+durante un año = в течение одного года
+los dos próximos años = следующие два года
+los saltos=прыжки
+se verá = окажется / будет
+impulsado = вытолкнутым / направленным
+hacia = в сторону / к
+sufrir un trastorno depresivo = страдать от депрессивного расстройства
+ser propenso a = быть склонным к
+en general = в целом, вообще
+sufrir trastornos de sueño = страдать от нарушений сна
+trastornos de sueño = нарушения сна
+fatigarse con rapidez = быстро утомляться
+aparecer la fatiga = появляться усталости / наступать усталость
+tarde en aparecer = появляться позднее
+evitar conducir = избегать вождения
 
 
 
