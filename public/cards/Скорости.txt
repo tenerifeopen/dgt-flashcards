@@ -543,8 +543,8 @@ fatigarse con rapidez = быстро утомляться
 aparecer la fatiga = появляться усталости / наступать усталость
 tarde en aparecer = появляться позднее
 evitar conducir = избегать вождения
-
-
+¿Qué actuación debe evitar...?= Какого действия следует избегать?
+contribuir a = способствовать чему-либо
 
 
 
