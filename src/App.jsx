@@ -1,23 +1,22 @@
 import { useState, useEffect } from "react";
 
 const topics = [
-  { name: "Слова и выражения", file: "/cards/Слова и выражения.txt" },
-  { name: "Документы", file: "/cards/Документы.txt" },
-  { name: "Дороги и скорость", file: "/cards/Дороги и скорость.txt" },
-  { name: "Знаки и правила", file: "/cards/Знаки и правила.txt" },
-  { name: "Манёвры", file: "/cards/Манёвры.txt" },
-  { name: "Нормы движения", file: "/cards/Нормы движения.txt" },
-  { name: "Определения участников движения", file: "/cards/Определения участников движения.txt" },
-  { name: "Особые полосы", file: "/cards/Особые полосы.txt" },
-  { name: "Перевозка грузов и детей", file: "/cards/Перевозка грузов и детей.txt" },
-  { name: "Права и баллы", file: "/cards/Права и баллы.txt" },
-  { name: "Скорости", file: "/cards/Скорости.txt" },
-  { name: "Транспортные средства", file: "/cards/Транспортные средства.txt" },
-  { name: "Фары и освещение", file: "/cards/Фары и освещение.txt" },
-  { name: "Ловушки", file: "/cards/Ловушки.txt" },
-  { name: "Безопасность", file: "/cards/Безопасность.txt" },
-  { name: "Экстренные ситуации", file: "/cards/Экстренные ситуации.txt" },
-  { name: "DGT База", file: "/cards/DGT База.txt" }
+  { name: "Слова 1", file: "/cards/Слова 1.txt" },
+  { name: "Слова 2", file: "/cards/Слова 2.txt" },
+  { name: "Слова 3", file: "/cards/Слова 3.txt" },
+  { name: "Слова 4", file: "/cards/Слова 4.txt" },
+  { name: "Слова 5", file: "/cards/Слова 5.txt" },
+  { name: "Слова 6", file: "/cards/Слова 6.txt" },
+  { name: "Все слова", file: "/cards/Все слова.txt" },
+
+  { name: "Словосочетания 1", file: "/cards/Словосочетания 1.txt" },
+  { name: "Словосочетания 2", file: "/cards/Словосочетания 2.txt" },
+  { name: "Словосочетания 3", file: "/cards/Словосочетания 3.txt" },
+  { name: "Словосочетания 4", file: "/cards/Словосочетания 4.txt" },
+  { name: "Словосочетания 5", file: "/cards/Словосочетания 5.txt" },
+  { name: "Словосочетания 6", file: "/cards/Словосочетания 6.txt" },
+  { name: "Словосочетания 7", file: "/cards/Словосочетания 7.txt" },
+  { name: "Все словосочетания", file: "/cards/Все словосочетания.txt" }
 ];
 
 export default function App() {
@@ -28,7 +27,7 @@ export default function App() {
   const [favorites, setFavorites] = useState([]);
   const [onlyFav, setOnlyFav] = useState(false);
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
-  
+
   const [topicCounts, setTopicCounts] = useState({});
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
@@ -119,10 +118,10 @@ export default function App() {
     }
 
     const utterance = new SpeechSynthesisUtterance(text);
-    
+
     const voices = window.speechSynthesis.getVoices();
     let selectedVoice = null;
-    
+
     selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Jorge'));
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Google'));
     if (!selectedVoice) selectedVoice = voices.find(v => v.lang.startsWith('es') && v.name.includes('Microsoft'));
@@ -138,8 +137,8 @@ export default function App() {
       utterance.lang = "es-ES";
     }
 
-    utterance.rate = 0.9;     
-    utterance.pitch = 0.9;    
+    utterance.rate = 0.9;
+    utterance.pitch = 0.9;
 
     setTimeout(() => {
       window.speechSynthesis.speak(utterance);
@@ -148,7 +147,7 @@ export default function App() {
 
   const speak = async (e) => {
     e.stopPropagation();
-    if (!current || isLoadingAudio) return; 
+    if (!current || isLoadingAudio) return;
 
     setIsLoadingAudio(true);
 
@@ -178,7 +177,11 @@ export default function App() {
       const data = await res.json();
 
       if (data.audio) {
-        try { localStorage.setItem(cacheKey, data.audio); } catch (err) { console.warn("Cache full"); }
+        try {
+          localStorage.setItem(cacheKey, data.audio);
+        } catch (err) {
+          console.warn("Cache full");
+        }
         await playAudioSafe(data.audio);
         return;
       }
@@ -207,31 +210,29 @@ export default function App() {
         <div style={{ background: "#e5e7eb", padding: 20, borderRadius: 20, width: 320 }}>
           <h2 style={{ textAlign: "center", color: "#000", fontSize: 26, fontWeight: 700 }}>📚 МОИ КАРТОЧКИ</h2>
           {topics.map((t, i) => (
-            <button 
-              key={i} 
-              onClick={() => loadTopic(t.file)} 
-              style={{ 
-                width: "100%", 
-                marginTop: 10, 
-                padding: "14px 18px", 
-                borderRadius: 12, 
-                border: "none", 
-                background: "#2563eb", 
-                color: "white", 
-                fontSize: 18, 
+            <button
+              key={i}
+              onClick={() => loadTopic(t.file)}
+              style={{
+                width: "100%",
+                marginTop: 10,
+                padding: "14px 18px",
+                borderRadius: 12,
+                border: "none",
+                background: "#2563eb",
+                color: "white",
+                fontSize: 18,
                 fontWeight: 500,
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
                 cursor: "pointer",
-                textAlign: "left", // Прижимаем текст влево
-                gap: "10px" // Отступ между текстом и цифрой
+                textAlign: "left",
+                gap: "10px"
               }}
             >
-              {/* Текст занимает всё свободное место */}
               <span style={{ flex: 1 }}>{t.name}</span>
-              
-              {/* Цифра строго справа, не сжимается */}
+
               {topicCounts[t.file] !== undefined && (
                 <span style={{ fontSize: 14, fontWeight: 400, color: "#1e3a8a", flexShrink: 0 }}>
                   {topicCounts[t.file]}
@@ -239,8 +240,21 @@ export default function App() {
               )}
             </button>
           ))}
-          
-          <button onClick={clearBrowserCache} style={{ width: "100%", marginTop: 30, padding: 14, borderRadius: 12, border: "none", background: "#94a3b8", color: "white", fontSize: 16, fontWeight: 500 }}>
+
+          <button
+            onClick={clearBrowserCache}
+            style={{
+              width: "100%",
+              marginTop: 30,
+              padding: 14,
+              borderRadius: 12,
+              border: "none",
+              background: "#94a3b8",
+              color: "white",
+              fontSize: 16,
+              fontWeight: 500
+            }}
+          >
             🗑️ Очистить кеш браузера
           </button>
 
@@ -253,37 +267,90 @@ export default function App() {
     <div style={{ minHeight: "100vh", background: "#0f172a", display: "flex", flexDirection: "column", alignItems: "center", padding: "20px 12px 160px", fontFamily: font }}>
       <div style={{ width: "100%", maxWidth: 420, display: "flex", justifyContent: "space-between", color: "#94a3b8" }}>
         <div onClick={() => setScreen("menu")}>← назад</div>
-        <button onClick={() => setOnlyFav(!onlyFav)} style={{ width: 52, height: 52, borderRadius: 12, background: onlyFav ? "#facc15" : "#334155", fontSize: 26, border: "none" }}>★</button>
+        <button
+          onClick={() => setOnlyFav(!onlyFav)}
+          style={{
+            width: 52,
+            height: 52,
+            borderRadius: 12,
+            background: onlyFav ? "#facc15" : "#334155",
+            fontSize: 26,
+            border: "none"
+          }}
+        >
+          ★
+        </button>
       </div>
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 10 }}>
-        <div onClick={() => setShow(!show)} style={{ width: "100%", height: "60vh", borderRadius: 20, overflow: "hidden", position: "relative" }}>
-          <div onClick={toggleFavorite} style={{ position: "absolute", top: 14, right: 14, fontSize: 30, zIndex: 30, cursor: "pointer", color: favorites.includes(current?.question) ? "#facc15" : "#9ca3af" }}>★</div>
-          
-          <button 
-            onClick={speak} 
-            disabled={isLoadingAudio} 
-            style={{ 
-              position: "absolute", 
-              bottom: 14, 
-              right: 14, 
-              width: 70, 
-              height: 48, 
-              borderRadius: 16, 
-              background: isLoadingAudio ? "#64748b" : "#2563eb",
-              color: "white", 
-              fontSize: 24, 
-              border: "none", 
+        <div
+          onClick={() => setShow(!show)}
+          style={{
+            width: "100%",
+            height: "60vh",
+            borderRadius: 20,
+            overflow: "hidden",
+            position: "relative"
+          }}
+        >
+          <div
+            onClick={toggleFavorite}
+            style={{
+              position: "absolute",
+              top: 14,
+              right: 14,
+              fontSize: 30,
               zIndex: 30,
-              cursor: isLoadingAudio ? "not-allowed" : "pointer", 
-              opacity: isLoadingAudio ? 0.7 : 1 
+              cursor: "pointer",
+              color: favorites.includes(current?.question) ? "#facc15" : "#9ca3af"
+            }}
+          >
+            ★
+          </div>
+
+          <button
+            onClick={speak}
+            disabled={isLoadingAudio}
+            style={{
+              position: "absolute",
+              bottom: 14,
+              right: 14,
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: isLoadingAudio ? "#64748b" : "#2563eb",
+              color: "white",
+              fontSize: 24,
+              border: "none",
+              zIndex: 30,
+              cursor: isLoadingAudio ? "not-allowed" : "pointer",
+              opacity: isLoadingAudio ? 0.7 : 1
             }}
           >
             {isLoadingAudio ? "⏳" : "🔊"}
           </button>
 
-          <div style={{ width: "100%", height: "100%", background: show ? "#2563eb" : "#e5e7eb", color: show ? "#fff" : "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ width: "100%", textAlign: "center", padding: 20, fontSize: "clamp(27px, 6vw, 40px)", fontWeight: show ? 700 : 500, lineHeight: 1.6 }}>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              background: show ? "#2563eb" : "#e5e7eb",
+              color: show ? "#fff" : "#000",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <div
+              style={{
+                width: "100%",
+                textAlign: "center",
+                padding: 20,
+                fontSize: "clamp(27px, 6vw, 40px)",
+                fontWeight: show ? 700 : 500,
+                lineHeight: 1.6
+              }}
+            >
               {show ? current?.answer : current?.question}
             </div>
           </div>
@@ -291,11 +358,73 @@ export default function App() {
       </div>
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 12 }}>
-        <button onClick={shuffle} style={{ width: "100%", height: 70, borderRadius: 20, background: "#334155", border: "none", fontSize: 36 }}>🔀</button>
-        <div style={{ marginTop: 10, height: 70, background: "#1e293b", borderRadius: 24, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px" }}>
-          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#020617", color: "white", fontSize: 26, border: "none" }}>←</button>
-          <div style={{ color: "white" }}>{filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}</div>
-          <button onClick={() => { if (!filteredCards.length) return; setShow(false); setIndex(i => (i + 1) % filteredCards.length); }} style={{ width: 70, height: 48, borderRadius: 16, background: "#2563eb", color: "white", fontSize: 26, border: "none" }}>→</button>
+        <button
+          onClick={shuffle}
+          style={{
+            width: "100%",
+            height: 70,
+            borderRadius: 20,
+            background: "#334155",
+            border: "none",
+            fontSize: 36
+          }}
+        >
+          🔀
+        </button>
+
+        <div
+          style={{
+            marginTop: 10,
+            height: 70,
+            background: "#1e293b",
+            borderRadius: 24,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 16px"
+          }}
+        >
+          <button
+            onClick={() => {
+              if (!filteredCards.length) return;
+              setShow(false);
+              setIndex(i => (i - 1 + filteredCards.length) % filteredCards.length);
+            }}
+            style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#020617",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}
+          >
+            ←
+          </button>
+
+          <div style={{ color: "white" }}>
+            {filteredCards.length ? `${index + 1} / ${filteredCards.length}` : "0 / 0"}
+          </div>
+
+          <button
+            onClick={() => {
+              if (!filteredCards.length) return;
+              setShow(false);
+              setIndex(i => (i + 1) % filteredCards.length);
+            }}
+            style={{
+              width: 70,
+              height: 48,
+              borderRadius: 16,
+              background: "#2563eb",
+              color: "white",
+              fontSize: 26,
+              border: "none"
+            }}
+          >
+            →
+          </button>
         </div>
       </div>
     </div>
