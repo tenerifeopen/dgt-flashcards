@@ -36,16 +36,15 @@ export default function App() {
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
-  const accessMatch = window.location.pathname.match(/^\/access\/([^/]+)\/?$/);
-  const accessToken = accessMatch ? decodeURIComponent(accessMatch[1]) : null;
-
   useEffect(() => {
-    if (!accessToken) {
+    const match = window.location.pathname.match(/^\/access\/([^/]+)\/?$/);
+
+    if (!match) {
       setAccessStatus("denied");
       return;
     }
 
-    const token = accessToken;
+    const token = decodeURIComponent(match[1]);
 
     fetch("/api/access", {
       method: "POST",
@@ -122,27 +121,6 @@ export default function App() {
     } else {
       setFavorites([...favorites, current.question]);
     }
-  };
-
-  const registerActivity = () => {
-    if (!accessToken) return;
-
-    fetch("/api/access", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      credentials: "include",
-      body: JSON.stringify({ token: accessToken })
-    }).catch(() => {});
-  };
-
-  const handleCardClick = () => {
-    if (!show) {
-      registerActivity();
-    }
-
-    setShow(!show);
   };
 
   const shuffle = () => {
@@ -361,7 +339,7 @@ export default function App() {
 
       <div style={{ width: "100%", maxWidth: 420, marginTop: 10 }}>
         <div
-          onClick={handleCardClick}
+          onClick={() => setShow(!show)}
           style={{
             width: "100%",
             height: "60vh",
