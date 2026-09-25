@@ -2,11 +2,17 @@ import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
 
 import express from "express";
+import accessHandler from "./api/access.js";
 import handler from "./api/tts.js";
 
 const app = express();
 
 app.use(express.json());
+
+// 🔐 Проверка персонального доступа
+app.post("/api/access", (req, res) => {
+  return accessHandler(req, res);
+});
 
 // 🔊 обратно нормальная работа
 app.post("/api/tts", (req, res) => {
