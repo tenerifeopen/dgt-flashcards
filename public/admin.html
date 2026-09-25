@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Администрирование</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0f172a;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+    }
+
+    .box {
+      width: min(380px, calc(100vw - 32px));
+      background: #e5e7eb;
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      font-size: 18px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 14px;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: #2563eb;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 16px;
+      text-align: center;
+      min-height: 24px;
+    }
+
+    .admin-content {
+      display: none;
+      text-align: center;
+    }
+
+    .admin-content h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div id="login">
+      <h1>Администрирование</h1>
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Пароль"
+        autocomplete="current-password"
+      >
+
+      <button id="loginButton">Войти</button>
+
+      <div id="message" class="message"></div>
+    </div>
+
+    <div id="adminContent" class="admin-content">
+      <h2>Доступ разрешён</h2>
+      <p>Административная часть защищена.</p>
+    </div>
+  </div>
+
+  <script>
+    const login = document.getElementById("login");
+    const adminContent = document.getElementById("adminContent");
+    const passwordInput = document.getElementById("password");
+    const loginButton = document.getElementById("loginButton");
+    const message = document.getElementById("message");
+
+    function showAdmin() {
+      login.style.display = "none";
+      adminContent.style.display = "block";
+    }
+
+    async function checkSession() {
+      try {
+        const response = await fetch("/api/admin", {
+          method: "GET",
+          credentials: "include"
+        });
+
+        if (response.ok) {
+          showAdmin();
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    async function loginAdmin() {
+      message.textContent = "";
+
+      try {
+        const response = await fetch("/api/admin", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            password: passwordInput.value
+          })
+        });
+
+        if (!response.ok) {
+          message.textContent = "Неверный пароль";
+          passwordInput.value = "";
+          return;
+        }
+
+        showAdmin();
+      } catch (error) {
+        message.textContent = "Ошибка соединения";
+      }
+    }
+
+    loginButton.addEventListener("click", loginAdmin);
+
+    passwordInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        loginAdmin();
+      }
+    });
+
+    checkSession();
+  </script>
+</body>
+</html>

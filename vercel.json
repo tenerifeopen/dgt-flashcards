@@ -3,6 +3,10 @@
     {
       "source": "/access/(.*)",
       "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
     }
   ]
 }
