@@ -64,18 +64,51 @@ function isAdminAuthenticated(req) {
 }
 
 function getSiteOrigin(req) {
-  const forwardedProto = req.headers["x-forwarded-proto"];
   const forwardedHost = req.headers["x-forwarded-host"];
-
-  const protocol =
-    forwardedProto === "https" ? "https" : "https";
 
   const host =
     forwardedHost ||
     req.headers.host ||
     "dgt-flashcards.vercel.app";
 
-  return `${protocol}://${host}`;
+  return `https://${host}`;
+}
+
+function createAccessToken() {
+  return crypto.randomBytes(32).toString("hex");
+}
+
+async function getUsers(supabase, req) {
+  const { data, error } = await supabase
+    .from("access_users")
+    .select(
+      "id,user_name,access_code,access_token,status,session_active,last_activity,total_sessions,total_usage_seconds,issued_at,comment"
+    )
+    .order("issued_at", {
+      ascending: true
+    });
+
+  if (error) {
+    throw error;
+  }
+
+  const origin = getSiteOrigin(req);
+
+  return (data || []).map((user) => ({
+    id: user.id,
+    user_name: user.user_name,
+    access_code: user.access_code,
+    status: user.status,
+    session_active: user.session_active,
+    last_activity: user.last_activity,
+    total_sessions: user.total_sessions,
+    total_usage_seconds: user.total_usage_seconds,
+    issued_at: user.issued_at,
+    comment: user.comment,
+    personal_link: user.access_token
+      ? `${origin}/access/${encodeURIComponent(user.access_token)}`
+      : null
+  }));
 }
 
 export default async function handler(req, res) {
@@ -109,43 +142,10 @@ export default async function handler(req, res) {
         supabaseKey
       );
 
-      const { data, error } = await supabase
-        .from("access_users")
-        .select(
-          "id,user_name,access_code,access_token,status,session_active,last_activity,total_sessions,total_usage_seconds,issued_at,comment"
-        )
-        .order("issued_at", {
-          ascending: true
-        });
-
-      if (error) {
-        console.error(
-          "Admin users query error:",
-          error
-        );
-
-        return res.status(500).json({
-          error: "Failed to load users"
-        });
-      }
-
-      const origin = getSiteOrigin(req);
-
-      const users = (data || []).map((user) => ({
-        id: user.id,
-        user_name: user.user_name,
-        access_code: user.access_code,
-        status: user.status,
-        session_active: user.session_active,
-        last_activity: user.last_activity,
-        total_sessions: user.total_sessions,
-        total_usage_seconds: user.total_usage_seconds,
-        issued_at: user.issued_at,
-        comment: user.comment,
-        personal_link: user.access_token
-          ? `${origin}/access/${encodeURIComponent(user.access_token)}`
-          : null
-      }));
+      const users = await getUsers(
+        supabase,
+        req
+      );
 
       return res.status(200).json({
         authenticated: true,
@@ -159,7 +159,7 @@ export default async function handler(req, res) {
       );
 
       return res.status(500).json({
-        error: "Server error"
+        error: "Failed to load users"
       });
     }
   }
@@ -170,7 +170,100 @@ export default async function handler(req, res) {
     });
   }
 
-  const { password } = req.body || {};
+  const body = req.body || {};
+
+  if (body.action === "create_user") {
+    if (!isAdminAuthenticated(req)) {
+      return res.status(401).json({
+        authenticated: false
+      });
+    }
+
+    const userName = String(
+      body.user_name || ""
+    ).trim();
+
+    const accessCode = String(
+      body.access_code || ""
+    ).trim();
+
+    const comment = String(
+      body.comment || ""
+    ).trim();
+
+    if (!userName || !accessCode) {
+      return res.status(400).json({
+        error: "Имя пользователя и Access code обязательны"
+      });
+    }
+
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      return res.status(500).json({
+        error: "Supabase configuration is missing"
+      });
+    }
+
+    try {
+      const supabase = createClient(
+        supabaseUrl,
+        supabaseKey
+      );
+
+      const accessToken =
+        createAccessToken();
+
+      const { data, error } = await supabase
+        .from("access_users")
+        .insert({
+          user_name: userName,
+          access_code: accessCode,
+          access_token: accessToken,
+          status: "active",
+          comment: comment || null
+        })
+        .select(
+          "id,user_name,access_code,access_token,status,session_active,last_activity,total_sessions,total_usage_seconds,issued_at,comment"
+        )
+        .single();
+
+      if (error) {
+        console.error(
+          "Create user error:",
+          error
+        );
+
+        return res.status(500).json({
+          error: "Не удалось создать пользователя"
+        });
+      }
+
+      const origin = getSiteOrigin(req);
+
+      return res.status(200).json({
+        created: true,
+        user: {
+          ...data,
+          personal_link:
+            `${origin}/access/${encodeURIComponent(accessToken)}`
+        }
+      });
+
+    } catch (error) {
+      console.error(
+        "Create user server error:",
+        error
+      );
+
+      return res.status(500).json({
+        error: "Server error"
+      });
+    }
+  }
+
+  const password = body.password;
 
   if (!password) {
     return res.status(401).json({

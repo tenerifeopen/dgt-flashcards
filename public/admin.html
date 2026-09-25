@@ -92,6 +92,14 @@
       margin-bottom: 20px;
     }
 
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     .header h1 {
       text-align: left;
       margin: 0 0 8px;
@@ -100,6 +108,61 @@
     .summary {
       color: #475569;
       font-size: 16px;
+    }
+
+    .create-button {
+      background: #16a34a;
+      font-size: 16px;
+      padding: 12px 16px;
+    }
+
+    .create-panel {
+      display: none;
+      margin-top: 18px;
+      background: white;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .create-panel h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .form-field {
+      min-width: 0;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 6px;
+      color: #475569;
+      font-size: 13px;
+    }
+
+    .form-input {
+      font-size: 16px;
+      background: #f8fafc;
+    }
+
+    .create-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .cancel-button {
+      background: #64748b;
     }
 
     .users {
@@ -214,6 +277,24 @@
       margin-bottom: 18px;
     }
 
+    .success {
+      background: #bbf7d0;
+      color: #14532d;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-field.full {
+        grid-column: auto;
+      }
+    }
+
     @media (max-width: 600px) {
       .page {
         padding: 16px;
@@ -266,16 +347,113 @@
       class="admin-content"
     >
       <div class="header">
-        <h1>Пользователи</h1>
+        <div class="header-top">
+          <div>
+            <h1>Пользователи</h1>
+            <div
+              id="summary"
+              class="summary"
+            ></div>
+          </div>
+
+          <button
+            id="showCreateButton"
+            class="create-button"
+            type="button"
+          >
+            + Добавить пользователя
+          </button>
+        </div>
+
         <div
-          id="summary"
-          class="summary"
-        ></div>
+          id="createPanel"
+          class="create-panel"
+        >
+          <h2>Новый пользователь</h2>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label
+                class="form-label"
+                for="userName"
+              >
+                Имя пользователя
+              </label>
+
+              <input
+                id="userName"
+                class="form-input"
+                type="text"
+                placeholder="Например: Иван"
+              >
+            </div>
+
+            <div class="form-field">
+              <label
+                class="form-label"
+                for="accessCode"
+              >
+                Access code
+              </label>
+
+              <input
+                id="accessCode"
+                class="form-input"
+                type="text"
+                placeholder="Например: IVAN"
+              >
+            </div>
+
+            <div class="form-field full">
+              <label
+                class="form-label"
+                for="comment"
+              >
+                Комментарий
+              </label>
+
+              <input
+                id="comment"
+                class="form-input"
+                type="text"
+                placeholder="Необязательно"
+              >
+            </div>
+          </div>
+
+          <div class="create-actions">
+            <button
+              id="createUserButton"
+              type="button"
+            >
+              Создать пользователя
+            </button>
+
+            <button
+              id="cancelCreateButton"
+              class="cancel-button"
+              type="button"
+            >
+              Отмена
+            </button>
+          </div>
+
+          <div
+            id="createMessage"
+            class="message"
+          ></div>
+        </div>
       </div>
 
       <div
         id="error"
         class="error"
+        style="display: none;"
+      ></div>
+
+      <div
+        id="success"
+        class="success"
         style="display: none;"
       ></div>
 
@@ -290,9 +468,6 @@
   <script>
     const loginWrap =
       document.getElementById("loginWrap");
-
-    const login =
-      document.getElementById("login");
 
     const adminContent =
       document.getElementById("adminContent");
@@ -314,6 +489,33 @@
 
     const errorBox =
       document.getElementById("error");
+
+    const successBox =
+      document.getElementById("success");
+
+    const showCreateButton =
+      document.getElementById("showCreateButton");
+
+    const createPanel =
+      document.getElementById("createPanel");
+
+    const userNameInput =
+      document.getElementById("userName");
+
+    const accessCodeInput =
+      document.getElementById("accessCode");
+
+    const commentInput =
+      document.getElementById("comment");
+
+    const createUserButton =
+      document.getElementById("createUserButton");
+
+    const cancelCreateButton =
+      document.getElementById("cancelCreateButton");
+
+    const createMessage =
+      document.getElementById("createMessage");
 
     function formatDate(value) {
       if (!value) return "—";
@@ -607,6 +809,120 @@
           "Ошибка соединения";
       }
     }
+
+    function resetCreateForm() {
+      userNameInput.value = "";
+      accessCodeInput.value = "";
+      commentInput.value = "";
+      createMessage.textContent = "";
+    }
+
+    showCreateButton.addEventListener(
+      "click",
+      () => {
+        createMessage.textContent = "";
+
+        createPanel.style.display =
+          createPanel.style.display === "block"
+            ? "none"
+            : "block";
+
+        if (createPanel.style.display === "block") {
+          userNameInput.focus();
+        }
+      }
+    );
+
+    cancelCreateButton.addEventListener(
+      "click",
+      () => {
+        createPanel.style.display =
+          "none";
+
+        resetCreateForm();
+      }
+    );
+
+    async function createUser() {
+      createMessage.textContent = "";
+
+      const userName =
+        userNameInput.value.trim();
+
+      const accessCode =
+        accessCodeInput.value.trim();
+
+      const comment =
+        commentInput.value.trim();
+
+      if (!userName || !accessCode) {
+        createMessage.textContent =
+          "Введите имя пользователя и Access code";
+
+        return;
+      }
+
+      createUserButton.disabled =
+        true;
+
+      try {
+        const response =
+          await fetch("/api/admin", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            credentials: "include",
+            body: JSON.stringify({
+              action: "create_user",
+              user_name: userName,
+              access_code: accessCode,
+              comment
+            })
+          });
+
+        const data =
+          await response.json();
+
+        if (!response.ok) {
+          createMessage.textContent =
+            data.error ||
+            "Не удалось создать пользователя";
+
+          return;
+        }
+
+        createPanel.style.display =
+          "none";
+
+        resetCreateForm();
+
+        await loadUsers();
+
+        successBox.textContent =
+          `Пользователь "${data.user.user_name}" создан. Ссылка добавлена в список.`;
+
+        successBox.style.display =
+          "block";
+
+        setTimeout(() => {
+          successBox.style.display =
+            "none";
+        }, 5000);
+
+      } catch (error) {
+        createMessage.textContent =
+          "Ошибка соединения";
+      } finally {
+        createUserButton.disabled =
+          false;
+      }
+    }
+
+    createUserButton.addEventListener(
+      "click",
+      createUser
+    );
 
     loginButton.addEventListener(
       "click",
