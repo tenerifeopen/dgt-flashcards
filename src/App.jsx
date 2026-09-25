@@ -22,6 +22,8 @@ const topics = [
 ];
 
 export default function App() {
+  const [accessStatus, setAccessStatus] = useState("checking");
+
   const [screen, setScreen] = useState("menu");
   const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
@@ -35,6 +37,45 @@ export default function App() {
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
   useEffect(() => {
+    const match = window.location.pathname.match(/^\/access\/([^/]+)\/?$/);
+
+    if (!match) {
+      setAccessStatus("denied");
+      return;
+    }
+
+    const token = decodeURIComponent(match[1]);
+
+    fetch("/api/access", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      body: JSON.stringify({ token })
+    })
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error("Access denied");
+        }
+
+        return res.json();
+      })
+      .then((data) => {
+        if (data.access === true) {
+          setAccessStatus("granted");
+        } else {
+          setAccessStatus("denied");
+        }
+      })
+      .catch(() => {
+        setAccessStatus("denied");
+      });
+  }, []);
+
+  useEffect(() => {
+    if (accessStatus !== "granted") return;
+
     topics.forEach(async (t) => {
       try {
         const res = await fetch(t.file);
@@ -45,7 +86,7 @@ export default function App() {
         console.error("Ошибка подсчета для", t.file);
       }
     });
-  }, []);
+  }, [accessStatus]);
 
   const loadTopic = (file) => {
     fetch(file)
@@ -184,6 +225,7 @@ export default function App() {
         } catch (err) {
           console.warn("Cache full");
         }
+
         await playAudioSafe(data.audio);
         return;
       }
@@ -204,6 +246,17 @@ export default function App() {
       alert('Кеш очищен!');
     }
   };
+
+  if (accessStatus !== "granted") {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          background: "#0f172a"
+        }}
+      />
+    );
+  }
 
   if (screen === "menu") {
     return (
