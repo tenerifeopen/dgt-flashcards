@@ -36,16 +36,15 @@ export default function App() {
 
   const font = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
-  const accessMatch = window.location.pathname.match(/^\/access\/([^/]+)\/?$/);
-  const accessToken = accessMatch ? decodeURIComponent(accessMatch[1]) : null;
-
   useEffect(() => {
-    if (!accessToken) {
+    const match = window.location.pathname.match(/^\/access\/([^/]+)\/?$/);
+
+    if (!match) {
       setAccessStatus("denied");
       return;
     }
 
-    const token = accessToken;
+    const token = decodeURIComponent(match[1]);
 
     fetch("/api/access", {
       method: "POST",
@@ -124,8 +123,19 @@ export default function App() {
     }
   };
 
+  const shuffle = () => {
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    setCards(shuffled);
+    setIndex(0);
+    setShow(false);
+  };
+
   const registerActivity = () => {
-    if (!accessToken) return;
+    const match = window.location.pathname.match(/^\/access\/([^/]+)\/?$/);
+
+    if (!match) return;
+
+    const token = decodeURIComponent(match[1]);
 
     fetch("/api/access", {
       method: "POST",
@@ -133,7 +143,7 @@ export default function App() {
         "Content-Type": "application/json"
       },
       credentials: "include",
-      body: JSON.stringify({ token: accessToken })
+      body: JSON.stringify({ token })
     }).catch(() => {});
   };
 
@@ -143,13 +153,6 @@ export default function App() {
     }
 
     setShow(!show);
-  };
-
-  const shuffle = () => {
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
-    setCards(shuffled);
-    setIndex(0);
-    setShow(false);
   };
 
   const playAudioSafe = async (base64) => {
